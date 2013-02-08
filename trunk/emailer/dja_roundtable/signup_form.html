@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>DJA Town-hall Meeting</title>
+    <script src="/javascripts/prototype.js?1315420516" type="text/javascript"></script>
+    <script src="/javascripts/forms.js?1315420516" type="text/javascript"></script>
+</head>
+<body>
+<style>
+    /* Base */
+body {
+    color: #3a3a3a;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 12px;
+}
+
+form {
+    margin: 0;
+    padding: 0;
+}
+
+label {
+    font-weight: bold;
+}
+
+a:link, a:visited {
+    color: #2787d1;
+}
+
+a:hover {
+    color: #00a0ff;
+}
+
+div#container {
+    width: 940px;
+    margin: 0 auto 0 auto;
+    background-color: transparent;
+    border-top-width: 1px;
+}
+
+div#messages {
+    margin-bottom: 20px;
+}
+
+div#error_messages {
+    border-left: 4px solid #ff0000;
+    background-color: #ffdddd;
+    padding: 10px;
+}
+
+div#messages ul {
+    padding-left: 14px;
+}
+
+div#messages ul li {
+    margin-bottom: 4px;
+    padding: 0;
+}
+
+div.inner {
+    padding: 0 30px 0px;
+}
+
+div#footer a:link,
+div#footer a:visited {
+    color: #7299be;
+    text-decoration: none;
+}
+
+div#footer a:hover {
+    text-decoration: underline;
+}
+
+fieldset {
+    border: 0;
+    padding: 0px 0 0 0;
+    margin: 0;
+    background-color: #f7f7f7;
+}
+
+table.form tr th {
+    width: 160px;
+    padding: 0 14px 14px 0;
+    text-align: right;
+    vertical-align: middle;
+    font-size: 14px;
+    color: #a6a6a6;
+}
+
+table.form tr th.fields-header {
+    padding-top: 0px;
+}
+
+table.form tr td {
+    padding: 0 0 14px 0;
+    vertical-align: middle;
+}
+
+table.form tr td label {
+    font-size: 11px;
+    display: block;
+    padding-bottom: 2px;
+}
+
+div.form-tools {
+    padding: 6px 30px;
+    background-color: #ededed;
+    text-align: center;
+}
+
+div.datetime {
+    padding: 6px 20px;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #b0c2d1;
+    height: 175px !important;
+}
+
+    /* Profile */
+
+table.profile-form {
+    margin: 3px 0 20px 0;
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+}
+
+table.profile-form tr td {
+    padding: 4px 0 4px 0;
+}
+
+table.profile-form tr th {
+    line-height: 22px;
+    width: 150px;
+    padding: 4px 10px 4px 0;
+    text-align: right;
+    vertical-align: top;
+}
+
+table.profile-form ul {
+    padding: 0;
+    list-style: none;
+    margin: 2px 0 0 0;
+}
+
+table.profile-form ul li label {
+    font-weight: normal;
+}
+
+ul#list-memberships {
+    list-style: none;
+    padding: 0 30px;
+    margin: 0;
+}
+
+ul#list-memberships li {
+    margin-bottom: 3px;
+}
+
+ul#list-memberships li label {
+    font-weight: normal;
+}
+
+div#unsubscribe-section {
+    padding: 10px 30px;
+    background-color: #fffedf;
+    border-top: 1px solid #f1ee98;
+    margin: 10px 0 0 0;
+}
+
+table#unsubscribe-table {
+    width: 100%;
+    border: none;
+    border-collapse: collapse;
+}
+
+table#unsubscribe-table tr td {
+    padding: 0;
+}
+
+    /* Share */
+
+input#share-url {
+    width: 500px;
+    font-size: 13px;
+}
+
+ul#share-social-list {
+    list-style: none;
+    padding: 0 90px;
+    overflow: hidden;
+}
+
+ul#share-social-list li {
+    width: 242px;
+    margin-bottom: 10px;
+    float: left;
+}
+
+ul#share-social-list li a:link,
+ul#share-social-list li a:visited {
+    display: block;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 32px;
+    padding-left: 36px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center left;
+}
+
+ul#share-social-list li a:hover {
+    text-decoration: underline;
+}
+
+ul#share-social-list li a#share-social-twitter:link,
+ul#share-social-list li a#share-social-twitter:visited {
+    background-image: url(/images/forms/share/twitter_32.png);
+}
+
+ul#share-social-list li a#share-social-facebook:link,
+ul#share-social-list li a#share-social-facebook:visited {
+    background-image: url(/images/forms/share/facebook_32.png);
+}
+
+ul#share-social-list li a#share-social-myspace:link,
+ul#share-social-list li a#share-social-myspace:visited {
+    background-image: url(/images/forms/share/myspace_32.png);
+}
+
+ul#share-social-list li a#share-social-linkedin:link,
+ul#share-social-list li a#share-social-linkedin:visited {
+    background-image: url(/images/forms/share/linkedin_32.png);
+}
+
+span#subject {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.scheduletable td {
+    height: 20px;
+    border-bottom: 1px dotted #b0c4de !important;
+    padding-left: 10px;
+}
+</style>
+<div id="container">
+    <table>
+        <tr>
+            <td style="width: 400px;vertical-align: top">
+                <form action="{{{form_url}}}" method="post">
+                    <img style="width: 400px" src="http://www.swift-kanban.com/emailer/dja_roundtable/webinar-header-register.jpg"/>
+                    <div class="inner">
+                        <!--{{{messages}}}-->
+
+
+                        <table class="profile-form">
+                            <tr>
+                        <th colspan="2">
+
+                        </th>
+                    </tr>
+                            <tr>
+                                <th>
+                                    <label for="person_email_address">e-Mail Address</label> <span
+                                        class="required">*</span>
+                                </th>
+                                <td>
+                                    <input id="person_email_address" name="person[email_address]" size="30" type="text"
+                                           value="{{{email_address}}}"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <label for="person_first_name">First Name</label>
+                                    <span class="required">*</span>
+                                </th>
+                                <td>
+                                    <input id="person_first_name" name="person[first_name]" size="30" type="text"
+                                           value="{{{first_name}}}"/>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th>
+                                    <label for="person_last_name">Last Name</label>
+                                    <span class="required">*</span>
+
+                                </th>
+                                <td>
+                                    <input id="person_last_name" name="person[last_name]" size="30" type="text"
+                                           value="{{{last_name}}}"/>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th>
+                                    <label for="person_company">Company</label>
+                                    <span class="required">*</span>
+                                </th>
+                                <td>
+                                    <input id="person_company" name="person[company]" size="30" type="text"
+                                           value="{{{company}}}"/>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th>
+                                    <label for="person_company_url">Company URL</label>
+                                </th>
+                                <td>
+                                    <input id="person_company_url" name="person[company_url]" size="30" type="text"
+                                           value="{{{company_url}}}"/>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th>
+                                    <label for="person_phone_number">Phone Number</label>
+                                    <span class="required">*</span>
+                                </th>
+                                <td>
+                                    <input id="person_phone_number" name="person[phone_number]" size="30" type="text"
+                                           value="{{{phone_number}}}"/>
+                                </td>
+                            </tr>
+
+                            <tr style='display: none;'>
+                                <th>Email Format</th>
+                                <td>
+                                    <select id="person_email_content_format" name="person[email_content_format]">
+                                        <option value="html" selected="selected">HTML</option>
+                                        <option value="text">Text</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                        </table>
+
+                    </div>
+                    <div class="form-tools">
+                        <input name="commit" type="submit" value="Sign Up"/>
+                    </div>
+
+                </form>
+            </td>
+            <td style="vertical-align: top;">
+
+                <table class="profile-form">
+
+                    <tr>
+                        <th colspan="2" style="text-align: left;padding: 0 30px 0px;">
+                            Swift-Kanban Customer Round-Table with David Anderson<br/>
+                            Topic: Business Value of Kanban Metrics<br/>
+                            <label for="">Date: Mar 14, 2012&nbsp;&nbsp;&nbsp;&nbsp;Time: 10:00 AM Pacific&nbsp;&nbsp;&nbsp;&nbsp;Duration:
+                                90 mins.</label><br/><br/>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: justify;padding-left:30px;line-height: 20px;">
+                            We are thrilled to invite a select set of our customers to the first Swift-Kanban
+                            Round-Table online
+                            meeting with David Anderson!
+                            This is your opportunity to meet the Kanban visionary – hear him on the subject of Kanban
+                            metrics
+                            and their business value – and ask your own questions to him in an interactive manner. This
+                            gives
+                            you an opportunity to connect with other Swift-Kanban users for greater learning and
+                            synergies in
+                            your Lean/ Kanban journey. This will also give you an opportunity to hear from the
+                            Swift-Kanban team
+                            on our plans for the product for 2012.</br><br/>
+                            <span style="font-weight: bold;">Agenda:</span><br/>
+                    <span>
+                    &diams;&nbsp; Opening Remarks: 5 minutes<br/>
+
+                        &diams;&nbsp; Business Value of Kanban Metrics – David Anderson: 15 minutes<br/>
+
+                        &diams;&nbsp; Interactive round-table Q&A and Discussion: 50 minutes<br/>
+
+                        &diams;&nbsp; Product Roadmap – Presentation by Swift-Kanban Team: 10 minutes<br/>
+
+                        &diams;&nbsp; Q&A and Closing Remarks – 10 minutes
+                    </span>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+
+</div>
+</body>
+</html>

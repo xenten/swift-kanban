@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Global Town-hall Meeting</title>
+  <script src="/javascripts/prototype.js?1315420516" type="text/javascript"></script>
+<script src="/javascripts/forms.js?1315420516" type="text/javascript"></script>
+</head>
+<body>
+  <style>
+    /* Base */
+body {
+  color: #3a3a3a;
+  margin: 0;
+  padding: 0;
+  background-color:transparent;
+  font-family: arial, helvetica, sans-serif;
+  font-size: 12px;
+}
+
+form {
+  margin: 0;
+  padding: 0;
+}
+
+label {
+  font-weight: bold;
+}
+
+a:link, a:visited {
+  color: #2787d1;
+}
+
+a:hover {
+  color: #00a0ff;
+}
+
+div#container {
+  width: 500px;
+  margin: 0 auto 0 auto;
+  background-color: #ffffff;
+  border: 1px solid #b0c2d1;
+  border-top-width: 1px;
+}
+
+div#messages {
+  margin-bottom: 20px;
+}
+
+div#error_messages {
+  border-left: 4px solid #ff0000;
+  background-color: #ffdddd;
+  padding: 10px;
+}
+
+
+div#messages ul {
+  padding-left: 14px;
+}
+
+div#messages ul li {
+  margin-bottom: 4px;
+  padding: 0;
+}
+
+div.inner {
+  padding: 0 30px 0px;
+}
+
+div#footer a:link,
+div#footer a:visited {
+  color: #7299be;
+  text-decoration: none;
+}
+
+div#footer a:hover {
+  text-decoration: underline;
+}
+
+fieldset {
+  border: 0;
+  padding: 0px 0 0 0;
+  margin: 0;
+  background-color: #f7f7f7;
+}
+
+
+table.form tr th {
+  width: 160px;
+  padding: 0 14px 14px 0;
+  text-align: right;
+  vertical-align: middle;
+  font-size: 14px;
+  color: #a6a6a6;
+}
+
+table.form tr th.fields-header {
+  padding-top: 0px;
+}
+
+table.form tr td {
+  padding: 0 0 14px 0;
+  vertical-align: middle;
+}
+
+table.form tr td label {
+  font-size: 11px;
+  display: block;
+  padding-bottom: 2px;
+}
+
+div.form-tools {
+  padding: 6px 30px;
+  background-color: #ededed;
+  text-align: center;
+}
+
+div.datetime {
+  padding: 6px 20px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #b0c2d1;
+  height: 175px!important;
+}
+/* Profile */
+
+table.profile-form {
+  margin: 10px 0 20px 0;
+  width: 100%;
+  border-collapse: collapse;
+  border: none;
+}
+
+table.profile-form tr td {
+  padding: 4px 0 4px 0;
+}
+
+table.profile-form tr th {
+  line-height: 22px;
+  width: 150px;
+  padding: 4px 10px 4px 0;
+  text-align: right;
+  vertical-align: top;
+}
+
+table.profile-form ul {
+  padding: 0;
+  list-style: none;
+  margin: 2px 0 0 0;
+}
+
+table.profile-form ul li label {
+  font-weight: normal;
+}
+
+ul#list-memberships {
+  list-style: none;
+  padding: 0 30px;
+  margin: 0;
+}
+
+ul#list-memberships li {
+  margin-bottom: 3px;
+}
+
+ul#list-memberships li label {
+  font-weight: normal;
+}
+
+div#unsubscribe-section {
+  padding: 10px 30px;
+  background-color: #fffedf;
+  border-top: 1px solid #f1ee98;
+  margin: 10px 0 0 0;
+}
+
+table#unsubscribe-table {
+  width: 100%;
+  border: none;
+  border-collapse: collapse;
+}
+
+table#unsubscribe-table tr td {
+  padding: 0;
+}
+
+/* Share */
+
+input#share-url {
+  width: 500px;
+  font-size: 13px;
+}
+
+ul#share-social-list {
+  list-style: none;
+  padding: 0 90px;
+  overflow: hidden;
+}
+
+ul#share-social-list li {
+  width: 242px;
+  margin-bottom: 10px;
+  float: left;
+}
+
+ul#share-social-list li a:link,
+ul#share-social-list li a:visited {
+  display: block;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 32px;
+  padding-left: 36px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+
+ul#share-social-list li a:hover {
+  text-decoration: underline;
+}
+
+ul#share-social-list li a#share-social-twitter:link,
+ul#share-social-list li a#share-social-twitter:visited {
+  background-image: url(/images/forms/share/twitter_32.png);
+}
+
+ul#share-social-list li a#share-social-facebook:link,
+ul#share-social-list li a#share-social-facebook:visited {
+  background-image: url(/images/forms/share/facebook_32.png);
+}
+
+ul#share-social-list li a#share-social-myspace:link,
+ul#share-social-list li a#share-social-myspace:visited {
+  background-image: url(/images/forms/share/myspace_32.png);
+}
+
+ul#share-social-list li a#share-social-linkedin:link,
+ul#share-social-list li a#share-social-linkedin:visited {
+  background-image: url(/images/forms/share/linkedin_32.png);
+}
+
+span#subject {
+  font-weight: bold;
+  font-size: 14px;
+}
+  .scheduletable td
+  {
+      height: 20px;
+      border-bottom: 1px dotted #b0c4de !important;
+      padding-left: 10px;
+  }
+  </style>
+  <div id="container">
+    <img src="http://www.swift-kanban.com/emailer/dja_townhall_i/DJA_townhall_signup.jpg"/>
+
+          <form action="{{{form_url}}}" method="post">
+          <div class="inner">
+    {{{messages}}}
+
+    
+    
+<table class="profile-form">
+    <tr>
+    <th colspan="2" style="text-align: left;">
+      <label for="">Date: Nov 11, 2011&nbsp;&nbsp;&nbsp;&nbsp;Time: 10:00 AM IST (+5:30 GMT)&nbsp;&nbsp;&nbsp;&nbsp;Duration: 1 hour</label><br/><br/>
+    </th>
+
+  </tr>
+  <tr>
+    <th>
+      <label for="person_email_address">e-Mail Address</label> <span class="required">*</span>
+    </th>
+    <td>
+      <input id="person_email_address" name="person[email_address]" size="30" type="text" value="{{{email_address}}}" />
+    </td>
+  </tr>
+          <tr>
+      <th>
+        <label for="person_first_name">First Name</label>
+        <span class="required">*</span>
+      </th>
+      <td>
+        <input id="person_first_name" name="person[first_name]" size="30" type="text" value="{{{first_name}}}" />
+      </td>
+    </tr>
+    
+          <tr>
+      <th>
+        <label for="person_last_name">Last Name</label>
+        
+      </th>
+      <td>
+        <input id="person_last_name" name="person[last_name]" size="30" type="text" value="{{{last_name}}}" />
+      </td>
+    </tr>
+    
+          <tr>
+      <th>
+        <label for="person_company">Company</label>
+        <span class="required">*</span>
+      </th>
+      <td>
+        <input id="person_company" name="person[company]" size="30" type="text" value="{{{company}}}" />
+      </td>
+    </tr>
+    
+          <tr>
+      <th>
+        <label for="person_company_url">Company URL</label>
+        <span class="required">*</span>
+      </th>
+      <td>
+        <input id="person_company_url" name="person[company_url]" size="30" type="text" value="{{{company_url}}}" />
+      </td>
+    </tr>
+    
+          <tr>
+      <th>
+        <label for="person_phone_number">Phone Number</label>
+        <span class="required">*</span>
+      </th>
+      <td>
+        <input id="person_phone_number" name="person[phone_number]" size="30" type="text" value="{{{phone_number}}}" />
+      </td>
+    </tr>
+    
+  <tr style='display: none;'>
+  <th>Email Format</th>
+  <td>
+    <select id="person_email_content_format" name="person[email_content_format]"><option value="html" selected="selected">HTML</option>
+<option value="text">Text</option></select>
+  </td>
+</tr>
+</table>
+
+  </div>
+  <div class="form-tools">
+    <input name="commit" type="submit" value="Sign Up" />
+  </div>
+</form>
+  </div>
+</body>
+</html>
