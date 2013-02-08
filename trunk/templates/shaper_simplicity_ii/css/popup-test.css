@@ -1,0 +1,246 @@
+/* CSS for Get Free Trial Popup box starts here */
+.free_trial_dialog {
+    border: 1px solid #E28208;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    cursor: hand;
+    cursor: pointer;
+    width: 425px !important;
+    top: 50% !important;
+    left: 50% !important;
+    margin: -85px 0 0 -205px !important;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 2px 2px 7px #ABABAB;
+}
+.free_trial_dialog .ui-dialog-titlebar-close {
+    margin: 0px 6px 0 0 !important;
+    position: absolute;
+    top: 12px;
+    right: 0;
+}
+.free_trial_dialog .ui-dialog-titlebar {
+    background-color: #E28208;
+    height: 32px;
+    position: relative;
+    padding: 3px 0 3px 9px;
+}
+.free_trial_dialog .ui-dialog-titlebar-close span {
+    width: 14px;
+    height: 14px;
+    background-image: url("/images/close-btn-free-trial.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: left top !important;
+    padding: 1px !important;
+    margin-top: 0px !important;
+}
+#survey-get-free-text {
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center;
+    margin: 0;
+    padding: 12px 0;
+    color: #e28208;
+    font-weight: bold;
+    font-family: "Arial";
+}
+.free_trial_dialog span.ui-dialog-title {
+    color: #ffffff;
+    margin: 2px 0 4px 2px;
+    font-size: 22px;
+    font-family: "Arial Black";
+    background-image: url("/images/get-free-trial-head.png");
+    background-repeat: no-repeat;
+    background-position: left 4px;
+    width: 175px;
+    float: left;
+
+}
+
+#survey-get-free {
+    height: auto !important;
+    min-height: 0 !important;
+    background-image: url("/images/down-arrow.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.ui-widget-overlay {
+    z-index: 102 !important;
+    background: #AAA/*{bgColorOverlay}*/ url(/images/ui-bg_flat_0_aaaaaa_40x100.png)/*{bgImgUrlOverlay}*/ 50%/*{bgOverlayXPos}*/ 50%/*{bgOverlayYPos}*/ repeat-x/*{bgOverlayRepeat}*/ !important;
+    filter: Alpha(Opacity=30)/*{opacityOverlay}*/ !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    opacity: .3 !important;
+
+}
+
+.free_trial_dialog .ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl { -moz-border-radius-topleft: 4px/*{cornerRadius}*/; -webkit-border-top-left-radius: 4px/*{cornerRadius}*/; -khtml-border-top-left-radius: 4px/*{cornerRadius}*/; border-top-left-radius: 4px/*{cornerRadius}*/; }
+.free_trial_dialog .ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr { -moz-border-radius-topright: 4px/*{cornerRadius}*/; -webkit-border-top-right-radius: 4px/*{cornerRadius}*/; -khtml-border-top-right-radius: 4px/*{cornerRadius}*/; border-top-right-radius: 4px/*{cornerRadius}*/; }
+.free_trial_dialog .ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl { -moz-border-radius-bottomleft: 0px/*{cornerRadius}*/; -webkit-border-bottom-left-radius: 0px/*{cornerRadius}*/; -khtml-border-bottom-left-radius: 0px/*{cornerRadius}*/; border-bottom-left-radius: 0px/*{cornerRadius}*/; }
+.free_trial_dialog .ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br { -moz-border-radius-bottomright: 0px/*{cornerRadius}*/; -webkit-border-bottom-right-radius: 0px/*{cornerRadius}*/; -khtml-border-bottom-right-radius: 0px/*{cornerRadius}*/; border-bottom-right-radius: 0px/*{cornerRadius}*/; }
+
+.free_trial_dialog .ui-dialog-title {
+    float: left;
+}
+
+.free_trial_dialog .ui-dialog-titlebar-close {
+    position: absolute;
+}
+.free_trial_dialog .ui-icon {
+    text-indent: -99999px !important;
+    overflow: hidden !important;
+    display: block;
+}
+.free_trial_dialog .ui-dialog-content {
+    position: relative;
+    border: 0;
+    padding: .5em 1em;
+    background: none;
+    overflow: auto;
+    zoom: 1;
+}
+
+/* CSS for Get Free Trial Popup box ends here */
+
+/* Survey Popup css starts here */
+.survey_dialog {
+    position: fixed !important;
+    left: 50% !important;
+    top: 45% !important;
+    margin: -85px 0 0 -205px !important;
+    border: 1px solid #656565;
+    padding: 0;
+    box-shadow: 2px 2px 7px #ABABAB;
+    font-size: 14px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    background-color: #FFFFE6;
+}
+
+.survey_dialog .ui-dialog-titlebar {
+    background-color: #858585;
+    background-image: none;
+    border: 0;
+    border-radius: 0;
+    padding: .4em 1em;
+    color: #fff;
+    font-weight: normal;
+    position: relative;
+    height: 21px;
+}
+.survey_dialog .ui-dialog-title {
+    float: left;
+    margin: .1em 16px .1em 0;
+    font-family: "Open Sans";
+}
+
+.survey_dialog .ui-dialog-titlebar-close span {
+    width: 9px;
+    height: 9px;
+    background-image: url("/images/close-btn.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: left top !important;
+    padding: 1px !important;
+    text-indent: -99999px;
+    position: absolute;
+    top: 11px;
+    right: 6px;
+}
+
+.survey_dialog .ui-dialog-titlebar-close span:hover, .survey_dialog .ui-dialog-titlebar-close span:focus {
+    width: 9px;
+    height: 9px;
+    background-image: url("/images/close-btn-hover.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: left top !important;
+    border: none !important;
+    box-shadow: none !important;
+    background-color: none !important;
+    position: absolute;
+    top: 11px;
+    right: 6px;
+}
+
+.survey_dialog .ui-dialog-titlebar-close {
+    padding: 0 !important;
+}
+
+#survey-text {
+    font-size: 15px;
+    line-height: 22px;
+    margin: 5px 0;
+    color: #191919;
+    font-weight: bold;
+    margin-top: 5px;
+    font-family: "Open Sans";
+}
+#yes-btn {
+    background-color: #656565 !important;
+    border: 1px solid #656565 !important;
+    background-image: none !important;
+    font-size: 16px !important;
+    text-align: center !important;
+    width: 80px !important;
+    text-decoration: none !important;
+    border-radius: 3px !important;
+    padding: 4px 0 2px 0 !important;
+    margin-right: 15px !important;
+    color: #FFFFFF !important;
+    font-family: "Arial";
+}
+
+.survey_dialog .ui-widget-content a {
+    text-decoration: none;
+}
+
+#no-btn {
+    background-color: #dddbda !important;
+    border: 1px solid #cac8c7 !important;
+    font-size: 16px !important;
+    text-align: center !important;
+    width: 80px !important;
+    text-decoration: none !important;
+    border-radius: 3px !important;
+    padding: 4px 0 2px 0 !important;
+    background-image: none !important;
+    font-family: "Arial";
+}
+
+.survey-buttons {
+    margin-top: 15px;
+}
+
+.survey-buttons input {
+    float: none !important;
+}
+
+.survey_dialog .ui-dialog .ui-dialog-titlebar-close {
+    margin: -7px 0 0 0 !important;
+    right: 13px !important;
+    width: 9px !important;
+    height: 9px !important;
+    top: 18px !important;
+}
+
+.survey_dialog .ui-dialog .ui-dialog-title {
+    font-family: "Open Sans";
+    padding: 5px 5px 2px 5px;
+}
+
+#survey .ui-dialog-content {
+    overflow: hidden !important;
+    height: auto !important;
+}
+
+#survey {
+    height: auto !important;
+    padding: .5em 1em;
+}
+
+/* Survey Popup css ends here */

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+   <layout title="COM_JFUPLOADER_MENU_TITLE">
+       <message>COM_JFUPLOADER_MENU_DESC</message>
+   </layout>
+      <fields name="request">
+      <fieldset name="request">
+         <field name="tfu_sel_id"
+            type="list"
+            label="JFU_PARAM_MODE"
+            description="JFU_PARAM_MODE_TOOLTIP"
+            default="0">
+            <option value="0">JFU_OPTION_PROFILE</option>
+            <option value="1">JFU_OPTION_GROUP</option>
+         </field>
+         	<field name="tfu_id"
+            type="text"
+            label="JFU_PARAM_ID"
+            description="JFU_PARAM_ID_TOOLTIP"				         
+            size="20" 
+          />
+      </fieldset>
+   </fields>        
+</metadata>

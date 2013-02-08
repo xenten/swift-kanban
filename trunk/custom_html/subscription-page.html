@@ -1,0 +1,225 @@
+<link rel="stylesheet" href="css.css" type="text/css" xmlns="http://www.w3.org/1999/html"/>
+
+<style type="text/css">
+    .drplist {
+        color: #191919;
+        font-size: 20px !important;
+    }
+    div.tooltip {
+        position: absolute;
+        top: 105px !important;
+        left: 375px !important;
+        width: auto !important;
+        max-width: 500px !important;
+        padding: 2px 5px !important;
+        font-size: 13px;
+        font-family: Arial;
+        color: #4a4949;
+        background-color: #fdfacc;
+        border: 1px solid #999999;
+        -moz-box-shadow:    1px 1px 2px #a1a1a1;
+        -webkit-box-shadow: 1px 1px 2px #a1a1a1;
+        box-shadow:         1px 1px 2px #a1a1a1;
+    }
+
+</style>
+
+<script type="text/javascript">
+    var blur_value = function (element_id, element_value, isPass) {
+        var elementvalue = document.getElementById(element_id).value;
+        if (elementvalue.trim() == '') {
+            document.getElementById(element_id).value = element_value;
+            document.getElementById(element_id).className = 'req-field input-textbox';
+            if (isPass) {
+                document.getElementById(element_id).type = 'text';
+            }
+        }
+
+    };
+
+    var focus_value = function (element_id, element_value, isPass) {
+        var elementvalue = document.getElementById(element_id).value;
+        if (elementvalue.trim() == element_value) {
+            document.getElementById(element_id).value = '';
+            document.getElementById(element_id).className = 'input-textbox';
+        }
+        if (isPass) {
+            document.getElementById(element_id).type = 'Password';
+
+        }
+    };
+
+
+</script>
+
+<!-- Javascript for Password text box -->
+<script language="javascript">
+    function changeBox() {
+        document.getElementById('div1').style.display = 'none';
+        document.getElementById('div2').style.display = '';
+        document.getElementById('password').focus();
+    }
+    function restoreBox() {
+        if (document.getElementById('password').value == '') {
+            document.getElementById('div1').style.display = '';
+            document.getElementById('div2').style.display = 'none';
+        }
+    }
+</script>
+
+<script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
+
+<div class="signup-form-container">
+    <div class="signup-form-header">
+        <div class="signup-form-heading">Register for a Free Trial Account</div>
+        <div class="signup-form-info">Please enter the information below to setup your account</div>
+    </div>
+    <form id="myform" action="#">
+        <div class="signup-form">
+            <div class="form-row">
+                <input id="fname" name="fname" class="input-textbox req-field" type="text" value="First Name"
+                       onfocus="focus_value('fname', 'First Name');" onblur="blur_value('fname', 'First Name');"
+                       size="32" tabindex="1"><span></span>
+                <input id="lname" name="lname" class="input-textbox req-field" type="text" value="Last Name"
+                       onfocus="focus_value('lname', 'Last Name');" onblur="blur_value('lname', 'Last Name');" size="32"
+                       tabindex="2"><span></span>
+            </div>
+            <div class="error-row">
+                <div class="error-text">Enter a Valid First Name</div><span></span>
+                <div class="error-text">Enter a Valid Last Name</div><span></span>
+            </div>
+            <div class="form-row">
+                <input id="email" name="email" class="input-textbox req-field" type="text" value="eMail/ Login Id"
+                       onfocus="focus_value('email', 'eMail/ Login Id');"
+                       onblur="blur_value('email', 'eMail/ Login Id');" size="32" tabindex="3"><span></span>
+                <input name="pass1" id="pass1" type="text" title="Password should have atleast seven characters and one numeric value" class="input-textbox req-field" value="Password" size="20"
+                       maxlength="20" onfocus="focus_value('pass1', 'Password', true)"
+                       onblur="blur_value('pass1', 'Password', true)" tabindex="4"/><span></span>
+                <input name="repass" id="repass" type="text" style="margin-right: 0px !important;"
+                       class="input-textbox req-field" value="Re-type Password" size="20" maxlength="20"
+                       onfocus="focus_value('repass', 'Re-type Password', true)"
+                       onblur="blur_value('repass', 'Re-type Password', true)" tabindex="5"/><span></span>
+
+            </div>
+            <div class="error-row">
+                <div class="error-text">Enter a Valid eMail/ Login Id</div>
+                <div class="error-text">Enter a Valid Password</div>
+                <div class="error-text-last">Password not matching</div>
+            </div>
+            <div class="form-row">
+                <select class="input-textbox req-field" tabindex="6"
+                        onChange="this.style.color=this.options[this.selectedIndex].style.color">
+                    <option value="" selected="selected">Intended Use</option>
+                    <option value="personal" style="color: #191919;">Personal</option>
+                    <option value="business" style="color: #191919;">Business</option>
+                    <option value="both" style="color: #191919;">Both</option>
+                </select><span></span>
+                <input id="company_name" name="company_name" style="background-image: none !important;"
+                       class="input-textbox req-field" type="text" value="Company Name"
+                       onfocus="focus_value('company_name', 'Company Name');"
+                       onblur="blur_value('company_name', 'Company Name');" size="32" tabindex="7"><span></span>
+            </div>
+            <div class="error-row">
+                <div class="error-text">Select a Intended Use</div>
+            </div>
+            <div class="form-row">
+                <input id="contact_number" name="contact_number" class="input-textbox req-field" type="text"
+                       value="Contact Number" onfocus="focus_value('contact_number', 'Contact Number');"
+                       onblur="blur_value('contact_number', 'Contact Number');" size="32" tabindex="8"><span></span>
+                <select class="input-textbox-small req-field" tabindex="9" onchange="this.className+=' drplist'"
+                        value="">
+                    <option value="" selected style="font-size: 20px !important;">How did you hear about us?</option>
+                    <optgroup label="Web Search" style="color: #191919; font-size: 20px !important;">
+                        <option value="google" style="color: #191919; font-size: 20px !important;">&bull; Google
+                        </option>
+                        <option value="bing" style="color: #191919; font-size: 20px !important;">&bull; Bing</option>
+                        <option value="yahoo" style="color: #191919; font-size: 20px !important;">&bull; Yahoo</option>
+                        <option value="other" style="color: #191919; font-size: 20px !important;">&bull; Other</option>
+                    </optgroup>
+                    <option value="swift-kanban-webinar" style="color: #191919; font-size: 20px !important;">
+                        Swift-Kanban Webinar
+                    </option>
+                    <option value="swift-kanban-mailer" style="color: #191919; font-size: 20px !important;">Swift-Kanban
+                        Mailer
+                    </option>
+                    <option value="recommended" style="color: #191919; font-size: 20px !important;">Recommended by
+                    </option>
+                    <option value="external-blog" style="color: #191919; font-size: 20px !important;">External Blog/
+                        Website
+                    </option>
+                    <option value="other1" style="color: #191919; font-size: 20px !important;">Other</option>
+                </select><span></span>
+                <input id="promotion_code" name="promotion_code"
+                       style="background-image: none !important; margin-right: 0px !important;"
+                       class="input-textbox req-field" type="text" value="Promotion Code"
+                       onfocus="focus_value('promotion_code', 'Promotion Code');"
+                       onblur="blur_value('promotion_code', 'Promotion Code');" size="32" tabindex="10"><span></span>
+            </div>
+            <div class="error-row">
+                <div class="error-text">Enter a Contact Number</div>
+                <div class="error-text">Select a How did you hear about us</div>
+            </div>
+        </div>
+    </form>
+
+    <!-- javascript coding -->
+    <script>
+        // execute your scripts when the DOM is ready. this is a good habit
+        $(function() {
+
+            // select all desired input fields and attach tooltips to them
+            $("#myform :input").tooltip({
+
+                // place tooltip on the right edge
+                position: "30px -50px",
+
+                // a little tweaking of the position
+                offset: [-2, 10],
+
+                // use the built-in fadeIn/fadeOut effect
+                effect: "fade",
+
+                // custom opacity setting
+                opacity: 1.0
+
+            });
+        });
+    </script>
+
+    <div>
+        <div class="get-started-heading">Get Started with Swift-Kanban</div>
+        <div class="get-started-text">By clicking <strong>Get Started with Swift-Kanban</strong> you agree to our Terms
+            of Service and Privacy Policy.
+        </div>
+    </div>
+</div>
+
+<div class="ads-container">
+    <div class="module-box">
+        <div><a href="http://help.swift-kanban.com/" target="_blank"><img
+                src="../images/subscription-page/need-help-head.png"/></a></div>
+        <div class="module-box-text">Refer to our Online Help - with FAQs, Tutorials and more.</div>
+    </div>
+    <div class="module-box">
+        <div><a href="http://swiftkanban.uservoice.com/clients/widgets/o2rbDPHcbSdUayeNDFUolQ.html" onclick="window.open('http://swiftkanban.uservoice.com/clients/widgets/o2rbDPHcbSdUayeNDFUolQ.html','popup',
+						'width=900,height=400,scrollbars=yes,resizable=yes,toolbar=no,directories=no,location=no,menubar=no,status=no,left=100,top=100');
+						return false"><img src="../images/subscription-page/contact-us-head.png"/></a></div>
+        <div class="module-box-text">Got Ideas/ Suggestions? <br/>Need Support? Get in touch</div>
+    </div>
+    <div class="module-box">
+        <div><a href="http://www.swift-kanban.com/linkedin" target="_blank"><img
+                src="../images/subscription-page/join-sk-head.png"/></a></div>
+        <div class="module-box-text">Connect, share and learn from other user</div>
+    </div>
+    <div class="module-box">
+        <div><img src="../images/subscription-page/follow-us-head.png" style="margin-top: 6px;"/></div>
+        <div class="module-box-text"><a href="http://www.facebook.com/digite" target="_blank"><img
+                src="../images/subscription-page/facebook-icon.png" style="margin-right: 6px;"/></a> <a
+                href="http://www.twitter.com/swiftkanban" target="_blank"><img
+                src="../images/subscription-page/twitter-icon.png" style="margin-right: 6px;"/></a> <a
+                href="http://www.swift-kanban.com/blog" target="_blank"><img
+                src="../images/subscription-page/blog-icon.png" style="margin-right: 6px;"/></a> <a
+                href="http://www.youtube.com/digiteswift" target="_blank"><img
+                src="../images/subscription-page/youtube-icon.png"/></a></div>
+    </div>
+</div>

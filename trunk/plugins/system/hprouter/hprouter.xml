@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="system" method="upgrade">
+	<name>HP Router</name>
+	<author>Hannes Papenberg</author>
+	<creationDate>November 2010</creationDate>
+	<copyright>(C) 2010 Hannes Papenberg. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>hannes.papenberg@community.joomla.org</authorEmail>
+	<version>0.3</version>
+	<description>Plugin to improve Joomlas URLs</description>
+	<files>
+		<filename plugin="hprouter">hprouter.php</filename>
+		<folder plugin="hprouter">hprouter</folder>
+	</files>
+	<params />
+</install>

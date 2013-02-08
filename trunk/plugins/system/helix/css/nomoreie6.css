@@ -1,0 +1,24 @@
+/*---------------------------------------------------------------
+# Package - Helix Framework  
+# ---------------------------------------------------------------
+# Author - JoomShaper http://www.joomshaper.com
+# Copyright (C) 2010 - 2011 JoomShaper.com. All Rights Reserved.
+# license - PHP files are licensed under  GNU/GPL V2
+# license - CSS  - JS - IMAGE files  are Copyrighted material 
+# Websites: http://www.joomshaper.com - http://www.joomxpert.com
+-----------------------------------------------------------------*/
+
+/*Drop support Internet Explorer 6*/
+#warnIE6 {background: #fdfbbd; color:#cf2a24; text-align: left;width:100%;position: relative;}
+#warnIE6 .ie6padding {padding:10px 16px;}
+#warnIE6-image {float:left;width:124px;height:124px;margin-right: 20px;background:url(images/ie6/ie6nomore.gif) no-repeat 0 0;}
+#warnIE6-text {float:left;margin-right: 20px;}
+#warnIE6-text .ietitle {font-size: 30px;line-height:normal; font-weight: bold;}
+#warnIE6-text .iedesc {font-size: 20px; line-height: 30px;}
+a#warnIE6-close {height:16px;width:51px;background: url(images/ie6/ie6nomore-cornerx.jpg) no-repeat;float:right;}
+a#getFirefox,a#getIE,a#getSafari,a#getChrome,a#getOpera {width:48px;height:48px;float:left;}
+a#getFirefox{background:url(images/ie6/firefox.gif) no-repeat}
+a#getIE{background:url(images/ie6/ie.gif) no-repeat}
+a#getSafari{background:url(images/ie6/safari.gif) no-repeat}
+a#getChrome{background:url(images/ie6/google-chrome.gif) no-repeat}
+a#getOpera{background:url(images/ie6/opera.gif) no-repeat}

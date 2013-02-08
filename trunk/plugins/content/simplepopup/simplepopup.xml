@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="content" method="upgrade">
+	<name>Content - Simple Pop-Up</name>
+	<author>Anders Wasén</author>
+	<creationDate>2011-05-14</creationDate>
+	<copyright>Copyright 2011 (C) Anders Wasén. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>awasen@gmail.com</authorEmail>
+	<authorUrl>http://wasen.net</authorUrl>
+	<version>0.1.0</version>
+	<description>Simple Pop-Up - It will display a FancyBox Pop-Up on any page where added in an article...</description>
+	
+	<files>
+		<filename plugin="simplepopup">simplepopup.php</filename>
+		<folder>simplepopup</folder>
+	</files>
+	
+	<languages>
+	   <language tag="en-GB">en-GB.plg_content_simplepopup.ini</language>
+	</languages>
+
+	<params>
+		<param name="spu_aligntext" type="radio" default="center" label="Align text" description="Text alignment in the Pop-Up box.">
+			<option value="left">Left</option>
+			<option value="center">Center</option>
+			<option value="right">Right</option>
+		</param>
+		<param name="spu_boxwidth" type="text" default="400" label="Pop-up box width (in pixels)" description="Pop-up box width (in pixels)."/>
+		<param name="spu_boxheight" type="text" default="auto" label="Pop-up box height (in pixels)" description="Pop-up box height (in pixels). Set it to [auto] to grow as needed on height."/>
+		<param name="spu_autodimensions" type="radio" default="false" label="Auto Dimensions" description="The Pop-Up box will shape according to content.">
+			<option value="false">No</option>
+			<option value="true">Yes</option>
+		</param>
+	</params>
+	
+</install>

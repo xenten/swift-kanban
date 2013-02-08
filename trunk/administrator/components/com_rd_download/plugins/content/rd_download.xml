@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<install type="plugin" version="1.5.0" group="content">
+	<name>RD Download</name>
+	<author>Robert Deutz</author>
+	<creationDate>November 2009</creationDate>
+  	<copyright>This component in released under the GNU/GPL License</copyright>
+  	<license>GPL</license>
+	<authorEmail>joomla@run-digital.com</authorEmail>
+	<authorUrl>http://www.run-digital.com</authorUrl>
+ 	<version>0.9 (<![CDATA[ $Rev: 421 $ ]]>)</version>
+  	<description>RD Downloads Plugin <![CDATA[
+        $Id: rd_download.xml 421 2009-11-12 17:03:03Z deutz $
+        ]]></description> 
+	<files>
+		<filename plugin="rd_download">rd_download.php</filename>
+	</files>
+
+</install>

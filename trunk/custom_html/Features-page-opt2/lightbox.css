@@ -1,0 +1,45 @@
+#lightbox{
+	background-color:#ffffff;
+	padding: 10px;
+	border: 1px solid #c3c3c3;
+	}
+#lightboxDetails{
+	font-size: 0.8em;
+	padding-top: 0.4em;
+    display: none;
+	}	
+#lightboxCaption{ float: left; }
+#keyboardMsg{ float: right; }
+#closeButton{ top: 5px; right: 5px; }
+
+#lightbox img{ border: none; clear: both;} 
+#overlay img{ border: none; }
+
+#overlay{ background-image: url(overlay1.png);
+     }
+
+* html #overlay{
+	background-color: #fff;
+	back\ground-color: transparent;
+	background-image: url(blank.gif);
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="overlay.png", sizingMethod="scale");
+	}
+
+
+#overlay {
+    display: block;
+    position: absolute;
+    top: 350px !important;
+    left: 20% !important;
+    z-index: 90;
+    width: 949px !important;
+    height: 920px !important;
+}
+.new-header {
+    width: 100%;
+    position: relative;
+}
+
+#lightbox {
+    top: 370px !important;
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="package" version="1.6" method="upgrade">
+<name>DiscussIt for Joomla 1.6 / 1.7 / 2.5 Package</name>
+<packagename>discussit</packagename>
+<version>2.0</version>
+<url>http://dis.cuss.it</url>
+<packager>Pete Bennett</packager>
+<description>DiscussIt for Joomla 1.6 / 1.7 / 2.5</description>
+<files folder="packages">
+<file type="plugin" id="plg_discussit" group="content">plg_discussit.zip</file>
+<file type="component" id="com_discussit" >com_discussit.zip</file>
+</files>
+
+<updateservers>
+        <server type="extension" priority="1" name="pkg_discussit">http://www.discussit.com/joomla/discussit-package-update.xml</server>
+    </updateservers>
+
+</extension>

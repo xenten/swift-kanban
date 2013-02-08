@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" type="text/javascript"></script>
+    <script src="http://swift-kanban.com/templates/shaper_simplicity_ii/js/cookie.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var currentTime = (new Date()).getTime();
+
+        $.cookie("first_visit_time", currentTime); // Sample 2
+        if( $.cookie("first_visit_time")==null && $.cookie("survey_popup_displayed")==null)
+            $.cookie("first_visit_time", currentTime);
+
+        $.doTimeout(1000, function(){
+            var newTime = (new Date()).getTime();
+            if($.cookie("survey_popup_displayed")!=null)
+                return false;
+            if(newTime-$.cookie("first_visit_time") > 5000 )
+            {
+                $.cookie("survey_popup_displayed","true");
+                //showDialog();
+                alert("dialog shown");
+                return false;
+            }
+            return true;
+
+        });
+
+        function showDialog()
+        {
+            $( "#survey" ).dialog({
+
+                width: '465px',
+                height: 160,
+                modal: false,
+                resizable: false,
+                draggable: false
+            });
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

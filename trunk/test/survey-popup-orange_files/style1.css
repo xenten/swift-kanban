@@ -1,0 +1,113 @@
+/*---------------------------------------------------------------
+
+# Package - Joomla Template based on Helix Framework   
+
+# ---------------------------------------------------------------
+
+# Author - JoomShaper http://www.joomshaper.com
+
+# Copyright (C) 2010 - 2011 JoomShaper.com. All Rights Reserved.
+
+# license - PHP files are licensed under  GNU/GPL V2
+
+# license - CSS  - JS - IMAGE files  are Copyrighted material 
+
+# Websites: http://www.joomshaper.com - http://www.joomxpert.com
+
+-----------------------------------------------------------------*/
+
+a{color:#373737}
+
+a:hover,a:active,a:focus{color:#12768e}
+
+
+
+#sp-bottom{background:##373737;color:#fff;font-size:11px;}
+
+#sp-bottom .mod-wrapper-flat li{border-bottom:1px solid #1485a3;color:#a1c7d0}
+
+#sp-bottom a{color:#a1c7d0}
+
+.mod-wrapper h3.header,.mod-wrapper-flat h3.header{color: ##373737!important;}
+
+
+
+/*Menu*/
+
+#hornav{background:#fff;border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5}
+
+#sublevel{background:#069bbf}
+
+
+
+#hornav ul.level-0 > li.menu-item{border-right:1px solid #e5e5e5}
+
+#sublevel ul.level-1 > li.menu-item{}
+
+
+
+#hornav ul.level-0 > li.menu-item > a.menu-item{color:#333}
+
+#sublevel ul.level-1 > li.menu-item > a.menu-item{color:#fff}
+
+
+
+#hornav ul.level-0 > li.menu-item span.menu-desc,
+
+#sublevel ul.level-1 > li.menu-item span.menu-desc{color:#888}
+
+
+
+#hornav ul.level-0 > li.menu-item:hover,#hornav ul.level-0 > li.menu-item.active{background-color: #68BC14}
+
+#hornav ul.level-0 > li.menu-item:hover > a,#hornav ul.level-0 > li.menu-item.active > a{color: #fff;}
+
+#sublevel li.menu-item li.menu-item {background-color: #68BC14}
+
+
+
+
+
+#hornav ul.level-0 > li.menu-item:hover span.menu-desc,#hornav ul.level-0 > li.menu-item.active span.menu-desc,
+
+#sublevel ul.level-1 > li.menu-item:hover span.menu-desc,#sublevel ul.level-1 > li.menu-item.active span.menu-desc{color:#fff}
+
+
+
+#sublevel ul.level-1 > li:hover,#sublevel ul.level-1 > li.menu-item.active{background:##373737!important}
+
+#sublevel ul.level-1 > li.menu-item.active > a.menu-item,#sublevel ul.level-1 > li.menu-item:hover > a.menu-item
+
+{}
+
+
+
+/*Sub Items*/
+
+#hornav ul li .submenu-inner,#sublevel ul li .submenu-inner {background:##373737;color:#fff}
+
+
+
+#hornav li.menu-item li.menu-item,
+
+
+
+#hornav li.menu-item li:hover,#hornav li.menu-item li.active > a,
+
+#sublevel li.menu-item li:hover,#sublevel li.menu-item li.active > a{background: #000!important}
+
+
+
+#hornav li.menu-item li.menu-item a.menu-item,
+
+#sublevel li.menu-item li.menu-item a.menu-item{color:#333}
+
+
+
+#hornav li.menu-item li.menu-item span.menu-desc,
+
+#sublevel li.menu-item li.menu-item span.menu-desc{color:#888}
+
+
+
+#hornav .group-title{border-bottom:5px solid #005f76}

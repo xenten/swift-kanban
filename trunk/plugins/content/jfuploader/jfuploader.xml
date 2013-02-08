@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.6/plugin-install.dtd">
+<extension version="1.6" type="plugin" group="content" method="upgrade">
+  <name>PLG_CONTENT_JFUPLOADER</name>
+  <creationDate>Dez 2011</creationDate>
+  <author>Michael Dempfle</author>
+  <copyright>This plugin is freeeware</copyright>
+  <authorEmail>jfu@mdempfle.de</authorEmail>
+  <authorUrl>jfu.tinywebgallery.com</authorUrl>
+  <version>2.15.1</version>
+  <license>GNU GPL</license>
+  <description>PLG_CONTENT_JFUPLOADER_XML_DESCRIPTION</description>
+  <scriptfile>jfuploader.scriptfile.php</scriptfile>
+  <files>
+    <filename plugin="jfuploader">jfuploader.php</filename>
+    <filename>readme.txt</filename>
+    <filename>license.txt</filename>
+    <filename>index.html</filename>    
+  </files>  
+   <updateservers>
+      <server type="extension" name="JFUploader plugin update site">http://www.tinywebgallery.com/update/plg_jfuploader/extension.xml</server>
+   </updateservers>
+   <languages folder="language">
+  		<!--
+  			these files will be installed in the administrator/language folder.
+  		-->
+  		<language tag="en-GB">en-GB/en-GB.plg_content_jfuploader.ini</language>
+  		<language tag="en-GB">en-GB/en-GB.plg_content_jfuploader.sys.ini</language>
+  		<language tag="de-DE">de-DE/de-DE.plg_content_jfuploader.ini</language>
+  		<language tag="de-DE">de-DE/de-DE.plg_content_jfuploader.sys.ini</language>
+	</languages>
+</extension>

@@ -1,0 +1,7 @@
+@charset "UTF-8";
+.file{ margin: 10px 0 0 0;}
+.file label{ font-weight: bold; font-size: 14px; }
+
+.config { border: 1px solid #eee; padding:0 5px 5px 10px; }
+.config .label{ font-size: 15px;}
+.config .label,.config span{ font-weight: bold;}

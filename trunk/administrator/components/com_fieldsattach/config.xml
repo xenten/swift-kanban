@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id: helloworld.xml 14 2009-11-02 18:35:20Z cristian $ -->
+<config>
+	<!--<fieldset
+		name="parameters"
+		label="COM_FIELDSATTACH_SETTINGS_LABEL" 
+	>
+		<field
+			name="html_string_position"
+			type="text"
+			label="COM_FIELDSATTACH_HTML_STRING_POSITION_LABEL"
+			description="COM_FIELDSATTACH_HTML_STRING_POSITION_LABEL_DESC"
+                        size="100"
+			default='div class="width-100 fltlft"'
+		/>  
+	</fieldset>-->
+	<fieldset
+		name="permissions"
+		label="JCONFIG_PERMISSIONS_LABEL"
+		description="JCONFIG_PERMISSIONS_DESC"
+	>
+		<field
+			name="rules"
+			type="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			class="inputbox"
+			validate="rules"
+			filter="rules"
+			component="com_fieldsattach"
+			section="component"
+		/>
+	</fieldset>
+</config>
+

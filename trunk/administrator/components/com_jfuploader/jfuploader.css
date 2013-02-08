@@ -1,0 +1,234 @@
+.noflash { padding:10px; margin:10px; border: 1px solid #555555; background-color: #f8f8f8; text-align:center; width:330px; }
+div.flashcontent { padding:0;margin:0;border:none;}
+table.adminform tr { vertical-align:top; padding-left:5px; }
+.config table.adminlist tr { vertical-align:top; padding-left:5px; }
+.odd{background-color: #f3f3f3;}
+.even{} 
+.error { color:#FF0000;  }
+.errordiv { padding:10px; margin:10px; border: 1px solid #555555;color: #000000;background-color: #f8f8f8; text-align:center; width:360px; }
+.w50 { width:50px; }
+.w250 { width:250px; }
+.w230 { width:230px; }
+
+.form-block-menu {
+	border: 1px solid #cccccc;
+	background: #eeeeee;
+	padding-top: 6px;
+	padding-left: 5px;
+	padding-bottom: 6px;
+	padding-right: 5px;
+	margin:0px;
+	display:inline;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.form-block-menu:hover {
+	border-top: 2px solid #ff0000;
+}
+
+.form-block-menu-sel {
+    position:relative;
+    z-index:2;
+	border: 1px solid #cccccc;
+	background: #ffffff;
+	padding-top: 6px;
+	padding-left: 5px;
+	padding-bottom: 6px;
+	padding-right: 5px;
+	margin:0px;
+	display:inline;
+	font-weight: bold;
+	border-top: 2px solid #ff0000;
+	border-bottom: 1px solid #ffffff;
+} 
+
+
+.block-menu {
+text-align:left;
+width:100%;
+padding-top:8px;
+padding-bottom:6px;
+border-bottom: 1px solid #cccccc;
+}
+
+.redreg {
+color: #ff0000;
+font-size: 9pt;
+font-weight: normal;
+text-align:left;
+padding-bottom:5px;
+}
+
+p.imglist img, p.imglist .text
+{
+vertical-align: middle;
+}
+
+table.admintable thead th
+{
+height:28px;
+text-align: center;
+background-color: #f0f0f0;
+background-image: none;
+background-repeat: repeat;
+background-attachment: scroll;
+background-position: 0% 0%;
+color: #666666;
+border-bottom: 1px solid #999999;
+border-left: 1px solid #ffffff;
+}
+
+table.admintable td {
+ vertical-align: top;
+}
+
+.icon-32-user
+{
+background-image: url(images/user_f2.png);
+}
+
+.icon-32-plugins
+{
+background-image: url(images/jfu_plugin.png);
+}
+
+.jfu_nocheck
+{
+color: #FF7F00;
+}
+
+.jfu_old
+{
+color: #ff0000;
+}
+
+.jfu_current
+{
+color: #339900;
+}
+
+.panel {float:left;width:200px;margin-right:40px;}
+
+.panel ul {
+    list-style-type:none;
+    border:3px ridge #999;
+    background:#fff;
+    padding:3px;
+    min-height:200px;
+    width:200px;
+}
+
+.panel li {
+    display:block;
+    border-bottom:1px solid #ddd;
+    background:#fff;
+    width:190px;
+    padding:3px 3px;
+    margin-bottom:0px;
+}
+
+.panel li {
+    border-bottom:1px solid #ddd;
+    padding:3px 3px;
+    margin-bottom:0px;
+}
+
+.panel li.dds_selected {
+    background:#ffc;
+    padding:3px 3px;
+}
+.panel li.dds_ghost {
+    opacity:0.9;
+    padding:3px 3px;
+}
+.panel li.dds_move {
+    background:#f2f2f2;
+    padding:5px 5px;
+}
+.panel li.dds_hover {
+    background:#fff;
+    border:3px ridge  #c96;
+}
+
+.panel li.holder {
+    border:3px solid #333;
+    background:#fff;
+}
+
+.panel li.invisible {
+float: left;
+height:0px; 
+border-bottom:none; 
+padding: 0;
+}
+
+.jfu_button { white-space: nowrap; margin-top:5px; background-color:#fff; color:#000; padding:6px; padding-top:2px; padding-bottom:2px; border:1px outset #555; }
+.jfu_button:hover { white-space: nowrap; margin-top:5px; background-color:#fff; padding:6px; padding-top:2px; padding-bottom:2px; text-decoration: none; border:1px inset #999; }
+
+iframe.jfu_iframe {
+width: 800px;
+padding-left: 50px;
+height: 300px;
+border: 1px;
+} 
+
+.logcontainer {
+border:1px solid #555; 
+padding: 5px; 
+width:700px; 
+height:200px; 
+overflow:auto;
+}
+
+.icon-48-jfu_toolbar_title { 
+  background-image:url(images/jfu_logo.png);
+}
+
+table.adminlist td.jfu_indent {
+padding-left:10px;
+}
+
+table.adminlist td.jfu_indent_2 {
+padding-left:20px;
+}
+
+td img, td .text, .message img, .message .text {
+  vertical-align: middle;
+}
+
+.nobreak {
+  white-space: nowrap;
+}
+
+table.admintable td {
+	padding: 3px;
+	font-size: 1em;
+}
+
+table.admintable td.key,table.admintable td.paramlist_key {
+	background-color: #f1f1f1;
+	text-align: right;
+	width: 140px;
+	color: #2c2c2c;
+	font-weight: bold;
+	border-bottom: 1px solid #e9e9e9;
+	border-right: 1px solid #e9e9e9;
+	font-size: 1em;
+}
+
+table.admintable td.key label, table.admintable td.paramlist_key label {
+	font-size: 1em;
+}
+
+table.admintable td.paramlist_value label {
+	font-size: 1em;
+}
+
+table.admintable input, table.admintable span.faux-input, table.admintable select, form label {
+	font-size: 1em;
+}
+
+table.adminlist thead th {
+	background-color: #e7e7e7;
+}

@@ -1,0 +1,292 @@
+<html><head>
+<title>History of JFUploader</title>
+<style>
+body {
+font-size:11px;
+color:#000000;
+background-color:#ffffff;
+font-family:Arial,Helvetica,sans-serif;
+}
+p {
+font-weight:bold;
+}
+</style>
+
+</head><body bgcolor="#FFFFFF">
+<h3>History of the JFUploader for Joomla 1.6.x</h3>
+<p>v2.15.1</p>
+<ul>
+  <li>New: Master profile mode for groups was improved and the documentation extended.</li>
+  <li>Fix: Master profile mode for groups was not implemented for the plugin. Now the same code as for the component is used.</li>
+</ul> 
+<p>v2.15</p>
+<ul>
+  <li>New: Updated TFU to 2.15.</li> 
+  <li>New: Master mode for user groups.</li>
+  <li>New: Install package for Joomla 1.6/1.7. You don't need to unzip the full package anymore.</li>
+  <li>New: Workaround for IDN domains. Please read howto 20 of the TFU FAQ!</li>
+  <li>New: switch_sides added to the configuration</li>
+  <li>New: date_format added to the configuration</li>
+  <li>New: use_index_for_files added to the configuration</li>
+  <li>New: zip files renamed to Joomla standard</li>
+  <li>New: Image magick can only be set to true if the command path is set properly. Otherwise the setting is disabled.</li>
+  <li>Fix: Layout fixes like alignment of icons...</li>
+</ul>
+<p>v2.14.3</p>
+<ul>
+  <li>New: Updated TFU to 2.14.3.</li> 
+  <li>New: The JFU editor button can now be used without a user in the editor as well (if you allow public creation of articles). You have to disable the user check in the config of the plugin.</li>
+  <li>Fix: The JFU editor was using a static destination to insert the code. This was only working for default installations. Now it is read dnamically and inserting of images should work fine everywhere.</li>
+</ul>
+<p>v2.14.2</p>
+<ul>
+  <li>New: Updated TFU to 2.14.2.</li>
+  <li>New: The size warning in the JFU editor is only shown if the thumbnail option is available.</li>
+  <li>Fix: The JFU editor has an error in the language file which caused the Javascript to fail.</li>
+</ul>
+<p>v2.14.1</p>
+<ul>
+  <li>New: Updated TFU to 2.14.1.</li>
+  <li>New: Joomla 1.6.4 has still a bug when ading menu items to the database. JFUploader does now a cleanup if the Joomla db menu table. If you get an error while installing please simply reinstall.</li>
+  <li>New: A warning is shown if you try to insert an image in a different size than the original</li>
+  <li>Fix: The icon is not shown in the frontend anymore.</li>
+</ul>
+<p>v2.14</p>
+<ul>
+  <li>New: TFU 2.14 is included with all the new features that comes with it. e.g directory quota, creation of files. </li>
+  <li>New:  JFUploader Editor extension was extended:
+    <ul>
+      <li>JFUploader Editor extension can be configured. </li>
+      <li>Links can be inserted</li>
+      <li>Thumbnails of pdf's can be created.</li>
+      <li>html and css was optimized to work with different templates (some templates destroyed the divs)</li>
+      <li>Google doc viewer can be used directly.</li>
+      <li>many small fixes...</li>
+     </ul>
+  </li>
+</ul>
+<p>v2.13.1</p>
+<ul>
+  <li>New: FTP mode directory creation is now also used for the master profile mode to create user directories.</li>
+</ul>
+<p>v2.13</p>
+<ul>
+  <li>New: Migration to Joomla 1.6 - Rewrite the whole site part</li>
+  <li>New: Adding the new user groups in the administration</li>
+  <li>New: TFU 2.13.1 is included</li>
+  <li>New: JFUploader Editor extension is available and some changes have been made in the site part because this is used for the plugin. </li>
+  <li>New: Translation of the menu entries of JFUploader </li>
+  <li>Fix: The generated plugin code was listing groups not distinct</li>
+</ul>
+<p>v2.12</p>
+<ul> 
+  <li>New: TFU 2.12 is included - Scans images (gif,png,jpg) for php code and detects multiple extensions (e.g. .php.gif)</li> 
+  <li>New: Warning message on user page if a profile is not assigned to a group yet.</li>
+  <li>New: Warning messages on the config page if the user/profile/group configuration seems not to be o.k.</li>
+  <li>New: php.ini in tfu folder is saved at uninstall and restored after install.</li>
+  <li>New: .htaccess in tfu folder is saved at uninstall and restored after install.</li>
+  <li>New: Parameters $compression, $remove_multiple_php_extension, $scan_images  added to JFU configuration</li>  
+  <li>Fix: Small errors in css</li>
+  <li>Fix: Typos in the language files </li>
+</ul>
+<p>v2.11.2</p>
+<ul> 
+  <li>New: TFU 2.11.1 is included.</li> 
+  <li>New: History is now shown on the config page.</li>
+  <li>Fix: The chmod parameters where not passed to the flash after a refactor. Thanks to Verena for the hint.</li> 
+  <li>Fix: Download of big files > php memory limit was improved - before this failed on some servers.</li>
+  <li>Fix: I removed the display of the image magic check while optimizing - now it's back again and reseted when you save a profile.</li>
+</ul>
+<p>v2.11.1</p>
+<ul> 
+  <li> Important: Please update JFU to the latest version. Because of an update of Joomla itself JFU has to be updated as well to be 100% secure! </li> 
+  <li>New: New security concept for the plugin + plugin code generator</li> 
+</ul>
+<p>v2.11</p>
+<ul> 
+  <li>New: Renamed Joomla Flash Uploader to JFUploader because extensions are not allowed to start with Joomla. Database tables are not renamed - so updates to this version are possible without loosing the configuration.</li> 
+  <li>New: TFU 2.11 is included</li> 
+  <li>New: New plugin page where installed plugins are shown.</li> 
+  <li>New: All 13 new parameters of TFU are now added to JFU.</li> 
+  <li>New: All plugins are now refactored to work with JFU 2.11.</li> 
+  <li>New: The session usage was reworked. Most parameters are now in one array in the session.</li> 
+  <li>New: The internal parameter usage was optimized and new parameters can be added now much faster.</li> 
+</ul>
+<p>v2.10.7</p>
+<ul>
+<li>New: Updated TFU to version 2.10.7</li>
+<li>New: Added $truncate_dir_in_title to the configuration.</li>
+<li>New: You can now select the user name as directory for the mastermode as well.</li>
+</ul> 
+<p>v2.10.6</p>
+<ul> 
+  <li>Never offically release because TFU 2.10.7 was needed before JFU 2.10.6 was done.</li> 
+  <li>New: Updated TFU to version 2.10.6</li> 
+  <li>New: Added $hide_hidden_files to the configuration.</li> 
+  <li>New: Added the new logo to JFU</li> 
+  <li>New: Added icons to the menu entries.</li> 
+</ul>
+<p>v2.10.5</p>
+<ul>
+<li>New: Updated TFU to version 2.10.5</li>
+<li>New: The Joomla session is now refreshed on the upload page - so users are not logged out after a long upload.</li>
+<li>Fix: Description for the e-mail notification updated.</li>
+</ul> 
+<p>v2.10.4</p>
+<ul>
+<li>New: Updated TFU to version 2.10.4</li>
+<li>New: It's now possible to define a profile for each or the 3 backend roles of Joomla.</li>
+<li>New: Enhanced debug can be enabled in the config</li>
+<li>New: $upload_notification_use_full_path can now be changed in the config.</li>
+</ul> 
+<p>v2.10.3</p>
+<ul> 
+  <li>New: Updated TFU to version 2.10.3</li>
+  <li>New: Enhanced Upload debug can be enabled in the config</li>
+  <li>New: Debug file is shown in the backend and can be deleted there.</li>
+  <li>New: The tfu folder can be located in the site or the administration. This makes it possible to use a .htaccess file to protect the administration area im Joomla! v2.10.2</li>
+  <li>New: Updated TFU to version 2.10.2 v2.10.1</li>
+  <li>New: ch_mod settings for new created dirs are now used for master profile created folders as well</li>
+  <li>Fix: $upload_notification_use_full_path was not supported in Joomla. I changed this for a user that needed this. The setting will be available in the backend in the next version.</li>
+  <li>Fix: Updated TFU to version 2.10.1</li>
+  <li>Fix: value for 'ch_mod' for the files was not displayed</li>
+  <li>Fix: User panel was displayed in the admin profile at the bottom.</li>
+  <li>Fix: the session_cache workaround was not working for Joomla. Not it is. v2.10</li>
+  <li>New: Updated TFU to version 2.10</li>
+  <li>New: New user tab - completely improved handling of the users. Includes nice drag drop lists and filters</li>
+  <li>New: Filter on the user page for faster and easier handling of the users.</li>
+  <li>New: 'Add users' section is now on the top for better handling</li>
+  <li>New: Introduced post processing plugins</li>
+  <li>check the website v2.9.1.1</li>
+  <li>New: when double clicking on a folder tfu was jumping to the sub dir and back with the 2nd click. Now a 300 ms timeout does exists between changing folders</li>
+  <li>New: $_SESSION["TFU_USER_NAME"] and $_SESSION["TFU_USER_EMAIL"] are available in TFU. This are the user name and the e-mail of the joomla user.</li>
+  <li>Fix: At the description mode a wrong checkbox value was used and therefore no description file was written. v2.9.1</li>
+  <li>Fix: Updated TFU to version 2.9.1</li>
+  <li>The language selector was only working for en,de,es but not for the other languages anymore! v2.9.0.1</li>
+  <li>Fix: Hide remote view was not working in the frontend because a ; was missing in the flashvars v2.9</li>
+  <li>New: Updated TFU to 2.9</li>
+  <li>New: Permissions of the tfu_files can be changed in the backend (Limits page). This is a problem of servers with bad umasks.</li>
+  <li>New: Version check in the config</li>
+  <li>New: Added JFU backend group restriction. You can select which backend user group can access the upload and the config</li>
+  <li>New: Added "Overwrite files" setting to the config</li>
+  <li>New: Added "Description mandatory" setting to the config</li>
+  <li>New: Added "Show full url" setting to the config</li>
+  <li>New: Flash can now be included with and without Javascript. There are some other components around that make including the Flash with JS a problem.</li>
+  <li>New: added us.gif to the installer</li>
+  <li>New: A warning is shown if the upload limit is larger then the server limit.</li>
+  <li>New: Added "Normalize spaces" to the config</li>
+  <li>New: Added chmod to my config for files and directories</li>
+  <li>New: Added Japanese language files</li>
+  <li>New: JFU administration is now fully translated to German</li>
+  <li>New: replaced swfobjects 1.5 with swfobjects 2.1</li>
+  <li>Fix: Fixed some wording v2.8.3.2</li>
+  <li>New: Master profile indicator is now in the config list and can be changed by AJAX.</li>
+  <li>New: The access to JFU in the backend can be restricted for the different menu items.</li>
+  <li>New: you can specify a directory structure that is copied to a new folder i master profiles are used. Read the howto "How to use a master profile" how to use this.</li>
+  <li>New: A different message is displayed if no groups are used. This makes configuration easier to use.</li>
+  <li>New: Added a howto how to use the language dependant title</li>
+  <li>New: An internal center of the flash was removed. You have to add center in the textboxes now to have it centered.</li>
+  <li>New: Updated JFU to TFU 2.9</li>
+  <li>Fix: you can now decide if the Flash in the frontend is included by Javascript or by the object tag. On some systems the Javascript interferes with other components. If you get an error message that the page cannot be opend you should use the object tag.</li>
+  <li>Fix: Reworked some descriptions</li>
+  <li>Fix: Directory names where always normalized. Now the setting of the backend is used.</li>
+  <li>Fix: css in the plugin was not loaded by Javascript and therefore was generating not valid html. Now the plugin validates fine. v2.8.3.1</li>
+  <li>Fix: I autmatically remove " when license data is entered. Wrong inputs could lead the an invalid license file was created and JFU was not accessible anymore.</li>
+  <li>Fix: Create a new profile created an error. There was a typo in the code. v2.8.3</li>
+  <li>New: TFU 2.8.3 integrated</li>
+  <li>New: Added normalize direcory names to the config</li>
+  <li>New: Added direct download to the config</li>
+  <li>Fix: Plugin was not working with groups properly. I did a small refactory and one variable was not renamed. Now groups work fine in the plugin as well.</li>
+  <li>Fix: Small layout fixes for IE v2.8.2.1</li>
+  <li>Fix: The session was started although joomla already did this. I removed that line. v2.8.2</li>
+  <li>New: css splitted. Now there is a css for the frontend and for the backend.</li>
+  <li>New: you can set in the profile if the login name is converted to lowercase in the master profile mode</li>
+  <li>Fix: ' and " where double encoded on some systems when stored in the database. Now magic quotes is checked and slashes are removed if not needed</li>
+  <li>Fix: Installer was inserting the version each time again to the database. Now it is updated properly.</li>
+  <li>Fix: automatic language selection was not working</li>
+  <li>Fix: Error handling was set to a higher level in the frontend. This can lead to error messages of other plugins. I don't change the error handling now. v2.8.1.2</li>
+  <li>New: A small debug is now written to be able to help users if they do not configure the flash right. Search for type jfu in the source code to get the parameters</li>
+  <li>Fix: The detection of wrong parameters was improved</li>
+  <li>Fix: Version number in the backend was not updated. v2.8.1.1</li>
+  <li>Fix: Resize was always trying to use image magick because a session parameter was not passed correctly.</li>
+  <li>Fix: The default for not resizing was set to 100000. Now it is 10000 how it should be and how the description says</li>
+</ul> 
+<p>v2.8.1 - 28.11.2008</p>
+<ul>
+  <li>Fix: Session recovery was improved. Now the tfu_file.php checks as well if the session is lost and restores it if needed.</li>
+  <li>Fix: the css in the backend was sometimes not loaded because I add it dynamically in css. This is w3c conform but not stable. I do now include the css the old style and this works all the time and is not W3C conform.</li>
+  <li>Fix: master profile login names are always converted to lowercase.</li>
+  <li>Fix: The mambot was using a undefined variable which was throwing an error message depending on the joomla error settings. Now the right variable is used.</li>
+  <li>Fix: The upload folder has to be relative. The check was not checking if the path started with a / which is not right. Now this check is done as well.</li>
+  <li>Fix: plugin can now included in html comments to be invisible when disabled.</li>
+  <li>Fix: TFU 2.8.1 was integrated because files could not be renamed. This is fixed now.</li>
+</ul> 
+<p>v2.8 - 09.11.2008</p>
+<ul>
+  <li>New: Update JFU to TFU 2.8 with all the new stuff that comes with it</li>
+  <li>Check the TFU website for details! Everything from 1.7.5 is new to JFU.</li>
+  <li>New: many new parameters can be configured directly within Joomla</li>
+  <li>New: Master profile. you can create a profile which automatically creates a subfolder for each of you registered users.</li>
+  <li>New: Folder check. There is now an Ajax check that verifies if the folder you enter is nthe config does exists and is writeable!</li>
+  <li>New: Check if image magick is available</li>
+  <li>New: New configuration layout. Different tabs are now available</li>
+  <li>New: Optimized installer - now all previous versions are detected and nicely upgraded without loosing the old settings.</li>
+  <li>New: Input parameters are checked. Especially the list are not allowed to contain any spaces now they are stripped automatically.</li>
+  <li>New: tfu_description_mode and hide_remote_view are added when calling the flash. The layout is then prepared properly and you don't see the default layout for a millisecound.</li>
+  <li>Fix: The css is now dynamically added to the header. Makes the component w3c conform in the frontend.</li>
+  <li>Fix: The settings where restructured how they belong together.</li>
+  <li>Fix: The description of many parameters where not very good. I reworked many of them. If you find they still need improvement please give me a better text.</li>
+  <li>Fix: session_double_fix error which was thrown because I forgot to define a variable.</li>
+  <li>Fix: an unlink error was thrown when the internal session cache was cleaned up because the main directory was not excluded from the cleanup.</li>
+  <li>Fix: The Mambot was ignoring the type attribute- therefore only profiles could be used and not groups. Now both work like expected</li>
+  <li>Fix: Some messages where shown twice because of a caching session bug in Joomla. I fixed this where it was confusing. Hopefully it is completely fixed in a later Joomla version v2.7.4.2</li>
+  <li>Fix: E-Mail notification was not using the Joomla login and the e-mail was not formated. Now it is.</li>
+  <li>Fix: Because of a php bug the wrong license type was shown on the help page. Now the correct one is shown.</li>
+  <li>Fix: Preview text was not shown properly - always preview not available was shown.</li> 
+</ul>  
+<p>v2.7.4.1</p>
+<ul>
+  <li>Fix: I was using parse_url with a parameter added in 5.1.2. I implemented it now the way that is works with php < 5.1.2 too.</li>
+</ul>
+<p>v2.7.4</p>
+<ul>
+  <li>New: integrated TFU 2.7.4</li>
+  <li>New: added SEF support</li>
+  <li>Fix: copy/move settings is now used. v2.7 - dev build</li>
+  <li>New: Update JFU to TFU 2.7 with all the new stuff that comes with it - check the TFU website for details!</li>
+  <li>New: License file is stored in the database when uninstalling and restored when JFU is reinstalled.</li>
+  <li>New: Multiple slection is now possible when selecting users</li>
+  <li>New: Enable/disable of profiles on the config page with AJAX.</li>
+  <li>New: You can now use chars as groupid - before only numbers where possible</li>
+  <li>New: Enhanced settings for the download button is now possible.</li>
+  <li>New: I load the configuration of Joomla in the TFU files! Therefore if session_save_path is set then JFU is using this too!</li>
+  <li>Fix: Moved some styles to the css</li>
+  <li>Fix: Added an & before the collor settings are attached. Makes the use less error prove + I added the colors the the JFU help (was in the TFU FAQ before)</li>
+  <li>Fix: Uploading to the main dir of Joomla was sometimes a problem. It was only working the 2nd time. I think it is a bug of some php versions because it happens at 5.0.3 but not on 5.2.3. I made a workaround that seems to work ;).</li> 
+</ul>  
+  
+<p>v2.5.4- 01.11.2007</p>
+<ul>
+  <li>Fix: php has a bug that prevents that the session is passed properly. I have implemented a workaround to get JFU work anyway ;).</li>
+  <li>Fix: Disabling the flash lead to an error message because I changed the signature of a method but forgot one to change ;).</li>
+</ul>  
+<p>v2.5.3  - 22.10.2007</p>
+<ul>
+  <li>Fix: added defined( '_VALID_MOS' ) or die( 'Direct Access to this script is not allowed'); to installer and uninstaller script.</li>
+</ul> 
+<p>v2.5.2 19.09.2007</p>
+<ul>
+  <li>Fix: Download was not working for registered users.</li>
+</ul>
+   
+<p>v2.5.1.1 30.08.2007</p>
+<ul>
+  <li>Fix: Disabling the profile was not showing the text from the config but a warning.</li>
+  <li>Fix: Log file handling for the mambot was disabled because everything after the include was writing to the log too. This should not be the case.</li>
+  <li>Fix: The automatic language selection was not enabled for the mambot - now it works there too.</li>
+</ul>  
+<p>v2.5.1 1.08.2007 Initial release</p>
+<ul>
+  <li>JFU  starts with 2.5.1 because the TWG Flash Uploader 2.5.1 is the base of this Joomla component/bridge. The versions of JFU will always tell you with version of TWG Flash Uploader is used.</li>
+</ul>
+</body></html>

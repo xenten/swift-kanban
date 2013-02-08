@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset
+		name="permissions"
+		label="JCONFIG_PERMISSIONS_LABEL"
+		description="JCONFIG_PERMISSIONS_DESC_JFU">
+		<field
+			name="rules"
+			type="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			filter="rules"
+			validate="rules"
+			component="com_jfuploader"
+			section="component">
+			<action name="core.admin" title="JACTION_MANAGE_JFU_CONFIG" description="JACTION_JFU_MANAGE_COMPONENT_DESC" />
+			<action name="core.manage" title="JACTION_JFU_ACCESS_UPLOAD" description="JACTION_JFU_ACCESS_UPLOAD_COMPONENT_DESC" />	
+               <action name="core.create" title="JACTION_CREATE_JFU_CREATE" description="JACTION_JFU_CREATE_COMPONENT_DESC" />
+			<action name="core.delete" title="JACTION_DELETE_JFU_DELETE" description="JACTION_JFU_DELETE_COMPONENT_DESC" />
+			<action name="core.edit" title="JACTION_EDIT_JFU_EDIT" description="JACTION_JFU_EDIT_COMPONENT_DESC" />
+			<action name="core.edit.state" title="JACTION_EDIT_JFU_USER" description="JACTION_JFU_USER_COMPONENT_DESC" />			
+		</field>
+	</fieldset>
+</config>

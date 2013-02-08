@@ -1,0 +1,13 @@
+@import "../templates/system/css/system.css" ;
+@import "../templates/system/css/general.css" ;
+@import "../templates/shaper_simplicity_ii/css/template.css" ;
+@import "../templates/shaper_simplicity_ii/css/joomla.css" ;
+@import "../templates/shaper_simplicity_ii/css/custom.css" ;
+@import "../templates/shaper_simplicity_ii/css/modules.css" ;
+@import "../templates/shaper_simplicity_ii/css/typography.css" ;
+@import "../templates/shaper_simplicity_ii/css/css3.css" ;
+@import "../templates/shaper_simplicity_ii/css/styles/style1.css" ;
+@import "../templates/shaper_simplicity_ii/css/menu.css" ;
+@import "../modules/mod_ariimageslider/mod_ariimageslider/js/themes/nivo-slider.css";
+@import "../modules/mod_ariimageslider/mod_ariimageslider/js/themes/default/style.css";
+@import "../components/com_jcomments/tpl/default/style.css?v=21";

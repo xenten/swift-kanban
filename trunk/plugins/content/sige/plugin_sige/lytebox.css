@@ -1,0 +1,24 @@
+#lbOverlay{position:fixed; top:0; left:0; z-index:99998; width:100%; height:500px; background-color: #000}
+#lbMain{position:absolute; left:0; width:100%; z-index:99999; text-align:center; line-height:0}
+#lbMain a img{border:none; background: white;}
+#lbOuterContainer{position:relative; background-color:#fff; width:200px; height:200px; margin:0 auto; border:3px solid #888}
+#lbDetailsContainer{font:10px Verdana,Helvetica,sans-serif; background-color:#fff; width:100%; line-height:1.4em; overflow:auto; margin:0 auto; border:3px solid #888; border-top:none}
+#lbImageContainer, #lbIframeContainer{padding:10px}
+#lbLoading{position:absolute; top:45%; left:0%; height:32px; width:100%; text-align:center; line-height:0; background:url(loading.gif) center no-repeat}
+#lbHoverNav{position:absolute; top:0; left:0; height:100%; width:100%; z-index:10}
+#lbImageContainer>#lbHoverNav{left:0}
+#lbHoverNav a{outline:none}
+#lbPrev{width:49%; height:100%; background:transparent url(blank.gif) no-repeat; display:block; left:0; float:left}
+#lbPrev:hover, #lbPrev:visited:hover{background:url(prevlabel.gif) left 15% no-repeat}
+#lbNext{width:49%; height:100%; background:transparent url(blank.gif) no-repeat; display:block; right:0; float:right}
+#lbNext:hover, #lbNext:visited:hover{background:url(nextlabel.gif) right 15% no-repeat}
+#lbPrev2, #lbNext2, #lbSpacer{text-decoration:none; font-weight:bold; color:#333}
+#lbPrev2_Off, #lbNext2_Off{font-weight:bold; color:#CCC}
+#lbDetailsData{padding:0 10px; color:#333}
+#lbDetails{width:60%; float:left; text-align:left}
+#lbCaption{display:block;}
+#lbNumberDisplay{float:left; display:block; padding-bottom:1.0em}
+#lbNavDisplay{float:left; display:block; padding-bottom:1.0em}
+#lbClose{width:64px; height:28px; float:right; margin-bottom:1px; background:url(closelabel.gif) no-repeat}
+#lbPlay{width:64px; height:28px; float:right; margin-bottom:1px; background:url(play.png) no-repeat}
+#lbPause{width:64px; height:28px; float:right; margin-bottom:1px; background:url(pause.png) no-repeat}

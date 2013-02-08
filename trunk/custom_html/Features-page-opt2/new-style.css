@@ -1,0 +1,23 @@
+.main-container {
+    position: relative;
+    background-image: url("features-image-opt2.jpg");
+    background-repeat: no-repeat;
+    height: 906px;
+}
+.visualize-text {
+    position: absolute;
+    top: 24px;
+    left: 8px;
+    font-size: 14px;
+    color: #6d6d6d !important;
+}
+.visualize-text a, .categorize-text a {
+    color: #6d6d6d !important;
+}
+.categorize-text {
+    position: absolute;
+    top: 75px;
+    left: 17px;
+    font-size: 14px;
+    color: #6d6d6d !important;
+}

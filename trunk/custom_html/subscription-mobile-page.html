@@ -1,0 +1,81 @@
+<link rel="stylesheet" href="css.css" type="text/css" xmlns="http://www.w3.org/1999/html"/>
+
+<div class="mobile-page-container">
+    <div class="mobile-register-head">Register for a Free Trial Account</div>
+    <div class="mobile-form-container">
+        <div class="mobile-form-row">
+            <div class="mobile-textbox">First Name<span class="mandatory-star">*</span>:</div>
+            <input id="fname" name="fname" class="mobile-input-textbox" type="text" value="" tabindex="1">
+            <div class="mobile-error-text">Enter a valid First Name</div>
+        </div>
+        <div class="mobile-form-row">
+            <div class="mobile-textbox">Last Name<span class="mandatory-star">*</span>:</div>
+            <input id="lname" name="lname" class="mobile-input-textbox" type="text" value="" tabindex="2">
+            <div class="mobile-error-text">Enter a valid Last Name</div>
+        </div>
+        <div class="mobile-form-row">
+            <div class="mobile-textbox">eMail/ Login Id<span class="mandatory-star">*</span>:</div>
+            <input id="email" name="email" class="mobile-input-textbox" type="text" value="" tabindex="3">
+            <div class="mobile-error-text">Enter a valid eMail/ Login Id</div>
+        </div>
+        <div class="mobile-form-row">
+            <div class="mobile-textbox">Contact Number:</div>
+            <input id="contact_number" name="contact_number" class="mobile-input-textbox" type="text" value="" tabindex="4">
+            <div class="mobile-error-text">Please enter a valid Contact Number</div>
+        </div>
+        <div class="mobile-form-row">
+            <div class="mobile-textbox">Intended Use<span class="mandatory-star">*</span>:</div>
+            <select class="mobile-input-textbox" tabindex="5" id="intended_use" name="intended_use"
+                    onChange="this.style.color=this.options[this.selectedIndex].style.color">
+                <option value="" selected="selected">Intended Use</option>
+                <option value="personal" style="color: #191919;">Personal</option>
+                <option value="business" style="color: #191919;">Business</option>
+                <option value="both" style="color: #191919;">Both</option>
+            </select>
+            <div class="mobile-error-text">Select a Intended Use</div>
+        </div>
+        <div class="mobile-form-row">
+            <div class="mobile-textbox">Company Name:</div>
+            <input id="company_name" name="company_name" class="mobile-input-textbox" type="text" value="" tabindex="6">
+        </div>
+        <div class="mobile-form-row">
+            <div class="mobile-textbox">How did you hear about us?<span class="mandatory-star">*</span>:</div>
+            <select id="hear-about-us" name="hear-about-us" class="mobile-input-textbox" tabindex="7" onchange="this.style.color=this.options[this.selectedIndex].style.color"
+                    value="">
+                <option value="" selected>How did you hear about us?</option>
+                <optgroup label="Web Search" style="color: #191919;">
+                    <option value="google" style="color: #191919;">&bull; Google
+                    </option>
+                    <option value="bing" style="color: #191919;">&bull; Bing</option>
+                    <option value="yahoo" style="color: #191919;">&bull; Yahoo</option>
+                    <option value="other" style="color: #191919;">&bull; Other</option>
+                </optgroup>
+                <option value="swift-kanban-webinar" style="color: #191919;">
+                    Swift-Kanban Webinar
+                </option>
+                <option value="swift-kanban-mailer" style="color: #191919;">Swift-Kanban
+                    Mailer
+                </option>
+                <option value="recommended" style="color: #191919;">Recommended by colleague/ friend
+                </option>
+                <option value="ad-media" style="color: #191919;">Ad/ Media Article
+                </option>
+                <option value="external-blog" style="color: #191919;">External Blog/
+                    Website
+                </option>
+                <option value="other1" style="color: #191919;">Other</option>
+            </select>
+            <div class="mobile-error-text">Select a How did you hear about us</div>
+        </div>
+        <div class="mobile-form-row">
+            <div class="mobile-textbox">Promotion Code:</div>
+            <input id="promotion_code" name="promotion_code" class="mobile-input-textbox" type="text" value="" tabindex="8">
+        </div>
+        <div>
+            <div class="mobile-get-started-heading">Get Started with Swift-Kanban</div>
+            <div class="get-started-text">By clicking Get Started with Swift-Kanban you agree to our Terms
+                of Service and Privacy Policy.
+            </div>
+        </div>
+    </div>
+</div>

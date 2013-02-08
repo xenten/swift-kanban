@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+    <title>Swift Kanban Blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+    <meta name="robots" content="noindex,nofollow"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"></script>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <script language="JavaScript1.2">
+        function follow_twitter() {
+            window.open("https://twitter.com/intent/follow?screen_name=swiftkanban", "mywindow", "menubar=1,resizable=0,width=565,height=520");
+        }
+    </script>
+
+
+    <style type="text/css">
+        body{
+            font-family: "Open Sans";
+        }
+
+        .subscribe-blog-block {
+            font-size: 14px;
+            padding: 0;
+            overflow: auto;
+            margin-bottom: 10px;
+            line-height: 22px;
+            width: 234px;
+            text-align: center;
+        }
+
+        .subscribe-main-content {
+            border-radius: 0px 0px 5px 5px;
+            -moz-border-radius: 0px 0px 5px 5px;
+            -webkit-border-radius: 0px 0px 5px 5px;
+            border-left: 1px solid #E8E8E8;
+            border-right: 1px solid #E8E8E8;
+            border-bottom: 1px solid #E8E8E8;
+            overflow: auto;
+            padding-bottom: 0px;
+            padding-top: 10px;
+            background-color: whiteSmoke;
+        }
+
+        .subscribe-head {
+            font-size: 14px;
+            border-radius: 5px 5px 0px 0px;
+            -moz-border-radius: 5px 5px 0px 0px;
+            -webkit-border-radius: 5px 5px 0px 0px;
+            color: #ffffff;
+            background-color: #62bae7;
+            height: 28px;
+            font-weight: 600;
+            text-align: left;
+            padding: 5px 10px 0px 10px;
+            margin: 0;
+        }
+
+        .subscribe-blog-content {
+            padding: 5px 10px;
+            text-align: left;
+            overflow: auto;
+        }
+
+        .blog-textbox {
+            font-size: 13px;
+            border: 1px solid #c5c5c5;
+            width: 205px !important;
+            color: #868686;
+            padding: 5px;
+            height: 28px;
+        }
+
+        .subscribe-btn {
+            cursor: pointer;
+            text-align: center;
+            font: normal 13px Arial, Helvetica, sans-serif !important;
+            text-decoration: none;
+            text-transform: none !important;
+            background: url(http://www.swift-kanban.com/images/blog/subscribe-btn-bg.png) repeat-x 0 100% !important;
+            margin: 0;
+            border: none !important;
+            color: #ffffff !important;
+            padding: 5px 0px;
+            margin-top: 9px !important;
+            width: 75px;
+        }
+
+        .subscribe-btn-box {
+            width: 80px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .subscribe-social-icons {
+            background-color: #ffffff;
+            border-radius: 0px 0px 5px 5px;
+            -moz-border-radius: 0px 0px 5px 5px;
+            -webkit-border-radius: 0px 0px 5px 5px;
+            margin-top: 10px;
+            padding: 8px 8px 3px 8px;
+            text-align: left;
+            font-family: Arial;
+            font-size: 12px;
+            color: #191919;
+            overflow: auto;
+            clear: both;
+        }
+        .social-icons-text {
+            float: left;
+            margin-right: 5px;
+        }
+
+        .social-icons-block {
+            float: left;
+            margin-top: 3px;
+        }
+    </style>
+
+
+    <script type="text/javascript">
+
+        function getFocus(inputEl) {
+            if (inputEl.value === inputEl.defaultValue) {
+                inputEl.value = "";
+                inputEl.style.color = "#000000";
+            }
+        }
+        function loseFocus(inputEl) {
+            if (inputEl.value === "") {
+                inputEl.value = inputEl.defaultValue;
+                inputEl.style.color = "#868686";
+            }
+        }
+
+    </script>
+
+<div class="subscribe-blog-block">
+    <form style="text-align:center;" action="http://app.streamsend.com/public/RQpU/7k8/subscribe" method="post">
+        <div class="subscribe-head">Subscribe to Kanban Blog</div>
+        <div class="subscribe-main-content">
+            <div class="subscribe-blog-content"><input type="text" class="blog-textbox" name="eMail_id"
+                                                       value="Enter your eMail Id" onfocus="getFocus(this);"
+                                                       onblur="loseFocus(this);"/></div>
+            <div class="subscribe-btn-box"><input type="hidden" value="feedsportal/zXPU" name="uri"/>
+                <input type="hidden" id="person_email_content_format" name="person[email_content_format]" value="html"/>
+                <input type="submit" value="Subscribe" class="subscribe-btn"/></div>
+            <div class="subscribe-social-icons">
+                <div class="social-icons-text">Subscribe on:</div>
+                <div class="social-icons-block">
+                    <a href="http://feeds.feedburner.com/swiftkanban" target="_blank"><img src="https://www.swift-kanban.com/modules/mod_socialmedialinks/icons/default/size1/feed.png"/></a>&nbsp;
+                    <a href="https://www.facebook.com/digite" target="_blank"><img src="https://www.swift-kanban.com/modules/mod_socialmedialinks/icons/default/size1/facebook.png"/></a>&nbsp;
+                    <a href="javascript: follow_twitter()"><img src="https://www.swift-kanban.com/modules/mod_socialmedialinks/icons/default/size1/twitter.png"/></a>&nbsp;
+                    <a href="https://www.swift-kanban.com/ln" target="_blank"><img src="https://www.swift-kanban.com/modules/mod_socialmedialinks/icons/default/size1/linkedin.png"/></a>&nbsp;
+                    <a href="http://www.youtube.com/digiteswift" target="_blank"><img src="https://www.swift-kanban.com/modules/mod_socialmedialinks/icons/default/size1/youtube.png"/></a>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

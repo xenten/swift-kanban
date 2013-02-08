@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="package" method="upgrade">
+	<packagename>JFUploader</packagename>
+	<packager>Michael Dempfle</packager>
+	<name>JFUploader</name>
+	<author>Michael Dempfle</author>
+	<creationDate>Nov 2011</creationDate>
+	<copyright>This extension is released under the GNU/GPL License.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html	GNU/GPL</license>
+  <authorEmail>jfu@mdempfle.de</authorEmail>
+  <authorUrl>jfu.tinywebgallery.com</authorUrl>
+	<version>2.15</version>
+	<files>
+		<file id="COM_JFUPLOADER" type="component">com_jfuploader_215_J16.zip</file>
+		<file id="PLG_CONTENT_JFUPLOADER" type="plugin" group="content" client="site">plg_jfuploader_215_J16.zip</file>
+		<file id="PLG_EDITOR_XLD_JFU_NAME" type="plugin" group="content" client="site">plg_jfuploader_215_J16_editors-xtd.zip</file>
+	</files>
+</extension>

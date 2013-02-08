@@ -1,0 +1,63 @@
+/*---------------------------------------------------------------
+# Package - Helix Framework  
+# ---------------------------------------------------------------
+# Author - JoomShaper http://www.joomshaper.com
+# Copyright (C) 2010 - 2011 JoomShaper.com. All Rights Reserved.
+# license - PHP files are licensed under  GNU/GPL V2
+# license - CSS  - JS - IMAGE files  are Copyrighted material 
+# Websites: http://www.joomshaper.com - http://www.joomxpert.com
+-----------------------------------------------------------------*/
+input[type=radio] {border:0!important}
+html{border-bottom:1px solid transparent;min-height:100%}
+.helix-desc h1 {font-size:250%;color: #16a9e1;margin:0 0 5px 0;padding:0}
+.helix-desc h2 {font-size:200%;margin:10px 0 5px 0;padding:0}
+.helix-desc h3 {font-size:130%;margin:15px 0 5px 0;padding:0}
+
+.tabs-item fieldset,.helix-details fieldset{border:none!important;margin-bottom:0!important;padding:0!important;text-align:left}
+.adminformlist li >label{display:block;font-size:1.091em!important;margin-right:20px!important;padding-right:15px!important;text-align:right!important;width:130px!important}
+.helix-details ul.adminformlist li{float:left;margin-right:10px}
+.helix-details ul.adminformlist li >label{display:block;font-size:1.091em!important;margin-right:10px!important;min-width:30px!important;padding-right:10px!important;text-align:right!important;width:auto!important}
+.helix-details input#jform_title,.helix-details input#jform_template,.helix-details input.readonly{font-size:13px!important;color:#777!important;line-height:16px;border:1px solid #d3d3d3!important}
+input.readonly {display:none!important;}
+input#jform_template.readonly {margin-top:4px!important;display:block!important;padding:1px 0!important}
+.helix-details input#jform_title{width:250px}
+.helix-details input#jform_template{width:150px}
+.helix-details input.readonly{width:50px}
+input.required{background-color:transparent!important}
+fieldset.adminform > label{display:none}
+.helix-details{margin-bottom:10px}
+.helix-details input.readonly,.helix-details span.readonly,.helix-details #jform_id{background:transparent;color:#666;font-size:18px;font-weight:400;margin:0;padding:0}
+
+#sp_spinner{background:url(images/loader.gif) no-repeat 0 0;display:block;height:16px;margin:10px auto;width:16px}
+.sp_update{border-bottom:1px dotted #d1d1d1;clear:both;line-height:25px}
+#sp_update_div p{color:#666;font-size:11px;text-align:left;margin-top:.7em}
+
+.line_separator.hasText{color:#999;cursor:pointer;font-size:10px;line-height:1px;padding-left:100px}
+.line_separator{background:#E5E5E5;clear:both;display:block;height:5px;margin:5px 0}
+.line_separator.hasText span{background:#FFF;padding:4px}
+.text-limit{text-align:right}
+
+.helix-title-area{background:url(images/helix.png) no-repeat 100% 0;border-bottom:4px solid #0ea5de;height:32px;padding-top:6px}
+ul.helix-tabs{list-style:none;margin:0;padding:0}
+ul.helix-tabs li.tabs-title{color:#666;float:left;font-family:"Lucida Grande",Arial,sans-serif;font-size:11px;font-weight:700!important;margin:0;padding:0 5px 0 0;text-align:center;min-height:10px;}
+ul.helix-tabs li.tabs-title span.tab-l{background:url(images/tab-l.png) no-repeat 0 0;display:block}
+ul.helix-tabs li.tabs-title span.tab-r{background:url(images/tab-r.png) no-repeat 100% 0;color:#666;display:block!important;line-height:32px;margin-left:5px;padding:0 10px 0 4px}
+ul.helix-tabs li.tabs-title.open span.tab-l{background:url(images/tab-active-l.png) no-repeat 0 0}
+ul.helix-tabs li.tabs-title.open span.tab-r{background:url(images/tab-active-r.png) no-repeat 100% 0;color:#fff}
+ul.helix-tabs li#sp-basic span.tab-text{background:url(images/icons/basic.png) no-repeat 0 50%;padding-left:18px}
+ul.helix-tabs li#sp-menu span.tab-text{background:url(images/icons/menu.png) no-repeat 0 50%;padding-left:18px}
+ul.helix-tabs li#sp-fonts span.tab-text{background:url(images/icons/font.png) no-repeat 0 50%;padding-left:18px}
+ul.helix-tabs li#sp-template-specific span.tab-text{background:url(images/icons/template-specific.png) no-repeat 0 50%;padding-left:18px}
+ul.helix-tabs li#sp-menu-assign span.tab-text{background:url(images/icons/menu-assigned.png) no-repeat 0 50%;padding-left:18px}
+ul.helix-tabs li#sp-advanced span.tab-text{background:url(images/icons/advanced.png) no-repeat 0 50%;padding-left:18px}
+ul.helix-tabs li#sp-help-update span.tab-text{background:url(images/icons/help.png) no-repeat 0 50%;padding-left:18px}
+div.helix-panel{border:1px solid #e5e5e5;clear:both;padding:10px}
+.helix-params-area{background:#fff;border:1px solid #e5e5e5;float:left;min-height:400px;width:58%;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px}
+.helix-desc{background:#fff;border:1px solid #e5e5e5;float:right;overflow:hidden;padding:10px;width:38%;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px}
+.tabs-item{padding:10px}
+
+div#menu-assignment ul.menu-links{float:left;list-style:none outside none;margin:0;padding:0;width:49%}
+
+fieldset.adminform legend{display:none!important}
+.clearfix:after{clear:both;content:' ';display:block;font-size:0;height:0;line-height:0;visibility:hidden;width:0}
+* html .clearfix,:first-child+html .clearfix{zoom:1}

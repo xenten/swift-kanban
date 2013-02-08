@@ -1,0 +1,37 @@
+<!--<script language="JavaScript1.2">
+    function follow_twitter() {
+        window.open("https://twitter.com/intent/follow?original_referer=http%3A%2F%2Fwww.swift-kanban.com%2Ftest%2Ftest-font-data-uri.html&region=follow_link&screen_name=swiftkanban&tw_p=followbutton&variant=2.0", "mywindow", "menubar=1,resizable=0,width=565,height=520");
+    }
+</script>-->
+
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+
+<script>
+    var follow_twitter=function() {
+        $( "#dialog" ).dialog();
+    };
+</script>
+
+<div id="dialog" style="display: none;">
+    <iframe height="200" src="https://twitter.com/intent/follow?screen_name=swiftkanban" width="243"></iframe>
+</div>
+
+
+<br/>
+
+<p>
+    <a href="javascript: follow_twitter();"><input type="button" value="Follow @swiftkanban"></a>
+</p>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="http://www.facebook.com/digite" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.6/component-install.dtd">
+<extension type="component" version="1.6.0" method="upgrade"> 
+  <name>COM_JFUPLOADER</name>
+  <creationDate>Dez 2011</creationDate>
+  <author>Michael Dempfle</author>
+  <copyright>Freeeware</copyright>
+  <authorEmail>jfu@mdempfle.de</authorEmail>
+  <authorUrl>jfu.tinywebgallery.com</authorUrl>
+  <version>2.15.1</version>
+  <license>GNU GPL</license>
+  <description>COM_JFUPLOADER_XML_DESCRIPTION</description>
+  <files folder="site">
+    <filename>jfuploader.php</filename>
+    <filename>jfuploader.html.php</filename>
+    <filename>jfuploader.css</filename>
+    <filename>jfuploader.js</filename>
+    <filename>controller.php</filename>
+    <filename>index.html</filename>    
+    <folder>images</folder>
+    <folder>views</folder>
+  </files>
+   <updateservers>
+      <server type="extension" name="JFUploader update site">http://www.tinywebgallery.com/update/com_jfuploader/extension.xml</server>
+   </updateservers>
+  <languages folder="site">
+    <language tag="en-GB">language/en-GB/en-GB.com_jfuploader.ini</language>
+    <language tag="de-DE">language/de-DE/de-DE.com_jfuploader.ini</language>
+   </languages>
+ <scriptfile>jfuploader.scriptfile.php</scriptfile>
+  <administration>
+    <menu img="../administrator/components/com_jfuploader/images/jfu_menu_icon.png">COM_JFUPLOADER_MENU</menu>
+    <submenu>
+      <menu img="../administrator/components/com_jfuploader/images/jfu_menu_icon.png" act="upload">COM_JFUPLOADER_UPLOAD_MENU</menu>
+      <menu img="class:config" act="config">COM_JFUPLOADER_CONFIG_MENU</menu>
+      <menu img="class:user" act="user">COM_JFUPLOADER_USERS_MENU</menu>
+      <menu img="../administrator/components/com_jfuploader/images/jfu_plugin_menu.png" act="plugins">COM_JFUPLOADER_PLUGINS_MENU</menu>
+      <menu img="class:info" act="help">COM_JFUPLOADER_INFO_MENU</menu>
+    </submenu>
+    <languages folder="admin">
+      <language tag="en-GB">language/en-GB/en-GB.com_jfuploader.ini</language>
+      <language tag="en-GB">language/en-GB/en-GB.com_jfuploader.sys.ini</language>
+      <language tag="de-DE">language/de-DE/de-DE.com_jfuploader.ini</language>
+      <language tag="de-DE">language/de-DE/de-DE.com_jfuploader.sys.ini</language>
+    </languages>
+    <files folder="admin">
+      <folder>tfu</folder>
+      <folder>images</folder>
+      <folder>js</folder>
+      <folder>help</folder>
+      <filename>config.xml</filename>
+      <filename>admin.jfuploader.php</filename>
+      <filename>admin.jfuploader.html.php</filename>
+      <filename>jfuploader.class.php</filename>
+      <filename>toolbar.jfuploader.php</filename>
+      <filename>toolbar.jfuploader.html.php</filename> 
+      <filename>jfuploader.css</filename>
+      <filename>history.htm</filename>
+      <filename>index.htm</filename>
+      <filename>license.txt</filename>
+      <filename>readme.txt</filename>  
+    </files>
+  </administration>
+</extension>

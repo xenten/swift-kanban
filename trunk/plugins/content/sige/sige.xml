@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="2.5" group="content" method="upgrade">
+    <name>PLG_CONTENT_SIGE</name>
+    <author>Viktor Vogel</author>
+    <creationDate>16-Aug-2012</creationDate>
+    <copyright>This extension in released under the GNU/GPL License - http://www.gnu.org/copyleft/gpl.html</copyright>
+    <authorEmail>admin@kubik-rubik.de</authorEmail>
+    <authorUrl>http://joomla-extensions.kubik-rubik.de/</authorUrl>
+    <version>2.5-4</version>
+    <description>PLG_CONTENT_SIGE_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="sige">sige.php</filename>
+        <filename plugin="sige">index.html</filename>
+        <folder plugin="sige">plugin_sige</folder>
+        <folder plugin="sige">fields</folder>
+    </files>
+    <languages>
+        <language tag="en-GB">language/en-GB/en-GB.plg_content_sige.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.plg_content_sige.sys.ini</language>
+        <language tag="de-DE">language/de-DE/de-DE.plg_content_sige.ini</language>
+        <language tag="de-DE">language/de-DE/de-DE.plg_content_sige.sys.ini</language>
+        <language tag="it-IT">language/it-IT/it-IT.plg_content_sige.ini</language>
+        <language tag="it-IT">language/it-IT/it-IT.plg_content_sige.sys.ini</language>
+        <language tag="zh-TW">language/zh-TW/zh-TW.plg_content_sige.ini</language>
+        <language tag="zh-TW">language/zh-TW/zh-TW.plg_content_sige.sys.ini</language>
+        <language tag="fr-FR">language/fr-FR/fr-FR.plg_content_sige.ini</language>
+        <language tag="fr-FR">language/fr-FR/fr-FR.plg_content_sige.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params" addfieldpath="/plugins/content/sige/fields">
+            <fieldset name="SIGE_GALLERY">
+                <field type="krdonationcodecheck" />
+                <field type="krversioncheck" name="krversioncheck" default="sige|2.5-4" />
+                <field name="thumbs" type="list" default="0" label="PLG_CONTENT_SIGE_THUMBS" description="PLG_CONTENT_SIGE_THUMBSDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="thumbs_new" type="list" default="0" label="PLG_CONTENT_SIGE_THUMBSNEW" description="PLG_CONTENT_SIGE_THUMBSNEWDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="root" type="list" default="0" label="PLG_CONTENT_SIGE_ROOT" description="PLG_CONTENT_SIGE_ROOTDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="gap_v" type="text" default="30" size="5" label="PLG_CONTENT_SIGE_GAPV" description="PLG_CONTENT_SIGE_GAPVDESC" />
+                <field name="gap_h" type="text" default="30" size="5" label="PLG_CONTENT_SIGE_GAPH" description="PLG_CONTENT_SIGE_GAPHDESC" />
+                <field name="random" type="list" default="2" label="PLG_CONTENT_SIGE_RANDOM" description="PLG_CONTENT_SIGE_RANDOMDESC">
+                    <option value="1">JYES</option>
+                    <option value="2">PLG_CONTENT_SIGE_NOASC</option>
+                    <option value="3">PLG_CONTENT_SIGE_NODESC</option>
+                    <option value="4">PLG_CONTENT_SIGE_TIMEASC</option>
+                    <option value="5">PLG_CONTENT_SIGE_TIMEDESC</option>
+                </field>
+                <field name="view" type="list" default="0" label="PLG_CONTENT_SIGE_VIEW" description="PLG_CONTENT_SIGE_VIEWDESC">
+                    <option value="0">Slimbox</option>
+                    <option value="1">Lytebox</option>
+                    <option value="2">Lyteshow</option>
+                    <option value="3">Shadowbox</option>
+                    <option value="4">Milkbox</option>
+                </field>
+                <field name="js" type="list" default="0" label="PLG_CONTENT_SIGE_JS" description="PLG_CONTENT_SIGE_JSDESC">
+                    <option value="0">PLG_CONTENT_SIGE_SLIMBOXJS</option>
+                    <option value="1">PLG_CONTENT_SIGE_LYTEBOXJS</option>
+                    <option value="2">PLG_CONTENT_SIGE_SHADOWBOXJS</option>
+                    <option value="3">PLG_CONTENT_SIGE_MILKBOXJS</option>
+                    <option value="4">JNO</option>
+                </field>
+                <field name="limit" type="list" default="0" label="PLG_CONTENT_SIGE_LIMIT" description="PLG_CONTENT_SIGE_LIMITDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="limit_quantity" type="text" default="10" size="5" label="PLG_CONTENT_SIGE_LIMITQUANTITY" description="PLG_CONTENT_SIGE_LIMITQUANTITYDESC" />
+                <field name="column_quantity" type="text" default="" size="5" label="PLG_CONTENT_SIGE_COLUMNQUANTITY" description="PLG_CONTENT_SIGE_COLUMNQUANTITYDESC" />
+                <field name="css_image" type="list" default="0" label="PLG_CONTENT_SIGE_CSSIMAGE" description="PLG_CONTENT_SIGE_CSSIMAGEDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="css_image_half" type="list" default="0" label="PLG_CONTENT_SIGE_CSSIMAGEHALF" description="PLG_CONTENT_SIGE_CSSIMAGEHALFDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="noslim" type="list" default="0" label="PLG_CONTENT_SIGE_NOSLIM" description="PLG_CONTENT_SIGE_NOSLIMDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="list" type="list" default="0" label="PLG_CONTENT_SIGE_LIST" description="PLG_CONTENT_SIGE_LISTDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="caption" type="list" default="0" label="PLG_CONTENT_SIGE_CAPTION" description="PLG_CONTENT_SIGE_CAPTIONDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="image_link" type="text" default="" size="50" label="PLG_CONTENT_SIGE_IMAGELINK" description="PLG_CONTENT_SIGE_IMAGELINKDESC" />
+                <field name="image_link_new" type="list" default="0" label="PLG_CONTENT_SIGE_IMAGELINKNEW" description="">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="copyright" type="list" default="1" label="PLG_CONTENT_SIGE_COPYRIGHT" description="PLG_CONTENT_SIGE_COPYRIGHTDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+            </fieldset>
+            <fieldset name="SIGE_THUMBNAIL">
+                <field name="width" type="text" default="200" size="5" label="PLG_CONTENT_SIGE_WIDTHTHUMBS" description="PLG_CONTENT_SIGE_WIDTHTHUMBSDESC" />
+                <field name="height" type="text" default="200" size="5" label="PLG_CONTENT_SIGE_HEIGHTTHUMBS" description="PLG_CONTENT_SIGE_HEIGHTTHUMBSDESC" />
+                <field name="ratio" type="list" default="1" label="PLG_CONTENT_SIGE_RATIO" description="">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="calcmaxthumbsize" type="list" default="1" label="PLG_CONTENT_SIGE_CALCMAXTHUMBSIZE" description="PLG_CONTENT_SIGE_CALCMAXTHUMBSIZEDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="quality" type="text" default="80" size="5" label="PLG_CONTENT_SIGE_QUALITYJPG" description="PLG_CONTENT_SIGE_QUALITYJPGDESC" />
+                <field name="quality_png" type="text" default="6" size="5" label="PLG_CONTENT_SIGE_QUALITYPNG" description="PLG_CONTENT_SIGE_QUALITYPNGDESC" />
+                <field name="thumbdetail" type="list" default="0" label="PLG_CONTENT_SIGE_THUMBNAILDETAIL" description="PLG_CONTENT_SIGE_THUMBNAILDETAILDESC">
+                    <option value="0">1:1</option>
+                    <option value="1">PLG_CONTENT_SIGE_TOPLEFT</option>
+                    <option value="2">PLG_CONTENT_SIGE_TOPRIGHT</option>
+                    <option value="3">PLG_CONTENT_SIGE_BOTTOMLEFT</option>
+                    <option value="4">PLG_CONTENT_SIGE_BOTTOMRIGHT</option>
+                </field>
+                <field name="crop" type="list" default="0" label="PLG_CONTENT_SIGE_CROP" description="PLG_CONTENT_SIGE_CROPDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="crop_factor" type="text" default="50" size="5" label="PLG_CONTENT_SIGE_CROPFACTOR" description="PLG_CONTENT_SIGE_CROPFACTORDESC" />
+            </fieldset>
+            <fieldset name="SIGE_IMAGE">
+                <field name="resize_images" type="list" default="0" label="PLG_CONTENT_SIGE_RESIZEIMAGES" description="PLG_CONTENT_SIGE_RESIZEIMAGESDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="images_new" type="list" default="0" label="PLG_CONTENT_SIGE_IMAGESNEW" description="PLG_CONTENT_SIGE_IMAGESNEWDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="width_image" type="text" default="800" size="5" label="PLG_CONTENT_SIGE_WIDTHIMAGETHUMBS" description="PLG_CONTENT_SIGE_WIDTHIMAGETHUMBSDESC" />
+                <field name="height_image" type="text" default="800" size="5" label="PLG_CONTENT_SIGE_HEIGHTIMAGETHUMBS" description="PLG_CONTENT_SIGE_HEIGHTIMAGETHUMBSDESC" />
+                <field name="ratio_image" type="list" default="1" label="PLG_CONTENT_SIGE_RATIOIMAGE" description="">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+            </fieldset>
+            <fieldset name="SIGE_JSVIEW">
+                <field name="image_info" type="list" default="1" label="PLG_CONTENT_SIGE_IMAGEINFO" description="PLG_CONTENT_SIGE_IMAGEINFODESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="fileinfo" type="list" default="0" label="PLG_CONTENT_SIGE_FILEINFO" description="PLG_CONTENT_SIGE_FILEINFODESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="iptc" type="list" default="0" label="PLG_CONTENT_SIGE_IPTC" description="PLG_CONTENT_SIGE_IPTCDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="iptcutf8" type="list" default="0" label="PLG_CONTENT_SIGE_IPTCUTF8" description="PLG_CONTENT_SIGE_IPTCUTF8DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="download" type="list" default="0" label="PLG_CONTENT_SIGE_DOWNLOAD" description="PLG_CONTENT_SIGE_DOWNLOADDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="print" type="list" default="0" label="PLG_CONTENT_SIGE_PRINT" description="PLG_CONTENT_SIGE_PRINTDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="displaynavtip" type="list" default="0" label="PLG_CONTENT_SIGE_DISPLAYNAVTIP" description="">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="navtip" type="text" default="" size="50" label="PLG_CONTENT_SIGE_NAVTIP" description="PLG_CONTENT_SIGE_NAVTIPDEFAULT" />
+                <field name="displaymessage" type="list" default="0" label="PLG_CONTENT_SIGE_DISPLAYMESSAGE" description="">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="message" type="text" default="" size="50" label="PLG_CONTENT_SIGE_MESSAGE" description="PLG_CONTENT_SIGE_MESSAGEDEFAULT" />
+            </fieldset>
+            <fieldset name="SIGE_PLG_CONTENT_SIGE_WATERMARK">
+                <field name="watermark" type="list" default="0" label="PLG_CONTENT_SIGE_WATERMARK" description="PLG_CONTENT_SIGE_WATERMARKDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="watermark_new" type="list" default="0" label="PLG_CONTENT_SIGE_WATERMARKNEW" description="PLG_CONTENT_SIGE_WATERMARKNEWDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="watermarkposition" type="list" default="0" label="PLG_CONTENT_SIGE_WATERMARKPOSITION" description="">
+                    <option value="0">CENTER</option>
+                    <option value="1">PLG_CONTENT_SIGE_TOPLEFT</option>
+                    <option value="2">PLG_CONTENT_SIGE_TOPRIGHT</option>
+                    <option value="3">PLG_CONTENT_SIGE_BOTTOMLEFT</option>
+                    <option value="4">PLG_CONTENT_SIGE_BOTTOMRIGHT</option>
+                </field>
+                <field name="encrypt" type="list" default="1" label="PLG_CONTENT_SIGE_ENCRYPT" description="ENCRYPTDESC">
+                    <option value="0">ROT13</option>
+                    <option value="1">MD5</option>
+                    <option value="2">SHA1</option>
+                </field>
+            </fieldset>
+            <fieldset name="donation">
+                <field name="donation_code" type="text" default="" size="40" label="KR_DONATION_CODE" description="KR_DONATION_CODEDESC" />
+            </fieldset>
+            <fieldset name="versioncheck">
+                <field name="versioncheck_enable" type="list" default="1" label="KR_VERSION_CHECK" description="KR_VERSION_CHECKDESC">
+                    <option value="1">KR_VERSION_CHECK_ONCESESSION</option>
+                    <option value="2">KR_VERSION_CHECK_ONEVERYLOAD</option>
+                    <option value="0">JNO</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

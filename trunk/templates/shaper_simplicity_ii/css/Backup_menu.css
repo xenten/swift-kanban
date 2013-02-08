@@ -1,0 +1,168 @@
+/*---------------------------------------------------------------
+
+# Package - Joomla Template based on Helix Framework   
+
+# ---------------------------------------------------------------
+
+# Author - JoomShaper http://www.joomshaper.com
+
+# Copyright (C) 2010 - 2011 JoomShaper.com. All Rights Reserved.
+
+# license - PHP files are licensed under  GNU/GPL V2
+
+# license - CSS  - JS - IMAGE files  are Copyrighted material 
+
+# Websites: http://www.joomshaper.com - http://www.joomxpert.com
+
+-----------------------------------------------------------------*/
+
+#hornav,#sublevel {position:relative}
+
+#hornav ul.sp-menu { margin: 10px}
+
+#sublevel ul.sp-menu { padding: 10px}
+
+#hornav .megacol,#sublevel .megacol {float:left}
+
+#sublevel ul.empty,#sublevel li.empty {height:0px!important;display:none} 
+
+#hornav ul li,#sublevel ul li{background:none;padding:0;margin:0} 
+
+/*Top Level*/
+
+#hornav{
+background: #efefef url(../images/nav-bg.gif) repeat-x 0 0;
+padding:0 3px;border-top:1px solid #e5e5e5;
+border-bottom:1px solid #e5e5e5
+
+}
+
+
+
+#sublevel{margin-top:-1px}
+
+
+
+#hornav ul.level-0,
+
+#sublevel ul.level-1{float:left;margin:0;padding:0}
+
+
+
+#hornav ul.level-0 > li.menu-item,
+
+#sublevel ul.level-1 > li.menu-item{background:none;display:block;float:left;margin: 0 0 0 0;}
+
+
+
+#hornav ul.level-0 > li.menu-item.last,
+
+#sublevel ul.level-1 > li.menu-item.last {}
+
+
+
+#hornav ul.level-0 > li.menu-item > a.menu-item,
+
+#sublevel ul.level-1 > li.menu-item > a.menu-item{display:block;font-size:12px;font-weight:700;line-height:normal;text-decoration:none;margin:0!important;padding: 5px 14px 10px 7px;}
+
+
+
+#hornav ul.level-0 > li.menu-item span.has-image,
+
+#sublevel ul.level-1 > li.menu-item span.has-image{padding-left:18px;display:block;background-repeat:no-repeat;background-position:0 50%}
+
+
+
+#hornav ul.level-0 > li.menu-item span.menu-title,
+
+#sublevel ul.level-1 > li.menu-item span.menu-title{display:block}
+
+
+
+#hornav ul.level-0 > li.menu-item span.menu-desc,
+
+#sublevel ul.level-1 > li.menu-item span.menu-desc{display:block;font-weight:400;font-size:92%}
+
+
+
+#hornav ul.level-0 > li.parent > a.menu-item span.menu,
+
+#sublevel ul.level-1 > li.parent > a.menu-item span.menu {display:block;background: none; padding-right: 0!important;padding-left:0!important}
+
+
+
+#hornav ul li.parent > a.menu-item span.menu,
+
+#sublevel ul li.parent > a.menu-item span.menu {display:block;padding-right: 12px;}
+
+
+
+/*Submenu*/
+
+#hornav li .submenu,#sublevel li .submenu {position: absolute;display:none;z-index:9999}
+
+
+
+/*Styling subnav*/
+
+#hornav {position:relative;border-bottom: 3px solid #468CC8;}
+
+
+
+#hornav ul ul,
+
+#sublevel ul ul {float: none;}
+
+
+
+#hornav li.menu-item li.menu-item,
+
+#sublevel li.menu-item li.menu-item {background:none;display:block;margin:0;padding:0;float:none}
+
+
+
+#hornav li.menu-item li.menu-item.first,
+
+#sublevel li.menu-item li.menu-item.first { background-image: none!important; }
+
+
+
+#hornav li.menu-item li.menu-item a.menu-item,
+
+#sublevel li.menu-item li.menu-item a.menu-item{display:block;font-size:92%;font-weight:400;line-height:normal;text-decoration:none;margin:0;padding:7px 5px;color:#fff}
+
+
+
+/*Dropline or Split menu*/
+
+#sublevel ul.level-1 > li.menu-item{background:none;margin-top:1px}
+
+#sublevel ul.level-1 > li.menu-item > a.menu-item{padding:7px 5px!important}
+
+#sublevel ul.level-1 > li.menu-item span.has-image{}
+
+#sublevel ul.level-1 > li.menu-item span.menu-title{}
+
+#sublevel ul.level-1 > li.menu-item span.menu-desc{}
+
+
+
+/*Group*/
+
+* html .group{height:0}
+
+#hornav ul li.menu-item .group{background:none!important;overflow:hidden}
+
+#hornav .group-content ul.sp-menu{margin:10px 0!important}
+
+#hornav .group-title{overflow:hidden;color:#fff}
+
+#hornav .group-title .menu-title{font-size:100%;font-weight:400;line-height:normal;text-transform:uppercase;color:#fff}
+
+#hornav .group-title .menu-desc{padding-left:0!important;color:#e5e5e5}
+
+/* Added to hide(not Remove) second level of sub-menus - Ravish*/
+.level-2
+{
+    display: none;
+}
