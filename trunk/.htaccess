@@ -82,6 +82,7 @@ RewriteRule .* index.php [L]
 
 # Added for Custom 404 Error
 ErrorDocument 404 https://www.swift-kanban.com
+ErrorDocument 500 https://www.swift-kanban.com
 
 #SD Times Redirect
 redirect 301 /free https://login.swift-kanban.com/pui/mregistration.html?utm_source=SD%2BTimes&utm_medium=print&utm_campaign=SD%2BTimes%2BAd
