@@ -1,0 +1,4 @@
+#cleanData .mc-button {position: relative;}
+#cleanData .mc-button .spinner {display: none;position:absolute;left:7px;}
+#cleanData .mc-button.loading a {padding-left: 20px;}
+#cleanData .mc-button.loading .spinner {display: block;}

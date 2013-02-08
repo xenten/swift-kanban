@@ -1,0 +1,18 @@
+/*---------------------------------------------------------------
+# Package - Helix Framework  
+# ---------------------------------------------------------------
+# Author - JoomShaper http://www.joomshaper.com
+# Copyright (C) 2010 - 2011 JoomShaper.com. All Rights Reserved.
+# license - PHP files are licensed under  GNU/GPL V2
+# license - CSS  - JS - IMAGE files  are Copyrighted material 
+# Websites: http://www.joomshaper.com - http://www.joomxpert.com
+-----------------------------------------------------------------*/
+.sp-toppanel-wrap{position:relative;display:none;z-index:99999}
+#sp-toppanel{margin:0}
+#toppanel_container{width:100%;position:absolute;top:0;left:0;z-index:999}
+#toppanel-handler,.handler-left,.handler-right,.handler-mid{height:19px}
+#toppanel-handler{width:120px;display:block;cursor:pointer;position:absolute;left:50%;margin-left:-70px;bottom:-19px;text-align:center;color:#fff;font-size:10px;font-weight:700}
+.handler-left{background:url(images/toppanel-l.png) no-repeat 0 0}
+.handler-right{background:url(images/toppanel-r.png) no-repeat 100% 0;padding:0 20px}
+.handler-mid{background:url(images/toppanel-m.png) repeat-x 0 0}
+#sp-top{color:#666;background:#f5f5f5;min-height:320px;}

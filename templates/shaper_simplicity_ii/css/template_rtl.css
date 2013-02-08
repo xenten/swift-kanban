@@ -1,0 +1,81 @@
+/*---------------------------------------------------------------
+# Package - Joomla Template based on Helix Framework   
+# ---------------------------------------------------------------
+# Author - JoomShaper http://www.joomshaper.com
+# Copyright (C) 2010 - 2011 JoomShaper.com. All Rights Reserved.
+# license - PHP files are licensed under  GNU/GPL V2
+# license - CSS  - JS - IMAGE files  are Copyrighted material 
+# Websites: http://www.joomshaper.com - http://www.joomxpert.com
+-----------------------------------------------------------------*/
+html{direction:rtl}
+a#logo,#logo-text {float:right;background-position:100% 50%!important}
+/*Search*/
+#search{float:left}
+div.font-sizer{right:auto;left:10px}
+#sp-leftcol, #sp-rightcol, #sp-maincol ,#inset1, #inset2, #inner_content, .sp-block{float:right!important}
+/*Hornav*/
+#hornav li .submenu,#sublevel li .submenu {direction:ltr}
+.submenu-inner {direction:rtl}
+#hornav .megacol {float:right!important}
+#hornav ul.level-0,
+#sublevel ul.level-1,#hornav ul.level-0 > li.menu-item,
+#sublevel ul.level-1 > li.menu-item
+{float:right!important}
+#hornav ul.level-0 > li.parent > a.menu-item span.menu,
+#sublevel ul.level-1 > li.parent > a.menu-item span.menu {background: none!important}
+#hornav ul li.parent > a.menu-item span.menu,
+#sublevel ul li.parent > a.menu-item span.menu {padding-right: 0!important;padding-left: 12px!important;background:url(../images/daddy_rtl.png) no-repeat 0 50%!important}
+#hornav ul.level-0 > li.menu-item span.has-image,
+#sublevel ul.level-1 > li.menu-item span.has-image{padding-left:0!important;padding-right:18px;background-position:100% 50%!important}
+/* Breadcrumbs */
+#breadcrumbs span.showhome {margin:0 0 0 5px}
+#breadcrumbs a,#breadcrumbs span,#breadcrumbs strong{float:right}
+#breadcrumbs a,#breadcrumbs span.separator{margin:0 0 0 10px;padding:0 0 0 15px;background-position:0 50%}
+a#topofpage{float:left!important}
+/* Footer */
+#sp-footer .cp {float:right!important;}
+/*Footer Navigation*/
+#footer-nav{float:left!important}
+
+/*Modules*/
+#sp-userpos .separator .mod-block {padding-left:20px!important;padding-right:40px!important;background:url(../images/user-shadow-rtl.png) no-repeat 0 50%!important}
+.mod-wrapper li{background:url(../images/menu_bullet_rtl.png) no-repeat scroll 100% 10px transparent;padding:0 15px 0 10px!important}
+.mod-wrapper li li{margin-left:0!important;margin-right:15px}
+
+/* Helix Logo */
+.helix-logo-light,.helix-logo-dark,.helix-logo-light-small,.helix-logo-dark-small{float:right!important;padding:0 0 0 10px;margin:0 0 0 15px;border-right:0;border-left:1px solid #e5e5e5}
+/*Joomla*/
+a.readmore,a.fs-sp1-morein,.adminform button,#adminForm button,.button,button[type=submit],input[type=submit],input[type=button]{float:right}
+fieldset dd{float:right}
+fieldset dt{float:right}
+ul.buttonheading{float:left}
+dl.article-info{float:right}
+#form-login-username label, #form-login-password label, #form-login-remember label {float: right;text-align: right}
+#adminForm table thead tr, #adminForm table thead tr th {text-align: right}
+div.pagination ul{text-align:right}
+div.pagination p.counter{float:left}
+.filter-search{float:right}
+div.categories-list dt {float: right}
+
+.login label,.profile-edit dl dt,.remind dl dt,.reset dl dt,.registration dl dt{float:right;text-align:left}
+.login .inputbox,.login input.required,.registration dl dd input.required,.remind dl dd input.required,.reset dl dd input.required,
+.profile-edit .inputbox,.profile-edit input.required,.profile-edit input,.profile-edit select{margin:0 10px 0 0}
+.login .button,.login button,.profile-edit button,.remind button,.reset button,.registration button{margin:0 160px 0 0}
+
+/*Edit*/
+.edit label{float:right;text-align:left}
+label#jform_description-lbl {text-align:right}
+.edit .inputbox,.edit input{margin:0 10px 0 0}
+.edit select{margin:0 10px 0 0}
+.edit div.formelm-buttons {margin:0 140px 20px 0}
+
+/*Typography*/
+img.image-left{float:right!important;margin:.5em 0 .5em 1em!important}
+img.image-right{float:left!important;margin:.5em 1em .5em 0!important}
+p.stickynote,p.download{background-position:100% 0!important;padding:15px 60px 15px 10px!important}
+p.error,p.warn,p.tips,p.help,p.info,p.email,p.print,p.rss,p.save,p.lock,p.user,p.new,p.house,p.tag{background-position:100% 5px!important;padding:0 24px 5px 0!important}
+.dropcap:first-letter{float:right!important;padding:4px 0 0 8px!important}
+ul li {background-position:100% 6px;padding:0 10px 0 0}
+ul.rss li, ul.minus li, ul.delete li, ul.check li, ul.arrow li, ul.arrow-2 li, ul.add li, ul.star li {padding:0 20px 0 0!important;background-position:100% 2px!important}
+.bignumber{background-position:100% 0!important;float:right!important;margin-right:0!important;margin-left:8px}
+.legend-title{left:auto!important;right:7px!important}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        ul { margin-left:20px; color:blue; }
+        li { cursor:default; }
+        span { color:red; }
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+<ul>
+    <li>Milk</li>
+    <li>Bread</li>
+    <li class='fade'>Chips</li>
+
+    <li class='fade'>Socks</li>
+</ul>
+<script>
+    $("li").hover(
+            function () {
+                $(this).append($("<span> ***</span>"));
+            },
+            function () {
+                $(this).find("span:last").remove();
+            }
+    );
+
+
+
+    //li with fade class
+    $("li.fade").hover(function(){$(this).fadeOut(1000);$(this).fadeIn(1000);});
+
+</script>
+
+</body>
+</html>

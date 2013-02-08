@@ -1,0 +1,285 @@
+<style type="text/css">
+
+        /* Subscription Page CSS Starts here */
+    .signup-form-container {
+        width: 740px;
+        font-family: Arial;
+    }
+
+    .signup-form-heading {
+        font-size: 22px;
+        color: #1889c1;
+        margin-bottom: 10px;
+    }
+
+    .signup-form-info {
+        font-size: 16px;
+        color: #8d8d8d;
+    }
+
+    .signup-form-header {
+        border-bottom: 1px solid #d2d2d2;
+        overflow: hidden;
+        padding-bottom: 10px;
+    }
+
+    .input-textbox {
+        border: 1px solid #9e9e9e;
+        font-size: 22px;
+        color: #191919;
+        width: 340px;
+        float: left;
+        padding: 7px 14px;
+    }
+
+    select.input-textbox {
+        padding-left: 8px;
+    }
+
+    .signup-form {
+        margin-top: 25px;
+        position: relative;
+    }
+
+    .form-row {
+        clear: both;
+    }
+
+    .error-text {
+        color: #fe0000;
+        font-size: 13px;
+        padding-left: 10px;
+        width: 330px;
+        float: left;
+    }
+
+    span.empty-box {
+        width: 60px;
+        display: block;
+        float: left;
+    }
+
+    .error-row {
+        clear: both !important;
+        margin-bottom: 8px;
+        overflow: hidden;
+    }
+
+    .get-started-heading {
+        color: #0777af;
+        font-size: 18px;
+        font-weight: 600;
+        margin-top: 15px;
+        height: 22px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        width: 115px;
+    }
+
+    .signup-btn-container a {
+        width: 83px;
+    }
+
+    .get-started-text {
+        color: #000000;
+        font-size: 13px;
+        margin-top: 7px;
+    }
+
+    .module-box {
+        font-size: 13px;
+        border-radius: 5px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        padding: 10px 10px 0;
+        background-color: whiteSmoke;
+        border: 1px solid #E8E8E8;
+        margin-bottom: 10px;
+        width: 183px;
+        height: 100px;
+        float: left;
+        margin-right: 8px;
+    }
+
+    .module-box-text {
+        font-size: 15px;
+        color: #565656;
+        line-height: 19px;
+        height: 85px;
+        text-align: left;
+        margin-left: 19px;
+    }
+
+    .module-box-text a {
+        color: #1889C1;
+        text-decoration: none;
+    }
+
+    .module-box-text a:hover {
+        color: #1889C1;
+        text-decoration: underline;
+    }
+
+    .ads-container {
+        margin-top: 20px;
+        overflow: hidden;
+    }
+
+    .req-field {
+        background-image: url("http://www.swift-kanban.com/images/subscription-page/star-icon.png");
+        background-repeat: no-repeat;
+        background-position: 5px 9px;
+        color: #aaa8a8;
+    }
+
+    #div1 input, #div3 input {
+        background: url("http://www.swift-kanban.com/images/subscription-page/star-icon.png") no-repeat 5px 9px;
+    }
+
+    #div2 input, #div4 input {
+        background-image: none;
+        color: #191919;
+    }
+
+    .drplist {
+        color: #191919;
+        font-size: 20px !important;
+    }
+
+    .star-image {
+        background: url("http://www.swift-kanban.com/images/subscription-page/star-icon.png") no-repeat left center;
+    }
+
+        /* Subscription Page CSS ends here */
+
+</style>
+
+
+<script type="text/javascript">
+    var blur_value = function (element_id, element_value, isPass) {
+        var elementvalue = document.getElementById(element_id).value;
+        if (elementvalue.trim() == '') {
+            document.getElementById(element_id).value = element_value;
+            document.getElementById(element_id).className = 'req-field input-textbox';
+            if (isPass) {
+                document.getElementById(element_id).type = 'text';
+            }
+        }
+
+    };
+
+
+    var focus_value = function (element_id, element_value, isPass) {
+        var elementvalue = document.getElementById(element_id).value;
+        if (elementvalue.trim() == element_value) {
+            document.getElementById(element_id).value = '';
+            document.getElementById(element_id).className = 'input-textbox';
+        }
+        if (isPass) {
+            document.getElementById(element_id).type = 'Password';
+
+        }
+    };
+
+
+</script>
+
+<div class="signup-form-container">
+    <div class="signup-form-header">
+        <div class="signup-form-heading">Register for a Free 30 Day Trial!</div>
+    </div>
+    <form id="myform" action="#">
+        <div class="signup-form">
+            <div class="form-row">
+                <input id="fname" name="fname" class="input-textbox req-field" type="text" value="First Name"
+                       onfocus="focus_value('fname', 'First Name');" onblur="blur_value('fname', 'First Name');"
+                       size="32" tabindex="1"><span></span>
+                <span class="empty-box">&nbsp;</span>
+                <input id="lname" name="lname" class="input-textbox req-field" type="text" value="Last Name"
+                       onfocus="focus_value('lname', 'Last Name');" onblur="blur_value('lname', 'Last Name');" size="32"
+                       tabindex="2"><span></span>
+            </div>
+            <div class="error-row">
+                <div class="error-text">Enter a valid First Name</div><span></span>
+                <span class="empty-box">&nbsp;</span>
+                <div class="error-text">Enter a valid Last Name</div><span></span>
+            </div>
+            <div class="form-row">
+                <input id="email" name="email" class="input-textbox req-field" type="text" value="eMail/ Login Id"
+                       onfocus="focus_value('email', 'eMail/ Login Id');"
+                       onblur="blur_value('email', 'eMail/ Login Id');" size="32" tabindex="3"><span></span>
+                <span class="empty-box">&nbsp;</span>
+                <input id="contact_number" style="background-image: none !important;" name="contact_number" class="input-textbox req-field" type="text"
+                       value="Contact Number" onfocus="focus_value('contact_number', 'Contact Number');"
+                       onblur="blur_value('contact_number', 'Contact Number');" size="32" tabindex="4"><span></span>
+            </div>
+            <div class="error-row">
+                <div class="error-text">Enter a valid eMail/ Login Id</div>
+                <span class="empty-box">&nbsp;</span>
+                <div class="error-text">Please enter a valid Contact Number</div>
+            </div>
+            <div class="form-row">
+                <select class="input-textbox req-field" tabindex="5" id="intended-use" name="intended-use"
+                        onChange="this.style.color=this.options[this.selectedIndex].style.color">
+                    <option value="" selected="selected" style="background-image:  url('http://www.swift-kanban.com/images/subscription-page/star-icon.png'); background-repeat: no-repeat; background-position: 5px 9px;">Intended Use</option>
+                    <option value="personal" style="color: #191919;">Personal</option>
+                    <option value="business" style="color: #191919;">Business</option>
+                    <option value="both" style="color: #191919;">Both</option>
+                </select><span></span>
+                <span class="empty-box">&nbsp;</span>
+                <input id="company_name" name="company_name" style="background-image: none !important;"
+                       class="input-textbox req-field" type="text" value="Company Name"
+                       onfocus="focus_value('company_name', 'Company Name');"
+                       onblur="blur_value('company_name', 'Company Name');" size="32" tabindex="6"><span></span>
+            </div>
+            <div class="error-row">
+                <div class="error-text">Please make a selection</div>
+            </div>
+            <div class="form-row">
+                <select id="hear-about-us" name="hear-about-us" class="input-textbox req-field" tabindex="7" onchange="this.style.color=this.options[this.selectedIndex].style.color"
+                        value="">
+                    <option value="" selected style="font-size: 22px !important;">How did you hear about us?</option>
+                    <optgroup label="Web Search" style="color: #191919; font-size: 22px !important;">
+                        <option value="google" style="color: #191919; font-size: 22px !important;">&bull; Google
+                        </option>
+                        <option value="bing" style="color: #191919; font-size: 22px !important;">&bull; Bing</option>
+                        <option value="yahoo" style="color: #191919; font-size: 22px !important;">&bull; Yahoo</option>
+                        <option value="other" style="color: #191919; font-size: 22px !important;">&bull; Other</option>
+                    </optgroup>
+                    <option value="swift-kanban-webinar" style="color: #191919; font-size: 22px !important;">
+                        Swift-Kanban Webinar
+                    </option>
+                    <option value="swift-kanban-mailer" style="color: #191919; font-size: 22px !important;">Swift-Kanban
+                        Mailer
+                    </option>
+                    <option value="recommended" style="color: #191919; font-size: 22px !important;">Recommended by colleague/ friend
+                    </option>
+                    <option value="ad-media" style="color: #191919; font-size: 22px !important;">Ad/ Media Article
+                    </option>
+                    <option value="external-blog" style="color: #191919; font-size: 22px !important;">External Blog/
+                        Website
+                    </option>
+                    <option value="other1" style="color: #191919; font-size: 22px !important;">Other</option>
+                </select><span></span>
+                <span class="empty-box">&nbsp;</span>
+                <input id="promotion_code" name="promotion_code"
+                       style="background-image: none !important; margin-right: 0px !important;"
+                       class="input-textbox req-field" type="text" value="Promotion Code"
+                       onfocus="focus_value('promotion_code', 'Promotion Code');"
+                       onblur="blur_value('promotion_code', 'Promotion Code');" size="32" tabindex="8"><span></span>
+            </div>
+            <div class="error-row">
+                <div class="error-text">Please make a selection</div>
+            </div>
+        </div>
+    </form>
+
+
+
+    <div class="signup-btn-container">
+        <div class="get-started-heading"><a href="#"><img src="http://swift-kanban.com/images/signup-btn.png"/> </a></div>
+        <div class="get-started-text">By clicking Signup, you agree to our Terms
+            of Service and Privacy Policy.
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+.main-container {
+    position: relative;
+    background-image: url("features-image-opt1.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 455px;
+}
+.visualize-text {
+    position: absolute;
+    top: 12px;
+    left: 186px;
+    font-size: 10px;
+    line-height: 11px;
+    color: #2690c5 !important;
+    text-align: center;
+    width: 55px;
+}
+.visualize-text a, .categorize-text a {
+    color: #2690c5 !important;
+}
+.categorize-text {
+    position: absolute;
+    top: 13px;
+    left: 424px;
+    font-size: 10px;
+    line-height: 11px;
+    color: #2690C5 !important;
+    text-align: center;
+    width: 55px;
+}

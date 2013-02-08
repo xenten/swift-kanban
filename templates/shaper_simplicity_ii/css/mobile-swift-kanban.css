@@ -1,0 +1,111 @@
+.cat-children {
+    display: none;
+}
+#survey {
+    display: none !important;
+}
+#survey-get-free {
+    display: none !important;
+}
+
+/* css for news and events page starts here */
+
+.blog_news_page h6, .item-page_news_page h6 {
+    color: gray !important;
+    font-size: 10px;
+    line-height: 12px;
+    orphans: 2;
+    text-align: left;
+    font-weight: normal;
+    margin: 0;
+}
+.blog_news_page .article-tools {
+    color: #999;
+    border-bottom: 1px dotted #ECECEC;
+    margin-bottom: 8px;
+    clear: both;
+    display: block;
+    position: relative;
+}
+.blog_news_page h2.blog-header-title {
+    height: 35px;
+}
+
+.blog_news_page .jcomments-links {
+    margin-top: 7px;
+    padding-bottom: 5px;
+}
+.blog_news_page a.readmore-link {
+    color: #F48A00 !important;
+    font-size: 13px;
+}
+/* css for news and events page ends here */
+
+/* css for blog page starts here */
+
+.blog_custom_blog h2.blog-header-title, .item-page_custom_blog h2 {
+    color: #00AEF0;
+    /*background-color: #F2F2F2;
+    padding: 4px 8px 6px 6px !important;
+    border-top: 1px solid #E6E6E6;
+    border-left: 1px solid #E6E6E6;
+    border-right: 1px solid #E6E6E6;*/
+    margin: 0;
+}
+.blog_custom_blog .blog-header-details {
+    /*background-color: #F2F2F2;*/
+    margin: 0;
+    padding: 0;
+    /*border-bottom: 1px solid #E6E6E6;
+    border-left: 1px solid #E6E6E6;
+    border-right: 1px solid #E6E6E6;*/
+    color: #999;
+    font-size: 13px;
+}
+.blog_custom_blog dl.article-info {
+    margin: 0;
+    /*padding: 0 6px 4px 6px;*/
+}
+.item-page_custom_blog dl.article-info {
+    /*background-color: #F2F2F2;*/
+    margin: 0;
+    /*padding: 0px 6px 4px 7px;
+    border-left: 1px solid #E6E6E6;
+    border-right: 1px solid #E6E6E6;*/
+    color: #999;
+    font-size: 13px;
+}
+.blog_custom_blog .items-leading > div {
+    margin-bottom: 30px !important;
+}
+.blog_custom_blog .jcomments-links {
+    font-size: 13px;
+}
+.blog_custom_blog .comments-link, .blog_custom_blog .readmore-link {
+    padding: 0 5px 5px 14px;
+    background-image: url(https://www.swift-kanban.com/components/com_jcomments/tpl/default/images/jc_blog.gif);
+    background-repeat: no-repeat;
+    color: #F48A00 !important;
+}
+.blog_custom_blog .readmore-link {
+    background-position: 0 1px;
+}
+.blog_custom_blog .comments-link {
+    background-position: 0 -27px;
+}
+
+.item-page_custom_blog #v-social-bar {
+    /*border-left: 1px solid #E6E6E6;
+    border-right: 1px solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
+    padding: 2px 0 2px 7px;*/
+    display: none;
+}
+.item-page_custom_blog .article-tools {
+    margin-bottom: 7px;
+}
+.item-page_custom_blog dl.article-info dd.create {
+    /*float: left;
+    margin-right: 15px;*/
+}
+/* css for blog page ends here */

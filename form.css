@@ -1,0 +1,125 @@
+.tundra .dijitTextBox {
+	background:#fff url(images/validationInputBg.png) repeat-x top left;
+	#background:#fff url(images/validationInputBg.gif) repeat-x top left;
+	border:1px solid #b3b3b3;
+    width: 90%;
+}
+
+.dijitInputInner {
+    height: 22px;
+}
+.tundra .dijitTextBox .dijitButtonNode {
+    border-color: #9B9B9B;
+    height: 22px;
+}
+.tundra .dijitTextBox .dijitArrowButtonInner {
+	background-position: 0 center;
+	padding-top:10px;
+	
+}
+.tundra .dijitButtonNode {
+	
+	border: 1px solid #c0c0c0;
+	border-bottom: 1px solid #9b9b9b;
+	padding: 0.5em 0.2em 0.2em;
+	background: #fff url(images/buttonEnabled.png) repeat-x bottom left;
+	height: 20px;
+}
+.tundra .dijitError {
+	background-color:#f9f7ba;
+	background-image:none;
+
+}
+.tundra .dijitTextBox{
+}
+        .style1 {
+            color: #999999;
+            font-size: 12px;
+        }
+
+        body {
+            margin-left: 0px;
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            background-repeat: repeat;
+            background-color: #188ac2;
+        }
+
+        .form {
+           /* background-color: #f1f1f1;*/
+            padding-left: 40px;
+            padding-right: 10px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            color: #666666;
+            width: 90%;
+			margin-top: -33px;
+
+        }
+
+        .form-bg {
+            background-color: #fff;
+            padding-left: 50px;
+            padding-right: 30px;
+            padding-top: 20px;
+            padding-bottom: 30px;
+            width: 95%;
+            height: 40%;
+            margin-left: -16px;
+            text-align: left;
+			-moz-box-shadow: 1px 0px 6px 2px #f2f2f2;
+		  	-webkit-box-shadow: 1px 0px 6px 2px #f2f2f2;
+			box-shadow: 1px 0px 6px 2px #f2f2f2;
+            border-radius: 6px 6px 6px 6px;
+            font-size: 13px;
+            font-family: Helvetica;
+            font-weight: bold;
+
+        }
+		
+		.onecol{
+            width: 47%;
+            height: 40%;
+		}
+		.twocol{
+			height: 40%;
+			margin-left: 402px;
+			margin-top: -56px;
+			width: 106%;
+		}
+		.twocol-comments{
+			height: 40%;
+			margin-left: 402px;
+			*margin-left: 201px;
+			margin-top: -56px;
+			width: 384px;
+			*width: 375px;
+		}
+		.twocol-btn{
+			height: 40%;
+			margin-left: 400px;
+			margin-top: -2px;
+			width: 50%;
+		}
+        .field-group label {
+            clear: none;
+            float: left;
+        }
+
+        .label {
+            color: #666666;
+            font-family: Helvetica;
+            font-size: 14px;
+            line-height: 150%;
+        }
+
+        .label {
+            clear: both;
+            float: left;
+            font-weight: bold;
+            margin-top: 8px;
+            position: relative;
+            text-align: left;
+            width: auto;
+        }

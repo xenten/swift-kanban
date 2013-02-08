@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="1.6.0"
+	client="site"
+	method="upgrade">
+	<name>Social Media Icon Links</name>
+	<author>Viper Web Solutions</author>
+	<creationDate>January 2011</creationDate>
+	<copyright>Copyright (C) 2008 - 2011 Viper Web Solutions. All rights reserved. Defualt icons provided by http://jwloh.deviantart.com/ - jwloh01@gmail.com</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>Dallas@viperwebsites.com</authorEmail>
+	<authorUrl>www.viperwebsites.com</authorUrl>
+	<version>1.6.0</version>
+	<description>MOD_SOCIALMEDIALINKS_V1.6</description>
+	<files>
+		<filename module="mod_socialmedialinks">mod_socialmedialinks.php</filename>
+		<filename>index.html</filename>
+		<filename>style.css</filename>
+        <folder>icons/</folder>
+    </files>
+	<languages folder="site">
+		<language tag="en-GB">language/en-GB/en-GB.mod_socialmedialinks.ini</language>
+		<language tag="en-GB">language/en-US/en-US.mod_socialmedialinks.ini</language>
+	</languages>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_SOCIALMEDIALINKS" />
+	<config>
+	
+
+	 
+		<fields name="params">
+			<fieldset name="basic">
+
+		 		 <field 
+				 	name="theme" 
+					type="folderlist" 
+					default="default" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_THEME_LABEL" 
+					directory="modules/mod_socialmedialinks/icons" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_THEME_DESC"  />
+
+				<field 
+					name="size" 
+					type="list" 
+					default="size3" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_SIZE_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_SIZE_DESC">
+						<option value="size1">MOD_SOCIALMEDIALINKS_FIELD_SIZE1_LABEL</option>
+						<option value="size2">MOD_SOCIALMEDIALINKS_FIELD_SIZE2_LABEL</option>
+						<option value="size3">MOD_SOCIALMEDIALINKS_FIELD_SIZE3_LABEL</option>
+						<option value="size4">MOD_SOCIALMEDIALINKS_FIELD_SIZE4_LABEL</option>
+						<option value="size5">MOD_SOCIALMEDIALINKS_FIELD_SIZE5_LABEL</option>
+				</field>
+
+				<field 
+					name="align" 
+					type="radio" 
+					default="center" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_ALIGN_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_ALIGN_DESC">
+						<option value="left">MOD_SOCIALMEDIALINKS_FIELD_LEFT_LABEL</option>
+						<option value="center">MOD_SOCIALMEDIALINKS_FIELD_CENTER_LABEL</option>
+						<option value="right">MOD_SOCIALMEDIALINKS_FIELD_RIGHT_LABEL</option>
+				</field>
+		
+				<field 
+					name="margin" 
+					type="text" 
+					default="3px" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_MARGIN_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_MARGIN_DESC"/>
+			
+				<field 
+					name="text" 
+					type="text" 
+					default="Follow us on" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_TEXT_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_TEXT_DESC"/>
+		
+				<field 
+					name="rsstext" 
+					type="text" 
+					default="RSS Feed" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_RSSTEXT_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_RSSTEXT_DESC"/>
+		
+				<field 
+					name="target" 
+					type="radio" 
+					default="_blank" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_TARGET_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_TARGET_DESC">
+						<option value="_blank">MOD_SOCIALMEDIALINKS_FIELD_NEW_WINDOW</option>
+						<option value="_self">MOD_SOCIALMEDIALINKS_FIELD_SAME_WINDOW</option>
+				</field>
+		
+				<field 
+					name="robots" 
+					type="radio" 
+					default="1" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_ROBOTS_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_ROBOTS_DESC">
+						<option value="0">JNo</option>
+						<option value="1">JYes</option>
+				</field>
+		
+				<field 
+					name="credits" 
+					type="radio" 
+					default="1" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_CREDITS_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_CREDITS_DESC">
+						<option value="0">JNo</option>
+						<option value="1">JYes</option>
+				</field>
+		
+				<field name="@spacer" type="spacer" default="" label="MOD_SOCIALMEDIALINKS_ICONS" description="MOD_SOCIALMEDIALINKS_ICONS" />
+		
+		
+				<field 
+					name="ic1" 
+					type="imagelist" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_ICON_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_ICON_DESC" 
+					directory="/modules/mod_socialmedialinks/icons/default/size3/" 
+					striptext="" />
+					
+				<field 
+					name="url1" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_URL_DESC"/>
+					
+				<field name="spacer" type="spacer" default="" label="MOD_SOCIALMEDIALINKS_SPACE" description="MOD_SOCIALMEDIALINKS_SPACE" />
+				
+				<field 
+					name="ic2" 
+					type="imagelist" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_ICON_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_ICON_DESC" 
+					directory="/modules/mod_socialmedialinks/icons/default/size3/" 
+					striptext="" />
+					
+				<field 
+					name="url2" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_URL_DESC"/>
+					
+				<field name="spacer" type="spacer" default="" label="MOD_SOCIALMEDIALINKS_SPACE" description="MOD_SOCIALMEDIALINKS_SPACE" />
+				
+				<field 
+					name="ic3" 
+					type="imagelist" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_ICON_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_ICON_DESC" 
+					directory="/modules/mod_socialmedialinks/icons/default/size3/" 
+					striptext="" />
+					
+				<field 
+					name="url3" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_URL_DESC"/>
+					
+				<field name="spacer" type="spacer" default="" label="MOD_SOCIALMEDIALINKS_SPACE" description="MOD_SOCIALMEDIALINKS_SPACE" />
+				
+				<field 
+					name="ic4" 
+					type="imagelist" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_ICON_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_ICON_DESC" 
+					directory="/modules/mod_socialmedialinks/icons/default/size3/" 
+					striptext="" />
+					
+				<field 
+					name="url4" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_URL_DESC"/>
+					
+				<field name="spacer" type="spacer" default="" label="MOD_SOCIALMEDIALINKS_SPACE" description="MOD_SOCIALMEDIALINKS_SPACE" />
+				
+				<field 
+					name="ic5" 
+					type="imagelist" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_ICON_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_ICON_DESC" 
+					directory="/modules/mod_socialmedialinks/icons/default/size3/" 
+					striptext="" />
+					
+				<field 
+					name="url5" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_URL_DESC"/>
+					
+				<field name="spacer" type="spacer" default="" label="MOD_SOCIALMEDIALINKS_SPACE" description="MOD_SOCIALMEDIALINKS_SPACE" />
+				
+				<field 
+					name="ic6" 
+					type="imagelist" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_ICON_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_ICON_DESC" 
+					directory="/modules/mod_socialmedialinks/icons/default/size3/" 
+					striptext="" />
+					
+				<field 
+					name="url6" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_URL_DESC"/>
+					
+				<field name="spacer" type="spacer" default="" label="MOD_SOCIALMEDIALINKS_SPACE" description="MOD_SOCIALMEDIALINKS_SPACE" />
+				
+				<field 
+					name="ic7" 
+					type="imagelist" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_ICON_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_ICON_DESC" 
+					directory="/modules/mod_socialmedialinks/icons/default/size3/" 
+					striptext="" />
+					
+				<field 
+					name="url7" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_URL_DESC"/>
+					
+				<field name="spacer" type="spacer" default="" label="MOD_SOCIALMEDIALINKS_SPACE" description="MOD_SOCIALMEDIALINKS_SPACE" />
+				
+				<field 
+					name="ic8" 
+					type="imagelist" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_ICON_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_ICON_DESC" 
+					directory="/modules/mod_socialmedialinks/icons/default/size3/" 
+					striptext="" />
+					
+				<field 
+					name="url8" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_URL_DESC"/>
+					
+				<field name="spacer" type="spacer" default="" label="MOD_SOCIALMEDIALINKS_SPACE" description="MOD_SOCIALMEDIALINKS_SPACE" />
+				
+				<field 
+					name="ic9" 
+					type="imagelist" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_ICON_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_ICON_DESC" 
+					directory="/modules/mod_socialmedialinks/icons/default/size3/" 
+					striptext="" />
+					
+				<field 
+					name="url9" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_URL_DESC"/>
+					
+				<field name="spacer" type="spacer" default="" label="MOD_SOCIALMEDIALINKS_SPACE" description="MOD_SOCIALMEDIALINKS_SPACE" />
+				
+				<field 
+					name="ic10" 
+					type="imagelist" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_ICON_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_ICON_DESC" 
+					directory="/modules/mod_socialmedialinks/icons/default/size3/" 
+					striptext="" />
+					
+				<field 
+					name="url10" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_URL_DESC"/>
+					
+				<field name="spacer" type="spacer" default="" label="MOD_SOCIALMEDIALINKS_SPACE" description="MOD_SOCIALMEDIALINKS_SPACE" />
+				
+				<field 
+					name="ic11" 
+					type="imagelist" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_ICON_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_ICON_DESC" 
+					directory="/modules/mod_socialmedialinks/icons/default/size3/" 
+					striptext="" />
+					
+				<field 
+					name="url11" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_URL_DESC"/>
+					
+				<field name="spacer" type="spacer" default="" label="MOD_SOCIALMEDIALINKS_SPACE" description="MOD_SOCIALMEDIALINKS_SPACE" />
+				
+				<field 
+					name="ic12" 
+					type="imagelist" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_ICON_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_ICON_DESC" 
+					directory="/modules/mod_socialmedialinks/icons/default/size3/" 
+					striptext="" />
+					
+				<field 
+					name="url12" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_URL_DESC"/>
+					
+				<field name="spacer" type="spacer" default="" label="MOD_SOCIALMEDIALINKS_SPACE" description="MOD_SOCIALMEDIALINKS_SPACE" />
+				
+				<field 
+					name="ic13" 
+					type="imagelist" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_ICON_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_ICON_DESC" 
+					directory="/modules/mod_socialmedialinks/icons/default/size3/" 
+					striptext="" />
+					
+				<field 
+					name="url13" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_URL_DESC"/>
+					
+				<field name="spacer" type="spacer" default="" label="MOD_SOCIALMEDIALINKS_SPACE" description="MOD_SOCIALMEDIALINKS_SPACE" />
+				
+				<field 
+					name="ic14" 
+					type="imagelist" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_ICON_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_ICON_DESC" 
+					directory="/modules/mod_socialmedialinks/icons/default/size3/" 
+					striptext="" />
+					
+				<field 
+					name="url14" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_URL_DESC"/>
+					
+				<field name="spacer" type="spacer" default="" label="MOD_SOCIALMEDIALINKS_SPACE" description="MOD_SOCIALMEDIALINKS_SPACE" />
+				
+				<field 
+					name="ic15" 
+					type="imagelist" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_ICON_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_ICON_DESC" 
+					directory="/modules/mod_socialmedialinks/icons/default/size3/" 
+					striptext="" />
+					
+				<field 
+					name="url15" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_URL_DESC"/>
+					
+				<field name="spacer" type="spacer" default="" label="MOD_SOCIALMEDIALINKS_SPACE" description="MOD_SOCIALMEDIALINKS_SPACE" />
+				
+				<field 
+					name="ic16" 
+					type="imagelist" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_ICON_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_ICON_DESC" 
+					directory="/modules/mod_socialmedialinks/icons/default/size3/" 
+					striptext="" />
+					
+				<field 
+					name="url16" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_URL_DESC"/>
+					
+				<field name="spacer" type="spacer" default="" label="MOD_SOCIALMEDIALINKS_SPACE" description="MOD_SOCIALMEDIALINKS_SPACE" />
+				
+				<field 
+					name="ic17" 
+					type="imagelist" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_ICON_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_ICON_DESC" 
+					directory="/modules/mod_socialmedialinks/icons/default/size3/" 
+					striptext="" />
+					
+				<field 
+					name="url17" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_URL_DESC"/>
+					
+				<field name="spacer" type="spacer" default="" label="MOD_SOCIALMEDIALINKS_SPACE" description="MOD_SOCIALMEDIALINKS_SPACE" />
+				
+				<field 
+					name="ic18" 
+					type="imagelist" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_ICON_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_ICON_DESC" 
+					directory="/modules/mod_socialmedialinks/icons/default/size3/" 
+					striptext="" />
+					
+				<field 
+					name="url18" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_URL_DESC"/>
+					
+				<field name="spacer" type="spacer" default="" label="MOD_SOCIALMEDIALINKS_SPACE" description="MOD_SOCIALMEDIALINKS_SPACE" />
+				
+				<field 
+					name="ic19" 
+					type="imagelist" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_ICON_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_ICON_DESC" 
+					directory="/modules/mod_socialmedialinks/icons/default/size3/" 
+					striptext="" />
+					
+				<field 
+					name="url19" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_URL_DESC"/>
+					
+				<field name="spacer" type="spacer" default="" label="MOD_SOCIALMEDIALINKS_SPACE" description="MOD_SOCIALMEDIALINKS_SPACE" />
+				
+				<field 
+					name="ic20" 
+					type="imagelist" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_ICON_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_ICON_DESC" 
+					directory="/modules/mod_socialmedialinks/icons/default/size3/" 
+					striptext="" />
+					
+				<field 
+					name="url20" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_URL_DESC"/>
+					
+				<field name="spacer" type="spacer" default="" label="MOD_SOCIALMEDIALINKS_SPACE" description="MOD_SOCIALMEDIALINKS_SPACE" />
+				
+				<field 
+					name="ic21" 
+					type="imagelist" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_ICON_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_ICON_DESC" 
+					directory="/modules/mod_socialmedialinks/icons/default/size3/" 
+					striptext="" />
+					
+				<field 
+					name="url21" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_URL_LABEL" 
+
+					description="MOD_SOCIALMEDIALINKS_FIELD_URL_DESC" />
+					
+				<field name="spacer" type="spacer" default="" label="MOD_SOCIALMEDIALINKS_SPACE" description="MOD_SOCIALMEDIALINKS_SPACE" />
+				
+				<field 
+					name="ic22" 
+					type="imagelist" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_ICON_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_ICON_DESC" 
+					directory="/modules/mod_socialmedialinks/icons/default/size3/" 
+					striptext="" />
+					
+				<field 
+					name="url22" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_URL_LABEL" 
+
+					description="MOD_SOCIALMEDIALINKS_FIELD_URL_DESC" />
+					
+				<field name="spacer" type="spacer" default="" label="MOD_SOCIALMEDIALINKS_SPACE" description="MOD_SOCIALMEDIALINKS_SPACE" />
+				
+				<field 
+					name="ic23" 
+					type="imagelist" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_ICON_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_ICON_DESC" 
+					directory="/modules/mod_socialmedialinks/icons/default/size3/" 
+					striptext="" />
+					
+				<field 
+					name="url23" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_URL_LABEL" 
+
+					description="MOD_SOCIALMEDIALINKS_FIELD_URL_DESC" />
+					
+				<field name="spacer" type="spacer" default="" label="MOD_SOCIALMEDIALINKS_SPACE" description="MOD_SOCIALMEDIALINKS_SPACE" />
+				
+				<field 
+					name="ic24" 
+					type="imagelist" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_ICON_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_ICON_DESC" 
+					directory="/modules/mod_socialmedialinks/icons/default/size3/" 
+					striptext="" />
+					
+				<field 
+					name="url24" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_URL_LABEL" 
+
+					description="MOD_SOCIALMEDIALINKS_FIELD_URL_DESC" />
+					
+				<field name="spacer" type="spacer" default="" label="MOD_SOCIALMEDIALINKS_SPACE" description="MOD_SOCIALMEDIALINKS_SPACE" />
+				
+				<field 
+					name="ic25" 
+					type="imagelist" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_ICON_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_ICON_DESC" 
+					directory="/modules/mod_socialmedialinks/icons/default/size3/" 
+					striptext="" />
+					
+				<field 
+					name="url25" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_URL_LABEL" 
+
+					description="MOD_SOCIALMEDIALINKS_FIELD_URL_DESC" />
+					
+				<field name="spacer" type="spacer" default="" label="MOD_SOCIALMEDIALINKS_SPACE" description="MOD_SOCIALMEDIALINKS_SPACE" />
+				
+				<field 
+					name="ic26" 
+					type="imagelist" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_ICON_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_ICON_DESC" 
+					directory="/modules/mod_socialmedialinks/icons/default/size3/" 
+					striptext="" />
+					
+				<field 
+					name="url26" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_URL_LABEL" 
+
+					description="MOD_SOCIALMEDIALINKS_FIELD_URL_DESC" />
+					
+				<field name="spacer" type="spacer" default="" label="MOD_SOCIALMEDIALINKS_SPACE" description="MOD_SOCIALMEDIALINKS_SPACE" />
+				
+				<field 
+					name="ic27" 
+					type="imagelist" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_ICON_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_ICON_DESC" 
+					directory="/modules/mod_socialmedialinks/icons/default/size3/" 
+					striptext="" />
+					
+				<field 
+					name="url27" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_URL_LABEL" 
+
+					description="MOD_SOCIALMEDIALINKS_FIELD_URL_DESC" />
+					
+				<field name="spacer" type="spacer" default="" label="MOD_SOCIALMEDIALINKS_SPACE" description="MOD_SOCIALMEDIALINKS_SPACE" />
+				
+				<field 
+					name="ic28" 
+					type="imagelist" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_ICON_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_ICON_DESC" 
+					directory="/modules/mod_socialmedialinks/icons/default/size3/" 
+					striptext="" />
+					
+				<field 
+					name="url28" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_URL_LABEL" 
+
+					description="MOD_SOCIALMEDIALINKS_FIELD_URL_DESC" />
+					
+				<field name="spacer" type="spacer" default="" label="MOD_SOCIALMEDIALINKS_SPACE" description="MOD_SOCIALMEDIALINKS_SPACE" />
+				
+				<field 
+					name="ic29" 
+					type="imagelist" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_ICON_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_ICON_DESC" 
+					directory="/modules/mod_socialmedialinks/icons/default/size3/" 
+					striptext="" />
+					
+				<field 
+					name="url29" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_URL_LABEL" 
+
+					description="MOD_SOCIALMEDIALINKS_FIELD_URL_DESC" />
+					
+				<field name="spacer" type="spacer" default="" label="MOD_SOCIALMEDIALINKS_SPACE" description="MOD_SOCIALMEDIALINKS_SPACE" />
+				
+				<field 
+					name="ic30" 
+					type="imagelist" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_ICON_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_ICON_DESC" 
+					directory="/modules/mod_socialmedialinks/icons/default/size3/" 
+					striptext="" />
+					
+				<field 
+					name="url30" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS_FIELD_URL_DESC" />
+					
+				<field name="spacer" type="spacer" default="" label="MOD_SOCIALMEDIALINKS_SPACE" description="MOD_SOCIALMEDIALINKS_SPACE" />
+			</fieldset>
+				<fieldset name="advanced">
+					<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

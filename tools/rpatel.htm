@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>PATEL RAVISH VASANTKUMAR</title>
+		<script language='JavaScript'>
+
+			function getParamValue(a_Param)
+			{
+				a_Param = a_Param.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+				var w_RegExpStr = "[\\?&]"+a_Param+"=([^&#]*)";
+				var w_RegEx = new RegExp(w_RegExpStr);
+				var w_Results = w_RegEx.exec(window.location.href);
+				if(w_Results == null)
+					return "";
+				else
+					return w_Results[1];
+			}
+		</script>
+	</head>
+<body>
+	You should get a prompt with value for the video parameter.
+	<script>
+		alert(getParamValue("video"));
+	</script>
+</body>
+</html>

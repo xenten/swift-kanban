@@ -1,0 +1,46 @@
+/*---------------------------------------------------------------
+# Package - Joomla Template based on Helix Framework   
+# ---------------------------------------------------------------
+# Author - JoomShaper http://www.joomshaper.com
+# Copyright (C) 2010 - 2011 JoomShaper.com. All Rights Reserved.
+# license - PHP files are licensed under  GNU/GPL V2
+# license - CSS  - JS - IMAGE files  are Copyrighted material 
+# Websites: http://www.joomshaper.com - http://www.joomxpert.com
+-----------------------------------------------------------------*/
+
+*{font-family:helvetica, arial, sans-serif;font-size:12px;color:#666}
+html{height:100%;margin-bottom:1px}
+.wrap{width:960px;background:#fff;margin:60px auto;padding:30px 0}
+.offline_bg .wrap{background:#fff url(../images/login_lock.jpg) no-repeat scroll right bottom;text-shadow:1px 1px #FFF;width:860px;margin:60px auto;}
+.padding{padding:10px 16px}
+.leftbox,.rightbox{width:49%}
+.leftbox{float:left;}
+.rightbox{float:right;}
+.clr{clear:both}
+h1,h2,h3{line-height:160px;font-size:160px;text-align:center;border-bottom:none;margin:30px auto 10px}
+h1{background:url(../images/warn.png) no-repeat 0 100%;text-align:right}
+h2{font-size:40px;line-height:40px;text-align:left;margin:0}
+h3{font-size:18px;line-height:18px;text-align:left;padding-bottom:10px;border-bottom:1px solid #e0e0e0;margin:0 0 10px}
+p{padding-bottom:6px}
+p.admincontact{text-align:center;background:#ffffdb;border:1px solid #e7e7a5;color:#000;margin:30px 0;padding:10px}
+ul{list-style-type:square;padding:0 0 0 36px}
+ol{list-style-position:inside;padding:0}
+ol li,ol li strong{font-size:11px!important;font-weight:400}
+ul.menu{list-style:none;margin:0;padding:0}
+ul.menu li.title{font-size:14px;border:0;background:none;margin:0;padding:0}
+ul.menu li a{background:url(../images/arrow.png) no-repeat 5px 10px;text-decoration:none;padding:4px 15px}
+ul.menu li a:hover{text-decoration:none}
+#frame{border:1px dashed #ccc;overflow:hidden;width:350px;margin:0 auto; padding: 20px 20px 30px 20px;}
+p.offline_message{text-align:center;background:#ffffdb;border:1px solid #e7e7a5;color:#000;margin:5px 0;padding:11px 10px}
+fieldset{border:none;margin:0 auto;padding:0}
+label{font-size:140%}
+input.username,input.passwd{border:1px solid #ddd;font-size:180%;height:35px;width:100%;margin-top:10px}
+input#mod_search_searchword{float:left;border:1px solid #ddd;width:350px;font-size:180%;height:25px;margin-top:4px}
+.search .button {float:left;margin-left:10px;}
+.button{float:right;margin:10px 0 20px}
+p#form-login-remember{float:left;margin:0}
+input[type=submit]{cursor:pointer;text-align:center;font:bold 10px Arial, Helvetica, sans-serif;text-decoration:none;text-transform:uppercase;background:url(../images/button-bg.gif) repeat-x 0 100%;border:1px solid #e7e7e7;margin:0;padding:6px 9px}
+
+body,.error_bg,.offline_bg{background:#EFEFEF}
+ul.menu li span.sub,ul.menu ul{display:none}
+#form-login-username input,#form-login-password input{background:none repeat scroll 0 0 #EAEAEA;border-bottom:1px solid #FFF;border-left:1px solid silver;border-top:1px solid silver;color:#B7B7B7;height:20px;width:99%;margin-top:10px}

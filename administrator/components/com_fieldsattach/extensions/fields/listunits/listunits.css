@@ -1,0 +1,11 @@
+@charset "UTF-8";
+.listunits{ width:100%;}
+.listunits td.action{width:4%;border:1px #eee solid;  font-size:13px; font-weight:bold; padding:7px;color:#333;} 
+.listunits td.normal{border:1px #eee solid;  font-size:14px; font-weight:bold; padding:7px; color:#333;}
+
+
+.listunits thead td{ background-color: #eee; }
+
+.addbutton{ background-color: #146CBD; border-color: #146CBD;  color:#fff; padding: 8px; margin: 10px 0; font-size: 15px;}
+
+.listunits td  a{display:block;background-color: #146CBD; border-color: #146CBD;  color:#fff; padding: 4px; margin: 0px 0; font-size: 13px;}

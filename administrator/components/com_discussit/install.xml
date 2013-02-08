@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.6.0" method="upgrade">
+	<name>DiscussIt</name>
+	<creationDate>25/01/2012</creationDate>
+	<author>Peter Bennett</author>
+	<authorUrl>http://dis.cuss.it</authorUrl>
+	<copyright>Copyright DiscussIt</copyright>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<version>2.0</version>
+	<description>Installation component for Discussit JSWidget plugin - Joomla! implementation.</description>
+	
+	
+    <install>
+      <sql>
+        <file driver="mysql" charset="utf8">sql/install.sql</file>
+      </sql>
+    </install>
+    <files folder="site">
+        <filename>xmlrpc.php</filename>
+    </files>
+	<administration>		
+		<menu img="components/com_discussit/media/images/bulletlogo16.png">COM_DISCUSSIT_MENU</menu>
+		<files folder="admin">
+			<filename>index.html</filename>
+			<filename>discussit.php</filename>
+			<folder>media</folder>
+			<folder>sql</folder>
+		</files>
+	
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_discussit.sys.ini</language>
+		</languages>
+
+	
+	</administration>	
+	
+	
+	<scriptfile>install.discussit.php</scriptfile>
+
+	
+
+	
+</extension>

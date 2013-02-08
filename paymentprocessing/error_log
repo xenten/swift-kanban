@@ -1,0 +1,16 @@
+[03-Dec-2012 01:49:19] PHP Warning:  require_once(/stripe/Stripe.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/digite/public_html/hosted_domains/swift/swift-kanban.com/paymentprocessing/stripe_payment.php on line 9
+[03-Dec-2012 01:49:19] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required '/stripe/Stripe.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/digite/public_html/hosted_domains/swift/swift-kanban.com/paymentprocessing/stripe_payment.php on line 9
+[03-Dec-2012 01:50:48] PHP Warning:  require_once(/stripe/lib/Stripe.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/digite/public_html/hosted_domains/swift/swift-kanban.com/paymentprocessing/stripe_payment.php on line 9
+[03-Dec-2012 01:50:48] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required '/stripe/lib/Stripe.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/digite/public_html/hosted_domains/swift/swift-kanban.com/paymentprocessing/stripe_payment.php on line 9
+[03-Dec-2012 02:01:44] PHP Fatal error:  Class 'Stripe' not found in /home/digite/public_html/hosted_domains/swift/swift-kanban.com/paymentprocessing/create_customer.php on line 9
+[03-Dec-2012 02:01:55] PHP Fatal error:  Class 'Stripe' not found in /home/digite/public_html/hosted_domains/swift/swift-kanban.com/paymentprocessing/create_customer.php on line 9
+[03-Dec-2012 02:01:59] PHP Fatal error:  Class 'Stripe' not found in /home/digite/public_html/hosted_domains/swift/swift-kanban.com/paymentprocessing/create_customer.php on line 9
+[03-Dec-2012 02:02:30] PHP Fatal error:  Class 'Stripe' not found in /home/digite/public_html/hosted_domains/swift/swift-kanban.com/paymentprocessing/create_customer.php on line 9
+[03-Dec-2012 02:03:04] PHP Fatal error:  Call to undefined function  getstripecustomerid() in /home/digite/public_html/hosted_domains/swift/swift-kanban.com/paymentprocessing/create_customer.php on line 33
+[03-Dec-2012 02:03:56] PHP Fatal error:  Uncaught exception 'Stripe_InvalidRequestError' with message 'You cannot use a stripe token more than once: tok_0qbOES6UROBcm7' in /home/digite/public_html/hosted_domains/swift/swift-kanban.com/stripe/lib/Stripe/ApiRequestor.php:66
+Stack trace:
+#0 /home/digite/public_html/hosted_domains/swift/swift-kanban.com/stripe/lib/Stripe/ApiRequestor.php(114): Stripe_ApiRequestor->handleApiError('{?  "error": {?...', 400, Array)
+#1 /home/digite/public_html/hosted_domains/swift/swift-kanban.com/stripe/lib/Stripe/ApiRequestor.php(54): Stripe_ApiRequestor->_interpretResponse('{?  "error": {?...', 400)
+#2 /home/digite/public_html/hosted_domains/swift/swift-kanban.com/stripe/lib/Stripe/ApiResource.php(76): Stripe_ApiRequestor->request('post', '/v1/customers', Array)
+#3 /home/digite/public_html/hosted_domains/swift/swift-kanban.com/stripe/lib/Stripe/Customer.php(26): Stripe_ApiResource::_scopedCreate('Stripe_Customer', Array, NULL)
+#4 /home/digite/public_html/hosted_domains/swift/swift-kanban.com/paymentprocessing/create_cust in /home/digite/public_html/hosted_domains/swift/swift-kanban.com/stripe/lib/Stripe/ApiRequestor.php on line 66

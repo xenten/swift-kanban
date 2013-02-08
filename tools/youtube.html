@@ -1,0 +1,36 @@
+<script type="text/javascript">
+    function getParamValue(a_Param)
+        {
+            a_Param = a_Param.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+            var w_RegExpStr = "[\\?&]"+a_Param+"=([^&#]*)";
+            var w_RegEx = new RegExp(w_RegExpStr);
+            var w_Results = w_RegEx.exec(window.location.href);
+            if(w_Results == null)
+                return "";
+            else
+                return w_Results[1];
+        }
+    var video_list_URL =[
+    "http://www.youtube.com/embed/AeafohFbc7U",//evm
+    "http://www.youtube.com/embed/mtwZJabG3AY"//Create project in swift Kanban
+    ];
+    var video_list = [
+    "EVN_Training",
+            "KANBAN_PROJECT"
+    ]
+    var URL=getParamValue("video_name")
+    var DISPLAY_URL="http://www.youtube.com/embed/AeafohFbc7U";
+    for(var i = 0 ; i< video_list.length ; i++)
+    {
+        if(URL==video_list[i])
+        {
+            DISPLAY_URL=video_list_URL[i];
+            break;
+        }
+    }
+
+</script>
+<iframe name="video_frame" id='video_frame' width="420" height="315" src="" frameborder="0" allowfullscreen></iframe>
+        <script type="text/javascript">
+                document.getElementById("video_frame").src=DISPLAY_URL;
+        </script>

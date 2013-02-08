@@ -1,0 +1,14 @@
+#hornav
+{
+    display: none!important;
+}
+
+#slides
+{
+    display: block!important;
+}
+
+
+/*Header Area*/
+ #header {position:relative; height: 99px; background:#fff url(../images/header.jpg) repeat-x 0 100%}
+/*Header Area End */

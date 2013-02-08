@@ -1,0 +1,5 @@
+@charset "UTF-8"; 
+
+.vimeo .file{ overflow: hidden; margin-bottom: 20px;}
+.vimeo .file span{ font-weight: bold; padding: 0 20px 0 0;}
+.vimeo iframe{ width: 400px; height: 300px;}

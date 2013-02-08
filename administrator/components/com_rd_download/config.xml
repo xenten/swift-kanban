@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+ <params>
+  <param name="verbose" type="radio" default="0" label="RDDOWNLOAD_VERBOSE" description="RDDOWNLOAD_VERBOSETIP">
+	<option value="0">RDDOWNLOAD_NO</option>
+	<option value="1">RDDOWNLOAD_YES</option>
+  </param>
+  <param name="downloaddir" type="text" default="downloads" label="RDDOWNLOAD_DOWNLOADDIR" description="RDDOWNLOAD_DOWNLOADDIRTIP" />
+ </params>
+</config>

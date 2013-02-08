@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="../custom_html/css.css" type="text/css"/>
+
+    <style type="text/css">
+        .ui-dialog {
+            position:absolute !important;
+            left:50% !important;
+            top:50% !important;
+            margin:-85px 0 0 -205px !important;
+        }
+
+        .ui-dialog.ui-widget.ui-widget-content {
+            border: 2px solid #f8981d;
+            padding: 0;
+            box-shadow: 2px 2px 7px #ABABAB;
+
+            font-size: 14px;
+        }
+        .ui-dialog-titlebar.ui-widget-header {
+            background-color: #f8981d;
+            background-image: none;
+            border: 0px;
+            border-radius: 0px;
+            padding: 0px 7px 5px 7px;
+            color: #fff;
+            font-weight: normal;
+        }
+        .ui-widget-header .ui-icon {
+            width: 9px;
+            height: 9px;
+            background-image: url("http://www.swift-kanban.com/images/close-btn.png");
+            background-repeat: no-repeat;
+            background-position: left top;
+            padding: 1px !important;
+        }
+        .ui-widget-header .ui-icon:hover {
+            width: 16px;
+            height: 16px;
+            background-image: url("http://www.swift-kanban.com/images/close-btn-hover.png");
+            background-repeat: no-repeat;
+            background-position: left top;
+        }
+        .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
+            background-image: url("http://www.swift-kanban.com/images/close-btn-hover.png");
+            background-repeat: no-repeat;
+            background: none !important;
+            background-position: left top;
+            border: 0px;
+        }
+        .ui-dialog .ui-dialog-titlebar-close {
+            padding: 0 !important;
+        }
+        .ui-widget-content p {
+            font-size: 14px;
+
+            margin: 5px 0;
+            color: #191919;
+            font-weight: bold;
+            margin-top: 21px;
+        }
+        .yes-btn {
+            background-color: #f8981d!important;
+            /*border: 1px solid #c77409!important;*/
+            background-image: none!important;
+            font-size: 16px!important;
+            text-align: center!important;
+            width: 80px!important;
+            text-decoration: none!important;
+            border-radius: 3px!important;
+            padding: 4px 4px 2px 0!important;
+            margin-right: 15px!important;
+            color: #FFFFFF!important;
+        }
+
+        .ui-widget-content a {
+            text-decoration: none;
+        }
+        .no-btn {
+            background-color: #dddbda!important;
+            /*border: 1px solid #a5a5a5!important;*/
+            font-size: 16px!important;
+            text-align: center!important;
+            width: 80px!important;
+            text-decoration: none!important;
+            border-radius: 3px!important;
+            padding: 4px 4px 2px 0!important;
+            background-image: none!important;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .buttons input
+        {
+            float: none!important;
+        }
+        .ui-dialog .ui-dialog-titlebar-close {
+            margin: -7px 0 0 0 !important;
+            right: 8px !important;
+            width: 9px !important;
+            height: 9px !important;
+        }
+
+    </style>
+
+    <!-- script for default selectable button -->
+    <script type="text/javascript">
+        function DoOnclick() {
+            var RetVal="Test: The child.html page will change this value...";
+            alert(RetVal);
+            RetVal = window.showModalDialog("child.html","","dialogHeight: 150px; dialogWidth: 300px;");
+            alert(RetVal);
+        }
+    </script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="http://swift-kanban.com/templates/shaper_simplicity_ii/js/cookie.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var currentTime = (new Date()).getTime();
+
+        //$.cookie("example", "foo", { expires: 7 }); // Sample 2
+        //alert( $.cookie("example") );
+
+
+
+            $.doTimeout(1000, function(){
+                var newTime = (new Date()).getTime();
+                if(newTime-currentTime > 15000)
+                {
+                    showDialog();
+                    return false;
+                }
+                return true;
+
+            });
+
+        function showDialog()
+        {
+            $( "#dialog" ).dialog({
+
+                width: '460px',
+                height: 160,
+                modal: true,
+                resizable: false
+            });
+        }
+    </script>
+
+</head>
+<body >
+
+<div id="dialog" title="Thank you for visiting Swift-Kanban!" style="display: none;">
+<p>Would you please take a 30 second survey for a chance to win a $25 Amazon Gift Card(or equivalent)?</p>
+    <div class="buttons">
+        <center>
+            <input type="button" value="Yes" class="yes-btn" name="yes" id='yes' onclick="window.location='http://www.swift-kanban.com/survey';" />
+            <input id='nobtn' type="button" value="No" class="no-btn" name="no" onclick="$('#dialog').dialog('close');"/>
+        </center>
+    </div>
+</div>
+</body>
+</html>

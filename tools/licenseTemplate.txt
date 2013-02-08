@@ -1,0 +1,77 @@
+INSERT INTO MESSAGE_TEMPLATE
+(Template_Id, Event_Name, Template, Channel, workspace_type,workspace_id, Subject)
+VALUES(10007,'License Expiry Today',
+'<html>
+<body>
+<pre>
+<font size= "3">
+
+Dear $firstName,
+
+Thank you for using Swift-Kanban. We are sorry to inform you that your trial period for Swift-Kanban is over and we urge you to consider converting to a paid license version. If you need any help in making this decision, such as a detailed demo or an implementation plan, or converting your account into a paid account please contact sales@digite.com
+
+As we have said before, you have the option to continue using our SaaS option. You also have the option to install Swift-Kanban in-house on your own servers if you would prefer that.
+
+PLEASE NOTE: Your trial period for Swift-Kanban will end today. We will still keep the your data safe with us for next 7 days before deactivating your account. If you decide not to signup, you still have the option to export all your trial data - please contact support@swift-kanban.com for more details and help.
+
+Thanks
+Swift-Kanban Team
+http://www.swift-kanban.com
+
+</font>
+</pre>
+</body>
+</html>','Email','Prj',1,'Swift-Kanban Trial Period Comes to a Close');
+
+
+-- -----------------next record -------------------------------
+
+INSERT INTO MESSAGE_TEMPLATE
+(Template_Id, Event_Name, Template, Channel, workspace_type,workspace_id, Subject)
+VALUES(10008,'License Expiry Near',
+'<html>
+<body>
+<pre>
+<font size= "3">
+Dear $firstName,
+
+Thank you so much for signing up and using Swift-Kanban over the last 3 weeks. We hope you have enjoyed the use of our product and will consider becoming a paying customer of Swift-Kanban.
+
+We would like to remind you that you have seven days left in your trial period. Please contact sales@digite.com for immediate help in helping you make this decision.
+
+You can visit our website (http://www.swift-kanban.com/pricing.html) to learn more of Swift-Kanban's pricing options. You have the option to continue using our SaaS option. You also have the option to install Swift-Kanban in-house on your own servers if you would prefer that. Please contact sales@digite.com for a demo or further help in making the purchase decision or to know if you qualify for a special discount.
+
+Whatever you decide, we would love to hear from you!! Please share your feedback or suggestions. You can do so at http://swiftkanban.uservoice.com
+
+Even now, if you are facing any difficulty in using the product or if you have any queries, please contact us at support@swift-kanban.com - we are standing by to help!!
+
+Swift-Kanban Team
+http://www.swift-kanban.com
+
+</font>
+</pre>
+</body>
+</html>','Email','Prj',1,'Your Swift-Kanban Trial is ending Soon!!');
+
+-- -----------------next record -------------------------------
+
+INSERT INTO MESSAGE_TEMPLATE
+(Template_Id, Event_Name, Template, Channel, workspace_type,workspace_id, Subject)
+VALUES(10009,'License Grace Expiry',
+'<html>
+<body>
+<pre>
+<font size= "3">
+Dear $firstName,
+
+Your Swift-Kanban account expired today. We waited for you this whole week, hoping that you wish to continue with us. But still have an entire day i.e today to re-activate your account and avoid account suspension. 
+
+Drop us an email at $supportId and we would love to talk to you and understand where we went wrong and if you have any feedback for us to improve upon.
+
+Thanks,
+Swift-Kanban Team
+</font>
+</pre>
+</body>
+</html>','Email','Prj',1,'Your Swift-Kanban account will be deactivated today');
+

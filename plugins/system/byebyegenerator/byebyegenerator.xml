@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.6" type="plugin" group="system" method="upgrade">
+	<name>System - ByeByeGenerator</name>
+	<author>Michael Richey</author>
+	<creationDate>May 2010</creationDate>
+	<copyright>Copyright (C) 2008 Michael Richey. All rights reserved.</copyright>
+	<license>GNU General Public License</license>
+	<authorEmail>byebyegenerator@richeyweb.com</authorEmail>
+	<authorUrl>http://www.richeyweb.com</authorUrl>
+	<version>1.10</version>
+	<description>A system plugin to alter the generator meta tag or remove it entirely.  On request of rasterblaster, now optionally removes the robots tag.</description>
+	<files>
+		<filename plugin="byebyegenerator">byebyegenerator.php</filename>
+	</files>
+	<config>
+	  <fields name="params">
+	    <fieldset name="basic">
+	      <field name="generator" type="radio" default="1" label="Generator" description="Select your option below.  ">
+		  <option value="0">Custom</option>
+		  <option value="1">Remove</option>
+		  <option value="2">Do Nothing</option>
+	      </field>
+	      <field name="custom" type="text" default="Custom Generator Content Here" label="Custom" description="Replace the existing generator tag with the content you type into this field." size="45" />
+	      <field name="robots" type="radio" default="1" label="Robots" description="Select your option below.  ">
+		  <option value="0">Keep</option>
+		  <option value="1">Remove</option>
+	      </field>
+	    </fieldset>
+	  </fields>
+	</config>
+</install>

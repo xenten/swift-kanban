@@ -1,0 +1,17 @@
+.sige{clear:both;display:table-cell;margin:16px 4px;padding:0;list-style-type: none !important;}
+.sige_single{text-align: center !important;list-style-type: none !important;}
+.sige .sige_clr{clear:both;}
+.sige_single .sige_clr{}
+.sige_thumb{float:left;background:url(shadowAlpha.png) no-repeat bottom right !important;margin:10px;padding:0;}
+.sige_thumb img{display:block;position:relative;background:#FFF !important;border:1px solid #ccc;margin:-5px 5px 5px -5px !important;padding:4px !important;}
+.sige_caption{margin-left: auto;margin-right: auto;text-align: center;display: block;font-weight:bold;clear: both;}
+.sige_small{color:#666666;font-size:92%;text-align:center;}
+.sige li{margin: 0 !important; overflow: hidden !important; background-image: none !important; padding: 0 !important;}
+
+/*Credits: Dynamic Drive CSS Library */
+/*URL: http://www.dynamicdrive.com/style/ */
+.sige_css_image{position: relative;z-index: 0;}
+.sige_css_image:hover{background-color: transparent;z-index: 50;direction: ltr;}
+.sige_css_image span{ /*CSS for enlarged image*/ position: absolute;background-color: #FFF;padding: 5px;left: -1000px;border: 1px solid #ccc;visibility: hidden;color: black;text-decoration: none;}
+.sige_css_image span img{ /*CSS for enlarged image*/ border-width: 0;padding: 2px;margin: 0px;}
+.sige_css_image:hover span{ /*CSS for enlarged image on hover*/ visibility: visible;top: 30px;left: 30px; /*position where enlarged image should offset horizontally */}

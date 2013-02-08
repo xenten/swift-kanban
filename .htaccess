@@ -1,0 +1,252 @@
+##
+# @version		$Id: htaccess.txt 21101 2011-04-07 15:47:33Z dextercowley $
+# @package		Joomla
+# @copyright	Copyright (C) 2005 - 2011 Open Source Matters. All rights reserved.
+# @license		GNU General Public License version 2 or later; see LICENSE.txt
+##
+
+##
+# READ THIS COMPLETELY IF YOU CHOOSE TO USE THIS FILE!
+#
+# The line just below this section: 'Options +FollowSymLinks' may cause problems
+# with some server configurations.  It is required for use of mod_rewrite, but may already
+# be set by your server administrator in a way that dissallows changing it in
+# your .htaccess file.  If using it causes your server to error out, comment it out (add # to
+# beginning of line), reload your site in your browser and test your sef url's.  If they work,
+# it has been set by your server administrator and you do not need it set here.
+##
+
+## Can be commented out if causes errors, see notes above.
+Options +FollowSymLinks
+
+## Mod_rewrite in use.
+
+RewriteEngine On
+
+## Begin - Rewrite rules to block out some common exploits.
+# If you experience problems on your site block out the operations listed below
+# This attempts to block the most common type of exploit `attempts` to Joomla!
+#
+# Block out any script trying to base64_encode data within the URL.
+RewriteCond %{QUERY_STRING} base64_encode[^(]*\([^)]*\) [OR]
+# Block out any script that includes a <script> tag in URL.
+RewriteCond %{QUERY_STRING} (<|%3C)([^s]*s)+cript.*(>|%3E) [NC,OR]
+# Block out any script trying to set a PHP GLOBALS variable via URL.
+RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
+# Block out any script trying to modify a _REQUEST variable via URL.
+RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})
+# Return 403 Forbidden header and show the content of the root homepage
+RewriteRule .* index.php [F]
+
+RewriteCond %{HTTPS} off
+RewriteRule ^(abc/def|ghi)(.*)/?$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,NC,L]
+
+#
+## End - Rewrite rules to block out some common exploits.
+
+## Begin - Custom redirects
+#
+# If you need to redirect some pages, or set a canonical non-www to
+# www redirect (or vice versa), place that code here. Ensure those
+# redirects use the correct RewriteRule syntax and the [R=301,L] flags.
+#
+## End - Custom redirects
+
+##
+# Uncomment following line if your webserver's URL
+# is not directly related to physical file paths.
+# Update Your Joomla! Directory (just / for root).
+##
+
+# RewriteBase /
+
+## Begin - Joomla! core SEF Section.
+#
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+#
+# If the requested path and file is not /index.php and the request
+# has not already been internally rewritten to the index.php script
+RewriteCond %{REQUEST_URI} !^/index\.php
+# and the request is for something within the component folder,
+# or for the site root, or for an extensionless URL, or the
+# requested URL ends with one of the listed extensions
+RewriteCond %{REQUEST_URI} /component/|(/[^.]*|\.(php|html?|feed|pdf|vcf|raw))$ [NC]
+# and the requested path and file doesn't directly match a physical file
+RewriteCond %{REQUEST_FILENAME} !-f
+# and the requested path and file doesn't directly match a physical folder
+RewriteCond %{REQUEST_FILENAME} !-d
+# internally rewrite the request to the index.php script
+RewriteRule .* index.php [L]
+#
+## End - Joomla! core SEF Section.
+
+# Added for Custom 404 Error
+ErrorDocument 404 https://www.swift-kanban.com
+
+#SD Times Redirect
+redirect 301 /free https://login.swift-kanban.com/pui/mregistration.html?utm_source=SD%2BTimes&utm_medium=print&utm_campaign=SD%2BTimes%2BAd
+
+redirect 301 /glossary http://www.swift-kanban.com/kanban/46-kanban-glossary.html
+redirect 301 /pricing http://www.swift-kanban.com/kanban-pricing.html
+redirect 301 /pricing.html http://www.swift-kanban.com/kanban-pricing.html
+redirect 301 /kanban-signup http://www.swift-kanban.com/free-kanban-trial.html
+redirect 301 /trial http://www.swift-kanban.com/free-kanban-trial.html
+redirect 301 /trial-popup http://www.swift-kanban.com/free-kanban-trial.html?utm_source=Website&utm_medium=Popup&utm_campaign=Website%2BTrial%2BPopup
+redirect 301 /kanban-tool.html http://www.swift-kanban.com
+redirect 301 /kanban-tools.html http://www.swift-kanban.com
+
+redirect 301 /community/category/blog/ http://www.swift-kanban.com/blog
+redirect 301 /blog/68-lean-software-development.html http://www.swift-kanban.com/blog/34-lean-software-development.html
+redirect 301 /kanban-signup.html http://www.swift-kanban.com/free-kanban-trial.html
+redirect 301 /pricing/kanban-signup.html http://www.swift-kanban.com/free-kanban-trial.html
+redirect 301 /swift-termspopup.html http://www.swift-kanban.com/terms-of-use.html
+
+################################# Community Redirects Starts Here  #########################################
+redirect 301 /community/blog/73-scrum-g-kanban-scrumban-or-kanban-lessons-at-lean-coffee.html http://www.swift-kanban.com/blog/37-scrum-g-kanban-scrumban-or-kanban-lessons-at-lean-coffee.html
+redirect 301 /community/blog/70-kanban-evolutionary-or-revolutionary.html http://www.swift-kanban.com/blog/35-kanban-evolutionary-or-revolutionary.html
+redirect 301 /community/blog/69-pull-vs-push.html http://www.swift-kanban.com/blog/36-kanban-says-pull-dont-push.html
+redirect 301 /community/blog/68-lean-software-development.html http://www.swift-kanban.com/blog/34-lean-software-development.html
+redirect 301 /community/blog/62-using-swift-kanban-for-customer-portfolio-management.html http://www.swift-kanban.com/blog/33-using-swift-kanban-for-customer-portfolio-management.html
+redirect 301 /community/blog/22-kanban-and-the-focus-on-fundamentals.html http://www.swift-kanban.com/blog/32-kanban-and-the-focus-on-fundamentals.html
+redirect 301 /community/blog/6-agility-redefined.html http://www.swift-kanban.com/blog/31-agility-redefined.html
+redirect 301 /community/blog/2-agility-requires-greater-discipline-are-you-ready-for-it.html http://www.swift-kanban.com/blog/30-agility-requires-greater-discipline-are-you-ready-for-it.html
+redirect 301 /community/blog/david-anderson-blog/1-kanban-and-offshore-development.html http://www.swift-kanban.com/blog/62-kanban-and-offshore-development.html
+redirect 301 /community/blog/david-anderson-blog/66-who-owns-kanban.html http://www.swift-kanban.com/blog/63-who-owns-kanban.html
+################################# Community Redirects Ends Here    #########################################
+
+################################# OLD REDIRECTS STARTS HERE #################################################
+redirect 301 /subscribe.html http://login.swift-kanban.com/pui/registration.html
+
+redirect 301 /toolsjournal http://www.swift-kanban.com/pricing.html?utm_source=ToolsJournal&utm_medium=Unpaid&utm_content=Review&utm_campaign=Swift-Kanban
+
+#DJA Invitation Redirects Starts Here#
+redirect 301 /dja-signup http://www.swift-kanban.com/news-and-events/dja-signup
+#redirect 301 /dja-signup http://www.swift-kanban.com/news-and-events/david-anderson-webinar-series
+redirect 301 /dja-webinar-series-signup /dja-signup
+redirect 301 /dja-event https://digite-events.webex.com/digite-events/onstage/g.php?t=a&d=665740844
+redirect 301 /dja-townhall-signup http://www.swift-kanban.com/dja-signup
+redirect 301 /July12-Scrumban http://www.youtube.com/embed/gm4nsbNyEA8
+#DJA Invitation Redirects Ends Here#
+
+#DJA Recording Redirects Starts Here#
+redirect 301 /round_table_webex https://digite-events.webex.com/digite-events/onstage/g.php?t=a&d=661501914
+redirect 301 /round_table_recording http://www.youtube.com/watch?v=nZcqcByb140
+redirect 301 /dja-townhall-meeting-3-recording https://digite-events.webex.com/digite-events/lsr.php?AT=pb&SP=EC&rID=4341632&rKey=4adfa9bdf9be401f
+redirect 301 /dja-townhall-meeting-4-recording https://digite-events.webex.com/digite-events/lsr.php?AT=pb&SP=EC&rID=4463452&rKey=0822c202d4be4990
+redirect 301 /dja-townhall-meeting-Apr-2012-recording http://www.swift-kanban.com/community/david-anderson-global-town-hall-meeting
+redirect 301 /dja-townhall-meeting-Jul-2012-recording http://www.youtube.com/watch?v=FPwzv57jAqw
+redirect 301 /dja-recordings http://www.youtube.com/playlist?list=PLE62A8CC7BDA27129&feature=view_all
+redirect 301 /dja_recording http://www.youtube.com/playlist?list=PLE62A8CC7BDA27129&feature=view_all
+#DJA Recording Redirects Ends Here#
+
+#MASA Redirects Starts Here#
+redirect 301 /masa-event https://digite-events.webex.com/digite-events/onstage/g.php?t=a&d=661232813
+redirect 301 /masa-signup http://www.swift-kanban.com/news-and-events/masa-signup?no_redirect=true
+redirect 301 /masa-redordings http://www.youtube.com/watch?v=uYsT_ZEa9Rk&list=PL0F8554EB72AFAFC9&index=1&feature=plpp_video
+#MASA Redirects Ends Here#
+
+#Dominica Redirects Starts Here#
+redirect 301 /dominica-event https://digite-events.webex.com/digite-events/onstage/g.php?t=a&d=660284421
+redirect 301 /dominica-signup http://www.swift-kanban.com/news-and-events/dominica-signup?no_redirect=true
+redirect 301 /dominica-recordings http://www.youtube.com/watch?v=d5RMhXtp0bo
+#MASA Redirects Ends Here#
+
+#Webinar Redirects Start here
+redirect 301 /training-series https://digite-events.webex.com/digite-events/onstage/g.php?t=a&d=661157257
+redirect 301 /first_scrumban_tool http://www.youtube.com/embed/gm4nsbNyEA8
+redirect 301 /first_scrumban_tool_signup http://www.swift-kanban.com/first_scrumban_tool
+
+redirect 301 /deliver_value https://digite-events.webex.com/digite-events/onstage/g.php?t=a&d=664109729
+redirect 301 /beyond_IT http://www.youtube.com/embed/xcQahZOZ4Y0
+redirect 301 /beyond_IT_europe https://digite-events.webex.com/digite-events/onstage/g.php?t=a&d=667865841
+redirect 301 /masa_webinar http://www.youtube.com/embed/xcQahZOZ4Y0
+redirect 301 /masa_webinar_europe http://www.youtube.com/embed/3pQtXCfvZ-U
+redirect 301 /beyond-it-and-software http://www.youtube.com/embed/xcQahZOZ4Y0
+redirect 301 /beyond-it-and-software-europe http://www.youtube.com/embed/3pQtXCfvZ-U
+#Webinar Redirects Ends here
+
+redirect 301 /integration-api http://help.swift-kanban.com/getting-started/api-for-web-services.html
+
+##YouTube Videos Start Here##
+
+## Measure and Improve
+redirect 301 /video_measure_and_improve http://www.youtube.com/embed/sL9Rbhu1PEU?rel=0
+
+## Swift-Kanban Introduction
+redirect 301 /video_swift_kanban_introduction http://www.youtube.com/embed/jArEvKPIfZ4
+
+## Creating a project
+redirect 301 /video_creating_project http://www.youtube.com/embed/mtwZJabG3AY?rel=0
+
+## Modify your processes
+redirect 301 /video_modify_processes http://www.youtube.com/embed/1YWGViUtk4Y
+
+## Importing cards in Swift-Kanban
+redirect 301 /video_import_cards http://www.youtube.com/embed/JwYiAgjyCLk
+
+## Blocking and Unblocking
+redirect 301 /video_block_cards http://www.youtube.com/embed/9KehhgobAhQ
+
+## Smart Lanes
+redirect 301 /video_smart_lanes http://www.youtube.com/embed/yzVNlPB-gBs
+
+
+
+##YouTube Videos Ends Here##
+
+
+#Email Redirects starts here
+redirect 301 /feature-suggestion http://swiftkanban.uservoice.com/forums/85253-ideas-suggestions
+#Email Redirects ends here
+
+#Help redirect
+redirect 301 /help/tutorials/ http://help.swift-kanban.com/video-tutorials.html
+redirect 301 /help/creating-users/ http://help.swift-kanban.com/getting-started/people.html
+redirect 301 /help/category/application-features/admin/define-card-types/ http://help.swift-kanban.com/getting-started/admin/define-card-types.html
+redirect 301 /help/invite-your-team-members/ http://help.swift-kanban.com/getting-started/projects/team-setup.html
+redirect 301 /help/category/application-features/projects/kanban-board/ http://help.swift-kanban.com/getting-started/projects/kanban-board/visualize-your-workflowprocess.html
+redirect 301 /help/category/application-features/projects/ http://help.swift-kanban.com/getting-started/projects/creating-a-project.html
+redirect 301 /help/faqs/ http://help.swift-kanban.com/faq.html
+
+redirect 301 /swift-kanban.html http://www.swift-kanban.com
+
+redirect 301 /masa http://www.swift-kanban.com/?utm_source=Masa&utm_medium=Sales&utm_campaign=Sales%2BMasa%2BWorkshop
+
+################################# OLD REDIRECTS ENDS HERE #################################################
+
+
+################################# eMail REDIRECTS Starts HERE #################################################
+redirect 301 /what_is_kanban.html http://swift-kanban.com/kanban/1-what-is-kanban.html
+redirect 301 /how_does_swift_kanban_work.html http://swift-kanban.com/kanban/53-why-swift-kanban.html
+redirect 301 /quicktour.html http://swift-kanban.com/swift-kanban-product-tour.html
+################################# eMail REDIRECTS ENDS HERE #################################################
+
+redirect 301 /linkedin http://www.linkedin.com/groups/SwiftKanban-Users-Friends-4332448?gid=4332448&trk=hb_side_g
+redirect 301 /ln http://www.linkedin.com/groups/SwiftKanban-Users-Friends-4332448?gid=4332448&trk=hb_side_g
+redirect 301 /community http://www.linkedin.com/groups/SwiftKanban-Users-Friends-4332448?gid=4332448&trk=hb_side_g
+redirect 301 /marketing-survey https://www.surveymonkey.com/s/swift-kanban-marketing
+redirect 301 /survey https://www.surveymonkey.com/s/swift-kanban
+
+redirect 301 /dja-chicago-2012 https://www.e-junkie.com/ecom/gb.php?ii=1108796&c=ib&aff=221065&cl=130848
+#redirect 301 /dja-chicago-2012 http://agilemanagement.net/index.php/Blog/advanced_kanban_masterclass_chicago_il_-_sep_5-7_2012/
+
+#SEM Starts
+redirect 301 /scrumban http://www.swift-kanban.com/kanban/41-what-is-scrumban.html
+redirect 301 /jira http://help.swift-kanban.com/getting-started/projects/jira-integration-beta.html
+redirect 301 /kanban-board http://www.swift-kanban.com/kanban/42-what-is-kanban-board.html
+#SEM Ends
+
+
+redirect 301 /buy https://buy.swift-kanban.com/xpaydigite
+redirect 301 /webinar-signup http://www.swift-kanban.com/news-and-events/david-anderson-webinar-series
+
+redirect 301 /signup_success http://www.swift-kanban.com/swift-kanban-subscription-confirmation
+
+redirect 301 /kanban-scrum-scrumban-features/swiftsync-integration.html https://www.swift-kanban.com/swiftsync-integration.html
+redirect 301 /kanban-scrum-scrumban-features/swiftsync-integration https://www.swift-kanban.com/swiftsync-integration.html
+
+redirect 301 /djav-in https://www.youtube.com/watch?v=W0uVcgeRqgk&list=PLQMRWQeOJpJR_xBZbXZ2zSPxBB6Mf0dEm
+
+redirect 301 /jim-0113-reg https://www.swift-kanban.com/jim-benson-webinar
+
+redirect 301 /jim-0113-event https://digite-events.webex.com/digite-events/onstage/g.php?t=a&d=666607824

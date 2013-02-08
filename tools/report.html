@@ -1,0 +1,136 @@
+<html>
+
+<head>
+
+    <script>
+
+        var All_ACCOUNTS_REPORT = "select 'NA' as 'Account Id', 'NA' as 'Account Name', sr.first_name as 'First Name', " +
+                "sr.last_name as 'Last Name', sr.email_address as 'Used Id or eMail Id', sr.contact_number as 'Phone Number', " +
+                "sr.country_code as 'Country', 'NA' as 'License Type', 'NA' as 'Activation Date', 'NA' as 'Expiry Date', " +
+                "0 as '#Projects', 0 as '#Users', 'Not Activated' as 'Current Status', 'NA' as 'Last Login', 0 as 'Total Logins', " +
+                "'NA' as 'Avg. Session Time' from Saas_registration sr where current_state = 'Created' " +
+                "UNION ALL  " +
+                "select   t1.appaccount as 'Account Id',  t1.name as 'Acount Name',  t1.first_name as 'First Name',  " +
+                "t1.last_name as 'Last Name',  t1.user_id as 'Used Id or eMail Id',  t1.phone_number as 'Phone Number',  " +
+                "t1.country as 'Country',  t1.account_type as 'License Type',  date(t1.activation_date) as 'Activation Date',  " +
+                "date(t1.expiry_date) as 'Expiry Date',  t1.workspaces as '#Projects',  t2.users as '#Users',  " +
+                "t1.current_state as 'Current Status',  date(t1.last_login_time) as 'Last Login',  t3.login_count as 'Total Logins',  " +
+                "(t3.logged_in_time/t3.login_count) as 'Avg. Session Time' from  (SELECT   orgcount as workspaces,  a.id as appaccount,  " +
+                "o.id as orgId,  a.name,  a.account_type,  l.activation_date,  l.expiry_date,  a.current_state,  " +
+                "p.first_name,  p.last_name,  p.user_id,  ad.phone_number,  ad.country,  max(pli.last_login_time) as last_login_time  " +
+                "from  app_domain d, app_account a, license l, person p, address ad, person_login_info pli, repository r, " +
+                "organization o  left outer join (select owner_org, count(owner_org) as orgcount from base_project " +
+                "where current_state != 'Deleted' group by owner_org) as w ON w.owner_org = o.id  where o.app_domain = d.id and " +
+                "d.app_account = a.id and a.license = l.id and p.id = a.contact_person and ad.id = a.contact_addr and " +
+                "r.app_domain = d.id and   pli.repository = r.id group by a.id order by last_login_time) t1,  " +
+                "(SELECT   a.id as appaccount, count(p.id) as users  from  organization o, app_domain d, app_account a, " +
+                "license l, person p  where  o.app_domain = d.id and d.app_account = a.id and a.license = l.id and p.working_org = o.id  " +
+                "group by a.id) t2  left outer join  (SELECT   a.id as appaccount,  count(psi.person_session_id) as login_Count,  " +
+                "sum(TIMESTAMPDIFF(Minute, login_time, logout_time)) as logged_in_time  from  organization o, app_domain d, " +
+                "app_account a, license l, person p, person_login_info pli, person_session_info psi  where  o.app_domain = d.id and " +
+                "d.app_account = a.id and a.license = l.id and p.working_org = o.id and pli.person_login_id = psi.person_login_id and " +
+                "pli.person_id = p.id  group by a.id) t3 ON t2.appaccount = t3.appaccount where  t1.appaccount = t2.appaccount  order by 14 desc;";
+        var ALL_USERS_REPORT = "select p.first_name as FirstName, p.last_name as LastName, p.user_id as Email, aa.name as AccountName, " +
+                "aa.account_type as LicenseType, date(pli.last_login_time) as LastLogin from organization o, app_domain ad, " +
+                "app_account aa, person p left outer join Person_login_info pli on pli.person_id = p.id where " +
+                "p.working_org = o.id  and o.app_domain = ad.id  and ad.app_account  = aa.id order by pli.last_login_time desc;";
+
+        function loginToAdmin() {
+            var userid = document.getElementById('userid').value;
+            var password = document.getElementById('password').value;
+            var ifrm = document.createElement("IFRAME");
+            ifrm.setAttribute("src", "https://login.swift-kanban.com/admin/adminHome.action?userId=" + userid + "&password=" + password);
+            ifrm.style.display = "none";
+            document.body.appendChild(ifrm);
+        }
+
+        function addQueryIframe(queryObject, FileName) {
+            var iFrameObject = document.createElement("IFRAME");
+            var iFrameURL = "https://login.swift-kanban.com/admin/fireQueryData.action?queryOutputFile=" + FileName +
+                    "&queryString=" + encodeURIComponent(queryObject);
+            iFrameObject.setAttribute("src", iFrameURL);
+            iFrameObject.style.display = "none";
+            document.body.appendChild(iFrameObject);
+        }
+
+        function fireQueries(a) {
+            if (a == 1 || a == -1)
+            {
+                addQueryIframe(All_ACCOUNTS_REPORT,"All_Accounts_Report");
+            }
+            if (a == 2 || a == -1) {/*
+                var ifrm2 = document.createElement("IFRAME");
+                ifrm2.setAttribute("src", "https://login.swift-kanban.com/admin/fireQueryData.action?queryOutputFile=All_Users_Report&queryString=select%20p.first_name%20as%20FirstName%2C%20p.last_name%20as%20LastName%2C%20p.user_id%20as%20Email%2C%20aa.name%20as%20AccountName%2C%20aa.account_type%20as%20LicenseType%2C%20date(pli.last_login_time)%20as%20LastLogin%20from%20organization%20o%2C%20app_domain%20ad%2C%20app_account%20aa%2C%20person%20p%20left%20outer%20join%20Person_login_info%20pli%20on%20pli.person_id%20%3D%20p.id%20where%20p.working_org%20%3D%20o.id%20%20and%20o.app_domain%20%3D%20ad.id%20%20and%20ad.app_account%20%20%3D%20aa.id%20order%20by%20pli.last_login_time%20desc%3B");
+                ifrm2.style.display = "none";
+                document.body.appendChild(ifrm2);*/
+                addQueryIframe(ALL_USERS_REPORT,"All_Users_Report")
+            }
+            if (a == 3 || a == -1) {
+                var ifrm3 = document.createElement("IFRAME");
+                ifrm3.setAttribute("src", "https://login.swift-kanban.com/admin/fireQueryData.action?queryOutputFile=Accounts_Not_Activated&queryString=select%20first_name%20as%20'First%20Name'%2Clast_name%20as%20'Last%20Name'%2C%20email_address%20as%20'eMail'%2Ccontact_number%20as%20'Phone%23'%2C%20date(created_date)%20as%20'Created%20Date'%20from%20saas_registration%20where%20current_state%20%3D%20'created'%20order%20by%20created_date%20desc%3B");
+                ifrm3.style.display = "none";
+                document.body.appendChild(ifrm3);
+            }
+
+            if (a == 4 || a == -1) {
+                var ifrm4 = document.createElement("IFRAME");
+                ifrm4.setAttribute("src", "https://login.swift-kanban.com/admin/fireQueryData.action?queryOutputFile=Account_Activation_Rate&queryString=Select%20Week%2C%20Total_Registrations%2C%20Actication_Rate%20from%20(select%20%20creat.createdWeek%20as%20'Week'%2C%20reg.registeredAccounts%20as%20Total_Registrations%20%2Ctruncate((100%20*%20creat.activeAccounts)%2Freg.registeredAccounts%20%2C%202)%20as%20Actication_Rate%20from%20(select%20date(DATE_ADD(created_date%2C%20INTERVAL(1-DAYOFWEEK(created_date))%20DAY)%20)%20as%20createdWeek%2C%20count(*)%20as%20registeredAccounts%20from%20saas_registration%20group%20by%20createdWeek)%20reg%2C%20(select%20date(DATE_ADD(created_date%2C%20INTERVAL(1-DAYOFWEEK(created_date))%20DAY)%20)%20as%20createdWeek%2C%20count(*)%20as%20activeAccounts%20from%20app_account%20group%20by%20createdweek)%20creat%20where%20creat.createdWeek%20%3D%20reg.createdWeek)%20Data%20order%20by%20Week%20desc%3B");
+                ifrm4.style.display = "none";
+                document.body.appendChild(ifrm4);
+            }
+        }
+    </script>
+    <style type="text/css">
+        td {
+            border-bottom: 1px solid #E0E0E0;
+            height: 50px;
+            margin-right: 25px;
+            padding-right: 25px;
+        }
+    </style>
+</head>
+
+<body>
+UserId:<input type="text" id='userid'/>&nbsp;&nbsp;&nbsp;Password:<input type="password" id='password'/>
+<input type="button" value="Login" onclick="loginToAdmin()"/>
+<br/><br/>Swift-Kanban Reports (<span
+        style="color: red;">You will have to login before you start downloading reports</span>):<br/><br/>
+<table>
+    <tr>
+        <td>
+            1. All Accounts Report
+        </td>
+        <td>
+            <a href="#" onclick="fireQueries(1)"><img src="download.png" title="Download Report"></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            2. All Users Report
+        </td>
+        <td>
+            <a href="#" onclick="fireQueries(2)"><img src="download.png" title="Download Report"></a>
+        </td>
+    </tr>
+
+
+    <tr>
+        <td>
+            3. Account Activation Rate
+        </td>
+        <td>
+            <a href="#" onclick="fireQueries(4)"><img src="download.png" title="Download Report"></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            All Reports
+        </td>
+        <td>
+            <a href="#" onclick="fireQueries(-1)"><img src="download.png" title="Download Report"></a>
+        </td>
+    </tr>
+
+</table>
+</body>
+</html>

@@ -1,0 +1,130 @@
+/**
+ * @version		$Id: template_rtl.css 22234 2011-10-13 09:28:17Z github_bot $
+ * @package		Joomla.Administrator
+ * @subpackage	templates.bluestork
+ * @copyright	Copyright (C) 2005 - 2011 Open Source Matters, Inc. All rights reserved.
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
+/* -- GENERAL STYLES RTL ------------------------------ */
+
+body{
+	direction: rtl;
+}
+
+#border-top span.logo {
+	float: left;
+	padding-left:15px;
+}
+
+#border-top span {
+	padding-right: 15px;
+}
+
+.button1 {
+	background: url(../images/j_button1_right.png) 100% 0 no-repeat;
+	margin-left: 5px;
+	padding-right: 10px;
+	white-space: nowrap;
+	padding-left: 0;
+}
+.button1 .next { background: url(../images/j_button1_prev.png) no-repeat; }
+.button1 a { padding: 0 6px 0 30px; }
+
+.button1,
+.button1 div{
+	float: left;
+}
+
+.button2-left a, .button2-left span {
+	padding: 0 6px 0 24px;
+}
+
+.button2-left {
+	background: transparent url(../images/j_button2_right.png) no-repeat scroll 100%;
+	float: right;
+}
+
+.button2-left .end{
+	background:	transparent url(../images/j_button2_first.png) no-repeat scroll 0 0;
+}
+
+.button2-left.off .end{
+	background:	transparent url(../images/j_button2_first_off.png) no-repeat scroll 0 0;
+}
+
+.button2-left .next{
+	background:	transparent url(../images/j_button2_prev.png) no-repeat scroll 0 0;
+}
+
+.button2-left.off .next{
+	background:	transparent url(../images/j_button2_prev_off.png) no-repeat scroll 0 0;
+}
+
+.button2-left .page,
+.button2-left .blank {
+	background: url(../images/j_button2_left_cap.png) 0 no-repeat;
+}
+
+.button2-right a, .button2-right span {
+	padding: 0 24px 0 6px;
+}
+
+.button2-left .image {
+	background:transparent url(../images/j_button2_image_rtl.png) no-repeat scroll 0 0;
+}
+
+.button2-left .article {
+	background:transparent url(../images/j_button2_readmore_rtl.png) no-repeat scroll 0 0;
+}
+
+.button2-left .pagebreak {
+	background:transparent url(../images/j_button2_pagebreak_rtl.png) no-repeat scroll 0 0;
+}
+
+.button2-left .readmore {
+	background:transparent url(../images/j_button2_readmore_rtl.png) no-repeat scroll 0 0;
+}
+
+.button2-right {
+	background:transparent url(../images/j_button2_left.png) no-repeat scroll 0 0;
+	float: right;
+}
+
+.button2-right .prev {
+	background:transparent url(../images/j_button2_next.png) no-repeat scroll 100%;
+}
+
+.button2-right.off .prev {
+	background:transparent url(../images/j_button2_next_off.png) no-repeat scroll 100%;
+}
+
+.button2-right .start {
+	background:transparent url(../images/j_button2_last.png) no-repeat scroll 100%;
+}
+
+.button2-right.off .start {
+	background:transparent url(../images/j_button2_last_off.png) no-repeat scroll 100%;
+}
+
+#border-top .version{
+	float: left;
+	padding: 25px 0 0 5px;
+}
+
+#border-top .title{
+	padding-right: 10px;
+	padding-left: 10px;
+	float: right;
+}
+
+#module-status {
+	float: left;
+}
+
+#module-status > * {
+	float: right !important;
+}
+
+#module-status span {
+	padding: 4px 22px 0 10px;

@@ -1,0 +1,5 @@
+@charset "UTF-8"; 
+
+.youtube .file{ overflow: hidden; margin-bottom: 20px;}
+.youtube .file span{ font-weight: bold; padding: 0 20px 0 0;}
+.youtube iframe{ width: 400px; height: 300px;}

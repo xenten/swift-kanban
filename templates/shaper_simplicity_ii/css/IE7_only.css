@@ -1,0 +1,17 @@
+/*---------------------------------------------------------------
+# Package - Joomla Template based on Helix Framework   
+# ---------------------------------------------------------------
+# Author - JoomShaper http://www.joomshaper.com
+# Copyright (C) 2010 - 2011 JoomShaper.com. All Rights Reserved.
+# license - PHP files are licensed under  GNU/GPL V2
+# license - CSS  - JS - IMAGE files  are Copyrighted material 
+# Websites: http://www.joomshaper.com - http://www.joomxpert.com
+-----------------------------------------------------------------*/
+.fs-sp1{zoom:1;overflow:hidden}
+#hornav {z-index:1}
+#hornav ul.level-0 > li.menu-item span.has-image,
+#sublevel ul.level-1 > li.menu-item span.has-image,
+#hornav li.menu-item li.menu-item,
+#sublevel li.menu-item li.menu-item,
+#hornav ul.level-0 > li.menu-item > a.menu-item,
+#sublevel ul.level-1 > li.menu-item > a.menu-item {zoom:1}
