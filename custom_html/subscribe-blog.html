@@ -13,16 +13,14 @@
         }
     </script>
 
-
     <style type="text/css">
-        body{
+        body {
             font-family: "Open Sans";
         }
 
         .subscribe-blog-block {
             font-size: 14px;
             padding: 0;
-            overflow: auto;
             margin-bottom: 10px;
             line-height: 22px;
             width: 234px;
@@ -77,7 +75,7 @@
             font: normal 13px Arial, Helvetica, sans-serif !important;
             text-decoration: none;
             text-transform: none !important;
-            background: url(http://www.swift-kanban.com/images/blog/subscribe-btn-bg.png) repeat-x 0 100% !important;
+            background: url(https://www.swift-kanban.com/images/blog/subscribe-btn-bg.png) repeat-x 0 100% !important;
             margin: 0;
             border: none !important;
             color: #ffffff !important;
@@ -89,7 +87,6 @@
         .subscribe-btn-box {
             width: 80px;
             margin: 0 auto;
-            overflow: hidden;
         }
 
         .subscribe-social-icons {
@@ -98,22 +95,24 @@
             -moz-border-radius: 0px 0px 5px 5px;
             -webkit-border-radius: 0px 0px 5px 5px;
             margin-top: 10px;
-            padding: 8px 8px 3px 8px;
+            padding: 8px 12px 3px 12px;
             text-align: left;
             font-family: Arial;
             font-size: 12px;
             color: #191919;
             overflow: auto;
-            clear: both;
-        }
-        .social-icons-text {
-            float: left;
-            margin-right: 5px;
         }
 
         .social-icons-block {
             float: left;
             margin-top: 3px;
+        }
+        .social-icons-block a {
+            margin-right: 21px;
+        }
+        .social-icons-text {
+            float: left;
+            margin-right: 5px;
         }
     </style>
 
@@ -134,31 +133,28 @@
         }
 
     </script>
-
+</head>
+<body>
 <div class="subscribe-blog-block">
-    <form style="text-align:center;" action="http://app.streamsend.com/public/RQpU/7k8/subscribe" method="post">
+    <form style="text-align:center;" action="{{{form_url}}}" method="post">
         <div class="subscribe-head">Subscribe to Kanban Blog</div>
         <div class="subscribe-main-content">
-            <div class="subscribe-blog-content"><input type="text" class="blog-textbox" name="eMail_id"
-                                                       value="Enter your eMail Id" onfocus="getFocus(this);"
-                                                       onblur="loseFocus(this);"/></div>
-            <div class="subscribe-btn-box"><input type="hidden" value="feedsportal/zXPU" name="uri"/>
-                <input type="hidden" id="person_email_content_format" name="person[email_content_format]" value="html"/>
-                <input type="submit" value="Subscribe" class="subscribe-btn"/></div>
+            <div class="subscribe-blog-content"><input type="text" class="blog-textbox" name="person[email_address]" value="Enter your eMail Id" onfocus="getFocus(this);" onblur="loseFocus(this);"></div>
+            <div class="subscribe-btn-box"><input type="hidden" value="feedsportal/zXPU" name="uri">
+                <input type="hidden" id="person_email_content_format" name="person[email_content_format]" value="html">
+                <input type="submit" value="Subscribe" class="subscribe-btn"></div>
             <div class="subscribe-social-icons">
-                <div class="social-icons-text">Subscribe on:</div>
                 <div class="social-icons-block">
-                    <a href="http://feeds.feedburner.com/swiftkanban" target="_blank"><img src="https://www.swift-kanban.com/modules/mod_socialmedialinks/icons/default/size1/feed.png"/></a>&nbsp;
-                    <a href="https://www.facebook.com/digite" target="_blank"><img src="https://www.swift-kanban.com/modules/mod_socialmedialinks/icons/default/size1/facebook.png"/></a>&nbsp;
-                    <a href="javascript: follow_twitter()"><img src="https://www.swift-kanban.com/modules/mod_socialmedialinks/icons/default/size1/twitter.png"/></a>&nbsp;
-                    <a href="https://www.swift-kanban.com/ln" target="_blank"><img src="https://www.swift-kanban.com/modules/mod_socialmedialinks/icons/default/size1/linkedin.png"/></a>&nbsp;
-                    <a href="http://www.youtube.com/digiteswift" target="_blank"><img src="https://www.swift-kanban.com/modules/mod_socialmedialinks/icons/default/size1/youtube.png"/></a>
+                    <a href="http://feeds.feedburner.com/swiftkanban" target="_blank"><img src="https://www.swift-kanban.com/modules/mod_socialmedialinks/icons/default/size2/feed.png"></a>
+                    <a href="https://www.facebook.com/digite" target="_blank"><img src="https://www.swift-kanban.com/modules/mod_socialmedialinks/icons/default/size2/facebook.png"></a>
+                    <a href="javascript: follow_twitter()"><img src="https://www.swift-kanban.com/modules/mod_socialmedialinks/icons/default/size2/twitter.png"></a>
+                    <a href="https://www.swift-kanban.com/ln" target="_blank"><img src="https://www.swift-kanban.com/modules/mod_socialmedialinks/icons/default/size2/linkedin.png"></a>
+                    <a href="http://www.youtube.com/digiteswift" target="_blank" style="margin-right: 0;"><img src="https://www.swift-kanban.com/modules/mod_socialmedialinks/icons/default/size2/youtube.png"></a>
                 </div>
             </div>
 
         </div>
     </form>
 </div>
-
 </body>
 </html>
