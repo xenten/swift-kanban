@@ -250,3 +250,9 @@ redirect 301 /djav-in https://www.youtube.com/watch?v=W0uVcgeRqgk&list=PLQMRWQeO
 redirect 301 /jim-0113-reg https://www.swift-kanban.com/jim-benson-webinar
 
 redirect 301 /jim-0113-event https://digite-events.webex.com/digite-events/onstage/g.php?t=a&d=666607824
+
+redirect 301 /WIP http://www.meetup.com/Limited-WIP-Society-India/
+redirect 301 /wip http://www.meetup.com/Limited-WIP-Society-India/
+
+redirect 301 /predictability-signup http://app.streamsend.com/public/RQpU/b8t/subscribe
+redirect 301 /predictability-event https://digite-events.webex.com/digite-events/onstage/g.php?t=a&d=661455701
