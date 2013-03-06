@@ -2,8 +2,7 @@
 <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="1024px" height="768px" viewBox="0 0 1024 768" enable-background="new 0 0 1024 768" xml:space="preserve">
-<path fill="#F7971F" d="M512.006,376.771v-6.57h-8.968v6.57h-10.876v11.776h13.279v-9.568h4.222v18.346h21.852l0.041-20.554H512.006
-	z M509.662,372.418v4.353h-4.222v-4.353H509.662z M503.038,378.979v7.305h-8.431v-7.305H503.038z M512.006,395.073v-16.095h17.184
-	v16.095H512.006z"/>
+	 width="40px" height="28px" viewBox="0 0 40 28" enable-background="new 0 0 40 28" xml:space="preserve">
+<path fill="#F7971F" d="M20.15,6.782V0h-9.106v6.782H0v12.158h13.483V9.062h4.287V28h22.189l0.042-21.218H20.15z M17.77,2.289v4.493
+	h-4.287V2.289H17.77z M11.044,9.062v7.54H2.483v-7.54H11.044z M20.15,25.676V9.062h17.448v16.614H20.15z"/>
 </svg>
