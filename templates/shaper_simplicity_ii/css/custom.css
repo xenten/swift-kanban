@@ -1040,6 +1040,11 @@ li.ui-state-processing a {
     top: -4px;
     left: 70px;
 }
+.net-objectives-logo {
+    position: absolute;
+    top: -4px;
+    left: 70px;
+}
 
 /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
 .ui-tabs .ui-tabs-panel {
