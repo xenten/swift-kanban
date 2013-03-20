@@ -438,6 +438,7 @@ Blog CSS starts here
     padding-bottom: 0 !important;
     margin-bottom: 10px;
     line-height: 22px;
+    overflow: auto;
 }
 
 .blog-right-header {
