@@ -1049,10 +1049,12 @@ li.ui-state-processing a {
 .partner-net-objectives-training-left {
     float: left;
     width: 250px;
+    margin-top: -10px !important;
 }
 .partner-net-objectives-training-right {
     float: right;
     width: 250px;
+    margin-top: -10px !important;
 }
 
 /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
@@ -1096,7 +1098,6 @@ a.mover {
 .partner-training-head {
     font-size: 14px;
     font-weight: 600;
-    margin: 0 !important;
 }
 
 .partner-head {
