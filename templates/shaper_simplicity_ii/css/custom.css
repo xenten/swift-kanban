@@ -1046,6 +1046,14 @@ li.ui-state-processing a {
     top: -4px;
     left: 70px;
 }
+.partner-net-objectives-training-left {
+    float: left;
+    width: 250px;
+}
+.partner-net-objectives-training-right {
+    float: right;
+    width: 250px;
+}
 
 /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
 .ui-tabs .ui-tabs-panel {
@@ -1083,6 +1091,12 @@ a.mover {
     margin-left: 15px;*/
     /*width: 100%;*/
     margin-top: -38px;
+}
+
+.partner-training-head {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 !important;
 }
 
 .partner-head {
@@ -1360,7 +1374,7 @@ img.valueinnova-download {
     padding: 2px;
 }
 
-.partner-blog-date-img {
+.partner-blog-date-img, .partner-net-objectives-webinar-date-img {
     float: left;
     margin: 5px 12px 10px 0;
     background-image: url("/images/partner/blog-date-icon.png");
@@ -1371,7 +1385,7 @@ img.valueinnova-download {
     height: 47px;
 }
 
-.partner-blog {
+.partner-blog, .partner-net-objectives-webinar {
     clear: both;
     margin: 0 0 30px 0;
     text-align: justify;
@@ -1557,7 +1571,7 @@ img.valueinnova-download {
 }
 
 /* valueinnova partner page css */
-.module_valueinnova, .module_davidanderson_webinar {
+.module_valueinnova, .module_davidanderson_webinar, .module_net-objectives {
     margin-top: -48px;
 }
 
