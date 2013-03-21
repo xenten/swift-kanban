@@ -1375,7 +1375,7 @@ img.valueinnova-download {
     padding: 2px;
 }
 
-.partner-blog-date-img, .partner-net-objectives-webinar-date-img {
+.partner-blog-date-img, .partner-net-objectives-webinar-date-img, .partner-lean-now-webinar-date-img {
     float: left;
     margin: 5px 12px 10px 0;
     background-image: url("/images/partner/blog-date-icon.png");
@@ -1386,7 +1386,7 @@ img.valueinnova-download {
     height: 47px;
 }
 
-.partner-blog, .partner-net-objectives-webinar {
+.partner-blog, .partner-net-objectives-webinar, .partner-lean-now-webinar {
     clear: both;
     margin: 0 0 30px 0;
     text-align: justify;
