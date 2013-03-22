@@ -2971,6 +2971,6 @@ span.pricing-contact {
 /* CSS for the team page inner content ends  here */
 
 
-.item-page_about-lean {
+.item-page_about-lean, .blog_leannow-webinar, .blog_netobjectives-webinar {
     margin-top: -20px !important;
 }
