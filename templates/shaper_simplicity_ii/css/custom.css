@@ -1587,7 +1587,8 @@ img.valueinnova-download {
     font-size: 11px;
     font-weight: 600;
     color: #949494;
-    margin: 4px 0 0 13px;
+    margin: 0 0 0 13px;
+    line-height: 15px;
 }
 
 .view-recording {
