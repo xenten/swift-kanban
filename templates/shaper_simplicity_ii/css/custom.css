@@ -106,7 +106,7 @@ div .fs-sp1-image {
 }
 
 .pricing-already-account {
-    margin-top: 24px;
+    margin-top: 0px;
     margin-right: 20px;
     margin-left: 120px;
 }
@@ -2550,6 +2550,15 @@ span.empty-box {
     font-size: 16px;
     padding: 9px 0 9px 10px;
     border-top: 1px dotted #82d6f4;
+    vertical-align: middle;
+}
+.pricing-desc-text-indent {
+    color: #000000;
+    font-size: 14px;
+    padding: 5px 0 5px 30px;
+    border-top: 1px dotted #82d6f4;
+    vertical-align: middle;
+    height: 35px;
 }
 
 .pricing-personal-team-enterprise-text {
@@ -2558,6 +2567,15 @@ span.empty-box {
     text-align: center;
     padding: 9px 0;
     border-top: 1px dotted #82d6f4;
+}
+.pricing-personal-team-enterprise-text-indent {
+    color: #000000;
+    height: 35px;
+    font-size: 14px;
+    text-align: center;
+    padding: 5px 0;
+    border-top: 1px dotted #82d6f4;
+    vertical-align: middle;
 }
 
 .pricing-ultimate-text {
@@ -2637,9 +2655,12 @@ span.pricing-contact {
 }
 .free-trial-note-text {
     clear: both;
-    color: #4e4e4e;
+    color: #ffffff;
     font-size: 11px;
     text-align: center;
+    display: block;
+    width: 100%;
+    margin-top: 5px;
 }
 .body-text a, .free-trial-note-text a {
     color: #1889c1;
