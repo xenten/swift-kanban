@@ -257,5 +257,5 @@ redirect 301 /wip http://www.meetup.com/Limited-WIP-Society-India/
 redirect 301 /predictability-signup http://app.streamsend.com/public/RQpU/b8t/subscribe
 redirect 301 /predictability-event https://digite-events.webex.com/digite-events/onstage/g.php?t=a&d=661455701
 
-redirect 301 /introduction-leannow-signup http://app.streamsend.com/public/RQpU/bpH/subscribe
-redirect 301 /introduction-leannow-event https://digite-events.webex.com/digite-events/onstage/g.php?t=a&d=298429481
+redirect 301 /leannow-signup http://app.streamsend.com/public/RQpU/bpH/subscribe
+redirect 301 /leannow-event https://digite-events.webex.com/digite-events/onstage/g.php?t=a&d=298429481
