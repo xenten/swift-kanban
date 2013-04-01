@@ -2519,12 +2519,12 @@ span.empty-box {
     width: 800px;
 }
 .pricing-desc-col {
-    width: 176px;
+    width: 221px;
     padding: 8px 0;
 }
 
 .pricing-personal-team-enterprise-col {
-    width: 143px;
+    width: 193px;
     text-align: center;
     padding: 8px 0;
     border-left: 1px solid #82d6f4;
@@ -2542,6 +2542,7 @@ span.empty-box {
     color: #0588b7;
     font-size: 20px;
     font-weight: 600;
+    border-top: 1px dotted #82d6f4;
 }
 
 .pricing-desc-text {
