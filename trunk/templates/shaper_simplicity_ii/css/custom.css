@@ -3015,6 +3015,7 @@ ul#treemenu1 {
 }
 
 .treeview li{ /*Style for LI elements in general (excludes an LI that contains sub lists)*/
+    /*background: white url(list.gif) no-repeat left center;*/
     list-style-type: none;
     padding-left: 0px;
     margin-bottom: 0px;
@@ -3028,7 +3029,6 @@ ul#treemenu1 {
 
 .treeview .submenu ul li{ /*Style for LIs of ULs that are children of LIs (submenu) */
     cursor: default;
-    background-image: none;
 }
 
 .feature-col {
@@ -3063,7 +3063,7 @@ ul#treemenu1 {
     font-weight: normal;
 }
 .treeview li.submenu{ /* Style for LI that contains sub lists (other ULs). */
-    background: url(http://www.swift-kanban.com/templates/shaper_simplicity_ii/images/collapse-icon.png) no-repeat 270px 12px !important;
+    background: #f8f8f8 url(http://www.swift-kanban.com/templates/shaper_simplicity_ii/images/collapse-icon.png) no-repeat 270px 12px;
     cursor: hand !important;
     cursor: pointer !important;
     color: #0588B7;
@@ -3074,7 +3074,6 @@ ul#treemenu1 {
     display: block;
     text-indent: 10px;
     overflow: auto;
-    background-color: #f8f8f8 !important;
 }
 li.subhead {
     color: black;
@@ -3084,6 +3083,7 @@ li.subhead {
     overflow: auto;
     clear: both;
     background-color: #ffffff;
+    background-image: none;
 }
 .text-col > div, .text-subhead-col > div {
     height: 18px;
@@ -3098,4 +3098,5 @@ li.subhead {
 .f-partial {
     background-image: url('http://www.swift-kanban.com/templates/shaper_simplicity_ii/images/yellow-tickmark.png');
 }
+
 /* css for the pricing page ends here */
