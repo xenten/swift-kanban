@@ -3028,8 +3028,7 @@ ul#treemenu1 {
 
 .treeview .submenu ul li{ /*Style for LIs of ULs that are children of LIs (submenu) */
     cursor: default;
-    background-image: none !important;
-    background-color: #ffffff;
+    background-image: none;
 }
 
 .feature-col {
@@ -3064,7 +3063,7 @@ ul#treemenu1 {
     font-weight: normal;
 }
 .treeview li.submenu{ /* Style for LI that contains sub lists (other ULs). */
-    background: white url(http://www.swift-kanban.com/templates/shaper_simplicity_ii/images/collapse-icon.png) no-repeat 270px 12px;
+    background: url(http://www.swift-kanban.com/templates/shaper_simplicity_ii/images/collapse-icon.png) no-repeat 270px 12px !important;
     cursor: hand !important;
     cursor: pointer !important;
     color: #0588B7;
@@ -3075,7 +3074,7 @@ ul#treemenu1 {
     display: block;
     text-indent: 10px;
     overflow: auto;
-    background-color: #f8f8f8;
+    background-color: #f8f8f8 !important;
 }
 li.subhead {
     color: black;
@@ -3084,6 +3083,7 @@ li.subhead {
     border-top: 1px dotted #82D6F4;
     overflow: auto;
     clear: both;
+    background-color: #ffffff;
 }
 .text-col > div, .text-subhead-col > div {
     height: 18px;
