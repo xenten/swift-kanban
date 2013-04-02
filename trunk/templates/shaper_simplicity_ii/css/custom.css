@@ -2515,16 +2515,17 @@ span.empty-box {
 
 /* New Pricing Page CSS starts here */
 .pricing-signup-table {
-    border: 1px solid #82d6f4;
-    width: 800px;
+    /*border: 1px solid #82d6f4;*/
+    width: 802px;
 }
 .pricing-desc-col {
-    width: 221px;
+    /*width: 221px;*/
+    width: 290px;
     padding: 8px 0;
 }
 
 .pricing-personal-team-enterprise-col {
-    width: 193px;
+    width: 170px;
     text-align: center;
     padding: 8px 0;
     border-left: 1px solid #82d6f4;
@@ -2538,7 +2539,7 @@ span.empty-box {
 }
 
 .pricing-tr-header {
-    background-color: #f5f9fb;
+    background-color: #e8f4fa;
     color: #0588b7;
     font-size: 20px;
     font-weight: 600;
@@ -2997,3 +2998,103 @@ span.pricing-contact {
 .item-page_about-lean, .blog_leannow-webinar, .custom_business-webinar-series {
     margin-top: -20px !important;
 }
+
+
+/* css for the pricing page starts here */
+
+ul#treemenu1 {
+    width: 802px;
+    font-family: 'Open Sans', Arial;
+    margin: 0;
+    padding: 0;
+}
+
+.treeview ul{ /*CSS for Simple Tree Menu*/
+    margin: 3px 0 0 0;
+    padding: 0;
+}
+
+.treeview li{ /*Style for LI elements in general (excludes an LI that contains sub lists)*/
+    background: white url(list.gif) no-repeat left center;
+    list-style-type: none;
+    padding-left: 0px;
+    margin-bottom: 0px;
+}
+
+
+
+.treeview li.submenu ul{ /*Style for ULs that are children of LIs (submenu) */
+    display: none; /*Hide them by default. Don't delete. */
+}
+
+.treeview .submenu ul li{ /*Style for LIs of ULs that are children of LIs (submenu) */
+    cursor: default;
+}
+
+.feature-col {
+    width: 290px;
+    float: left;
+    padding-bottom: 4px;
+}
+.feature-subhead-col {
+    width: 270px;
+    float: left;
+    padding-top: 3px;
+}
+.text-col {
+    width: 170px;
+    float: left;
+    text-align: center;
+    padding-bottom: 5px;
+    padding-top: 2px;
+}
+.text-subhead-col {
+    width: 170px;
+    float: left;
+    text-align: center;
+    padding-bottom: 1px;
+    padding-top: 2px;
+}
+#treemenu1 li.head {
+    color: #0588B7;
+    font-size: 16px;
+    padding: 5px 0 3px 10px;
+    border-top: 1px dotted #82D6F4;
+    font-weight: normal;
+}
+.treeview li.submenu{ /* Style for LI that contains sub lists (other ULs). */
+    background: white url(collapse-icon.png) no-repeat 270px 12px;
+    cursor: hand !important;
+    cursor: pointer !important;
+    color: #0588B7;
+    padding: 5px 0 0 0;
+    font-size: 16px;
+    font-weight: 400;
+    border-top: 1px dotted #82D6F4;
+    display: block;
+    text-indent: 10px;
+    overflow: auto;
+    background-color: #f8f8f8;
+}
+li.subhead {
+    color: black;
+    font-size: 14px;
+    padding: 5px 0 5px 20px;
+    border-top: 1px dotted #82D6F4;
+    overflow: auto;
+    clear: both;
+}
+.text-col > div, .text-subhead-col > div {
+    height: 18px;
+    width: 20px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0 auto;
+}
+.f-supported {
+    background-image: url('http://www.swift-kanban.com/templates/shaper_simplicity_ii/images/green-tickmark.png');
+}
+.f-partial {
+    background-image: url('http://www.swift-kanban.com/templates/shaper_simplicity_ii/images/yellow-tickmark.png');
+}
+/* css for the pricing page ends here */
