@@ -3029,6 +3029,7 @@ ul#treemenu1 {
 .treeview .submenu ul li{ /*Style for LIs of ULs that are children of LIs (submenu) */
     cursor: default;
     background-image: none !important;
+    background-color: #ffffff;
 }
 
 .feature-col {
