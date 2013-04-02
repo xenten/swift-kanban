@@ -1,8 +1,8 @@
 var persisteduls=new Object()
 var ddtreemenu=new Object()
 
-ddtreemenu.closefolder="closed.gif" //set image path to "closed" folder image
-ddtreemenu.openfolder="open.gif" //set image path to "open" folder image
+ddtreemenu.closefolder="http://www.swift-kanban.com/templates/shaper_simplicity_ii/images/collapse-icon.png" //set image path to "closed" folder image
+ddtreemenu.openfolder="http://www.swift-kanban.com/templates/shaper_simplicity_ii/images/expand-icon.png" //set image path to "open" folder image
 
 //////////No need to edit beyond here///////////////////////////
 
@@ -34,15 +34,19 @@ ulelement.setAttribute("rel", "closed")
 else if (ulelement.getAttribute("rel")=="open") //else if no cookie and this UL has an explicit rel value of "open"
 ddtreemenu.expandSubTree(treeid, ulelement) //expand this UL plus all parent ULs (so the most inner UL is revealed!)
 ulelement.parentNode.onclick=function(e){
-var submenu=this.getElementsByTagName("ul")[0]
+var submenu=this.getElementsByTagName("ul")[0];
 if (submenu.getAttribute("rel")=="closed"){
-submenu.style.display="block"
-submenu.setAttribute("rel", "open")
+submenu.style.display="block";
+submenu.setAttribute("rel", "open");
+    this.getElementsByClassName("head-c")[0].setAttribute("class", "head-c");
+    this.getElementsByClassName("head-c")[1].setAttribute("class", "head-c");
 ulelement.parentNode.style.backgroundImage="url("+ddtreemenu.openfolder+")"
 }
 else if (submenu.getAttribute("rel")=="open"){
-submenu.style.display="none"
-submenu.setAttribute("rel", "closed")
+submenu.style.display="none";
+submenu.setAttribute("rel", "closed");
+    this.getElementsByClassName("head-c")[0].setAttribute("class", "f-partial head-c");
+    this.getElementsByClassName("head-c")[1].setAttribute("class", "f-partial head-c");
 ulelement.parentNode.style.backgroundImage="url("+ddtreemenu.closefolder+")"
 }
 ddtreemenu.preventpropagate(e)
@@ -71,7 +75,7 @@ ddtreemenu.flatten=function(treeid, action){ //expand or contract all UL element
 var ultags=document.getElementById(treeid).getElementsByTagName("ul")
 for (var i=0; i<ultags.length; i++){
 ultags[i].style.display=(action=="expand")? "block" : "none"
-var relvalue=(action=="expand")? "open" : "closed"
+var relvalue=(action=="expand")? "open" : "closed";
 ultags[i].setAttribute("rel", relvalue)
 ultags[i].parentNode.style.backgroundImage=(action=="expand")? "url("+ddtreemenu.openfolder+")" : "url("+ddtreemenu.closefolder+")"
 }
