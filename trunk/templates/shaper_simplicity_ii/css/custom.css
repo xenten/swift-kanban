@@ -3015,7 +3015,6 @@ ul#treemenu1 {
 }
 
 .treeview li{ /*Style for LI elements in general (excludes an LI that contains sub lists)*/
-    background: white url(list.gif) no-repeat left center;
     list-style-type: none;
     padding-left: 0px;
     margin-bottom: 0px;
@@ -3063,7 +3062,7 @@ ul#treemenu1 {
     font-weight: normal;
 }
 .treeview li.submenu{ /* Style for LI that contains sub lists (other ULs). */
-    background: white url(collapse-icon.png) no-repeat 270px 12px;
+    background: white url(http://www.swift-kanban.com/templates/shaper_simplicity_ii/images/collapse-icon.png) no-repeat 270px 12px;
     cursor: hand !important;
     cursor: pointer !important;
     color: #0588B7;
