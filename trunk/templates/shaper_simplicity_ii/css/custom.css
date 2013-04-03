@@ -2529,7 +2529,7 @@ span.empty-box {
     width: 170px;
     text-align: center;
     padding: 8px 0;
-    border-left: 1px solid #82d6f4;
+    border-left: 1px solid #ACE2F5;
 }
 
 .pricing-ultimate-col {
@@ -2544,30 +2544,30 @@ span.empty-box {
     color: #0588b7;
     font-size: 20px;
     font-weight: 600;
-    border-top: 1px dotted #82d6f4;
+    border-top: 1px solid #ACE2F5;
 }
 
 .pricing-desc-text {
     color: #0588b7;
     font-size: 16px;
-    padding: 9px 0 9px 10px;
-    border-top: 1px dotted #82d6f4;
+    padding: 5px 0 5px 10px;
+    border-top: 1px solid #ACE2F5;
     vertical-align: middle;
 }
 .pricing-desc-text-indent {
     color: #000000;
     font-size: 14px;
     padding: 5px 0 5px 30px;
-    border-top: 1px dotted #82d6f4;
+    border-top: 1px solid #82d6f4;
     vertical-align: middle;
     height: 35px;
 }
 
 .pricing-personal-team-enterprise-text {
     color: #000000;
-    font-size: 16px;
+    font-size: 14px;
     text-align: center;
-    padding: 9px 0;
+    padding: 5px 0;
     border-top: 1px dotted #82d6f4;
 }
 .pricing-personal-team-enterprise-text-indent {
@@ -3071,7 +3071,7 @@ ul#treemenu1 {
     padding: 5px 0 0 0;
     font-size: 16px;
     font-weight: 400;
-    border-top: 1px dotted #82D6F4;
+    border-top: 1px solid #ACE2F5;
     display: block;
     text-indent: 10px;
     overflow: auto;
@@ -3080,7 +3080,7 @@ li.subhead {
     color: black;
     font-size: 14px;
     padding: 5px 0 5px 20px;
-    border-top: 1px dotted #82D6F4;
+    border-top: 1px solid #ACE2F5;
     overflow: auto;
     clear: both;
     background-color: #ffffff;
