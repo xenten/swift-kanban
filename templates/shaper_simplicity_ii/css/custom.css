@@ -2664,6 +2664,19 @@ span.pricing-contact {
     width: 100%;
     margin-top: 5px;
 }
+.buy-now-upgrade-text {
+    clear: both;
+    color: #ffffff;
+    font-size: 11px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+}
+.buy-now-upgrade-text a {
+    color: #ffffff !important;
+    text-decoration: underline !important;
+}
 .body-text a, .free-trial-note-text a {
     color: #1889c1;
     text-decoration: none;
@@ -3048,6 +3061,8 @@ ul#treemenu1 {
     text-align: center;
     padding-bottom: 5px;
     padding-top: 2px;
+    font-size: 14px;
+    color: #000000;
 }
 .text-subhead-col {
     width: 170px;
@@ -3055,6 +3070,9 @@ ul#treemenu1 {
     text-align: center;
     padding-bottom: 1px;
     padding-top: 2px;
+}
+.item-page_pricing-page {
+    padding-bottom: 40px;
 }
 #treemenu1 li.head {
     color: #0588B7;
@@ -3075,6 +3093,19 @@ ul#treemenu1 {
     display: block;
     text-indent: 10px;
     overflow: auto;
+    clear: both;
+}
+.treeview li.normalmenu{ /* Style for LI that contains sub lists (other ULs). */
+    color: #0588B7;
+    padding: 5px 0 0 0;
+    font-size: 16px;
+    font-weight: 400;
+    border-top: 1px solid #ACE2F5;
+    display: block;
+    text-indent: 10px;
+    overflow: auto;
+    clear: both;
+    background-image: none !important;
 }
 li.subhead {
     color: black;
