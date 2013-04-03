@@ -79,6 +79,7 @@ div .fs-sp1-image {
     vertical-align: middle;
     height: 41px;
     border: none !important;
+    position: relative;
 }
 
 .pricing-table-header-sub {
@@ -3097,6 +3098,17 @@ li.subhead {
 }
 .f-partial {
     background-image: url('http://www.swift-kanban.com/templates/shaper_simplicity_ii/images/yellow-tickmark.png');
+}
+.compare-all-btn a {
+    background-image: url('http://www.swift-kanban.com/templates/shaper_simplicity_ii/images/compare-all-btn.png');
+    width:115px;
+    height: 22px;
+    position: absolute;
+    top: 9px;
+    cursor: hand;
+    cursor: pointer;
+    right: 10px;
+    color: transparent;
 }
 
 /* css for the pricing page ends here */
