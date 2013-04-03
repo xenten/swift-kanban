@@ -49,7 +49,7 @@ else if (submenu.getAttribute("rel")=="open"){
     submenu.setAttribute("rel", "closed");
     this.getElementsByClassName("head-c")[0].setAttribute("class", "f-partial head-c");
     this.getElementsByClassName("head-c")[1].setAttribute("class", "f-partial head-c");
-    this.getElementsByClassName("head-c")[2].setAttribute("class", "f-partial head-c");
+    this.getElementsByClassName("head-c")[2].setAttribute("class", "f-supported head-c");
 
 ulelement.parentNode.style.backgroundImage="url("+ddtreemenu.closefolder+")"
 }
