@@ -109,7 +109,7 @@ div .fs-sp1-image {
 .pricing-already-account {
     margin-top: 25px;
     margin-right: 20px;
-    margin-left: 120px;
+    margin-left: 149px;
 }
 
 .pricing-nfp {
@@ -2520,12 +2520,12 @@ span.empty-box {
     width: 802px;
 }
 .pricing-desc-col {
-    width: 281px;
+    width: 291px;
     padding: 8px 0;
 }
 
 .pricing-personal-team-enterprise-col {
-    width: 170px;
+    width: 175px;
     text-align: center;
     padding: 8px 0;
     border-left: 1px solid #ACE2F5;
@@ -3064,6 +3064,7 @@ ul#treemenu1 {
     font-size: 14px;
     color: #000000;
     height: 25px;
+    text-indent: 0 !important;
 }
 .text-subhead-col {
     width: 170px;
@@ -3120,14 +3121,15 @@ li.subhead {
     background-image: none;
 }
 .text-col > div, .text-subhead-col > div {
-    height: 18px;
-    width: 20px;
+    height: 19px;
+    width: 19px;
     background-repeat: no-repeat;
     background-position: center center;
     margin: 0 auto;
 }
 .f-supported {
     background-image: url('http://www.swift-kanban.com/templates/shaper_simplicity_ii/images/green-tickmark.png');
+    margin-top: 1px !important;
 }
 .f-partial {
     background-image: url('http://www.swift-kanban.com/templates/shaper_simplicity_ii/images/yellow-tickmark.png');
@@ -3147,10 +3149,11 @@ li.subhead {
 }
 
 .main-col {
-    background-color: #ffe6c5;
+    /*background-color: #ffe6c5;*/
+    background-color: #CCEAFF;
 }
 .main-big-col {
-    background-color: #ffe6c5;
+    background-color: #CCEAFF;
     height: 42px;
 }
 /* css for the pricing page ends here */
