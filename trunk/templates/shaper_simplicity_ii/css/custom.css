@@ -3132,7 +3132,8 @@ li.subhead {
 }
 .compare-all-btn a {
     background-image: url('http://www.swift-kanban.com/templates/shaper_simplicity_ii/images/compare-all-btn.png');
-    width:115px;
+    background-repeat: no-repeat;
+    width:173px;
     height: 22px;
     position: absolute;
     top: 9px;
