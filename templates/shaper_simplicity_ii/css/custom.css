@@ -2520,8 +2520,7 @@ span.empty-box {
     width: 802px;
 }
 .pricing-desc-col {
-    /*width: 221px;*/
-    width: 290px;
+    width: 281px;
     padding: 8px 0;
 }
 
@@ -3049,27 +3048,30 @@ ul#treemenu1 {
     width: 290px;
     float: left;
     padding-bottom: 4px;
+    padding-top: 3px;
 }
 .feature-subhead-col {
     width: 270px;
     float: left;
-    padding-top: 3px;
+    padding-top: 5px;
 }
 .text-col {
     width: 170px;
     float: left;
     text-align: center;
-    padding-bottom: 5px;
-    padding-top: 2px;
+    padding-bottom: 0px;
+    padding-top: 5px;
     font-size: 14px;
     color: #000000;
+    height: 25px;
 }
 .text-subhead-col {
     width: 170px;
     float: left;
     text-align: center;
-    padding-bottom: 1px;
-    padding-top: 2px;
+    padding-bottom: 0;
+    padding-top: 6px;
+    height: 25px;
 }
 .item-page_pricing-page {
     padding-bottom: 40px;
@@ -3086,7 +3088,7 @@ ul#treemenu1 {
     cursor: hand !important;
     cursor: pointer !important;
     color: #0588B7;
-    padding: 5px 0 0 0;
+    padding: 0;
     font-size: 16px;
     font-weight: 400;
     border-top: 1px solid #ACE2F5;
@@ -3097,7 +3099,7 @@ ul#treemenu1 {
 }
 .treeview li.normalmenu{ /* Style for LI that contains sub lists (other ULs). */
     color: #0588B7;
-    padding: 5px 0 0 0;
+    padding: 0;
     font-size: 16px;
     font-weight: 400;
     border-top: 1px solid #ACE2F5;
@@ -3110,7 +3112,7 @@ ul#treemenu1 {
 li.subhead {
     color: black;
     font-size: 14px;
-    padding: 5px 0 5px 20px;
+    padding: 0px 0 0px 20px;
     border-top: 1px solid #ACE2F5;
     overflow: auto;
     clear: both;
@@ -3135,12 +3137,20 @@ li.subhead {
     background-repeat: no-repeat;
     width:173px;
     height: 22px;
+    font-size: 1px;
     position: absolute;
     top: 9px;
     cursor: hand;
     cursor: pointer;
     right: 10px;
-    color: transparent;
+    color: #F0931D !important;
 }
 
+.main-col {
+    background-color: #ffe6c5;
+}
+.main-big-col {
+    background-color: #ffe6c5;
+    height: 42px;
+}
 /* css for the pricing page ends here */
