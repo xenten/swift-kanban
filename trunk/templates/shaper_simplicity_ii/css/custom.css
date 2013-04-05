@@ -3160,4 +3160,14 @@ li.subhead {
     background-color: #CCEAFF;
     height: 42px;
 }
+
+.group-col-shadow {
+    width: 170px;
+    height: 100%;
+    position: absolute;
+    margin-left:460px;
+    margin-top: -36px;
+    background-color: transparent;
+    box-shadow: 0px 0px 8px #cccccc;
+}
 /* css for the pricing page ends here */
