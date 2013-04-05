@@ -143,5 +143,5 @@ target.attachEvent(tasktype, functionref)
 
 ddtreemenu.resizeShadow = function()
 {
-    $('preferred-pricing').height(($('#pricing-td').height()+36));
+    $('#preferred-pricing').height(($('#pricing-td').height()+36));
 };
