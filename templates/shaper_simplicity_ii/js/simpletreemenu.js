@@ -35,21 +35,34 @@ else if (ulelement.getAttribute("rel")=="open") //else if no cookie and this UL 
 ddtreemenu.expandSubTree(treeid, ulelement) //expand this UL plus all parent ULs (so the most inner UL is revealed!)
 ulelement.parentNode.onclick=function(e){
 var submenu=this.getElementsByTagName("ul")[0]
+    var class_index=0;
 if (submenu.getAttribute("rel")=="closed"){
     submenu.style.display="block";
     submenu.setAttribute("rel", "open");
-    this.getElementsByClassName("head-c")[0].setAttribute("class", "head-c");
-    this.getElementsByClassName("head-c")[1].setAttribute("class", "head-c");
-    this.getElementsByClassName("head-c")[2].setAttribute("class", "head-c");
+    if(this.getElementsByClassName("head-a").length==1)
+        this.getElementsByClassName("head-a")[0].setAttribute("class", "head-a");
+    else
+    {
+        this.getElementsByClassName("head-c")[0].setAttribute("class", "head-c");
+        class_index = 1;
+    }
+    this.getElementsByClassName("head-c")[class_index].setAttribute("class", "head-c");
+    this.getElementsByClassName("head-c")[class_index+1].setAttribute("class", "head-c");
 
 ulelement.parentNode.style.backgroundImage="url("+ddtreemenu.openfolder+")"
 }
 else if (submenu.getAttribute("rel")=="open"){
     submenu.style.display="none";
     submenu.setAttribute("rel", "closed");
-    this.getElementsByClassName("head-c")[0].setAttribute("class", "f-partial head-c");
-    this.getElementsByClassName("head-c")[1].setAttribute("class", "f-partial head-c");
-    this.getElementsByClassName("head-c")[2].setAttribute("class", "f-supported head-c");
+    if(this.getElementsByClassName("head-a").length==1)
+        this.getElementsByClassName("head-a")[0].setAttribute("class", "f-not-supported head-a");
+    else
+    {
+        this.getElementsByClassName("head-c")[0].setAttribute("class", "f-partial head-c");
+        class_index=1;
+    }
+    this.getElementsByClassName("head-c")[class_index].setAttribute("class", "f-partial head-c");
+    this.getElementsByClassName("head-c")[class_index+1].setAttribute("class", "f-supported head-c");
 
 ulelement.parentNode.style.backgroundImage="url("+ddtreemenu.closefolder+")"
 }
