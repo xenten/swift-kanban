@@ -3073,6 +3073,7 @@ ul#treemenu1 {
     padding-bottom: 0;
     padding-top: 6px;
     height: 25px;
+    text-indent: 0 !important;
 }
 .item-page_pricing-page {
     padding-bottom: 40px;
@@ -3130,6 +3131,9 @@ li.subhead {
 .f-supported {
     background-image: url('http://www.swift-kanban.com/templates/shaper_simplicity_ii/images/green-tickmark.png');
     margin-top: 1px !important;
+}
+.f-not-supported {
+    background-image: url('http://www.swift-kanban.com/templates/shaper_simplicity_ii/images/grey-tickmark.png');
 }
 .f-partial {
     background-image: url('http://www.swift-kanban.com/templates/shaper_simplicity_ii/images/yellow-tickmark.png');
