@@ -2517,7 +2517,7 @@ span.empty-box {
 /* New Pricing Page CSS starts here */
 .pricing-signup-table {
     /*border: 1px solid #82d6f4;*/
-    width: 802px;
+    width: 800px;
 }
 .pricing-desc-col {
     width: 291px;
@@ -2525,10 +2525,10 @@ span.empty-box {
 }
 
 .pricing-personal-team-enterprise-col {
-    width: 175px;
+    width: 173px;
     text-align: center;
     padding: 8px 0;
-    border-left: 1px solid #ACE2F5;
+    border-left: 1px solid #D7ECF7;
 }
 
 .pricing-ultimate-col {
@@ -2543,7 +2543,7 @@ span.empty-box {
     color: #0588b7;
     font-size: 20px;
     font-weight: 600;
-    border-top: 1px solid #ACE2F5;
+    border-top: 1px solid #D7ECF7;
 }
 
 .pricing-desc-text {
@@ -3016,7 +3016,7 @@ span.pricing-contact {
 /* css for the pricing page starts here */
 
 ul#treemenu1 {
-    width: 802px;
+    width: 800px;
     font-family: 'Open Sans', Arial;
     margin: 0;
     padding: 0;
@@ -3048,12 +3048,15 @@ ul#treemenu1 {
     width: 290px;
     float: left;
     padding-bottom: 4px;
+    border-top: 1px solid #D7ECF7;
     padding-top: 5px;
 }
 .feature-subhead-col {
     width: 270px;
     float: left;
     padding-top: 5px;
+    padding-left: 20px;
+    border-top: 1px solid #D7ECF7;
 }
 .text-col {
     width: 170px;
@@ -3065,6 +3068,7 @@ ul#treemenu1 {
     color: #000000;
     height: 25px;
     text-indent: 0 !important;
+    border-top: 1px solid #D7ECF7;
 }
 .text-subhead-col {
     width: 170px;
@@ -3073,6 +3077,7 @@ ul#treemenu1 {
     padding-bottom: 0;
     padding-top: 6px;
     height: 25px;
+    border-top: 1px solid #D7ECF7;
     text-indent: 0 !important;
 }
 .item-page_pricing-page {
@@ -3093,7 +3098,8 @@ ul#treemenu1 {
     padding: 0;
     font-size: 16px;
     font-weight: 400;
-    border-top: 1px solid #ACE2F5;
+    /*border-top: 1px solid #ACE2F5;*/
+    border-top: none;
     display: block;
     text-indent: 10px;
     overflow: auto;
@@ -3104,7 +3110,8 @@ ul#treemenu1 {
     padding: 0;
     font-size: 16px;
     font-weight: 400;
-    border-top: 1px solid #ACE2F5;
+    /*border-top: 1px solid #d7ecf7;*/
+    border-top: none;
     display: block;
     text-indent: 10px;
     overflow: auto;
@@ -3114,8 +3121,9 @@ ul#treemenu1 {
 li.subhead {
     color: black;
     font-size: 14px;
-    padding: 0px 0 0px 20px;
-    border-top: 1px solid #ACE2F5;
+    padding: 0;
+    /*border-top: 1px solid #ACE2F5;*/
+    border-top: none;
     overflow: auto;
     clear: both;
     background-color: #ffffff;
@@ -3155,9 +3163,15 @@ li.subhead {
 .main-col {
     /*background-color: #ffe6c5;*/
     background-color: #CCEAFF;
+    border-top: 1px solid #EDF5F9;
+}
+.main-top-col {
+    /*background-color: #ffe6c5;*/
+    background-color: #CCEAFF;
 }
 .main-big-col {
     background-color: #CCEAFF;
+    border-top: 1px solid #EDF5F9;
     height: 42px;
 }
 
@@ -3168,6 +3182,7 @@ li.subhead {
     margin-left:460px;
     margin-top: -36px;
     background-color: transparent;
-    box-shadow: 0px 0px 8px #cccccc;
+    box-shadow: 0px 4px 13px #000;
+    opacity: 0.4;
 }
 /* css for the pricing page ends here */
