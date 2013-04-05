@@ -54,6 +54,7 @@ else if (submenu.getAttribute("rel")=="open"){
 ulelement.parentNode.style.backgroundImage="url("+ddtreemenu.closefolder+")"
 }
 ddtreemenu.preventpropagate(e)
+    ddtreemenu.resizeShadow();
 }
 ulelement.onclick=function(e){
 ddtreemenu.preventpropagate(e)
@@ -139,3 +140,8 @@ target.addEventListener(tasktype, functionref, false)
 else if (target.attachEvent)
 target.attachEvent(tasktype, functionref)
 }
+
+ddtreemenu.resizeShadow = function()
+{
+    $('preferred-pricing').height(($('#pricing-td').height()+36));
+};
