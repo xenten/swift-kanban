@@ -74,6 +74,7 @@ currentnode.parentNode.style.backgroundImage="url("+ddtreemenu.openfolder+")"
 }
 currentnode=currentnode.parentNode
 }
+    ddtreemenu.resizeShadow();
 }
 
 ddtreemenu.flatten=function(treeid, action){ //expand or contract all UL elements
@@ -84,6 +85,7 @@ var relvalue=(action=="expand")? "open" : "closed"
 ultags[i].setAttribute("rel", relvalue)
 ultags[i].parentNode.style.backgroundImage=(action=="expand")? "url("+ddtreemenu.openfolder+")" : "url("+ddtreemenu.closefolder+")"
 }
+    ddtreemenu.resizeShadow();
 }
 
 ddtreemenu.rememberstate=function(treeid, durationdays){ //store index of opened ULs relative to other ULs in Tree into cookie
