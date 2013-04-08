@@ -3104,6 +3104,12 @@ ul#treemenu1 {
     text-indent: 10px;
     overflow: auto;
     clear: both;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .treeview li.normalmenu{ /* Style for LI that contains sub lists (other ULs). */
     color: #0588B7;
@@ -3117,6 +3123,12 @@ ul#treemenu1 {
     overflow: auto;
     clear: both;
     background-image: none !important;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 li.subhead {
     color: black;
