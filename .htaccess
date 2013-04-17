@@ -22,7 +22,7 @@ Options +FollowSymLinks
 ## Mod_rewrite in use.
 
 RewriteEngine On
-
+ExpiresActive On
 ## Begin - Rewrite rules to block out some common exploits.
 # If you experience problems on your site block out the operations listed below
 # This attempts to block the most common type of exploit `attempts` to Joomla!
@@ -80,8 +80,19 @@ RewriteRule .* index.php [L]
 #
 ## End - Joomla! core SEF Section.
 
+
+ExpiresByType text/html "access plus 1 hours"
+ExpiresByType image/gif "access plus 1 hours"
+ExpiresByType image/jpeg "access plus 1 hours"
+ExpiresByType image/png "access plus 1 hours"
+ExpiresByType text/css "access plus 1 hours"
+ExpiresByType text/javascript "access plus 1 hours"
+ExpiresByType application/x-javascript "access plus 1 hours"
+ExpiresByType image/ico "access plus 1 hours"
+
 # Added for Custom 404 Error
 ErrorDocument 404 https://www.swift-kanban.com
+ErrorDocument 500 https://www.swift-kanban.com
 
 #SD Times Redirect
 redirect 301 /free https://login.swift-kanban.com/pui/mregistration.html?utm_source=SD%2BTimes&utm_medium=print&utm_campaign=SD%2BTimes%2BAd
