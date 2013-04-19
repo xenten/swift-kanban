@@ -270,3 +270,5 @@ redirect 301 /predictability-event https://digite-events.webex.com/digite-events
 
 redirect 301 /leannow-signup http://app.streamsend.com/public/RQpU/bpH/subscribe
 redirect 301 /leannow-event https://digite-events.webex.com/digite-events/onstage/g.php?t=a&d=298429481
+
+redirect 301 /cisco-presentation https://drive.google.com/folderview?id=0B37Dn5JpAgZCXzdTekl4MUh2TkE&usp=sharing
