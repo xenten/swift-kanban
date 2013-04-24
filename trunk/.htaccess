@@ -91,51 +91,51 @@ ExpiresByType application/x-javascript "access plus 1 hours"
 ExpiresByType image/ico "access plus 1 hours"
 
 # Added for Custom 404 Error
-ErrorDocument 404 https://www.swift-kanban.com
-ErrorDocument 500 https://www.swift-kanban.com
+ErrorDocument 404 https://www.swiftkanban.com
+ErrorDocument 500 https://www.swiftkanban.com
 
 #SD Times Redirect
 redirect 301 /free https://login.swift-kanban.com/pui/mregistration.html?utm_source=SD%2BTimes&utm_medium=print&utm_campaign=SD%2BTimes%2BAd
 
-redirect 301 /glossary http://www.swift-kanban.com/kanban/46-kanban-glossary.html
-redirect 301 /pricing http://www.swift-kanban.com/kanban-pricing.html
-redirect 301 /pricing.html http://www.swift-kanban.com/kanban-pricing.html
-redirect 301 /kanban-signup http://www.swift-kanban.com/free-kanban-trial.html
-redirect 301 /trial http://www.swift-kanban.com/free-kanban-trial.html
-redirect 301 /trial-popup http://www.swift-kanban.com/free-kanban-trial.html?utm_source=Website&utm_medium=Popup&utm_campaign=Website%2BTrial%2BPopup
-redirect 301 /kanban-tool.html http://www.swift-kanban.com
-redirect 301 /kanban-tools.html http://www.swift-kanban.com
+redirect 301 /glossary http://www.swiftkanban.com/kanban/46-kanban-glossary.html
+redirect 301 /pricing http://www.swiftkanban.com/kanban-pricing.html
+redirect 301 /pricing.html http://www.swiftkanban.com/kanban-pricing.html
+redirect 301 /kanban-signup http://www.swiftkanban.com/free-kanban-trial.html
+redirect 301 /trial http://www.swiftkanban.com/free-kanban-trial.html
+redirect 301 /trial-popup http://www.swiftkanban.com/free-kanban-trial.html?utm_source=Website&utm_medium=Popup&utm_campaign=Website%2BTrial%2BPopup
+redirect 301 /kanban-tool.html http://www.swiftkanban.com
+redirect 301 /kanban-tools.html http://www.swiftkanban.com
 
-redirect 301 /community/category/blog/ http://www.swift-kanban.com/blog
-redirect 301 /blog/68-lean-software-development.html http://www.swift-kanban.com/blog/34-lean-software-development.html
-redirect 301 /kanban-signup.html http://www.swift-kanban.com/free-kanban-trial.html
-redirect 301 /pricing/kanban-signup.html http://www.swift-kanban.com/free-kanban-trial.html
-redirect 301 /swift-termspopup.html http://www.swift-kanban.com/terms-of-use.html
+redirect 301 /community/category/blog/ http://www.swiftkanban.com/blog
+redirect 301 /blog/68-lean-software-development.html http://www.swiftkanban.com/blog/34-lean-software-development.html
+redirect 301 /kanban-signup.html http://www.swiftkanban.com/free-kanban-trial.html
+redirect 301 /pricing/kanban-signup.html http://www.swiftkanban.com/free-kanban-trial.html
+redirect 301 /swift-termspopup.html http://www.swiftkanban.com/terms-of-use.html
 
 ################################# Community Redirects Starts Here  #########################################
-redirect 301 /community/blog/73-scrum-g-kanban-scrumban-or-kanban-lessons-at-lean-coffee.html http://www.swift-kanban.com/blog/37-scrum-g-kanban-scrumban-or-kanban-lessons-at-lean-coffee.html
-redirect 301 /community/blog/70-kanban-evolutionary-or-revolutionary.html http://www.swift-kanban.com/blog/35-kanban-evolutionary-or-revolutionary.html
-redirect 301 /community/blog/69-pull-vs-push.html http://www.swift-kanban.com/blog/36-kanban-says-pull-dont-push.html
-redirect 301 /community/blog/68-lean-software-development.html http://www.swift-kanban.com/blog/34-lean-software-development.html
-redirect 301 /community/blog/62-using-swift-kanban-for-customer-portfolio-management.html http://www.swift-kanban.com/blog/33-using-swift-kanban-for-customer-portfolio-management.html
-redirect 301 /community/blog/22-kanban-and-the-focus-on-fundamentals.html http://www.swift-kanban.com/blog/32-kanban-and-the-focus-on-fundamentals.html
-redirect 301 /community/blog/6-agility-redefined.html http://www.swift-kanban.com/blog/31-agility-redefined.html
-redirect 301 /community/blog/2-agility-requires-greater-discipline-are-you-ready-for-it.html http://www.swift-kanban.com/blog/30-agility-requires-greater-discipline-are-you-ready-for-it.html
-redirect 301 /community/blog/david-anderson-blog/1-kanban-and-offshore-development.html http://www.swift-kanban.com/blog/62-kanban-and-offshore-development.html
-redirect 301 /community/blog/david-anderson-blog/66-who-owns-kanban.html http://www.swift-kanban.com/blog/63-who-owns-kanban.html
+redirect 301 /community/blog/73-scrum-g-kanban-scrumban-or-kanban-lessons-at-lean-coffee.html http://www.swiftkanban.com/blog/37-scrum-g-kanban-scrumban-or-kanban-lessons-at-lean-coffee.html
+redirect 301 /community/blog/70-kanban-evolutionary-or-revolutionary.html http://www.swiftkanban.com/blog/35-kanban-evolutionary-or-revolutionary.html
+redirect 301 /community/blog/69-pull-vs-push.html http://www.swiftkanban.com/blog/36-kanban-says-pull-dont-push.html
+redirect 301 /community/blog/68-lean-software-development.html http://www.swiftkanban.com/blog/34-lean-software-development.html
+redirect 301 /community/blog/62-using-swift-kanban-for-customer-portfolio-management.html http://www.swiftkanban.com/blog/33-using-swift-kanban-for-customer-portfolio-management.html
+redirect 301 /community/blog/22-kanban-and-the-focus-on-fundamentals.html http://www.swiftkanban.com/blog/32-kanban-and-the-focus-on-fundamentals.html
+redirect 301 /community/blog/6-agility-redefined.html http://www.swiftkanban.com/blog/31-agility-redefined.html
+redirect 301 /community/blog/2-agility-requires-greater-discipline-are-you-ready-for-it.html http://www.swiftkanban.com/blog/30-agility-requires-greater-discipline-are-you-ready-for-it.html
+redirect 301 /community/blog/david-anderson-blog/1-kanban-and-offshore-development.html http://www.swiftkanban.com/blog/62-kanban-and-offshore-development.html
+redirect 301 /community/blog/david-anderson-blog/66-who-owns-kanban.html http://www.swiftkanban.com/blog/63-who-owns-kanban.html
 ################################# Community Redirects Ends Here    #########################################
 
 ################################# OLD REDIRECTS STARTS HERE #################################################
 redirect 301 /subscribe.html http://login.swift-kanban.com/pui/registration.html
 
-redirect 301 /toolsjournal http://www.swift-kanban.com/pricing.html?utm_source=ToolsJournal&utm_medium=Unpaid&utm_content=Review&utm_campaign=Swift-Kanban
+redirect 301 /toolsjournal http://www.swiftkanban.com/pricing.html?utm_source=ToolsJournal&utm_medium=Unpaid&utm_content=Review&utm_campaign=Swift-Kanban
 
 #DJA Invitation Redirects Starts Here#
-redirect 301 /dja-signup http://www.swift-kanban.com/news-and-events/dja-signup
-#redirect 301 /dja-signup http://www.swift-kanban.com/news-and-events/david-anderson-webinar-series
+redirect 301 /dja-signup http://www.swiftkanban.com/news-and-events/dja-signup
+#redirect 301 /dja-signup http://www.swiftkanban.com/news-and-events/david-anderson-webinar-series
 redirect 301 /dja-webinar-series-signup /dja-signup
 redirect 301 /dja-event https://digite-events.webex.com/digite-events/onstage/g.php?t=a&d=665740844
-redirect 301 /dja-townhall-signup http://www.swift-kanban.com/dja-signup
+redirect 301 /dja-townhall-signup http://www.swiftkanban.com/dja-signup
 redirect 301 /July12-Scrumban http://www.youtube.com/embed/gm4nsbNyEA8
 #DJA Invitation Redirects Ends Here#
 
@@ -144,7 +144,7 @@ redirect 301 /round_table_webex https://digite-events.webex.com/digite-events/on
 redirect 301 /round_table_recording http://www.youtube.com/watch?v=nZcqcByb140
 redirect 301 /dja-townhall-meeting-3-recording https://digite-events.webex.com/digite-events/lsr.php?AT=pb&SP=EC&rID=4341632&rKey=4adfa9bdf9be401f
 redirect 301 /dja-townhall-meeting-4-recording https://digite-events.webex.com/digite-events/lsr.php?AT=pb&SP=EC&rID=4463452&rKey=0822c202d4be4990
-redirect 301 /dja-townhall-meeting-Apr-2012-recording http://www.swift-kanban.com/community/david-anderson-global-town-hall-meeting
+redirect 301 /dja-townhall-meeting-Apr-2012-recording http://www.swiftkanban.com/community/david-anderson-global-town-hall-meeting
 redirect 301 /dja-townhall-meeting-Jul-2012-recording http://www.youtube.com/watch?v=FPwzv57jAqw
 redirect 301 /dja-recordings http://www.youtube.com/playlist?list=PLE62A8CC7BDA27129&feature=view_all
 redirect 301 /dja_recording http://www.youtube.com/playlist?list=PLE62A8CC7BDA27129&feature=view_all
@@ -152,20 +152,20 @@ redirect 301 /dja_recording http://www.youtube.com/playlist?list=PLE62A8CC7BDA27
 
 #MASA Redirects Starts Here#
 redirect 301 /masa-event https://digite-events.webex.com/digite-events/onstage/g.php?t=a&d=661232813
-redirect 301 /masa-signup http://www.swift-kanban.com/news-and-events/masa-signup?no_redirect=true
+redirect 301 /masa-signup http://www.swiftkanban.com/news-and-events/masa-signup?no_redirect=true
 redirect 301 /masa-redordings http://www.youtube.com/watch?v=uYsT_ZEa9Rk&list=PL0F8554EB72AFAFC9&index=1&feature=plpp_video
 #MASA Redirects Ends Here#
 
 #Dominica Redirects Starts Here#
 redirect 301 /dominica-event https://digite-events.webex.com/digite-events/onstage/g.php?t=a&d=660284421
-redirect 301 /dominica-signup http://www.swift-kanban.com/news-and-events/dominica-signup?no_redirect=true
+redirect 301 /dominica-signup http://www.swiftkanban.com/news-and-events/dominica-signup?no_redirect=true
 redirect 301 /dominica-recordings http://www.youtube.com/watch?v=d5RMhXtp0bo
 #MASA Redirects Ends Here#
 
 #Webinar Redirects Start here
 redirect 301 /training-series https://digite-events.webex.com/digite-events/onstage/g.php?t=a&d=661157257
 redirect 301 /first_scrumban_tool http://www.youtube.com/embed/gm4nsbNyEA8
-redirect 301 /first_scrumban_tool_signup http://www.swift-kanban.com/first_scrumban_tool
+redirect 301 /first_scrumban_tool_signup http://www.swiftkanban.com/first_scrumban_tool
 
 redirect 301 /deliver_value https://digite-events.webex.com/digite-events/onstage/g.php?t=a&d=664109729
 redirect 301 /beyond_IT http://www.youtube.com/embed/xcQahZOZ4Y0
@@ -219,9 +219,9 @@ redirect 301 /help/category/application-features/projects/kanban-board/ http://h
 redirect 301 /help/category/application-features/projects/ http://help.swift-kanban.com/getting-started/projects/creating-a-project.html
 redirect 301 /help/faqs/ http://help.swift-kanban.com/faq.html
 
-redirect 301 /swift-kanban.html http://www.swift-kanban.com
+redirect 301 /swift-kanban.html http://www.swiftkanban.com
 
-redirect 301 /masa http://www.swift-kanban.com/?utm_source=Masa&utm_medium=Sales&utm_campaign=Sales%2BMasa%2BWorkshop
+redirect 301 /masa http://www.swiftkanban.com/?utm_source=Masa&utm_medium=Sales&utm_campaign=Sales%2BMasa%2BWorkshop
 
 ################################# OLD REDIRECTS ENDS HERE #################################################
 
@@ -242,16 +242,16 @@ redirect 301 /dja-chicago-2012 https://www.e-junkie.com/ecom/gb.php?ii=1108796&c
 #redirect 301 /dja-chicago-2012 http://agilemanagement.net/index.php/Blog/advanced_kanban_masterclass_chicago_il_-_sep_5-7_2012/
 
 #SEM Starts
-redirect 301 /scrumban http://www.swift-kanban.com/kanban/41-what-is-scrumban.html
+redirect 301 /scrumban http://www.swiftkanban.com/kanban/41-what-is-scrumban.html
 redirect 301 /jira http://help.swift-kanban.com/getting-started/projects/jira-integration-beta.html
-redirect 301 /kanban-board http://www.swift-kanban.com/kanban/42-what-is-kanban-board.html
+redirect 301 /kanban-board http://www.swiftkanban.com/kanban/42-what-is-kanban-board.html
 #SEM Ends
 
 
 redirect 301 /buy https://buy.swift-kanban.com/xpaydigite
-redirect 301 /webinar-signup http://www.swift-kanban.com/news-and-events/david-anderson-webinar-series
+redirect 301 /webinar-signup http://www.swiftkanban.com/news-and-events/david-anderson-webinar-series
 
-redirect 301 /signup_success http://www.swift-kanban.com/swift-kanban-subscription-confirmation
+redirect 301 /signup_success http://www.swiftkanban.com/swift-kanban-subscription-confirmation
 
 redirect 301 /kanban-scrum-scrumban-features/swiftsync-integration.html https://www.swift-kanban.com/swiftsync-integration.html
 redirect 301 /kanban-scrum-scrumban-features/swiftsync-integration https://www.swift-kanban.com/swiftsync-integration.html
