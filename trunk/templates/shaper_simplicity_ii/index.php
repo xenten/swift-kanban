@@ -312,6 +312,9 @@ END ProvideSupport.com Graphics Chat Button Code -->
 
     <script type="text/javascript">
         var _gaq = _gaq || [];
+        var pluginUrl =
+            '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+        _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
         _gaq.push(['_setAccount', 'UA-2949348-11']);
         _gaq.push(['_setDomainName', 'swift-kanban.com']);
         _gaq.push(['_trackPageview']);
