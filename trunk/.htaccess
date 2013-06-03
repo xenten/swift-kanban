@@ -269,6 +269,7 @@ redirect 301 /predictability-signup http://app.streamsend.com/public/RQpU/b8t/su
 redirect 301 /predictability-event https://digite-events.webex.com/digite-events/onstage/g.php?t=a&d=661455701
 
 redirect 301 /leannow-signup-in http://www.swiftkanban.com/emailer/introduction-to-leannow-in/confirmation-email.html
+redirect 301 /leannow-event-in https://digite-events.webex.com/digite-events/onstage/g.php?t=a&d=669977017
 
 redirect 301 /leannow-signup-au http://app.streamsend.com/public/RQpU/bpH/subscribe
 redirect 301 /leannow-event-au https://digite-events.webex.com/digite-events/onstage/g.php?t=a&d=664822405
