@@ -112,8 +112,6 @@ var show_survey_dialog = function()
 var release_dialog = 0;
 var show_release_dialog = function()
 {
-   if($.cookie("release_30")!=null)
-        return false;
     $( "#release_30" ).dialog({
 
         width: '1000px',
