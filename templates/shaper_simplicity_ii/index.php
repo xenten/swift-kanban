@@ -362,9 +362,9 @@ END ProvideSupport.com Graphics Chat Button Code -->
             var readyFun = function(){
             $.doTimeout(1000, function(){
                 var newTime = (new Date()).getTime();
-                if($.cookie("release_30")==null)
+                if($.cookie("release_30")!=null)
                     return false;
-                if(newTime-$.cookie("first_visit_time") > (5*1000) )
+                if(newTime-$.cookie("release_30") > (5*1000) )
                 {
                     show_release_dialog();
                     return false;
