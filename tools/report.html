@@ -4,6 +4,22 @@
 
     <script>
 
+        var COUNTRY_REPORT = "Select eMail, Acc_Status, License_Type,Intended_Use, Source, Country, Reg_Date, Act_Date, Exp_Date, Last_Login from "+
+                "(select sr.email_address as eMail, dets_1.account_type as License_Type, sr.intended_use as Intended_Use, "+
+                "sr.referrer as Source, dets_1.country as Country, dets_1.current_state as Acc_Status, DATE(sr.CREATED_DATE) as Reg_Date, "+
+                "ifnull(DATE(dets_1.ACTIVATION_DATE), '') as Act_Date,  ifnull(DATE(dets_1.EXPIRY_DATE), '') as Exp_Date, "+
+                "ifnull(DATE(dets_1.lastLogin), '') as Last_Login "+
+                "from  saas_registration sr left outer join "+
+                "(select lic.activation_date, lic.expiry_date, dets.lastLogin, aap.user_id, aa.account_type, addr.country, aa.current_state "+
+                "from app_account_person aap, License lic , Address addr, app_account aa "+
+                "Left Outer Join (select max(LAST_LOGIN_TIME) as LastLogin, aa.id as AccountId "+
+                "from person_login_info pli, Repository r, app_account aa, app_domain ad "+
+                "where pli.REPOSITORY = r.ID "+
+                "and r.APP_DOMAIN = ad.ID and ad.APP_ACCOUNT = aa.id "+
+                "group by aa.id) dets on dets.accountId = aa.id "+
+                "where aa.id = aap.APP_ACCOUNT and addr.Id = aa.CONTACT_ADDR "+
+                "and aa.LICENSE = lic.ID) dets_1 on sr.EMAIL_ADDRESS = dets_1.USER_ID ) TEMP_TABLE ;"
+
         var All_ACCOUNTS_REPORT = "select 'NA' as 'Account Id', 'NA' as 'Account Name', sr.first_name as 'First Name', " +
                 "sr.last_name as 'Last Name', sr.email_address as 'Used Id or eMail Id', sr.contact_number as 'Phone Number', " +
                 "sr.country_code as 'Country', 'NA' as 'License Type', 'NA' as 'Activation Date', 'NA' as 'Expiry Date', " +
@@ -53,30 +69,19 @@
             document.body.appendChild(iFrameObject);
         }
 
-        function fireQueries(a) {
+        function fireQueries(a)
+        {
             if (a == 1 || a == -1)
             {
                 addQueryIframe(All_ACCOUNTS_REPORT,"All_Accounts_Report");
             }
-            if (a == 2 || a == -1) {/*
-                var ifrm2 = document.createElement("IFRAME");
-                ifrm2.setAttribute("src", "https://login.swift-kanban.com/admin/fireQueryData.action?queryOutputFile=All_Users_Report&queryString=select%20p.first_name%20as%20FirstName%2C%20p.last_name%20as%20LastName%2C%20p.user_id%20as%20Email%2C%20aa.name%20as%20AccountName%2C%20aa.account_type%20as%20LicenseType%2C%20date(pli.last_login_time)%20as%20LastLogin%20from%20organization%20o%2C%20app_domain%20ad%2C%20app_account%20aa%2C%20person%20p%20left%20outer%20join%20Person_login_info%20pli%20on%20pli.person_id%20%3D%20p.id%20where%20p.working_org%20%3D%20o.id%20%20and%20o.app_domain%20%3D%20ad.id%20%20and%20ad.app_account%20%20%3D%20aa.id%20order%20by%20pli.last_login_time%20desc%3B");
-                ifrm2.style.display = "none";
-                document.body.appendChild(ifrm2);*/
-                addQueryIframe(ALL_USERS_REPORT,"All_Users_Report")
+            if (a == 2 || a == -1)
+            {
+                addQueryIframe(ALL_USERS_REPORT,"All_Users_Report");
             }
-            if (a == 3 || a == -1) {
-                var ifrm3 = document.createElement("IFRAME");
-                ifrm3.setAttribute("src", "https://login.swift-kanban.com/admin/fireQueryData.action?queryOutputFile=Accounts_Not_Activated&queryString=select%20first_name%20as%20'First%20Name'%2Clast_name%20as%20'Last%20Name'%2C%20email_address%20as%20'eMail'%2Ccontact_number%20as%20'Phone%23'%2C%20date(created_date)%20as%20'Created%20Date'%20from%20saas_registration%20where%20current_state%20%3D%20'created'%20order%20by%20created_date%20desc%3B");
-                ifrm3.style.display = "none";
-                document.body.appendChild(ifrm3);
-            }
-
-            if (a == 4 || a == -1) {
-                var ifrm4 = document.createElement("IFRAME");
-                ifrm4.setAttribute("src", "https://login.swift-kanban.com/admin/fireQueryData.action?queryOutputFile=Account_Activation_Rate&queryString=Select%20Week%2C%20Total_Registrations%2C%20Actication_Rate%20from%20(select%20%20creat.createdWeek%20as%20'Week'%2C%20reg.registeredAccounts%20as%20Total_Registrations%20%2Ctruncate((100%20*%20creat.activeAccounts)%2Freg.registeredAccounts%20%2C%202)%20as%20Actication_Rate%20from%20(select%20date(DATE_ADD(created_date%2C%20INTERVAL(1-DAYOFWEEK(created_date))%20DAY)%20)%20as%20createdWeek%2C%20count(*)%20as%20registeredAccounts%20from%20saas_registration%20group%20by%20createdWeek)%20reg%2C%20(select%20date(DATE_ADD(created_date%2C%20INTERVAL(1-DAYOFWEEK(created_date))%20DAY)%20)%20as%20createdWeek%2C%20count(*)%20as%20activeAccounts%20from%20app_account%20group%20by%20createdweek)%20creat%20where%20creat.createdWeek%20%3D%20reg.createdWeek)%20Data%20order%20by%20Week%20desc%3B");
-                ifrm4.style.display = "none";
-                document.body.appendChild(ifrm4);
+            if (a == 3 || a == -1)
+            {
+                addQueryIframe(COUNTRY_REPORT,"Country_Source_Report");
             }
         }
     </script>
@@ -116,10 +121,10 @@ UserId:<input type="text" id='userid'/>&nbsp;&nbsp;&nbsp;Password:<input type="p
 
     <tr>
         <td>
-            3. Account Activation Rate
+            3. Country / Source Segmentation
         </td>
         <td>
-            <a href="#" onclick="fireQueries(4)"><img src="download.png" title="Download Report"></a>
+            <a href="#" onclick="fireQueries(3)"><img src="download.png" title="Country / Source Segmentation"></a>
         </td>
     </tr>
     <tr>
