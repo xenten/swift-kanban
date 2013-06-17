@@ -347,7 +347,7 @@ END ProvideSupport.com Graphics Chat Button Code -->
 
         <div class="release_30_wrapper">
             <div class="release_30_header">
-                    <div class='release_30_title'>A brand new SwiftKanban v3.0 with added value for your business!</div>
+                    <div class='release_30_title'>SwiftKanban 3.0 is here!</div>
                     <div class="release_30_close" id='release_30_close' onclick="$('#release_30').dialog('close');"><a href='#'>Skip to website >> </a></div>
             </div>
         <iframe id="blockrandom" name="iframe" src="http://www.swiftkanban.com/custom_html/release3/index_new.html" style="border: none!important;" width="100%" height="500" scrolling="no" class="wrapper_release_slides">
