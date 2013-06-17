@@ -114,7 +114,7 @@ require_once(dirname(__FILE__).DS.'lib'.DS.'helix.php');
 
 <?php $helix->addFeature('ie6warn'); ?>
 
-<body class="bg clearfix new-header" id='sk_body' >
+<body class="bg clearfix new-header" id='sk_body'>
 
 	<div class="bg1">
 
@@ -328,23 +328,7 @@ END ProvideSupport.com Graphics Chat Button Code -->
 
 
 
-    <!-- Google Code for Remarketing tag -->
-    <!-- Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. For instructions on adding this tag and more information on the above requirements, read the setup guide: google.com/ads/remarketingsetup -->
-    <script type="text/javascript">
-        /* <![CDATA[ */
-        var google_conversion_id = 974084088;
-        var google_conversion_label = "kPSfCLjEuSAQ-K-90AM";
-        var google_custom_params = window.google_tag_params;
-        var google_remarketing_only = true;
-        /* ]]> */
-    </script>
-    <script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
-    </script>
-    <noscript>
-        <div style="display:inline;">
-            <img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/974084088/?value=0&amp;label=kPSfCLjEuSAQ-K-90AM&amp;guid=ON&amp;script=0"/>
-        </div>
-    </noscript>
+
     <div id="survey" title="Thank you very much for visiting Swift-Kanban!" style="display: none;">
         <div id="survey-text">We hope you are enjoying your visit to our site. Would you please take a 1 minute survey for a chance to win a <span style="color:#fd631d;">$25 Amazon Gift Card</span> (or equivalent)?</div>
         <div class="survey-buttons">
@@ -359,23 +343,47 @@ END ProvideSupport.com Graphics Chat Button Code -->
             <div id="survey-get-free-text">Try Swift-Kanban at zero-cost for 30 days</div>
         </div>
     </div>
-    <a href="https://www.leadformix.com" title="Marketing Automation" onclick="window.open(this.href);return(false);">
+    <div class="release_30" id='release_30'>
+
+        <div class="release_30_wrapper">
+            <div class="release_30_header">
+                    <div class='release_30_title'>A brand new SwiftKanban v3.0 with added value for your business!</div>
+                    <div class="release_30_close" id='release_30_close' onclick="$('#release_30').dialog('close');"><a href='#'>Skip to website >> </a></div>
+            </div>
+        <iframe id="blockrandom" name="iframe" src="http://www.swiftkanban.com/custom_html/release3/index_new.html" style="border: none!important;" width="100%" height="500" scrolling="no" class="wrapper_release_slides">
+            This option will not work correctly. Unfortunately, your browser does not support inline frames.</iframe>
+
+        </div>
+        </div>
+
+
         <script type="text/javascript">
-            var pkBaseURL = (("https:" == document.location.protocol) ? "https://vlog.leadformix.com/" : "https://vlog.leadformix.com/");
-            <!--
-            bf_action_name = '';
-            bf_idsite = 8062;
-            bf_url = pkBaseURL+'bf/bf.php';
-            (function() {
-                var lfh = document.createElement('script'); lfh.type = 'text/javascript'; lfh.async = true;
-                lfh.src = pkBaseURL+'bf/lfx.js';
-                var s = document.getElementsByTagName('head')[0]; s.appendChild(lfh);
-            })();
-            //-->
+
+            var readyFun = function(){
+            $.doTimeout(1000, function(){
+                var newTime = (new Date()).getTime();
+                if($.cookie("release_30")==null)
+                    return false;
+                if(newTime-$.cookie("first_visit_time") > (5*1000) )
+                {
+                    show_release_dialog();
+                    return false;
+                }
+                return true;
+            });};
+            $('document').ready(readyFun());
+            var fun = function(e){
+                if(release_dialog==0)
+                return;
+                document.body.scrollTop = 0;
+                document.body.scrollTo(0,0);
+                e.preventDefault();
+                e.stopPropagation();
+                return false;
+            };
+            document.body.onmousewheel=fun;
+            document.body.onscroll=fun;
         </script>
-        <noscript><p>Marketing Automation Platform <img src="https://vlog.leadformix.com/bf/bf.php" style="border:0" alt="Marketing Automation Tool"/></p>
-        </noscript>
-    </a>
 </body>
 
 </html>

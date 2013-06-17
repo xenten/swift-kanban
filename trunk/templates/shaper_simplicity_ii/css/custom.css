@@ -2764,7 +2764,7 @@ span.pricing-contact {
     position: absolute !important;
     top: 0 !important;
     left: 0 !important;
-    opacity: .3 !important;
+    opacity: 0.9 !important;
 
 }
 
@@ -3201,3 +3201,62 @@ li.subhead {
     opacity: 0.4;
 }
 /* css for the pricing page ends here */
+
+.contentpane_release_slides
+{
+    width: 1000px;
+    margin-left: -100px;
+    margin-top: -35px;
+}
+
+.release_30
+{
+    display: none;
+}
+
+.ui-dialog-titlebar.ui-widget-header.ui-corner-all.ui-helper-clearfix
+{
+    display: none!important;
+}
+
+.release_30
+{
+    width: 900px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+}
+.release_30_title
+{
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    color:#F48A00;
+    margin-left: 90px;
+}
+.release_30_close
+{
+    float: right;
+    margin-right: 45px;
+}
+.release_30_header
+{
+    height: 30px;
+    padding-top: 10px;
+    background-color: #FFF;
+    border-bottom: 1px solid #E3E3E3;
+}
+
+.release_30_wrapper
+{
+    background-color: #FFF;
+    width: 900px;
+    margin: 0 auto;
+    box-shadow: 2px 2px 7px #ABABAB;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #888;
+    margin-top: 70px!important;
+}

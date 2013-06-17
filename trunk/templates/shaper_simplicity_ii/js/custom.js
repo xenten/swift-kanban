@@ -109,6 +109,37 @@ var show_survey_dialog = function()
     });
 };
 
+var release_dialog = 0;
+var show_release_dialog = function()
+{
+   if($.cookie("release_30")==null)
+        return false;
+    $( "#release_30" ).dialog({
+
+        width: '1000px',
+        height: '500px',
+        modal: true,
+        resizable: false,
+        draggable: false,
+        dialogClass:'release_dialog',
+        open:function(event, ui){
+            _gaq.push(['_trackEvent', '3.0 Release Popup', 'Displayed', 'Release']);
+        },
+        position: { my: "center", at: "bottom", of: '#header' },
+        create: function(event, ui) {
+            //$("body").css({ overflow: 'hidden' })
+            release_dialog=1;
+        },
+        beforeClose: function(event, ui) {
+            //$("body").css({ overflow: 'inherit' })
+            release_dialog=0;
+        }
+
+});
+
+    $.cookie("release_30","true",{ expires: 30 });
+};
+
 var show_free_trial_dialog = function()
 {
     $( "#survey-get-free" ).dialog({
@@ -180,3 +211,4 @@ function follow_twitter() {
 }
 
 /* javascript for follow twitter popup ends here */
+
