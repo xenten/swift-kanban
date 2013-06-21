@@ -64,7 +64,7 @@ $.doTimeout(1000, function(){
         return false;
     if(newTime-$.cookie("first_visit_time") > (display_survey_first_time*1000) )
     {
-        showDialog();
+        //showDialog();
         return false;
     }
     return true;
@@ -123,7 +123,7 @@ var show_release_dialog = function()
         open:function(event, ui){
             _gaq.push(['_trackEvent', '3.0 Release Popup', 'Displayed', 'Release']);
         },
-        position: { my: "center", at: "bottom", of: '#header' },
+        position: { my: "center", at: "bottom", of: '#popup_head' },
         create: function(event, ui) {
             //$("body").css({ overflow: 'hidden' })
             release_dialog=1;
