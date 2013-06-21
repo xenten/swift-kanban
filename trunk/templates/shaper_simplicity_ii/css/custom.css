@@ -3258,5 +3258,12 @@ li.subhead {
     -moz-border-radius: 4px;
     overflow: hidden;
     border: 1px solid #888;
-    margin-top: -40px!important;
+    margin-top: 0px!important;
+}
+
+.news_events_release .single_news_container img
+{
+    width: 508px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

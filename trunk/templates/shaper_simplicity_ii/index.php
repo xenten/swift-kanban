@@ -356,7 +356,9 @@ END ProvideSupport.com Graphics Chat Button Code -->
         </div>
         </div>
 
+<div style="position: fixed;width: 100%;height: 40px;background-color: transparent;z-index: 0;top:0;left: 0;" id='popup_head'>
 
+</div>
         <script type="text/javascript">
 
             var readyFun = function(){

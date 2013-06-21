@@ -1,0 +1,51 @@
+.features3-page
+{
+    width: 800px!important;
+    background-color: #FFF;
+    margin: 0 auto;
+}
+
+.features3-image.slider
+{
+    border: 1px solid #e0e0e0;
+}
+
+.features3-image
+{
+    padding-bottom: 15px;
+    padding-top: 15px;
+    position:relative;
+    text-align: center;
+}
+
+.features3-image img
+{
+    margin: 0 auto!important;
+    -moz-box-shadow: 0 0 5px #ccc;
+    -webkit-box-shadow: 0 0 5px #ccc;
+    box-shadow: 0 0 5px #ccc;
+    border: solid #fff 5px;
+}
+
+.features3-wrapper
+{
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.features3-title h3
+{
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 20px;
+}
+
+.bx-wrapper .bx-viewport
+{
+    left: 0!important;
+}
+
+.features3-wrapper .slider li
+{
+    width: 780px!important;
+}
