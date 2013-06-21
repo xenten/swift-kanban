@@ -859,9 +859,51 @@
 			}*/
 			// if autoHover is requested
             slider.autoPaused = true;
+            var x = 0, move_x = 0, x_diff= 0, x_prev=0;
+            var direction = 'right';
+            el.mousemove(function(e)
+            {
+                if(x==0) x=e.pageX;
+                x_prev = move_x;
+                move_x = e.pageX;
+                x_diff = move_x-x;
+                if(x_prev<move_x)
+                {
+                    if(direction=='left')
+                        x=move_x;
+                    direction = 'right';
+                }
+                else
+                {
+                    if(direction=='right')
+                        x=move_x;
+                    direction = 'left';
+                }
+                if(direction=='right')
+                {
+                    if(x_diff>30)
+                    {
+                        x=x_prev;
+                        el.goToNextSlide();
+                    }
+                }
+                else
+                {
+                    if(x_diff<30)
+                    {
+                        x=x_prev;
+                        el.goToPrevSlide();
+                    }
+                }
+                if(x_diff)
+                var pageCoords = "( " + e.pageX + ", " + e.pageY + " )";
+            });
+
+
+
 			if(slider.settings.autoHover){
 				// on el hover
-				el.hover(function(){
+				/*el.hover(function(){
                     // if the autoPaused value was created be the prior "mouseover" event
                     if(slider.autoPaused){
                         // start the auto show and pass true agument which will prevent control update
@@ -877,7 +919,7 @@
                         // create a new autoPaused value which will be used by the relative "mouseout" event
                         slider.autoPaused = true;
 					}
-				});
+				});*/
 			}
 		};
 		

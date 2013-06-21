@@ -32,18 +32,9 @@
         $(document).ready(function () {
 
             showSlide('.slider_zoom', false, true, FADE_SLIDE);
-            theme_object = showSlide('.slider_themes', true, false, HOR_SLIDE);
+            showSlide('.slider_team', false, true, HOR_SLIDE);
+            showSlide('.slider_themes', false, true, HOR_SLIDE);
 
-            var theme_x_out = 0;
-            var theme_mouse_move = function () {
-                theme_object.goToNextSlide();
-            };
-            var theme_out = function () {
-                theme_x_out = 0;
-            };
-            var theme_slider = $('.theme_slider');
-            //  theme_slider.mouseleave(theme_out());
-            //theme_slider.mousemove(theme_mouse_move());
 
         });
 
@@ -110,7 +101,7 @@
             </div>
 
             <div class="features3-wrapper">
-                <div class="features3-title"><h3>Get different level of details using board zoom!<span style="font-size: 12px;font-weight: normal;"> (mouse hover on image to see different board views)</span></h3> </div>
+                <div class="features3-title"><h3>Get different level of details using board zoom!</h3> </div>
                 <div class="features3-content">
                     <div class="features3-description"><!--Choose from various--></div>
                     <div class="features3-image slider">
@@ -163,7 +154,7 @@
                 <div class="features3-content">
                     <div class="features3-description"><!--Choose from various--></div>
                     <div class="features3-image slider">
-                        <div class="slider_zoom">
+                        <div class="slider_team">
                             <div>
                                 <div class="features3-wrapper">
                                     <div class="features3-content">
@@ -181,6 +172,30 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="features3-wrapper">
+                <div class="features3-title"><h3>Quick Actions on Card</h3></div>
+                <div class="features3-content">
+
+
+                        <div class="features3-image">
+                            <img src='../../images/features/common/cardactions.png'
+                                 alt='Define custom work cards!' />
+                        </div>
+                    <div class="features3-description">
+                        The following quick actions are available directly on the card.
+                        <ul><li><strong>Archive Card</strong> &ndash; Archive user story card from any lane to mark it done or if the user story has become obsolete.
+                        </li><li><strong>Clone Card</strong> &ndash; Clone card to create an exact replica of existing card to start a new user story with current settings of the card. E.g. A team is working on an issue for London factory and a similar issue is discovered for Tokyo factory.
+                        </li><li><strong>Convert Card</strong> &ndash; Convert a defect/bug into a user story or change request without losing details of existing card. Convert card can be used to convert any card type to other card type. This helps when the work type changes for a user story.
+                        </li><li><strong>Move To (Backlog)</strong> &ndash; Skip lanes and move the user story card to Backlog or any other lane on the board.
+                        </li><li><strong>Linked Cards</strong> &ndash; This will allow you to trace several cards for future reference
+                        </li>
+                        </ul>
+
                     </div>
                 </div>
             </div>
