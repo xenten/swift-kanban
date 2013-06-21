@@ -31,6 +31,7 @@
         var theme_object;
         $(document).ready(function () {
 
+            showSlide('.slider_smartlanes', false, true, FADE_SLIDE);
             showSlide('.slider_zoom', false, true, FADE_SLIDE);
             showSlide('.slider_team', false, true, HOR_SLIDE);
             showSlide('.slider_themes', false, true, HOR_SLIDE);
@@ -47,7 +48,7 @@
     <img src="../../images/features/common/header.png" style="margin-left:6px ;"/>
 </div>
 <div style="background-image: url('../../images/features/common/background.png'); background-repeat: repeat-y; margin: 0 auto;width:1007px">
-    <div style="width: 960px;margin:0 auto;">
+    <div style="width: 960px;margin:0 auto;padding-bottom: 30px;">
         <div class="features3-page">
 
             <div class="features3-wrapper">
@@ -180,8 +181,6 @@
             <div class="features3-wrapper">
                 <div class="features3-title"><h3>Quick Actions on Card</h3></div>
                 <div class="features3-content">
-
-
                         <div class="features3-image">
                             <img src='../../images/features/common/cardactions.png'
                                  alt='Define custom work cards!' />
@@ -200,8 +199,38 @@
                 </div>
             </div>
 
+            <div class="features3-wrapper">
+                <div class="features3-title"><h3>Smart Lanes</h3></div>
+                <div class="features3-content">
+                    <div class="features3-description">Smart-Lanes add tremendous flexibility and visualization to the Kanban board. 'Smart Lanes' can be associated with various card attributes such as Class Of Service, or Team Members, or even your own ad-hoc labels. As you move cards from one Smart Lane to another, the associated attribute value is also reset accordingly and vice-versa!</div>
+                    <div class="features3-image slider">
+                        <div class="slider_smartlanes">
+                            <div>
+                                <div class="features3-wrapper">
+                                    <div class="features3-content">
+                                        <div class="features3-image"><img src='../../images/features/common/smart-lanes-1.png'
+                                                                          alt='Define Smart Laanes in SwiftKanban SwiftKanban'/></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="features3-wrapper">
+                                    <div class="features3-content">
+                                        <div class="features3-image"><img src='../../images/features/common/smart_lanes_2.png'
+                                                                          alt='Automatic categorization of cards'/></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
+</div>
+<div style="margin: 0 auto;width: 1027px;">
+    <img src="../../images/features/common/footer.png" style="margin-left:6px ;"/>
 </div>
 </body>
 </html>
