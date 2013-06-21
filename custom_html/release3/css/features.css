@@ -49,3 +49,9 @@
 {
     width: 780px!important;
 }
+
+.features3-description ul li
+{
+    background: none;
+    margin-top: 10px;
+}
