@@ -7,14 +7,13 @@
 
 .features3-image.slider
 {
-    margin-top: -15px;
+
 }
 
 .features3-image
 {
     padding-bottom: 15px;
     padding-top: 15px;
-    position:relative;
     text-align: center;
 }
 
@@ -54,4 +53,15 @@
 {
     background: none;
     margin-top: 10px;
+}
+
+.slide_options div a
+{
+    margin-left: 15px;
+    color: #0058b0;
+}
+.slide_options
+{
+    float: right;
+    margin-right: 60px;
 }
