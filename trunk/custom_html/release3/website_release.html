@@ -38,7 +38,8 @@
             zoom_slide = showSlide('.slider_zoom', false, auto_start_false, FADE_SLIDE);
             showSlide('.slider_team', false, auto_start_true, HOR_SLIDE);
             theme_slide = showSlide('.slider_themes', false, auto_start_false, FADE_SLIDE);
-            theme_slide = showSlide('.slider_collab', false, auto_start_true, FADE_SLIDE);
+            showSlide('.slider_collab', false, auto_start_true, FADE_SLIDE);
+            chart_slide = showSlide('.slider_charts', false, auto_start_true, FADE_SLIDE);
         });
 
 
@@ -227,6 +228,40 @@
                         <div class="slider_collab">
                             <div class="features3-image"><img src='../../images/features/common/board-chat.png' alt='SwiftKanban Small Card View'/></div>
                             <div class="features3-image"><img src='../../images/features/common/comments.png' alt='SwiftKanban Medium Card View'/></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features3-wrapper">
+                <div class="features3-title"><h3>Collaboration</h3> </div>
+                <div class="features3-content">
+                    <div class="features3-description">
+                        Track key performance metrics such as Lead Time, Cycle Time and Wait Times in SwiftKanban and
+                        identify improvement opportunities using Cumulative Flow diagrams, which are generated based on
+                        the work item count, as well as work item estimates, to indicate the progress of work being
+                        executed/ flowing through the board over a period of time.
+                        <br/>
+                        <br/>
+                        <div class="slide_options">
+                            <div>
+                                Select your role and check how the board looks for you:
+                                <a  onmouseover="chart_slide.goToSlide(0);" href='javascript:theme_slide.goToSlide(0);'>CFD</a>
+                                <a  onmouseover="chart_slide.goToSlide(1);" href='javascript:theme_slide.goToSlide(1);'>Lead Time</a>
+                                <a  onmouseover="chart_slide.goToSlide(2);" href='javascript:theme_slide.goToSlide(2);'>Control Charts</a>
+                                <a  onmouseover="chart_slide.goToSlide(3);" href='javascript:theme_slide.goToSlide(3);'>Throughput</a>
+                                <a  onmouseover="chart_slide.goToSlide(4);" href='javascript:theme_slide.goToSlide(4);'>Wait Time</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="features3-image slider">
+                        <div class="slider_charts">
+                            <div class="features3-image"><img src='../../images/features/charts/kanban_cfd.png' alt='SwiftKanban Cummulative Flow Diagram'/></div>
+                            <div class="features3-image"><img src='../../images/features/charts/kanban_lead_time.png' alt='SwiftKanban Lead Time'/></div>
+                            <div class="features3-image"><img src='../../images/features/charts/kanban_lead_time_control_chart.png' alt='SwiftKanban Lead Time With Control Carts'/></div>
+                            <div class="features3-image"><img src='../../images/features/charts/kanban_throughput.png' alt='SwiftKanban Throughput'/></div>
+                            <div class="features3-image"><img src='../../images/features/charts/kanban_wait_time.png' alt='SwiftKanban Wait Time'/></div>
                         </div>
                     </div>
                 </div>
