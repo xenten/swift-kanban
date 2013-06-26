@@ -38,7 +38,7 @@
         var zoom_slide, team_slide, theme_slide;
         $(document).ready(function () {
 
-            showSlide('.slider_smartlanes', false, true, FADE_SLIDE);
+            smartlanes_slide = showSlide('.slider_smartlanes', false, true, FADE_SLIDE);
             zoom_slide = showSlide('.slider_zoom', false, auto_start_false, FADE_SLIDE);
             showSlide('.slider_team', false, auto_start_true, HOR_SLIDE);
             theme_slide = showSlide('.slider_themes', false, auto_start_false, FADE_SLIDE);
@@ -52,6 +52,8 @@
 
     <div>
     <div class="features3-page">
+    <h1>SwiftKanban Features</h1>
+    <div align="left" style="background-color: #f60; color: #ffffff; padding-left: 10px; padding-top: 7px; padding-bottom: 7px;"><span class="title" style="color: #ffffff; font-size: 13px;">Download a complete product brochure of SwiftKanban <a href="/download-brochure" style="color: #ffffff; font-size: 17px;"><span style="text-decoration: underline;">here</span></a>. Or <a href="/free-kanban-trial.html" style="color: #ffffff; font-size: 17px;"><span style="text-decoration: underline;">sign up</span></a> for a 30-day free trial!</span></div>
 
     <div class="features3-wrapper">
         <div class="features3-title"><h3>Visualize Your Workflow</h3></div>
@@ -86,11 +88,22 @@
     <div class="features3-wrapper">
         <div class="features3-title"><h3>Smart Lanes</h3></div>
         <div class="features3-content">
-            <div class="features3-description">Smart-Lanes add tremendous flexibility and visualization to the Kanban board. 'Smart Lanes' can be associated with various card attributes such as Class Of Service, or Team Members, or even your own ad-hoc labels. As you move cards from one Smart Lane to another, the associated attribute value is also reset accordingly and vice-versa!</div>
+            <div class="features3-description">Smart-Lanes add tremendous flexibility and visualization to the Kanban board. 'Smart Lanes' can be associated with various card attributes such as Class Of Service, or Team Members, or even your own ad-hoc labels. As you move cards from one Smart Lane to another, the associated attribute value is also reset accordingly and vice-versa! <br/><br/>
+                <div class="slide_options">
+                    <div>
+                        Select your role and check how the board looks for you:
+                        <a  onmouseover="smartlanes_slide.goToSlide(0);" href='javascript:theme_slide.goToSlide(0);'>Priority</a>
+                        <a  onmouseover="smartlanes_slide.goToSlide(1);" href='javascript:theme_slide.goToSlide(1);'>Class of Service</a>
+                        <a  onmouseover="smartlanes_slide.goToSlide(2);" href='javascript:theme_slide.goToSlide(2);'>Other Options</a>
+
+                    </div>
+                </div>
+            </div>
             <div class="features3-image slider">
                 <div class="slider_smartlanes">
-                    <div class="features3-image"><img src='../../images/features/common/smart_lanes_2.png' alt='Automatic categorization of cards'/></div>
-                    <div class="features3-image"><img src='../../images/features/common/smart-lanes-1.png' alt='Define Smart Laanes in SwiftKanban SwiftKanban'/></div>
+                    <div class="features3-image"><img src='../../images/features/common/smart_lanes_priority.png' alt='Automatic categorization of cards - Priority'/></div>
+                    <div class="features3-image"><img src='../../images/features/common/smart_lanes_class_of_service.png' alt='Automatic categorization of cards - Class of Service'/></div>
+                    <div class="features3-image"><img src='../../images/features/common/smart_lanes_settings.png' alt='Define Smart Laanes in SwiftKanban SwiftKanban'/></div>
                 </div>
             </div>
         </div>
@@ -243,22 +256,21 @@
     </div>
 
     <div class="features3-wrapper">
-        <div class="features3-title"><h3>Scrum Analytics</h3> </div>
+        <div class="features3-title"><h3>Scrum Analytics
+            <span style="font-weight: normal;font-size: 13px; margin-left: 147px;">Select Scrum Analytics for your team:
+            <a style="color: #0058b0;margin-left: 15px;" onmouseover="chart_scrum_slide.goToSlide(0);" href='javascript:theme_slide.goToSlide(0);'>Burn-down Chart</a>
+            <a style="color: #0058b0;margin-left: 15px;"  onmouseover="chart_scrum_slide.goToSlide(1);" href='javascript:theme_slide.goToSlide(1);'>Throughput or Velocity</a></span>
+        </h3>
+
+        </div>
         <div class="features3-content">
             <div class="features3-description">
-                <div class="slide_options">
-                    <div>
-                        Select Scrum Analytics for your team:
-                        <a  onmouseover="chart_scrum_slide.goToSlide(0);" href='javascript:theme_slide.goToSlide(0);'>Burn-down Chart</a>
-                        <a  onmouseover="chart_scrum_slide.goToSlide(1);" href='javascript:theme_slide.goToSlide(1);'>Throughput or Velocity</a>
 
-                    </div>
-                </div>
             </div>
             <div class="features3-image slider">
                 <div class="slider_scrum_charts">
                     <div class="slider_release">
-                        <div class="features3-description">
+                        <div class="features3-description" style="text-align: left!important;">
                             <strong>Burn-down Charts</strong>
                             <br>
                             Burn-down charts are provided in SwiftKanban to enable SCRUM teams to track the release progress in the good old way by tracking the hours remaining to be burned or how many actual hours have already being spent( Burn-up chart )before release is ready to be shipped.
@@ -266,7 +278,7 @@
                         <div class="features3-image"><img src='../../images/features/charts/kanban_scrum_burndown_charts.png' alt='Scrum Burndown Chart'/></div>
                     </div>
                     <div class="slider_release">
-                        <div class="features3-description">
+                        <div class="features3-description" style="text-align: left!important;">
                             <strong>Throughput/ Velocity</strong>
                             <br/>
                             Track Throughput/ Velocity of your team to see if you are on the improvement path. SwiftKanban allows you to view you throughput in terms of no. of cards as well as by card estimates( Velocity) and allows analyzing further breakup by the type of card, Class Of Service( CoS), Card Priority or card size.
@@ -324,12 +336,12 @@
             </div>
             <div class="features3-image slider">
                 <div class="slider_integrations">
-                    <div class="features3-image"><a href="http://swiftkanban.com/swiftsync-integration"><img src='../../images/features/common/kanban_integrations.png' alt='SwiftKanban Integrations'/></a></div>
+                    <div class="features3-image"><a style="border: none;color: transparent;" href="http://swiftkanban.com/swiftsync-integration"><img style="border: solid #fff 5px!important;" src='../../images/features/common/kanban_integrations.png' alt='SwiftKanban Integrations'/></a></div>
                 </div>
             </div>
         </div>
     </div>
-
+    <div align="left" style="background-color: #f60; color: #ffffff; padding-left: 10px; padding-top: 7px; padding-bottom: 7px;"><span class="title" style="color: #ffffff; font-size: 13px;">To learn more, download a complete product brochure of SwiftKanban <a href="/download-brochure" style="color: #ffffff; font-size: 17px;"><span style="text-decoration: underline;">here</span></a>. Or <a href="/free-kanban-trial.html" style="color: #ffffff; font-size: 17px;"><span style="text-decoration: underline;">sign up</span></a> for a 30-day free trial!</span></div>
     </div>
     </div>
 </div>
