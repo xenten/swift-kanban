@@ -40,6 +40,7 @@
             theme_slide = showSlide('.slider_themes', false, auto_start_false, FADE_SLIDE);
             showSlide('.slider_collab', false, auto_start_true, FADE_SLIDE);
             chart_slide = showSlide('.slider_charts', false, auto_start_false, FADE_SLIDE);
+            chart_scrum_slide = showSlide('.slider_scrum_charts', false, auto_start_false, FADE_SLIDE);
         });
 
 
@@ -268,6 +269,42 @@
                 </div>
             </div>
 
+            <div class="features3-wrapper">
+                <div class="features3-title"><h3>Scrum Analytics</h3> </div>
+                <div class="features3-content">
+                    <div class="features3-description">
+                        <div class="slide_options">
+                            <div>
+                                Select Scrum Analytics for your team:
+                                <a  onmouseover="chart_scrum_slide.goToSlide(0);" href='javascript:theme_slide.goToSlide(0);'>Burn-down Chart</a>
+                                <a  onmouseover="chart_scrum_slide.goToSlide(1);" href='javascript:theme_slide.goToSlide(1);'>Throughput or Velocity</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="features3-image slider">
+                        <div class="slider_scrum_charts">
+                            <div class="slider_release">
+                                <div class="features3-description">
+                                    <strong>Burn-down Charts</strong>
+                                    <br>
+                                    Burn-down charts are provided in SwiftKanban to enable SCRUM teams to track the release progress in the good old way by tracking the hours remaining to be burned or how many actual hours have already being spent( Burn-up chart )before release is ready to be shipped.
+                                </div>
+                                <div class="features3-image"><img src='../../images/features/charts/kanban_scrum_burndown_charts.png' alt='Scrum Burndown Chart'/></div>
+                            </div>
+                            <div class="slider_release">
+                                <div class="features3-description">
+                                    <strong>Throughput/ Velocity</strong>
+                                    <br/>
+                                    Track Throughput/ Velocity of your team to see if you are on the improvement path. SwiftKanban allows you to view you throughput in terms of no. of cards as well as by card estimates( Velocity) and allows analyzing further breakup by the type of card, Class Of Service( CoS), Card Priority or card size.
+                                </div>
+                                <div class="features3-image"><img src='../../images/features/charts/kanban_throughput.png' alt='Scrum Throughput'/></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
             <div class="features3-wrapper">
                 <div class="features3-title"><h3>User Story Hierarchy</h3> </div>
@@ -284,21 +321,21 @@
             </div>
 
             <div class="features3-wrapper">
-                <div class="features3-title"><h3>SwiftSync - The Most Enterprise-Ready Integration Technology!</h3> </div>
+                <div class="features3-title"><h3>Older cards tend to fade</h3> </div>
                 <div class="features3-content">
                     <div class="features3-description">
-                        Over 30 enterprise-class integrations with popular tools such as TFS, JIRA, Rally and many others. Use SwiftSync to visualize work across the organization!
+                        See where the action is! The new ‘Aging’ icon on the board menu enables you to see which cards have and have not been updated recently. The ‘older’ the card updates, the more faded it will appear!
                     </div>
                     <div class="features3-image slider">
                         <div class="slider_integrations">
-                            <div class="features3-image"><a href="http://swiftkanban.com/swiftsync-integration"><img src='../../images/features/common/kanban_integrations.png' alt='SwiftKanban Integrations'/></a></div>
+                            <div class="features3-image"><img src='../../images/features/common/kanban_card_aging.png' alt='SwiftKanban Aging Cards'/></div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="features3-wrapper">
-                <div class="features3-title"><h3>Older cards tend to fade</h3> </div>
+                <div class="features3-title"><h3>SwiftSync - The Most Enterprise-Ready Integration Technology!</h3> </div>
                 <div class="features3-content">
                     <div class="features3-description">
                         Over 30 enterprise-class integrations with popular tools such as TFS, JIRA, Rally and many others. Use SwiftSync to visualize work across the organization!
