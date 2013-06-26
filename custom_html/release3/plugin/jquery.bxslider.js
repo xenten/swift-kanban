@@ -881,7 +881,7 @@
                 }
                 if(direction=='right')
                 {
-                    if(x_diff>30)
+                    if(x_diff>60)
                     {
                         x=x_prev;
                         el.goToNextSlide();
@@ -889,7 +889,7 @@
                 }
                 else
                 {
-                    if(x_diff<30)
+                    if(x_diff<60)
                     {
                         x=x_prev;
                         el.goToPrevSlide();
