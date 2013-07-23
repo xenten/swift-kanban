@@ -354,14 +354,14 @@ END ProvideSupport.com Graphics Chat Button Code -->
             This option will not work correctly. Unfortunately, your browser does not support inline frames.</iframe>
 
         </div>
-        </div>
+    </div>
 
 <div style="position: fixed;width: 100%;height: 40px;background-color: transparent;z-index: 0;top:0;left: 0;" id='popup_head'>
 
 </div>
         <script type="text/javascript">
 
-            var readyFun = function(){
+            /*var readyFun = function(){
             $.doTimeout(1000, function(){
                 var newTime = (new Date()).getTime();
                 if($.cookie("release_30")!=null)
@@ -372,7 +372,7 @@ END ProvideSupport.com Graphics Chat Button Code -->
                     return false;
                 }
                 return true;
-            });};
+            });};*/
             $('document').ready(readyFun());
             var fun = function(e){
                 if(release_dialog==0)
