@@ -64,7 +64,7 @@ $.doTimeout(1000, function(){
         return false;
     if(newTime-$.cookie("first_visit_time") > (display_survey_first_time*1000) )
     {
-        //showDialog();
+        showDialog();
         return false;
     }
     return true;
