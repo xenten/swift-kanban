@@ -1,0 +1,68 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 15.0 MIMEDIR//EN
+VERSION:2.0
+METHOD:PUBLISH
+X-MS-OLK-FORCEINSPECTOROPEN:TRUE
+BEGIN:VTIMEZONE
+TZID:India Standard Time
+BEGIN:STANDARD
+DTSTART:16010101T000000
+TZOFFSETFROM:+0530
+TZOFFSETTO:+0530
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20130816T132216Z
+DESCRIPTION:Access Details:\nURL: http://www.swiftkanban.com/jim-0113-event
+	\nAccess Code: 2848\n\nEvent Description\nKanban is an evolutionary (non-d
+	isruptive) change management process\; the fact is that it requires a chan
+	ge in organizational and management practices and behavior that can be dau
+	nting. The best place to begin that change is at a personal level.\nOne of
+	 the main goals of having a Personal Kanban is the adoption of a “kaizen
+	 attitude”. This is an attitude of continuous improvement. To encourage 
+	adoption of Kanban/ Personal Kanban we are deeply honored to have Jim Bens
+	on – the father of Personal Kanban to talk on how to start with Personal
+	 Kanban and leverage the experience for Enterprise Kanban. \n
+DTEND;TZID="India Standard Time":20130822T233000
+DTSTAMP:20130816T131000Z
+DTSTART;TZID="India Standard Time":20130822T223000
+LAST-MODIFIED:20130816T132216Z
+LOCATION:WebEx
+SEQUENCE:1
+SUMMARY;LANGUAGE=en-in:Scaling Agile in your Enterprise – the Journey is 
+	Personal!
+TRANSP:OPAQUE
+UID:040000008200E00074C5B7101A82E008000000009C04FA0CB09ACE01000000000000000
+	0140000003FC51DF2AA068B2057C2424BA8EE217CEFF24BD5
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//E
+	N">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server ve
+	rsion rmj.rmm.rup.rpr">\n<TITLE></TITLE>\n</HEAD>\n<BODY>\n<!-- Converted 
+	from text/rtf format -->\n\n<P DIR=LTR><SPAN LANG="en-us"><B><FONT FACE="C
+	alibri">Access Details:</FONT></B></SPAN></P>\n\n<P DIR=LTR><SPAN LANG="en
+	-us"><FONT FACE="Calibri">URL:</FONT></SPAN><SPAN LANG="en-us"> </SPAN><A 
+	HREF="http://www.swiftkanban.com/jim-0113-event"><SPAN LANG="en-us"><U><FO
+	NT COLOR="#0563C1" FACE="Calibri">http://www.swiftkanban.com/jim-0113-even
+	t</FONT></U></SPAN><SPAN LANG="en-us"></SPAN></A><SPAN LANG="en-us"></SPAN
+	></P>\n\n<P DIR=LTR><SPAN LANG="en-us"><FONT FACE="Calibri">Access Code: 2
+	848</FONT></SPAN><SPAN LANG="en-us"></SPAN></P>\n\n<P DIR=LTR><SPAN LANG="
+	en-us"></SPAN></P>\n\n<P DIR=LTR><SPAN LANG="en-us"><B><FONT FACE="Calibri
+	">Event Description</FONT></B></SPAN></P>\n\n<P DIR=LTR><SPAN LANG="en-us"
+	><FONT FACE="Calibri">Kanban is an evolutionary (non-disruptive) change ma
+	nagement process\; the fact is that it requires a change in organizational
+	 and management practices and behavior that can be daunting. The best plac
+	e to begin that change is at a personal level.</FONT></SPAN></P>\n\n<P DIR
+	=LTR><SPAN LANG="en-us"><FONT FACE="Calibri">One of the main goals of havi
+	ng a Personal Kanban is the adoption of a</FONT></SPAN><SPAN LANG="en-us">
+	 <FONT FACE="Calibri">“</FONT></SPAN><SPAN LANG="en-us"><FONT FACE="Cali
+	bri">kaizen attitude</FONT></SPAN><SPAN LANG="en-us"><FONT FACE="Calibri">
+	”</FONT></SPAN><SPAN LANG="en-us"><FONT FACE="Calibri">. This is an atti
+	tude of continuous improvement. To encourage adoption of Kanban/ Personal 
+	Kanban we are deeply honored to have Jim Benson – the father of Personal
+	 Kanban to talk on how to start with Personal Kanban and leverage the expe
+	rience for Enterprise Kanban. </FONT></SPAN></P>\n\n</BODY>\n</HTML>
+X-MICROSOFT-CDO-BUSYSTATUS:BUSY
+X-MS-OLK-APPTLASTSEQUENCE:1
+X-MS-OLK-AUTOFILLLOCATION:FALSE
+END:VEVENT
+END:VCALENDAR
