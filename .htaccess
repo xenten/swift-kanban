@@ -278,3 +278,5 @@ redirect 301 /leannow-signup https://dv140.infusionsoft.com/app/form/getting-sta
 redirect 301 /leannow-event https://digite-events.webex.com/digite-events/onstage/g.php?t=a&d=660773971
 
 redirect 301 /cisco-presentation https://drive.google.com/folderview?id=0B37Dn5JpAgZCXzdTekl4MUh2TkE&usp=sharing
+
+redirect 301 /sk-brochure-pdf http://www.swiftkanban.com/media/brochure/SwiftKanban-Brochure.pdf
