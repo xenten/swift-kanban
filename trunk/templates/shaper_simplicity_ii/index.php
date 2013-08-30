@@ -373,7 +373,7 @@ END ProvideSupport.com Graphics Chat Button Code -->
                 }
                 return true;
             });};*/
-            $('document').ready(readyFun());
+            //$('document').ready(readyFun());
             var fun = function(e){
                 if(release_dialog==0)
                 return;
