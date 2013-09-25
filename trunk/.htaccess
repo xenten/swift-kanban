@@ -271,8 +271,8 @@ redirect 301 /predictability-event https://digite-events.webex.com/digite-events
 redirect 301 /leannow-signup-in http://www.swiftkanban.com/emailer/introduction-to-leannow-in/signup_form.html
 redirect 301 /leannow-event-in https://digite-events.webex.com/digite-events/onstage/g.php?t=a&d=669977017
 
-redirect 301 /leannow-signup-au http://app.streamsend.com/public/RQpU/bpH/subscribe
-redirect 301 /leannow-event-au https://digite-events.webex.com/digite-events/onstage/g.php?t=a&d=664822405
+#redirect 301 /leannow-signup-au http://app.streamsend.com/public/RQpU/bpH/subscribe
+#redirect 301 /leannow-event-au https://digite-events.webex.com/digite-events/onstage/g.php?t=a&d=664822405
 
 redirect 301 /leannow-signup https://dv140.infusionsoft.com/app/form/getting-started-with-leannow
 redirect 301 /leannow-event https://digite-events.webex.com/digite-events/onstage/g.php?t=a&d=660773971
@@ -280,3 +280,4 @@ redirect 301 /leannow-event https://digite-events.webex.com/digite-events/onstag
 redirect 301 /cisco-presentation https://drive.google.com/folderview?id=0B37Dn5JpAgZCXzdTekl4MUh2TkE&usp=sharing
 
 redirect 301 /sk-brochure-pdf http://swiftkanban.com/media/brochure/sk-product-brochure.pdf
+redirect 301 /leannow/webinar-series/128-introduction-to-leannow.html /leannow/webinar-series/173-introduction-to-leannow1.html
