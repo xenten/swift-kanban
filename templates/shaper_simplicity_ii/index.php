@@ -324,6 +324,8 @@ END ProvideSupport.com Graphics Chat Button Code -->
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
+
+        <script type="text/javascript" src="https://dv140.infusionsoft.com/app/webTracking/getTrackingCode?trackingId=d25b4e00bc03e9f13c524618683d62d5"></script>
     </script>
 
 
