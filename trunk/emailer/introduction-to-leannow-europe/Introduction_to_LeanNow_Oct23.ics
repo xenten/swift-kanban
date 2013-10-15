@@ -1,0 +1,36 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 10.0 MIMEDIR//EN
+VERSION:2.0
+METHOD:REQUEST
+BEGIN:VTIMEZONE
+TZID:Pacific Time
+BEGIN:STANDARD
+DTSTART:20111101T020000
+RRULE:FREQ=YEARLY;INTERVAL=1;BYDAY=1SU;BYMONTH=11
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0800
+TZNAME:Standard Time
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:20110301T020000
+RRULE:FREQ=YEARLY;INTERVAL=1;BYDAY=2SU;BYMONTH=3
+TZOFFSETFROM:-0800
+TZOFFSETTO:-0700
+TZNAME:Daylight Savings Time
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+ORGANIZER;CN="Digite Sales":MAILTO:sales@digite.com
+DTSTART;TZID="Pacific Time":20131023T070000
+DTEND;TZID="Pacific Time":20131023T080000
+LOCATION:https://digite-events.webex.com/digite-events/onstage/g.php?d=660838031&t=a 
+TRANSP:OPAQUE
+SEQUENCE:0
+UID:WEBEX-MEETING CENTER-6.0331455-108765867
+DTSTAMP:20131015T050928Z
+DESCRIPTION:\n1) Access code : 2848\n\n2) Please join the webinar by clicking https://digite-events.webex.com/digite-events/onstage/g.php?d=660838031&t=a at the specified time and date.\n\n3) You will NOT be able to connect via Telephone; you will have to connect using your computer's microphone and speakers (VoIP) only. A headset is recommended.\n\nFor VoIP help see the 'Joining a VoIP Conference' section from this document -http://wlc.webex.com/docs/job_aids/IntegratedVoIP_JA.pdf \n\n
+SUMMARY:Introduction to LeanNow™ with Randall Benson
+PRIORITY:5
+CLASS:PUBLIC
+END:VEVENT
+END:VCALENDAR
