@@ -1,0 +1,37 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 10.0 MIMEDIR//EN
+VERSION:2.0
+METHOD:REQUEST
+BEGIN:VTIMEZONE
+TZID:Pacific Time
+BEGIN:STANDARD
+DTSTART:20111101T020000
+RRULE:FREQ=YEARLY;INTERVAL=1;BYDAY=1SU;BYMONTH=11
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0800
+TZNAME:Standard Time
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:20110301T020000
+RRULE:FREQ=YEARLY;INTERVAL=1;BYDAY=2SU;BYMONTH=3
+TZOFFSETFROM:-0800
+TZOFFSETTO:-0700
+TZNAME:Daylight Savings Time
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+ATTENDEE;CN="Nishanth Mittu";ROLE=REQ-PARTICIPANT;RSVP=TRUE:MAILTO:%nmittu@digite.com%
+ORGANIZER;CN="Digite Sales":MAILTO:sales@digite.com
+DTSTART;TZID="Pacific Time":20131030T190000
+DTEND;TZID="Pacific Time":20131030T200000
+LOCATION:https://digite-events.webex.com/digite-events/onstage/g.php?d=662782861&t=a 
+TRANSP:OPAQUE
+SEQUENCE:0
+UID:WEBEX-MEETING CENTER-6.0331455-108853307
+DTSTAMP:20131021T080730Z
+DESCRIPTION:\nHello Nishanth Mittu,\n\nDigite Sales invites you to be a panelist in a Web seminar.\n\nTopic: Getting Started with LeanNow\nHost: Digite Sales\nDate and Time:\nWednesday, 30 October 2013 19:00, Pacific Daylight Time (San Francisco, GMT-07:00)\nThursday, 31 October 2013 13:00, Australia Eastern Daylight Time (Sydney, GMT+11:00)\nThursday, 31 October 2013 3:00, Europe Time (Berlin, GMT+01:00)\nThursday, 31 October 2013 7:30, India Time (Mumbai, GMT+05:30)\nEvent number: 662 782 861\nPanelist password: 3848 (Please do not share panelist password) \n\n-------------------------------------------------------\nTo join as a panelist\n-------------------------------------------------------\n1. Go to https://digite-events.webex.com/digite-events/onstage/g.php?d=662782861&t=p&EA=nmittu%40digite.com&ET=3c782e2ac9652e8df5d58c112f326024&RT=MTgjNDE=&p You may enter 60 minutes before the event start time.\n2. Click "Join Now".\n\nIf you experience a problem joining the event as a panelist, you can join as an attendee.\n\nEvent password: 2848\n\n-------------------------------------------------------\nTo join the event as an attendee\n-------------------------------------------------------\n1. Go to https://digite-events.webex.com/digite-events/onstage/g.php?d=662782861&t=a&EA=nmittu%40digite.com&ET=6279b7b3e9369aab6be2db841b35849b&ETR=8b59a8ec3622e0280543a1ac2fe241d1&SourceId=e93af1c7e5cc42d5e040fc0a78074466&RT=MTgjNDE=&p\n2. Click "Join Now".\n\n\n\n------------------------------------------------------\nFor assistance\n-------------------------------------------------------\nTo contact your host, Digite Sales, send a message to sales@digite.com\n\nThe playback of UCF (Universal Communications Format) rich media files requires appropriate players. To view this type of rich media files in the meeting, please check whether you have the players installed on your computer by going to https://digite-events.webex.com/digite-events/onstage/systemdiagnosis.php\n\n\nhttp://www.webex.com\n\nIMPORTANT NOTICE: This WebEx service includes a feature that allows audio and any documents and other materials exchanged or viewed during the session to be recorded. By joining this session, you automatically consent to such recordings. If you do not consent to the recording, discuss your concerns with the meeting host prior to the start of the recording or do not join the session. Please note that any such recordings may be subject to discovery in the event of litigation. \n
+SUMMARY:Getting Started with LeanNow
+PRIORITY:5
+CLASS:PUBLIC
+END:VEVENT
+END:VCALENDAR
