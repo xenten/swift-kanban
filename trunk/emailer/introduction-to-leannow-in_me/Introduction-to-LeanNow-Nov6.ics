@@ -1,0 +1,36 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 10.0 MIMEDIR//EN
+VERSION:2.0
+METHOD:REQUEST
+BEGIN:VTIMEZONE
+TZID:Pacific Time
+BEGIN:STANDARD
+DTSTART:20111101T020000
+RRULE:FREQ=YEARLY;INTERVAL=1;BYDAY=1SU;BYMONTH=11
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0800
+TZNAME:Standard Time
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:20110301T020000
+RRULE:FREQ=YEARLY;INTERVAL=1;BYDAY=2SU;BYMONTH=3
+TZOFFSETFROM:-0800
+TZOFFSETTO:-0700
+TZNAME:Daylight Savings Time
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+ORGANIZER;CN="Digite Sales":MAILTO:sales@digite.com
+DTSTART;TZID="Pacific Time":20131105T223000
+DTEND;TZID="Pacific Time":20131105T233000
+LOCATION:https://digite-events.webex.com/digite-events/onstage/g.php?t=a&d=668791221 
+TRANSP:OPAQUE
+SEQUENCE:0
+UID:WEBEX-MEETING CENTER-6.0331455-108911782
+DTSTAMP:20131025T030945Z
+DESCRIPTION:\n1) Access code : 2848\n\n2) Please join the webinar by clicking https://digite-events.webex.com/digite-events/onstage/g.php?t=a&d=668791221 at the specified time and date.\n\n3) You will NOT be able to connect via Telephone; you will have to connect using your computer's microphone and speakers (VoIP) only. A headset is recommended.\n\n*For VoIP help see the 'Joining a VoIP Conference' section from this document -http://wlc.webex.com/docs/job_aids/IntegratedVoIP_JA.pdf \n\n\nIMPORTANT NOTICE: This WebEx service includes a feature that allows audio and any documents and other materials exchanged or viewed during the session to be recorded. By joining this session, you automatically consent to such recordings. If you do not consent to the recording, discuss your concerns with the meeting host prior to the start of the recording or do not join the session. Please note that any such recordings may be subject to discovery in the event of litigation. \n
+SUMMARY:Introduction to LeanNow with Randall Benson
+PRIORITY:5
+CLASS:PUBLIC
+END:VEVENT
+END:VCALENDAR
