@@ -12,8 +12,8 @@ defined('_JEXEC') or die;
 jimport('joomla.application.component.controller');
 //require_once JPATH_COMPONENT.DS.'router.php';
 
-require_once(JPATH_COMPONENT.DS.'displayer.php');
-//require_once(JPATH_COMPONENT .'/displayer.php');
+//require_once(JPATH_COMPONENT.DS.'displayer.php');
+require_once(JPATH_COMPONENT .'/displayer.php');
 
 $controller = JController::getInstance('Xmap');
 $controller->execute(JRequest::getVar('task'));
