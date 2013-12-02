@@ -10,7 +10,7 @@
 defined('_JEXEC') or die;
 
 //require_once(JPATH_SITE . DS . 'includes' . DS . 'application.php');
-//require_once(JPATH_SITE . DS . 'libraries' . DS . 'cms' . DS . 'application' . DS . 'site.php');
+require_once(JPATH_SITE . DS . 'libraries/cms/application/site.php');
 jimport('joomla.database.query');
 
 /**
