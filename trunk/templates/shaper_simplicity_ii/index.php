@@ -68,8 +68,8 @@ require_once(dirname(__FILE__).DS.'lib'.DS.'helix.php');
         DM_redirect("http://m.swift-kanban.com");
     </script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js" type="text/javascript"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js" type="text/javascript"></script>
     <script src="/templates/shaper_simplicity_ii/js/cookie.js" type="text/javascript"></script>
 
 
