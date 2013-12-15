@@ -1,98 +1,76 @@
-##
-# @version		$Id: htaccess.txt 21101 2011-04-07 15:47:33Z dextercowley $
-# @package		Joomla
-# @copyright	Copyright (C) 2005 - 2011 Open Source Matters. All rights reserved.
-# @license		GNU General Public License version 2 or later; see LICENSE.txt
-##
-
-##
-# READ THIS COMPLETELY IF YOU CHOOSE TO USE THIS FILE!
-#
-# The line just below this section: 'Options +FollowSymLinks' may cause problems
-# with some server configurations.  It is required for use of mod_rewrite, but may already
-# be set by your server administrator in a way that dissallows changing it in
-# your .htaccess file.  If using it causes your server to error out, comment it out (add # to
-# beginning of line), reload your site in your browser and test your sef url's.  If they work,
-# it has been set by your server administrator and you do not need it set here.
+# Use PHP 5.3 
+AddHandler application/x-httpd-php53 .php 
+### @version $Id: htaccess.txt 10492 2008-07-02 06:38:28Z ircmaxell $
+# @package Joomla
+# @copyright Copyright (C) 2005 - 2008 Open Source Matters. All rights reserved.
+# @license http://www.gnu.org/copyleft/gpl.html GNU/GPL
+# Joomla! is Free Software
 ##
 
 ## Can be commented out if causes errors, see notes above.
-Options +FollowSymLinks
+Options +FollowSymLinks -Indexes
 
-## Mod_rewrite in use.
+#
+# mod_rewrite in use
 
 RewriteEngine On
-ExpiresActive On
-## Begin - Rewrite rules to block out some common exploits.
-# If you experience problems on your site block out the operations listed below
-# This attempts to block the most common type of exploit `attempts` to Joomla!
+
+########## Begin - Rewrite rules to block out some common exploits
+## If you experience problems on your site block out the operations listed below
+## This attempts to block the most common type of exploit `attempts` to Joomla!
 #
-# Block out any script trying to base64_encode data within the URL.
-RewriteCond %{QUERY_STRING} base64_encode[^(]*\([^)]*\) [OR]
-# Block out any script that includes a <script> tag in URL.
-RewriteCond %{QUERY_STRING} (<|%3C)([^s]*s)+cript.*(>|%3E) [NC,OR]
-# Block out any script trying to set a PHP GLOBALS variable via URL.
+# Block out any script trying to set a mosConfig value through the URL
+RewriteCond %{QUERY_STRING} mosConfig_[a-zA-Z_]{1,21}(=|\%3D) [OR]
+# Block out any script trying to base64_encode crap to send via URL
+RewriteCond %{QUERY_STRING} base64_encode.*\(.*\) [OR]
+# Block out any script that includes a tag in URL
+RewriteCond %{QUERY_STRING} (\|%3E) [NC,OR]
+# Block out any script trying to set a PHP GLOBALS variable via URL
 RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
-# Block out any script trying to modify a _REQUEST variable via URL.
+# Block out any script trying to modify a _REQUEST variable via URL
 RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})
-# Return 403 Forbidden header and show the content of the root homepage
-RewriteRule .* index.php [F]
-
-RewriteCond %{HTTPS} off
-RewriteRule ^(abc/def|ghi)(.*)/?$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,NC,L]
-
+# Send all blocked request to homepage with 403 Forbidden error!
+RewriteRule ^(.*)$ index.php [F,L]
 #
-## End - Rewrite rules to block out some common exploits.
-
-## Begin - Custom redirects
-#
-# If you need to redirect some pages, or set a canonical non-www to
-# www redirect (or vice versa), place that code here. Ensure those
-# redirects use the correct RewriteRule syntax and the [R=301,L] flags.
-#
-## End - Custom redirects
-
-##
-# Uncomment following line if your webserver's URL
-# is not directly related to physical file paths.
-# Update Your Joomla! Directory (just / for root).
-##
+########## End - Rewrite rules to block out some common exploits
 
 # RewriteBase /
 
-## Begin - Joomla! core SEF Section.
+########## Begin - Joomla! core SEF Section
 #
-RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
-#
-# If the requested path and file is not /index.php and the request
-# has not already been internally rewritten to the index.php script
-RewriteCond %{REQUEST_URI} !^/index\.php
-# and the request is for something within the component folder,
-# or for the site root, or for an extensionless URL, or the
-# requested URL ends with one of the listed extensions
-RewriteCond %{REQUEST_URI} /component/|(/[^.]*|\.(php|html?|feed|pdf|vcf|raw))$ [NC]
-# and the requested path and file doesn't directly match a physical file
+
+RewriteCond %{HTTP:Accept-Encoding} gzip
 RewriteCond %{REQUEST_FILENAME} !-f
-# and the requested path and file doesn't directly match a physical folder
 RewriteCond %{REQUEST_FILENAME} !-d
-# internally rewrite the request to the index.php script
-RewriteRule .* index.php [L]
+RewriteCond %{REQUEST_URI} !^/index.php
+RewriteCond %{REQUEST_URI} (/|\.php|\.html|\.htm|\.feed|\.pdf|\.raw|/[^.]*)$ [NC]
+RewriteRule (.*) index.php
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization},L]
+
 #
-## End - Joomla! core SEF Section.
+########## End - Joomla! core SEF Section
+SetOutputFilter DEFLATE
+Header set Expires "max-age=29030400, public"
+Header unset ETag
+FileETag None
 
-
-ExpiresByType text/html "access plus 1 hours"
-ExpiresByType image/gif "access plus 1 hours"
-ExpiresByType image/jpeg "access plus 1 hours"
-ExpiresByType image/png "access plus 1 hours"
-ExpiresByType text/css "access plus 1 hours"
-ExpiresByType text/javascript "access plus 1 hours"
-ExpiresByType application/x-javascript "access plus 1 hours"
-ExpiresByType image/ico "access plus 1 hours"
+ExpiresActive On
+ExpiresDefault A600
+ExpiresByType image/x-icon A2592000
+ExpiresByType application/x-javascript A604800
+ExpiresByType text/css A604800
+ExpiresByType image/gif A2592000
+ExpiresByType image/png A2592000
+ExpiresByType image/jpeg A2592000
+ExpiresByType text/plain A1200
+ExpiresByType application/x-shockwave-flash A2592000
+ExpiresByType video/x-flv A2592000
+ExpiresByType application/pdf A2592000
+ExpiresByType text/html A600
 
 # Added for Custom 404 Error
-ErrorDocument 404 https://www.swiftkanban.com
-ErrorDocument 500 https://www.swiftkanban.com
+ErrorDocument 404 http://www.swiftkanban.com
+ErrorDocument 500 http://www.swiftkanban.com
 
 #SD Times Redirect
 redirect 301 /free https://login.swift-kanban.com/pui/mregistration.html?utm_source=SD%2BTimes&utm_medium=print&utm_campaign=SD%2BTimes%2BAd
@@ -236,7 +214,7 @@ redirect 301 /linkedin http://www.linkedin.com/groups/SwiftKanban-Users-Friends-
 redirect 301 /ln http://www.linkedin.com/groups/SwiftKanban-Users-Friends-4332448?gid=4332448&trk=hb_side_g
 redirect 301 /community http://www.linkedin.com/groups/SwiftKanban-Users-Friends-4332448?gid=4332448&trk=hb_side_g
 redirect 301 /marketing-survey https://www.surveymonkey.com/s/swift-kanban-marketing
-redirect 301 /survey https://www.surveymonkey.com/s/swift-kanban
+redirect 301 /survey https://dv140.infusionsoft.com/app/form/swiftkanban-survey
 
 redirect 301 /dja-chicago-2012 https://www.e-junkie.com/ecom/gb.php?ii=1108796&c=ib&aff=221065&cl=130848
 #redirect 301 /dja-chicago-2012 http://agilemanagement.net/index.php/Blog/advanced_kanban_masterclass_chicago_il_-_sep_5-7_2012/
@@ -281,3 +259,51 @@ redirect 301 /cisco-presentation https://drive.google.com/folderview?id=0B37Dn5J
 
 redirect 301 /sk-brochure-pdf http://swiftkanban.com/media/brochure/sk-product-brochure.pdf
 redirect 301 /leannow/webinar-series/128-introduction-to-leannow.html /leannow/webinar-series/173-introduction-to-leannow1.html
+
+
+#################       Blog redirect to new blog site     ########
+
+
+redirect 301 /blog/174-how-to-handle-tickets-during-sprint-planning.html http://blog.digite.com/how-to-handle-tickets-during-sprint-planning/
+redirect 301 /blog/sudipta-lahiri/154-due-dates-for-kanban-systems.html http://blog.digite.com/due-dates-in-kanban-systems/
+redirect 301 /blog/sudipta-lahiri/138-daily-life-of-a-swiftkanban-developer.html http://blog.digite.com/all-in-a-days-work-as-a-swift-kanban-developer/
+redirect 301 /blog/sudipta-lahiri/123-agile-and-innovation.html http://blog.digite.com/agile-and-innovation/
+redirect 301 /blog/sudipta-lahiri/115-benefits-of-kanban-series-300-lead-time-reduction.html http://blog.digite.com/benefits-of-kanban-300-cycle-time-reduction/
+
+redirect 301 /blog/154-due-dates-for-kanban-systems.html http://blog.digite.com/due-dates-in-kanban-systems/
+redirect 301 /blog/138-daily-life-of-a-swiftkanban-developer.html http://blog.digite.com/all-in-a-days-work-as-a-swift-kanban-developer/
+redirect 301 /blog/123-agile-and-innovation.html http://blog.digite.com/agile-and-innovation/
+redirect 301 /blog/115-benefits-of-kanban-series-300-lead-time-reduction.html http://blog.digite.com/benefits-of-kanban-300-cycle-time-reduction/
+
+redirect 301 /blog/113-kanbans-passage-to-india-with-david-anderson-a-short-trip-report.html http://blog.digite.com/kanbans-passage-to-india-with-david-anderson/
+
+redirect 301 /blog/101-my-big-fat-indian-american-thanksgiving-kanban-to-the-rescue.html http://blog.digite.com/my-big-fat-indian-american-thanksgiving-kanban-to-the-rescue/
+
+redirect 301 /blog/100-implementing-kanban-start-with-yourself.html http://blog.digite.com/implementing-kanban-start-with-yourself/
+redirect 301 /blog/82-writing-your-blog-using-kanban-part-2.html http://blog.digite.com/writing-your-blog-using-kanban-part-2/
+redirect 301 /blog/83-writing-your-blog-using-kanban-part-1.html http://blog.digite.com/writing-your-blog-using-kanban-part-2-2/
+redirect 301 /blog/80-why-we-hate-process.html http://blog.digite.com/why-we-hate-process/
+redirect 301 /blog/15-masa-blog/76-handling-ticket-issues-with-kanban.html http://blog.digite.com/handling-ticket-issues-with-kanban/
+redirect 301 /blog/15-masa-blog/77-visualizing-cycles-in-kanban.html http://blog.digite.com/visualizing-cycles-in-kanban/
+redirect 301 /blog/72-so-how-do-you-run-a-well-managed-daily-standup-with-a-distributed-team.html http://blog.digite.com/so-how-do-you-do-agile-in-a-distributed-environment/
+
+redirect 301 /blog/15-masa-blog/69-maturing-the-kanban-board.html http://blog.digite.com/maturing-the-kanban-board/
+redirect 301 /blog/66-translating-a-book-with-kanban.html http://blog.digite.com/translating-a-book-with-kanban/
+redirect 301 /blog/37-scrum-g-kanban-scrumban-or-kanban-lessons-at-lean-coffee.html http://blog.digite.com/scrum-kanban-scrumban-or-kanban-lessons-at-lean-coffee/
+
+redirect 301 /blog/35-kanban-evolutionary-or-revolutionary.html http://blog.digite.com/kanban-evolutionary-or-revolutionary/
+redirect 301 /blog/36-kanban-says-pull-dont-push.html http://blog.digite.com/kanban-says-pull-don%C2%B4t-push/
+redirect 301 /blog/16-david-blog/34-lean-software-development.html http://blog.digite.com/lean-software-development/
+redirect 301 /blog/16-david-blog/63-who-owns-kanban.html http://blog.digite.com/279/
+redirect 301 /blog/15-masa-blog/33-using-swift-kanban-for-customer-portfolio-management.html http://blog.digite.com/using-swift-kanban-for-customer-portfolio-management/
+
+redirect 301 /blog/32-kanban-and-the-focus-on-fundamentals.html http://blog.digite.com/kanban-and-the-focus-on-fundamentals-2/
+redirect 301 /blog/31-agility-redefined.html http://blog.digite.com/agility-redefined/
+redirect 301 /blog/16-david-blog/62-kanban-and-offshore-development.html http://blog.digite.com/kanban-and-offshore-development/
+redirect 301 /blog/30-agility-requires-greater-discipline-are-you-ready-for-it.html http://blog.digite.com/agility-requires-greater-discipline-are-you-ready-for-it/
+
+redirect 301 /blog.html  http://blog.digite.com/
+redirect 301 /blog http://blog.digite.com
+
+redirect 301 /contact-us /swiftkanban-contact-us
+redirect 301 /contact-us.html /swiftkanban-contact-us
