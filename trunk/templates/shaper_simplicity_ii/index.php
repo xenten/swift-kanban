@@ -30,6 +30,7 @@
 //no direct accees
 
 defined ('_JEXEC') or die ('resticted aceess');
+if(!defined('DS')) define('DS', DIRECTORY_SEPARATOR);
 
 require_once(dirname(__FILE__).DS.'lib'.DS.'helix.php');
 
@@ -69,11 +70,6 @@ require_once(dirname(__FILE__).DS.'lib'.DS.'helix.php');
     </script>
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js" type="text/javascript"></script>
-    <script src="/templates/shaper_simplicity_ii/js/cookie.js" type="text/javascript"></script>
-
-
-    <script src="/templates/shaper_simplicity_ii/js/custom.js" type="text/javascript"></script>
 
     <?php
     $app = JFactory::getApplication();
@@ -102,11 +98,7 @@ require_once(dirname(__FILE__).DS.'lib'.DS.'helix.php');
         $ids = explode(':',JRequest::getString('id'));
         $article_id = $ids[0];
     }
-    JLoader::register('fieldattach', 'components/com_fieldsattach/helpers/fieldattach.php');
-    $socialimagelink_js = fieldattach::getValue( $article_id, 2, false) ;
-    /*$socialimagelink = urlencode($socialimagelink_js) ;
-    $socialdesc = urlencode(fieldattach::getValue( $this->item->id, 1, false)) ;
-    $socialtwittertag = (fieldattach::getValue( $this->item->id, 3, false)) ;*/
+
     ?>
     <meta property="og:image" content="<?php echo $socialimagelink_js?>" id="social_image" />
 
@@ -275,7 +267,10 @@ require_once(dirname(__FILE__).DS.'lib'.DS.'helix.php');
 
 <?php $helix->compress(); /* --- Compress CSS and JS files --- */ ?>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js" type="text/javascript"></script>
 
+
+<script src="/templates/shaper_simplicity_ii/js/custom.js" type="text/javascript"></script>
 
 <jdoc:include type="modules" name="debug" />
 <!-- BEGIN ProvideSupport.com Graphics Chat Button Code
