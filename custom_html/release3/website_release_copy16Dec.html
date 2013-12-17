@@ -2,59 +2,152 @@
 <html>
 <head>
     <script type='text/javascript' src="../../custom_html/release3/js/jquery.min.js"></script>
+    <script src="/custom_html/release3/js/jquery.js"></script>
+    <script src="../../custom_html/release3/js/jquery.scrollTo.js"></script>
+    <script src="../../custom_html/release3/js/jquery.nav.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#nav').onePageNav({
+                filter: ':not(.external)',
+                scrollThreshold: 0.25
+            });
+
+        });
+
+        /*$(document).ready(function() {
+         $('#nav').onePageNav({
+         begin: function() {
+         console.log('start');
+         },
+         end: function() {
+         console.log('stop');
+         },
+         scrollOffset: 30
+         });
+
+         $('.do').click(function(e) {
+         $('#section-1').append('<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>');
+         e.preventDefault();
+         });
+
+         });*/
+
+    </script>
+
+
     <link rel="stylesheet" href="../../custom_html/css.css" type="text/css"/>
     <style>
-    #nav {
-    left: 195px;
-    list-style: none;
-    position: fixed;
-    top: 255px;
-    }
-    #nav li {
-    margin-bottom: 2px;
-    }
-    #nav a {
-    background: #ededed;
-    color: #666;
-    display: block;
-    font-size: 11px;
-    padding: 5px 10px;
-    text-decoration: none;
-    text-transform: uppercase;
-    }
-    #nav a:hover {
-    background: #dedede;
-    }
-    #nav .current a {
-    background: #666;
-    color: #ededed;
-    }
-    .current {
-    background: blue;
-    }
-    #container {
-    margin: 0 auto;
-    width: 800px;
-    }
-    .section {
-    border-bottom: 5px solid #ccc;
-    padding: 2px;
-    }
-    .section p:last-child {
-    margin-bottom: 0;
-    }
-    </style>
+        #nav {
+            background: #ffffff;
+            left: 355;
+            width: 800px;
+            list-style: none;
+            overflow: visible;
+            position: fixed;
+            z-index: 1000;
+            /*right: 185;*/
+            text-align: center;
+            top: 0;
+        }
+        #nav li {
+            display: inline-block;
+        }
+        #nav a {
+            background: #ededed;
+            color: #000;/*box colour*/
+            display: block;
+            font-size: 13px;
+            font-weight: bold;
+            padding: 10px 45px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        #nav a:hover {
+            color: #dedede;
+        }
+        #nav .current a {
+            background: #43c6f5;
+            font-size:16px;
+            color: #ffffff;
+        }
+/*        .current {
+            background: #dedede;
+            list-style-type: none;
+        }*/
+        #container {
+            margin: 0 auto;
+            width: 800px;
+        }
+        .section {
+            border-bottom: 5px solid #ccc;
+            padding: 20px;
+        }
+        #section-1 {
+            padding-top: 50px;
+        }
+        .section p:last-child {
+            margin-bottom: 0;
+        }
+    /*    .no-bullets {
+            list-style-type: none;
+        }*/
+        ul li
+        {
+            background-image:none;
+
+        }
+
+            /*    #nav {
+                left: 195px;
+                list-style: none;
+                position: fixed;
+                top: 55px;
+                }
+                #nav li {
+                margin-bottom: 2px;
+                }
+                #nav a {
+                background: #ededed;
+                color: #666;
+                display: block;
+                font-size: 11px;
+                padding: 5px 10px;
+                text-decoration: none;
+                text-transform: uppercase;
+                }
+                #nav a:hover {
+                background: #dedede;
+                }
+                #nav .current a {
+                background: #666;
+                color: #ededed;
+                }
+                .current {
+                background: blue;
+                }
+                #container {
+                margin: 0 auto;
+                width: 800px;
+                }
+                .section {
+                border-bottom: 5px solid #ccc;
+                padding: 2px;
+                }
+                .section p:last-child {
+                margin-bottom: 0;
+                }
+                */
+                </style>
 
 
 </head>
 <body style="margin-top: 0!important;background-color: #f5f5f5;">
 
 <ul id="nav">
-    <strong class="current"><a href="#section-1">Kanban</a></strong>
-    <strong><a href="#section-2">Scrumban</a></strong>
-    <strong><a href="#section-3">Portfolio Kanban</a></strong>
-    <strong><a href="#section-4">SwiftSync</a></strong>
-    <strong><a href="/swiftkanban-brochure-download" class="external">Brochure</a></strong>
+    <li class="current"><a href="#section-1">Kanban</a></li>
+    <li><a href="#section-2">Scrumban</a></li>
+    <li><a href="#section-3">Portfolio Kanban</a></li>
+    <li><a href="#section-4">SwiftSync</a></li>
 </ul>
 
 <div id="container">
@@ -102,11 +195,13 @@
     </script>
 
     <div>
+
     <div class="features3-page">
+    <div class="section" id="section-1">
     <h1>SwiftKanban Features</h1>
     <div align="left" style="background-color: #f60; color: #ffffff; padding-left: 10px; padding-top: 7px; padding-bottom: 7px;"><span class="title" style="color: #ffffff; font-size: 13px;">Download a complete product brochure of SwiftKanban <a href="/swiftkanban-brochure-download" style="color: #ffffff; font-size: 17px;"><span style="text-decoration: underline;">here</span></a>. Or <a href="/free-kanban-trial.html" style="color: #ffffff; font-size: 17px;"><span style="text-decoration: underline;">sign up</span></a> for a 30-day free trial!</span></div>
 
-    <div class="section" id="section-1">
+
     <div class="features3-wrapper">
         <div class="features3-title"><h3>Visualize Your Workflow</h3></div>
         <div class="features3-content">
@@ -116,7 +211,7 @@
                 on a Kanban board, representing a workflow stage through which you can flow your work.
             </div>
             <div class="features3-image">
-                <img src='../../images/features/common/visualize.png'
+                <img style="width: 750px;" src='../../images/features/common/visualize.png'
                      alt='Visualize your workflow using SwiftKanban!'/>
             </div>
         </div>
@@ -275,11 +370,11 @@
                     <div class="features3-image"><img src='../../images/features/charts/kanban_throughput.png' alt='SwiftKanban Throughput'/></div>
                     <div class="features3-image"><img src='../../images/features/charts/kanban_wait_time.png' alt='SwiftKanban Wait Time'/></div>
                 </div>
-            </div>
+            </div><div class="section" id="section-2"></div>
         </div>
     </div>
 
-    <div class="section" id="section-2">
+
     <div class="features3-wrapper">
         <div class="features3-title"><h3>Scrum Release Planning</h3> </div>
         <div class="features3-content">
@@ -294,7 +389,7 @@
             </div>
         </div>
     </div>
-    </div>
+
 
     <div class="features3-wrapper">
         <div class="features3-title"><h3>User Story Hierarchy</h3> </div>
@@ -379,11 +474,11 @@
                     <div class="features3-image"><img src='../../images/features/theme/black.jpg' alt='SwiftKanban Black Theme'/></div>
                     <div class="features3-image"><img src='../../images/features/theme/options.jpg' alt='SwiftKanban Theme Options'/></div>
                 </div>
-            </div>
+            </div><div class="section" id="section-3"></div>
         </div>
     </div>
 
-    <div class="section" id="section-3">
+
         <div class="features3-wrapper">
             <div class="features3-title"><h3>Portfolio Kanban - Kanban for Portfolio Management</h3> </div>
             <div class="features3-content">
@@ -392,7 +487,7 @@
                 </div>
                 <div class="features3-image slider">
                     <div class="slider_integrations">
-                        <div class="features3-image"><a style="border: none;color: transparent;" href="/kanban/65-portfolio-kanban-the-most-visual-tool-for-portfolios.html"><img style="border: solid #fff 5px!important; width: 700px;" src='../../images/banners/portfolio-kanban.png' alt='Portfolio Kanban'/></a></div>
+                        <div class="features3-image"><a style="border: none;color: transparent;" href="/kanban/65-portfolio-kanban-the-most-visual-tool-for-portfolios.html"><img style="border: solid #fff 5px!important; width: 750px;" src='../../images/banners/portfolio-kanban.png' alt='Portfolio Kanban'/></a></div>
                     </div>
                 </div>
                 <div class="features3-description">
@@ -407,46 +502,40 @@
                             <li>Rollup of Information</li>
                         </ul>
                     To learn more about SwiftKanban's Portfolio Kanban features click <a href="kanban/65-portfolio-kanban-the-most-visual-tool-for-portfolios">here</a>.
-
-                </div>
-
+                </div><div class="section" id="section-4"></div>
             </div>
         </div>
-    </div>
 
-    <div class="section" id="section-4">
+
+
     <div class="features3-wrapper">
         <div class="features3-title"><h3>SwiftSync - The Most Enterprise-Ready Integration Technology!</h3> </div>
         <div class="features3-content">
             <div class="features3-description">
-                Over 30 enterprise-class integrations with popular tools such as TFS, JIRA, Rally and many others. Use SwiftSync to visualize work across the organization!
+                SwiftSync is an integration bus platform that provides integrations for application and software
+                development organizations that want to improve their development efficiency, increase organizational
+                visibility, manage regulatory compliance, improve time-to-market, and more. SwiftSync powered by OpsHub
+                supports over 30 enterprise-class integrations - with the leading ALM tools, including those from HP, Microsoft, IBM, Accept,
+                Atlassian, Rally, Serena, and more.<br/><br/>
+
+                SwiftSync has been architected, designed and built to enable multi-directional synchronization across
+                your existing development environment, delivering seamless collaboration to your product development
+                organization. Besides that, it will provide full transaction history, audit trailing and recovery
+                capability in case of any sync failures. Use SwiftSync to visualize work across the organization!
             </div>
             <div class="features3-image slider">
                 <div class="slider_integrations">
-                    <div class="features3-image"><a style="border: none;color: transparent;" href="http://swiftkanban.com/swiftsync-integration"><img style="border: solid #fff 5px!important;" src='../../images/features/common/kanban_integrations.png' alt='SwiftKanban Integrations'/></a></div>
+                    <div class="features3-image"><a style="border: none;color: transparent;" href="http://swiftkanban.com/swiftsync-integration"><img style="border: solid #fff 5px!important; width: 750px ;" src='../../images/features/common/kanban_integrations.png' alt='SwiftKanban Integrations'/></a></div>
                 </div>
             </div>
 
         </div>
     </div>
-    </div>
+
     <div align="left" style="background-color: #f60; color: #ffffff; padding-left: 10px; padding-top: 7px; padding-bottom: 7px;"><span class="title" style="color: #ffffff; font-size: 13px;">To learn more, download a complete product brochure of SwiftKanban <a href="/swiftkanban-brochure-download" style="color: #ffffff; font-size: 17px;"><span style="text-decoration: underline;">here</span></a>. Or <a href="/free-kanban-trial.html" style="color: #ffffff; font-size: 17px;"><span style="text-decoration: underline;">sign up</span></a> for a 30-day free trial!</span></div>
     </div>
     </div>
 </div>
-
-<script src="/custom_html/release3/js/jquery.js"></script>
-<script src="../../custom_html/release3/js/jquery.scrollTo.js"></script>
-<script src="../../custom_html/release3/js/jquery.nav.js"></script>
-<script>
-    $(document).ready(function() {
-        $('#nav').onePageNav({
-            filter: ':not(.external)',
-            scrollThreshold: 0.25
-        });
-
-    });
-</script>
 
 
 </body>
