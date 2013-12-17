@@ -277,7 +277,7 @@ require_once(dirname(__FILE__).DS.'lib'.DS.'helix.php');
 <div id="ciw7Q5" style="z-index:100;position:absolute"></div><div id="scw7Q5" style="display:inline"></div><div id="sdw7Q5" style="display:none"></div><script type="text/javascript">var sew7Q5=document.createElement("script");sew7Q5.type="text/javascript";var sew7Q5s=(location.protocol.indexOf("https")==0?"https":"http")+"://image.providesupport.com/js/1bxclixl1hml91srtbhpedbeeb/safe-standard.js?ps_h=w7Q5&ps_t="+new Date().getTime();setTimeout("sew7Q5.src=sew7Q5s;document.getElementById('sdw7Q5').appendChild(sew7Q5)",1)</script><noscript><div style="display:inline"><a href="http://www.providesupport.com?messenger=1bxclixl1hml91srtbhpedbeeb">Online Chat</a></div></noscript>
 END ProvideSupport.com Graphics Chat Button Code -->
 <script type="text/javascript">
-    var li_items = $('li');
+    var li_items = document.getElementsByTagName('li');
     for(i = 0 ; i<li_items.length; i++) {
 
         if(li_items[i].innerHTML.toLowerCase().indexOf("free trial!") >= 0)
@@ -340,49 +340,12 @@ END ProvideSupport.com Graphics Chat Button Code -->
         <div id="survey-get-free-text">Try Swift-Kanban at zero-cost for 30 days</div>
     </div>
 </div>
-<div class="release_30" id='release_30'>
 
-    <div class="release_30_wrapper">
-        <div class="release_30_header">
-            <div class='release_30_title'>SwiftKanban 3.0 is here!</div>
-            <div class="release_30_close" id='release_30_close' onclick="$('#release_30').dialog('close');"><a href='#'>Skip to website >> </a></div>
-        </div>
-        <iframe id="blockrandom" name="iframe" src="http://www.swiftkanban.com/custom_html/release3/index_new.html" style="border: none!important;" width="100%" height="500" scrolling="no" class="wrapper_release_slides">
-            This option will not work correctly. Unfortunately, your browser does not support inline frames.</iframe>
-
-    </div>
-</div>
 
 <div style="position: fixed;width: 100%;height: 40px;background-color: transparent;z-index: 0;top:0;left: 0;" id='popup_head'>
 
 </div>
-<script type="text/javascript">
 
-    /*var readyFun = function(){
-     $.doTimeout(1000, function(){
-     var newTime = (new Date()).getTime();
-     if($.cookie("release_30")!=null)
-     return false;
-     if(newTime-$.cookie("release_30") > (5*1000) )
-     {
-     show_release_dialog();
-     return false;
-     }
-     return true;
-     });};*/
-    //$('document').ready(readyFun());
-    var fun = function(e){
-        if(release_dialog==0)
-            return;
-        document.body.scrollTop = 0;
-        document.body.scrollTo(0,0);
-        e.preventDefault();
-        e.stopPropagation();
-        return false;
-    };
-    document.body.onmousewheel=fun;
-    document.body.onscroll=fun;
-</script>
 </body>
 
 </html>
