@@ -1,0 +1,484 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <script type='text/javascript' src="../../custom_html/release3/js/jquery-1.10.2.min.js"></script>
+    <script src="../../custom_html/release3/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../../custom_html/release3/js/jquery.sticky.js"></script>
+    <script src="../../custom_html/release3/js/jquery.scrollTo.js"></script>
+    <script src="../../custom_html/release3/js/jquery.nav.js"></script>
+    <script src="../../custom_html/release3/js/waypoints.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#nav').sticky({ topSpacing: 97 }).onePageNav({
+                filter: ':not(.external)',
+                scrollThreshold: 0.25
+            });
+
+        });
+    </script>
+
+    <link rel="stylesheet" href="../../custom_html/css.css" type="text/css"/>
+
+    <style>
+        #nav {
+            background: #ededed;
+            list-style: none;
+            overflow: visible;
+            position: fixed;
+            z-index: 1000;
+            text-align: center;
+            top: 256px;
+        }
+        #nav li {
+            display: inline-block;
+        }
+        #nav a {
+            background: #ededed;
+            color: #000;/*box colour*/
+            display: block;
+            font-family: 'Open Sans';
+            font-size: 13px;
+            font-weight: bold;
+            padding: 10px 45px;
+            text-decoration: none;
+        }
+        #nav a:hover {
+            color: #f48a00;
+        }
+        #nav .current a {
+            background: #43c6f5;
+            color: #ffffff;
+        }
+
+        .section {
+            border-bottom: 5px solid #ccc;
+            padding: 20px;
+        }
+        .section p:last-child {
+            margin-bottom: 0;
+        }
+        ul li
+        {
+            background-image:none;
+
+        }
+        .popup {
+            position:absolute;
+            background:#43c6f5;
+            font-size:20px;
+            padding:20px 5px 5px 5px;
+            border-radius-:5px 5px 0 0;
+        }
+
+        #article-finished {
+            position:fixed;
+            bottom:0px;
+            right:0px;
+            width:400px;
+            padding-top:5px;
+            -webkit-transition:right 700ms ease-in-out;
+            -moz-transition:right 700ms ease-in-out;
+            -o-transition:right 700ms ease-in-out;
+            -ms-transition:right 700ms ease-in-out;
+            transition:right 700ms ease-in-out;
+        }
+
+        #article-finished.hiding {
+            right:-420px;
+        }
+
+        #article-finished a {
+            color:#444a50;
+            text-decoration:underline;
+        }
+
+
+    </style>
+
+
+</head>
+
+<body style="margin-top: 0!important;background-color: #f5f5f5;">
+<ul id="nav">
+    <li><a href="#section-1">Kanban</a></li>
+    <li><a href="#section-2">Scrumban</a></li>
+    <li><a href="#section-3">Portfolio Kanban</a></li>
+    <li><a href="#section-4">SwiftSync</a></li>
+    <li></li>
+</ul>
+<div style="margin:0 auto;padding-bottom: 30px;">
+<script type='text/javascript' src="../../custom_html/release3/plugin/jquery.bxslider.js"></script>
+<link href="../../custom_html/release3/plugin/jquery.bxslider.css" rel="stylesheet"/>
+<link href="../../custom_html/release3/css/features.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+    var HOR_SLIDE = 'horizontal';
+    var FADE_SLIDE = 'fade';
+    var VER_SLIDE = 'vertical';
+    var auto_start_true = true;
+    var auto_start_false = false;
+    var showSlide = function (objid, s_controls, autoSlide, slide_type) {
+        return $(objid).bxSlider(
+                {
+                    adaptiveHeight: false,
+                    pager: false,
+                    auto: autoSlide,
+                    autoStart:true,
+                    infiniteLoop: true,
+                    mode: slide_type,
+                    controls: s_controls,
+                    autoHover:true
+                }
+        );
+    };
+    var theme_object;
+    var zoom_slide, team_slide, theme_slide;
+    $(document).ready(function () {
+
+        smartlanes_slide = showSlide('.slider_smartlanes', false, true, FADE_SLIDE);
+        zoom_slide = showSlide('.slider_zoom', false, auto_start_false, FADE_SLIDE);
+        showSlide('.slider_team', false, auto_start_true, HOR_SLIDE);
+        theme_slide = showSlide('.slider_themes', false, auto_start_false, FADE_SLIDE);
+        showSlide('.slider_collab', false, auto_start_true, FADE_SLIDE);
+        chart_slide = showSlide('.slider_charts', false, auto_start_false, FADE_SLIDE);
+        chart_scrum_slide = showSlide('.slider_scrum_charts', false, auto_start_false, FADE_SLIDE);
+    });
+
+
+</script>
+
+<div id="lcol">
+<div class="features3-page">
+<div class="section" id="section-1"></div>
+    <h1>SwiftKanban Features</h1>
+    <div align="left" style="background-color: #f60; color: #ffffff; padding-left: 10px; padding-top: 7px; padding-bottom: 7px;"><span class="title" style="color: #ffffff; font-size: 13px;">Download a complete product brochure of SwiftKanban <a href="/swiftkanban-brochure-download" style="color: #ffffff; font-size: 17px;"><span style="text-decoration: underline;">here</span></a>. Or <a href="/free-kanban-trial.html" style="color: #ffffff; font-size: 17px;"><span style="text-decoration: underline;">sign up</span></a> for a 30-day free trial!</span></div>
+<div class="features3-wrapper">
+        <div class="features3-title"><h3>Visualize Your Workflow</h3></div>
+        <div class="features3-content">
+            <div class="features3-description">
+                Visualize Your Workflow using SwiftKanban and quickly define your processes as lanes and
+                sub-lanes
+                on a Kanban board, representing a workflow stage through which you can flow your work.
+            </div>
+            <div class="features3-image">
+                <img style="width: 750px;" src='../../images/features/common/visualize.png'
+                     alt='Visualize your workflow using SwiftKanban!'/>
+            </div>
+        </div>
+    </div>
+<div class="features3-wrapper">
+    <div class="features3-title"><h3>Define Custom Work Cards and Card Templates</h3></div>
+    <div class="features3-content">
+        <div class="features3-description">
+            Define Work Cards of various types e.g. User Stories, Defects and Issues using a rich text
+            editor, configurable template to define your backlog, which can feed work into the Kanban board.
+            You can also set default TODO list for cards which can act as DOD (Definition of Done) or a generic checklist.
+        </div>
+        <div class="features3-image">
+            <img src='../../images/features/common/custom_cards.png'
+                 alt='Define custom work cards!'/>
+        </div>
+    </div>
+</div>
+<div class="features3-wrapper">
+    <div class="features3-title"><h3>Smart Lanes</h3></div>
+    <div class="features3-content">
+        <div class="features3-description">Smart-Lanes add tremendous flexibility and visualization to the Kanban board. 'Smart Lanes' can be associated with various card attributes such as Class Of Service, or Team Members, or even your own ad-hoc labels. As you move cards from one Smart Lane to another, the associated attribute value is also reset accordingly and vice-versa! <br/><br/>
+            <div class="slide_options">
+                <div>
+                    Select your role and check how the board looks for you:
+                    <a  onmouseover="smartlanes_slide.goToSlide(0);" href='javascript:theme_slide.goToSlide(0);'>Priority</a>
+                    <a  onmouseover="smartlanes_slide.goToSlide(1);" href='javascript:theme_slide.goToSlide(1);'>Class of Service</a>
+                    <a  onmouseover="smartlanes_slide.goToSlide(2);" href='javascript:theme_slide.goToSlide(2);'>Other Options</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="features3-image slider">
+            <div class="slider_smartlanes">
+                <div class="features3-image"><img src='../../images/features/common/smart_lanes_priority.png' alt='Automatic categorization of cards - Priority'/></div>
+                <div class="features3-image"><img src='../../images/features/common/smart_lanes_class_of_service.png' alt='Automatic categorization of cards - Class of Service'/></div>
+                <div class="features3-image"><img src='../../images/features/common/smart_lanes_settings.png' alt='Define Smart Laanes in SwiftKanban SwiftKanban'/></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="features3-wrapper">
+    <div class="features3-title"><h3>Quick Actions on Card</h3></div>
+    <div class="features3-content">
+        <div class="features3-image">
+            <img src='../../images/features/common/cardactions.png'
+                 alt='Define custom work cards!' />
+        </div>
+        <div class="features3-description">
+            The following quick actions are available directly on the card.
+            <ul>
+                <li><strong>Archive Card</strong> &ndash; Archive user story card from any lane to mark it done or if the user story has become obsolete.
+                </li><li><strong>Clone Card</strong> &ndash; Clone card to create an exact replica of existing card to start a new user story with current settings of the card. E.g. A team is working on an issue for London factory and a similar issue is discovered for Tokyo factory.
+            </li><li><strong>Convert Card</strong> &ndash; Convert a defect/bug into a user story or change request without losing details of existing card. Convert card can be used to convert any card type to other card type. This helps when the work type changes for a user story.
+            </li><li><strong>Move To (Backlog)</strong> &ndash; Skip lanes and move the user story card to Backlog or any other lane on the board.
+            </li><li><strong>Linked Cards</strong> &ndash; This will allow you to trace several cards for future reference<br/><br/></li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+<div class="features3-wrapper">
+    <div class="features3-title"><h3>Get different level of details using board zoom!</h3> </div>
+    <div class="features3-content">
+        <div class="features3-description">
+            <div class="slide_options">
+                <div>
+                    Select your role and check how the board looks for you:
+                    <a  onmouseover="zoom_slide.goToSlide(0);" href='javascript:theme_slide.goToSlide(0);'>Developer</a>
+                    <a  onmouseover="zoom_slide.goToSlide(1);" href='javascript:theme_slide.goToSlide(1);'>Product Owner</a>
+                    <a  onmouseover="zoom_slide.goToSlide(2);" href='javascript:theme_slide.goToSlide(2);'>Business Executive</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="features3-image slider">
+            <div class="slider_zoom">
+                <div class="features3-image"><img src='../../images/features/zoom/large.jpg' alt='SwiftKanban Small Card View'/></div>
+                <div class="features3-image"><img src='../../images/features/zoom/medium.png' alt='SwiftKanban Medium Card View'/></div>
+                <div class="features3-image"><img src='../../images/features/zoom/small.png' alt='SwiftKanban Small Card View'/></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="features3-wrapper">
+    <div class="features3-title"><h3>Teams<sup style="font-size:10px;font-weight: normal ">&nbsp;&#946;</sup></h3></div>
+    <div class="features3-content">
+        <div class="features3-description">SwiftKanban allows grouping members in 'Teams' and filtering the Kanban board/reports by Teams to track the progress of various cards assigned to a specific teams and enable focused collaboration.</div>
+        <div class="features3-image slider">
+            <div class="slider_team">
+                <div class="features3-image"><img src='../../images/features/common/create_team.png' alt='Create teams in SwiftKanban'/></div>
+                <div class="features3-image"><img src='../../images/features/common/filter_team.png' alt='Use Team Filter on kanban board'/></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="features3-wrapper">
+    <div class="features3-title"><h3>Collaboration</h3> </div>
+    <div class="features3-content">
+        <div class="features3-description">
+            SwiftKanban encourages communication amongst the team and provides capability for threaded
+            discussions, instant chat with card owners and group discussion with team of entire board.
+            <!--<div class="slide_options">
+                <div>
+                    Select your role and check how the board looks for you:
+                    <a  onmouseover="zoom_slide.goToSlide(0);" href='javascript:theme_slide.goToSlide(0);'>Developer</a>
+                    <a  onmouseover="zoom_slide.goToSlide(1);" href='javascript:theme_slide.goToSlide(1);'>Product Owner</a>
+                    <a  onmouseover="zoom_slide.goToSlide(2);" href='javascript:theme_slide.goToSlide(2);'>Business Executive</a>
+
+                </div>
+            </div>-->
+        </div>
+        <div class="features3-image slider">
+            <div class="slider_collab">
+                <div class="features3-image"><img src='../../images/features/common/board-chat.png' alt='SwiftKanban Small Card View'/></div>
+                <div class="features3-image"><img src='../../images/features/common/comments.png' alt='SwiftKanban Medium Card View'/></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="features3-wrapper">
+    <div class="features3-title"><h3>Analytics and Reports</h3> </div>
+    <div class="features3-content">
+        <div class="features3-description">
+            Track key performance metrics such as Lead Time, Cycle Time and Wait Times in SwiftKanban and
+            identify improvement opportunities using Cumulative Flow diagrams, which are generated based on
+            the work item count, as well as work item estimates, to indicate the progress of work being
+            executed/ flowing through the board over a period of time.
+            <br/>
+            <br/>
+            <div class="slide_options">
+                <div>
+                    Select your role and check how the board looks for you:
+                    <a  onmouseover="chart_slide.goToSlide(0);" href='javascript:theme_slide.goToSlide(0);'>CFD</a>
+                    <a  onmouseover="chart_slide.goToSlide(1);" href='javascript:theme_slide.goToSlide(1);'>Lead Time</a>
+                    <a  onmouseover="chart_slide.goToSlide(2);" href='javascript:theme_slide.goToSlide(2);'>Control Charts</a><!--
+                        <a  onmouseover="chart_slide.goToSlide(3);" href='javascript:theme_slide.goToSlide(3);'>Throughput</a>-->
+                    <a  onmouseover="chart_slide.goToSlide(4);" href='javascript:theme_slide.goToSlide(4);'>Wait Time</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="features3-image slider">
+            <div class="slider_charts">
+                <div class="features3-image"><img src='../../images/features/charts/kanban_cfd.png' alt='SwiftKanban Cummulative Flow Diagram'/></div>
+                <div class="features3-image"><img src='../../images/features/charts/kanban_lead_time.png' alt='SwiftKanban Lead Time'/></div>
+                <div class="features3-image"><img src='../../images/features/charts/kanban_lead_time_control_chart.png' alt='SwiftKanban Lead Time With Control Carts'/></div>
+                <div class="features3-image"><img src='../../images/features/charts/kanban_throughput.png' alt='SwiftKanban Throughput'/></div>
+                <div class="features3-image"><img src='../../images/features/charts/kanban_wait_time.png' alt='SwiftKanban Wait Time'/></div>
+            </div>
+        </div><div class="section" id="section-2"></div>
+    </div>
+</div>
+<div class="features3-wrapper">
+    <div class="features3-title"><h3>Scrum Release Planning</h3> </div>
+    <div class="features3-content">
+        <div class="features3-description">
+            Release Planning view in SwiftKanban enables team to plan release scope in a easy-to-use drag-drop
+            interface, as well as, track the release progress using various visual indicators and charts available in the same view.
+        </div>
+        <div class="features3-image slider">
+            <div class="slider_release">
+                <div class="features3-image"><img src='../../images/features/common/Release_Scoping.png' alt='Scrum Release Planning'/></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="features3-wrapper">
+    <div class="features3-title"><h3>User Story Hierarchy</h3> </div>
+    <div class="features3-content">
+        <div class="features3-description">
+            User Story Hierarchy is useful in situations where a larger (or parent) user story needs to be broken down into several smaller (or child) user stories for better planning and execution. Defining relationships is through a highly visual interface that enables creation of child stories as well as linking existing stories to parent user stories.
+        </div>
+        <div class="features3-image slider">
+            <div class="slider_release">
+                <div class="features3-image"><img src='../../images/features/common/kanban_card_hierarchy.png' alt='Kanban User Story Hierarchy'/></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="features3-wrapper">
+    <div class="features3-title"><h3>Scrum Analytics
+            <span style="font-weight: normal;font-size: 13px; margin-left: 147px;">Select Scrum Analytics for your team:
+            <a style="color: #0058b0;margin-left: 15px;" onmouseover="chart_scrum_slide.goToSlide(0);" href='javascript:theme_slide.goToSlide(0);'>Burn-down Chart</a>
+            <a style="color: #0058b0;margin-left: 15px;"  onmouseover="chart_scrum_slide.goToSlide(1);" href='javascript:theme_slide.goToSlide(1);'>Throughput or Velocity</a></span>
+    </h3>
+
+    </div>
+    <div class="features3-content">
+        <div class="features3-description">
+
+        </div>
+        <div class="features3-image slider">
+            <div class="slider_scrum_charts">
+                <div class="slider_release">
+                    <div class="features3-description" style="text-align: left!important;">
+                        <strong>Burn-down Charts</strong>
+                        <br>
+                        Burn-down charts are provided in SwiftKanban to enable SCRUM teams to track the release progress in the good old way by tracking the hours remaining to be burned or how many actual hours have already being spent( Burn-up chart )before release is ready to be shipped.
+                    </div>
+                    <div class="features3-image"><img src='../../images/features/charts/kanban_scrum_burndown_charts.png' alt='Scrum Burndown Chart'/></div>
+                </div>
+                <div class="slider_release">
+                    <div class="features3-description" style="text-align: left!important;">
+                        <strong>Throughput/ Velocity</strong>
+                        <br/>
+                        Track Throughput/ Velocity of your team to see if you are on the improvement path. SwiftKanban allows you to view you throughput in terms of no. of cards as well as by card estimates( Velocity) and allows analyzing further breakup by the type of card, Class Of Service( CoS), Card Priority or card size.
+                    </div>
+                    <div class="features3-image"><img src='../../images/features/charts/kanban_throughput.png' alt='Scrum Throughput'/></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="features3-wrapper">
+    <div class="features3-title"><h3>Older cards tend to fade</h3> </div>
+    <div class="features3-content">
+        <div class="features3-description">
+            See where the action is! The new ‘Aging’ icon on the board menu enables you to see which cards have and have not been updated recently. The ‘older’ the card updates, the more faded it will appear!
+        </div>
+        <div class="features3-image slider">
+            <div class="slider_integrations">
+                <div class="features3-image"><img src='../../images/features/common/kanban_card_aging.png' alt='SwiftKanban Aging Cards'/></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="features3-wrapper">
+    <div class="features3-title"><h3>Personalization</h3></div>
+    <div class="features3-content">
+        <div class="features3-description">
+            <div class="slide_options">
+                <div>
+                    Choose the them that suits your business or personality:
+                    <a onmouseover="theme_slide.goToSlide(0);" href='javascript:zoom_slide.goToSlide(0);'>Blue</a>
+                    <a  onmouseover="theme_slide.goToSlide(1);" href='javascript:zoom_slide.goToSlide(1);'>Grey</a>
+                    <a  onmouseover="theme_slide.goToSlide(2);" href='javascript:zoom_slide.goToSlide(2);'>Many More Themes</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="features3-image slider">
+            <div class="slider_themes">
+                <div class="features3-image"><img src='../../images/features/theme/blue.jpg' alt='SwiftKanban Blue Theme'/></div>
+                <div class="features3-image"><img src='../../images/features/theme/black.jpg' alt='SwiftKanban Black Theme'/></div>
+                <div class="features3-image"><img src='../../images/features/theme/options.jpg' alt='SwiftKanban Theme Options'/></div>
+            </div>
+        </div><div class="section" id="section-3"></div>
+    </div>
+</div>
+<div class="features3-wrapper">
+    <div class="features3-title"><h3>Portfolio Kanban - Kanban for Portfolio Management</h3> </div>
+    <div class="features3-content">
+        <div class="features3-description">
+            Whether it is IT or Business in a corporation, a consulting company, a hi-tech product company, a legal firm, a marketing/ advertising agency, an HR department or any other type of organization, it has the need to manage portfolios. Portfolios are nothing but related groups of initiatives or activities or projects that need to be monitored together for an overall picture of how that group is performing as a whole.
+        </div>
+        <div class="features3-image"><a style="border: none;color: transparent;" href="/kanban/65-portfolio-kanban-the-most-visual-tool-for-portfolios.html"><img style="border: solid #fff 5px!important; width: 750px;" src='../../images/banners/portfolio-kanban.png' alt='Portfolio Kanban'/></a></div>
+        <div class="features3-description">
+            So, you might want to manage projects, customers, lines-of-business, territory-based campaigns, recruitment campaigns as portfolios, make decisions and take appropriate actions to ensure the overall “health” of the portfolio. While traditional (Project) Portfolio Management tools abound, Kanban has the promise of being one of the easiest, most visual portfolio management tools. Portfolio Kanban is the application of Kanban to Portfolio Management.
+            <stong>
+                <br/><br/>
+                Kanban's Value to Portfolio Management</strong>
+                <ul>
+                    <li>Swim-Lanes to depict one or more portfolios</li>
+                    <li>Visual Value Stream</li>
+                    <li>WIP Limits</li>
+                    <li>Rollup of Information</li>
+                </ul>
+                To learn more about SwiftKanban's Portfolio Kanban features click <a href="kanban/65-portfolio-kanban-the-most-visual-tool-for-portfolios">here</a>.
+        </div><div class="section" id="section-4"></div>
+    </div>
+</div>
+<div class="features3-wrapper">
+    <div class="features3-title"><h3>SwiftSync - The Most Enterprise-Ready Integration Technology!</h3> </div>
+    <div class="features3-content">
+        <div class="features3-description">
+            SwiftSync is an integration bus platform that provides integrations for application and software
+            development organizations that want to improve their development efficiency, increase organizational
+            visibility, manage regulatory compliance, improve time-to-market, and more. SwiftSync powered by OpsHub
+            supports over 30 enterprise-class integrations - with the leading ALM tools, including those from HP, Microsoft, IBM, Accept,
+            Atlassian, Rally, Serena, and more.<br/><br/>
+
+            SwiftSync has been architected, designed and built to enable multi-directional synchronization across
+            your existing development environment, delivering seamless collaboration to your product development
+            organization. Besides that, it will provide full transaction history, audit trailing and recovery
+            capability in case of any sync failures. Use SwiftSync to visualize work across the organization!
+        </div>
+            <div class="features3-image"><a style="border: none;color: transparent;" href="http://swiftkanban.com/swiftsync-integration"><img style="border: solid #fff 5px!important; width: 750px ;" src='../../images/features/common/kanban_integrations.png' alt='SwiftKanban Integrations'/></a></div>
+
+    </div>
+</div>
+<div align="left"
+     style="background-color: #f60; color: #ffffff; padding-left: 10px; padding-top: 7px; padding-bottom: 7px;"><span
+        class="title" style="color: #ffffff; font-size: 13px;">To learn more, download a complete product brochure of SwiftKanban <a
+        href="/swiftkanban-brochure-download" style="color: #ffffff; font-size: 17px;"><span
+        style="text-decoration: underline;">here</span></a>. Or <a href="/free-kanban-trial.html"
+                                                                   style="color: #ffffff; font-size: 17px;"><span
+        style="text-decoration: underline;">sign up</span></a> for a 30-day free trial!</span></div>
+</div>
+</div>
+
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('body').append($("<div class='popup hiding' id='article-finished'>You've reached the end of the 'Features' page! Want to go for a test-ride? Sign up for a <a href='http://www.swiftkanban.com/free-kanban-trial' target='_blank'>FREE TRIAL</a> of SwiftKanban! </div>"));
+
+        $('#lcol').waypoint(function (direction) {
+            $('#article-finished').toggleClass('hiding', direction === "up");
+        }, {
+            offset: function () {
+                return $.waypoints('viewportHeight') - $(this).height() + 100;
+            }
+        });
+    });
+</script>
+
+
+</body>
+</html>
