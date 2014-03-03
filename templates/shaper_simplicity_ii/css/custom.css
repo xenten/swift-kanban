@@ -664,6 +664,7 @@ div.pagination {
     background-image: url("/images/active.png") !important;
     background-repeat: no-repeat;
     height: 46px;
+	width: 113px;
 
 }
 
@@ -674,6 +675,7 @@ div.pagination {
     background-image: url("/images/inactive.png") !important;
     background-repeat: no-repeat;
     height: 46px;
+	width: 113px;
 }
 
 #hornav ul.level-0 > li.menu-item.free-trial-menu  > a:hover {
@@ -3145,11 +3147,11 @@ li.subhead {
     width:173px;
     height: 22px;
     font-size: 1px;
-    position: absolute;
-    top: 9px;
     cursor: hand;
     cursor: pointer;
-    right: 10px;
+    float: right;
+    margin-top: -17px;
+    margin-right: 10px;
     color: #F0931D !important;
 }
 
