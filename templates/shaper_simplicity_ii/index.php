@@ -267,7 +267,7 @@ require_once(dirname(__FILE__).DS.'lib'.DS.'helix.php');
 
 <?php $helix->compress(); /* --- Compress CSS and JS files --- */ ?>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js" type="text/javascript"></script>
+<script src="/templates/shaper_simplicity_ii/js/jquery-ui.min.js" type="text/javascript"></script>
 
 
 <script src="/templates/shaper_simplicity_ii/js/custom.js" type="text/javascript"></script>
