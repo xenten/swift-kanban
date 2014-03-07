@@ -1,7 +1,15 @@
 /*! jquery.cookie v1.4.0 | MIT */
 !function(a){"function"==typeof define&&define.amd?define(["jquery"],a):a(jQuery)}(function(a){function b(a){return h.raw?a:encodeURIComponent(a)}function c(a){return h.raw?a:decodeURIComponent(a)}function d(a){return b(h.json?JSON.stringify(a):String(a))}function e(a){0===a.indexOf('"')&&(a=a.slice(1,-1).replace(/\\"/g,'"').replace(/\\\\/g,"\\"));try{a=decodeURIComponent(a.replace(g," "))}catch(b){return}try{return h.json?JSON.parse(a):a}catch(b){}}function f(b,c){var d=h.raw?b:e(b);return a.isFunction(c)?c(d):d}var g=/\+/g,h=a.cookie=function(e,g,i){if(void 0!==g&&!a.isFunction(g)){if(i=a.extend({},h.defaults,i),"number"==typeof i.expires){var j=i.expires,k=i.expires=new Date;k.setDate(k.getDate()+j)}return document.cookie=[b(e),"=",d(g),i.expires?"; expires="+i.expires.toUTCString():"",i.path?"; path="+i.path:"",i.domain?"; domain="+i.domain:"",i.secure?"; secure":""].join("")}for(var l=e?void 0:{},m=document.cookie?document.cookie.split("; "):[],n=0,o=m.length;o>n;n++){var p=m[n].split("="),q=c(p.shift()),r=p.join("=");if(e&&e===q){l=f(r,g);break}e||void 0===(r=f(r))||(l[q]=r)}return l};h.defaults={},a.removeCookie=function(b,c){return void 0!==a.cookie(b)?(a.cookie(b,"",a.extend({},c,{expires:-1})),!0):!1}});
 
-
+/*
+ * jQuery doTimeout: Like setTimeout, but better! - v1.0 - 3/3/2010
+ * http://benalman.com/projects/jquery-dotimeout-plugin/
+ *
+ * Copyright (c) 2010 "Cowboy" Ben Alman
+ * Dual licensed under the MIT and GPL licenses.
+ * http://benalman.com/about/license/
+ */
+(function($){var a={},c="doTimeout",d=Array.prototype.slice;$[c]=function(){return b.apply(window,[0].concat(d.call(arguments)))};$.fn[c]=function(){var f=d.call(arguments),e=b.apply(this,[c+f[0]].concat(f));return typeof f[0]==="number"||typeof f[1]==="number"?this:e};function b(l){var m=this,h,k={},g=l?$.fn:$,n=arguments,i=4,f=n[1],j=n[2],p=n[3];if(typeof f!=="string"){i--;f=l=0;j=n[1];p=n[2]}if(l){h=m.eq(0);h.data(l,k=h.data(l)||{})}else{if(f){k=a[f]||(a[f]={})}}k.id&&clearTimeout(k.id);delete k.id;function e(){if(l){h.removeData(l)}else{if(f){delete a[f]}}}function o(){k.id=setTimeout(function(){k.fn()},j)}if(p){k.fn=function(q){if(typeof p==="string"){p=g[p]}p.apply(m,d.call(n,i))===true&&!q?o():e()};o()}else{if(k.fn){j===undefined?e():k.fn(j===false);return true}else{e()}}}})(jQuery);
 
 //jQuery.noConflict();
 var social_titles = function(){
@@ -215,110 +223,4 @@ function follow_twitter() {
 }
 
 /* javascript for follow twitter popup ends here */
-
-/*Survey Popup code starts here*/
-var display_survey_first_time = 150;  //time in seconds
-var display_survey_next_delay = 600;  //time in seconds
-var currentTime = (new Date()).getTime();
-
-if(window.location.pathname.indexOf('free-kanban-trial')>=0)
-    $.cookie("free_trial", true);
-
-$.cookie("first_visit_time", currentTime); // Sample 2
-if( $.cookie("first_visit_time")==null && $.cookie("survey_popup_displayed")==null)
-    $.cookie("first_visit_time", currentTime);
-
-$.doTimeout(1000, function(){
-    var newTime = (new Date()).getTime();
-    if($.cookie("survey_popup_displayed")!=null)
-        return false;
-    if(newTime-$.cookie("first_visit_time") > (display_survey_first_time*1000) )
-    {
-        showDialog();
-        return false;
-    }
-    return true;
-});
-
-var survey_click = function(btn_value){
-    var survey = $('#survey');
-    survey.dialog('close');
-    if(btn_value=='yes')
-        window.open('http://www.swiftkanban.com/survey');
-}
-var showDialog = function (popup_type)
-{
-    $.cookie("survey_popup_displayed","true",{ expires: 30 });
-    loc = window.location;
-    if (loc.pathname.indexOf("free-kanban-trial") >= 0)
-        return;
-
-    $.doTimeout(5000, function(){
-        var popup_type = randomPopupGenerator();
-        if(popup_type==2 && ($.cookie("free_trial")==null))
-            show_free_trial_dialog();
-        else
-            show_survey_dialog();
-
-    });
-}
-
-var show_survey_dialog = function()
-{
-    $( "#survey" ).dialog({
-
-        width: '457px',
-        height: 'auto',
-        modal: true,
-        resizable: false,
-        draggable: false,
-        dialogClass:'survey_dialog',
-        open: function(event, ui) {
-            $('.survey_dialog').click(function() {
-                window.location='http://www.swiftkanban.com/trial-popup';
-            });
-
-            var survey_close = $('.ui-icon-closethick');
-            survey_close.click(function()
-            {
-                $('#survey').dialog('close');
-                return false;
-            });
-        }
-    });
-};
-
-var show_free_trial_dialog = function()
-{
-    $( "#survey-get-free" ).dialog({
-        width: '457px',
-        height: 'auto',
-        modal: true,
-        resizable: false,
-        draggable: false,
-        dialogClass:'free_trial_dialog',
-        open: function(event, ui) {
-            $('.free_trial_dialog').click(function() {
-                window.location='http://www.swiftkanban.com/trial-popup';
-            });
-
-            var free_trial_close = $('.ui-icon-closethick');
-            free_trial_close.click(function()
-            {
-                $('#survey-get-free').dialog('close');
-                return false;
-            });
-        }
-    });
-};
-
-
-var randomPopupGenerator = function ()
-{
-    var from= 2, to=3;
-    return Math.floor(Math.random()*(to-from+1)+from);
-}
-
-/*Survey Popup code ends here*/
-/*Social Media code starts here*/
 
