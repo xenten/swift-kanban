@@ -116,9 +116,22 @@ var show_survey_dialog = function()
         modal: true,
         resizable: false,
         draggable: false,
+        show : 'fade',
+        hide: 'fade',
         dialogClass:'survey_dialog',
         open:function(event, ui){
             _gaq.push(['_trackEvent', 'Website Popup', 'Displayed', 'Website Survey']);
+
+            $('.ui-widget-overlay', this).hide().fadeIn();
+
+            $('.ui-icon-closethick').bind('click.close', function () {
+                $('.ui-widget-overlay').fadeOut(function () {
+                    $('.ui-icon-closethick').unbind('click.close');
+                    $('.ui-icon-closethick').trigger('click');
+                });
+
+                return false;
+            });
         }
     });
 };
