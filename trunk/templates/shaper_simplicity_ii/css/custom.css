@@ -2683,6 +2683,7 @@ span.pricing-contact {
     position: fixed;
     background-color: #fff;
     box-shadow: 2px 2px 7px #ABABAB;
+    z-index: 61;
 }
 .free_trial_dialog .ui-dialog-titlebar-close {
     margin: 0px 6px 0 0 !important;
@@ -2791,6 +2792,7 @@ span.pricing-contact {
     -webkit-border-radius: 5px;
     -khtml-border-radius: 5px;
     background-color: #FFFFE6;
+    z-index: 61;
 }
 
 .survey_dialog .ui-dialog-titlebar {
