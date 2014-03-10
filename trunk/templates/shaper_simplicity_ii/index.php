@@ -326,7 +326,7 @@ END ProvideSupport.com Graphics Chat Button Code -->
 <script type="text/javascript" src="https://dv140.infusionsoft.com/app/webTracking/getTrackingCode?trackingId=d25b4e00bc03e9f13c524618683d62d5"></script>
 
 
-<div id="survey" title="Thank you very much for visiting Swift-Kanban!" style="display: none;">
+<div id="survey" title="Thank you very much for visiting SwiftKanban!" style="display: none;">
     <div id="survey-text">We hope you are enjoying your visit to our site. Would you please take a 1 minute survey for a chance to win a <span style="color:#fd631d;">$25 Amazon Gift Card</span> (or equivalent)?</div>
     <div class="survey-buttons">
         <center>
@@ -337,7 +337,7 @@ END ProvideSupport.com Graphics Chat Button Code -->
 </div>
 <div id="survey-get-free" title="" style="display: none;">
     <div>
-        <div id="survey-get-free-text">Try Swift-Kanban at zero-cost for 30 days</div>
+        <div id="survey-get-free-text">Try SwiftKanban at zero-cost for 30 days</div>
     </div>
 </div>
 
