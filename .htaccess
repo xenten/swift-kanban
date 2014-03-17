@@ -72,6 +72,10 @@ ExpiresByType text/html A600
 ErrorDocument 404 http://www.swiftkanban.com
 ErrorDocument 500 http://www.swiftkanban.com
 
+#####Sitemap - Feb28 2014 #####
+RewriteCond %{REQUEST_URI} ^/sitemap.xml
+RewriteRule .* /index.php?option=com_xmap&id=1&view=xml
+
 #SD Times Redirect
 redirect 301 /free https://login.swift-kanban.com/pui/mregistration.html?utm_source=SD%2BTimes&utm_medium=print&utm_campaign=SD%2BTimes%2BAd
 
@@ -307,3 +311,21 @@ redirect 301 /blog http://blog.digite.com
 
 redirect 301 /contact-us /swiftkanban-contact-us
 redirect 301 /contact-us.html /swiftkanban-contact-us
+
+####### edited on Feb 19th - for the blog-2 links google webmaster was showing #########
+
+redirect 301 /blog-2/37-scrum-g-kanban-scrumban-or-kanban-lessons-at-lean-coffee.html http://blog.digite.com/scrum-kanban-scrumban-or-kanban-lessons-at-lean-coffee/
+
+redirect 301 /blog-2/31-agility-redefined.html http://blog.digite.com/agility-redefined/
+redirect 301 /blog-2/80-why-we-hate-process.html http://blog.digite.com/why-we-hate-process/
+redirect 301 /blog-2/30-agility-requires-greater-discipline-are-you-ready-for-it.html http://blog.digite.com/agility-requires-greater-discipline-are-you-ready-for-it/
+
+redirect 301 /masa-blog-feed/76-handling-ticket-issues-with-kanban.html http://blog.digite.com/handling-ticket-issues-with-kanban/
+redirect 301 /blogs/36-kanban-says-pull-dont-push.html http://blog.digite.com/kanban-says-pull-don%C2%B4t-push/
+redirect 301 /blogs/35-kanban--evolutionary-or-revolutionary.html http://blog.digite.com/kanban-evolutionary-or-revolutionary/
+redirect 301 /blog-2/16-david-blog/63-who-owns-kanban.html http://blog.digite.com/who-owns-kanban/
+redirect 301 /16-blog/david-blog/34-lean-software-development.html http://blog.digite.com/lean-software-development/
+redirect 301 /blog-2/15-masa-blog/77-visualizing-cycles-in-kanban.html http://blog.digite.com/visualizing-cycles-in-kanban/
+redirect 301 /blog-2/82-writing-your-blog-using-kanban-part-2.html http://blog.digite.com/writing-your-blog-using-kanban-part-2/
+
+####### END edited on Feb 19th - for the blog-2 links google webmaster was showing #########

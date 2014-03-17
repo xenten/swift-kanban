@@ -18,8 +18,7 @@
                 "and r.APP_DOMAIN = ad.ID and ad.APP_ACCOUNT = aa.id "+
                 "group by aa.id) dets on dets.accountId = aa.id "+
                 "where aa.id = aap.APP_ACCOUNT and addr.Id = aa.CONTACT_ADDR "+
-                "and aa.LICENSE = lic.ID) dets_1 on sr.EMAIL_ADDRESS = dets_1.USER_ID ) TEMP_TABLE ;"
-
+                "and aa.LICENSE = lic.ID) dets_1 on sr.EMAIL_ADDRESS = dets_1.USER_ID ) TEMP_TABLE ;";
         var All_ACCOUNTS_REPORT = "select 'NA' as 'Account Id', 'NA' as 'Account Name', sr.first_name as 'First Name', " +
                 "sr.last_name as 'Last Name', sr.email_address as 'Used Id or eMail Id', sr.contact_number as 'Phone Number', " +
                 "sr.country_code as 'Country', 'NA' as 'License Type', 'NA' as 'Activation Date', 'NA' as 'Expiry Date', " +
@@ -50,6 +49,45 @@
                 "aa.account_type as LicenseType, date(pli.last_login_time) as LastLogin from organization o, app_domain ad, " +
                 "app_account aa, person p left outer join Person_login_info pli on pli.person_id = p.id where " +
                 "p.working_org = o.id  and o.app_domain = ad.id  and ad.app_account  = aa.id order by pli.last_login_time desc;";
+        var RAJ_REPORT = "SELECT sr.email_address AS 'Used Id', sr.first_name AS 'First Name', sr.last_name AS 'Last Name', " +
+                "sr.email_address AS 'eMail ID', 'NA' AS 'Company', sr.mgmt_function AS 'Function', sr.intended_use AS 'Intended Use', " +
+                "sr.referrer AS 'How did you hear about us?', 'NA' AS 'Country', 'NA' AS 'License Type', sr.created_date AS 'Date of Registration', " +
+                "'NA' AS 'Date of Activation', 'NA' AS 'Date of License Expiration', 'Not Activated' AS 'Active/Inactive', 0 AS 'Total number of logins', " +
+                "'NA' AS 'Recent/Last Login', 'NA' AS 'Average time spent per login', 'NA' AS 'Overall time spent this month', 'NA' AS 'Account Id', " +
+                "0 AS 'Projects Count', 0 AS 'Cards Created', 0 AS 'Users Invited' " +
+                "FROM Saas_registration sr " +
+                "WHERE current_state = 'Created' " +
+                "UNION ALL " +
+                "SELECT	t1.user_id 'Used Id', t1.first_name AS 'First Name', t1.last_name AS 'Last Name', t1.email_address AS 'eMail ID', " +
+                "t1.name AS 'Company', t1.mgmt_function AS 'Function', t1.intended_use AS 'Intended Use', t1.referrer AS 'How did you hear about us?', " +
+                "t1.country AS 'Country', t1.account_type AS 'License Type', date(t1.created_date) AS 'Date of Registration', " +
+                "date(t1.activation_date) AS 'Date of Activation', date(t1.expiry_date) AS 'Date of License Expiration', " +
+                "t1.current_state AS 'Active/Inactive', t3.login_count AS 'Total number of logins', date(t1.last_login_time) AS 'Recent/Last Login', " +
+                "(t3.logged_in_time/t3.login_count) AS 'Average time spent per login', t3.timeSpentThisMnth AS 'Overall time spent this month', " +
+                "t1.appaccount AS 'Account Id', t1.workspaces AS 'Projects Count', t4.cardcount AS 'Cards Created', t2.users AS 'Users Invited' " +
+                "FROM (SELECT orgcount AS workspaces, " +
+                "a.id AS appaccount, o.id AS orgId, a.name, a.account_type, sr.created_date, l.activation_date, l.expiry_date, a.current_state, " +
+                        "p.first_name, p.last_name, p.user_id, ad.phone_number, ad.country, max(pli.last_login_time) AS last_login_time, " +
+                        "sr.mgmt_function, sr.intended_use, sr.referrer, p.email_address " +
+                "FROM saas_registration sr, app_domain d, app_account a, license l, person p, address ad, " +
+                "repository r left outer join person_login_info PLI on PLI.repository = r.id, organization o " +
+                "LEFT OUTER JOIN " +
+                "(SELECT owner_org, count(owner_org) AS orgcount FROM base_project WHERE current_state != 'Deleted'  " +
+                "GROUP BY owner_org) AS w ON w.owner_org = o.id WHERE sr.email_address = p.user_id AND o.app_domain = d.id " +
+                "AND d.app_account = a.id AND a.license = l.id AND p.id = a.contact_person AND ad.id = a.contact_addr AND r.app_domain = d.id " +
+                "GROUP BY a.id ORDER BY last_login_time) t1, (SELECT a.id AS appaccount, count(p.id) AS users " +
+                "FROM organization o, app_domain d, app_account a, license l, person p WHERE o.app_domain = d.id " +
+                "AND d.app_account = a.id AND a.license = l.id AND p.working_org = o.id GROUP BY a.id) t2 LEFT OUTER JOIN " +
+                "(SELECT a.id AS appaccount, count(psi.person_session_id) AS login_Count, " +
+                "sum(IF(TIMESTAMPDIFF(MINUTE, login_time, logout_time) < 1440, TIMESTAMPDIFF(MINUTE, login_time, logout_time), 0)) AS logged_in_time, " +
+                "sum(IF(login_time BETWEEN  DATE_FORMAT(CURDATE(), '%Y-%m-01') AND last_day(CURDATE()) && TIMESTAMPDIFF(MINUTE, login_time, logout_time) < 1440, TIMESTAMPDIFF(MINUTE, login_time, logout_time), 0)) AS timeSpentThisMnth " +
+                "FROM organization o, app_domain d, app_account a, license l, person p, person_login_info PLI, person_session_info psi WHERE o.app_domain = d.id " +
+                "AND d.app_account = a.id AND a.license = l.id AND p.working_org = o.id AND PLI.person_login_id = psi.person_login_id AND PLI.person_id = p.id " +
+                "GROUP BY a.id) t3 ON t2.appaccount = t3.appaccount, (SELECT aa.id AS accntId, prj.cardcount FROM   app_account aa, app_domain ad, organization o " +
+                "LEFT OUTER JOIN (SELECT bp.owner_org, count(acv.id) as cardcount FROM base_project bp, all_card_view acv WHERE acv.workspaceid = bp.id " +
+                "AND acv.workspacetype = 'KanbanProject' AND acv.currentstate != 'Deleted' AND bp.current_state != 'Deleted' group by bp.owner_org) prj " +
+                "ON prj.owner_org = o.id WHERE  ad.app_account = aa.id AND ad.id = o.app_domain) t4 WHERE t1.appaccount = t2.appaccount AND t1.appaccount = t4.accntId " +
+                "ORDER BY 14 DESC;";
 
         function loginToAdmin() {
             var userid = document.getElementById('userid').value;
@@ -82,6 +120,10 @@
             if (a == 3 || a == -1)
             {
                 addQueryIframe(COUNTRY_REPORT,"Country_Source_Report");
+            }
+            if (a == 4 || a == -1)
+            {
+                addQueryIframe(RAJ_REPORT,"Rajendra's_query_Report");
             }
         }
     </script>
@@ -125,6 +167,14 @@ UserId:<input type="text" id='userid'/>&nbsp;&nbsp;&nbsp;Password:<input type="p
         </td>
         <td>
             <a href="#" onclick="fireQueries(3)"><img src="download.png" title="Country / Source Segmentation"></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            4. Rajendra's query
+        </td>
+        <td>
+            <a href="#" onclick="fireQueries(4)"><img src="download.png" title="Rajendra's Query"></a>
         </td>
     </tr>
     <tr>
