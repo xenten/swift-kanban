@@ -28,10 +28,13 @@ Disallow: /plugins/
 Disallow: /templates/
 Disallow: /tmp/
 Disallow: /community/
+Disallow: /hosted_domains/
+Disallow: /*?
 
+Sitemap: http://www.swiftkanban.com/index.php?option=com_xmap&id=1&view=xml
 #Begin Attracta SEO Tools Sitemap. Do not remove
-sitemap: http://cdn.attracta.com/sitemap/2276765.xml.gz
+#sitemap: http://cdn.attracta.com/sitemap/2276765.xml.gz
 #End Attracta SEO Tools Sitemap. Do not remove
 #Begin Attracta SEO Tools Sitemap. Do not remove
-sitemap: http://cdn.attracta.com/sitemap/2276761.xml.gz
+#sitemap: http://cdn.attracta.com/sitemap/2276761.xml.gz
 #End Attracta SEO Tools Sitemap. Do not remove

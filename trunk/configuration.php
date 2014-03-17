@@ -3,7 +3,7 @@ class JConfig {
 	public $offline = '0';
 	public $offline_message = 'This site is down for maintenance.<br /> Please check back again soon.';
 	public $display_offline_message = '1';
-	public $sitename = 'Enterprise Kanban Tool: Swift-Kanban';
+	public $sitename = 'Enterprise Kanban Tool: SwiftKanban';
 	public $editor = 'jckeditor';
 	public $list_limit = '20';
 	public $access = '1';
@@ -11,15 +11,15 @@ class JConfig {
 	public $debug_lang = '0';
 	public $dbtype = 'mysql';
 	public $host = 'localhost';
-	public $user = 'digite_db';
-	public $password = 'DigiteApp@123';
+	public $user = 'digite_swiftk';
+	public $password = 'uU#0&HbV?[ZdlpUNTL';
 	public $db = 'digite_swiftkanban';
 	public $dbprefix = 'sk_';
 	public $live_site = '';
 	public $secret = 'MX9KBgPcqLKohKdH';
 	public $gzip = '1';
 	public $error_reporting = 'default';
-	public $helpurl = 'http://help.joomla.org/proxy/index.php?option=com_help&keyref=Help16:{keyref}';
+	public $helpurl = 'http://help.joomla.org/proxy/index.php?option=com_help&keyref=Help{major}{minor}:{keyref}';
 	public $ftp_host = '127.0.0.1';
 	public $ftp_port = '21';
 	public $ftp_user = '';
@@ -40,8 +40,8 @@ class JConfig {
 	public $smtpport = '465';
 	public $caching = '2';
 	public $cache_handler = 'file';
-	public $cachetime = '60';
-	public $MetaDesc = 'Enterprise Kanban tool Swift-Kanban is one of the best Kanban tools to help you implement Lean/ Kanban for software development, IT Management and project management activities. Additionally, it can help you implement Kanban in HR, Marketing, Sales, Legal, Procurement, Manufacturing, Construction, Insurance and a range of other business functions. Enterprise Kanban tool Swift-Kanban helps you scale Agile to the enterprise with Lean/ Kanban.';
+	public $cachetime = '600';
+	public $MetaDesc = 'Enterprise Kanban tool SwiftKanban is one of the best Kanban tools to help you implement Lean/ Kanban for software development, IT Management and project management activities. Additionally, it can help you implement Kanban in HR, Marketing, Sales, Legal, Procurement, Manufacturing, Construction, Insurance and a range of other business functions. Enterprise Kanban tool Swift-Kanban helps you scale Agile to the enterprise with Lean/ Kanban.';
 	public $MetaKeys = '';
 	public $MetaAuthor = '0';
 	public $sef = '1';
@@ -59,4 +59,11 @@ class JConfig {
 	public $feed_email = 'author';
 	public $cookie_domain = '';
 	public $cookie_path = '';
+	public $robots = '';
+	public $MetaVersion = '0';
+	public $offline_image = '';
+	public $captcha = 'recaptcha';
+	public $mailonline = '1';
+	public $frontediting = '1';
+	public $asset_id = '1';
 }
