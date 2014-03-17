@@ -51,18 +51,6 @@ if ($params->get('show_create_date')
 ?>
 
 
-    <div style="display: none;">
-       <?php
-        $socialimagelink_js = fieldattach::getValue( $this->item->id, 2, false) ;
-        $socialimagelink = urlencode($socialimagelink_js) ;
-        $socialdesc = urlencode(fieldattach::getValue( $this->item->id, 1, false)) ;
-        $socialtwittertag = (fieldattach::getValue( $this->item->id, 3, false)) ;
-        ?>
-        <script type="text/javascript">
-            var social_share_image =  "<?php  if ($socialimagelink_js!='' && $socialimagelink_js !=null) : echo $socialimagelink_js; endif; ?>";
-        </script>
-
-    </div>
 <div class="article-tools clearfix">
 	<dl class="article-info">
 	<!-- <dt class="article-info-term"><?php  echo JText::_('COM_CONTENT_ARTICLE_INFO'); ?></dt>-->
