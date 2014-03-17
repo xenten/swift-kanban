@@ -15,7 +15,10 @@ $params = &$this->item->params;
 $canEdit	= $this->item->params->get('access-edit');
 JHtml::addIncludePath(JPATH_COMPONENT.'/helpers/html');
 JHtml::_('behavior.tooltip');
-JHtml::core();
+if (method_exists('JHtml','core')) 
+JHtml::core(); 
+else 
+JHtmlBehavior::framework(); 
 
 ?>
 
