@@ -45,10 +45,11 @@
                 "app_account a, license l, person p, person_login_info pli, person_session_info psi  where  o.app_domain = d.id and " +
                 "d.app_account = a.id and a.license = l.id and p.working_org = o.id and pli.person_login_id = psi.person_login_id and " +
                 "pli.person_id = p.id  group by a.id) t3 ON t2.appaccount = t3.appaccount where  t1.appaccount = t2.appaccount  order by 14 desc;";
-        var ALL_USERS_REPORT = "select p.first_name as FirstName, p.last_name as LastName, p.user_id as Email, aa.name as AccountName, " +
-                "aa.account_type as LicenseType, date(pli.last_login_time) as LastLogin from organization o, app_domain ad, " +
-                "app_account aa, person p left outer join Person_login_info pli on pli.person_id = p.id where " +
-                "p.working_org = o.id  and o.app_domain = ad.id  and ad.app_account  = aa.id order by pli.last_login_time desc;";
+        var ALL_USERS_REPORT = "select p.first_name as FirstName, p.last_name as LastName, p.user_id as Email, r.name as Role, " +
+                "aa.name as AccountName, aa.account_type as LicenseType, aa.CREATED_DATE as ActivationDate, " +
+                "date(pli.last_login_time) as LastLogin from organization o, app_domain ad, app_account aa, Role r, person p left outer join " +
+                "Person_login_info pli on pli.person_id = p.id where p.working_org = o.id  and o.app_domain = ad.id  and ad.app_account  = aa.id " +
+                "and r.id = p.primary_role order by pli.last_login_time desc;";
         var RAJ_REPORT = "SELECT sr.email_address AS 'Used Id', sr.first_name AS 'First Name', sr.last_name AS 'Last Name', " +
                 "sr.email_address AS 'eMail ID', 'NA' AS 'Company', sr.mgmt_function AS 'Function', sr.intended_use AS 'Intended Use', " +
                 "sr.referrer AS 'How did you hear about us?', 'NA' AS 'Country', 'NA' AS 'License Type', sr.created_date AS 'Date of Registration', " +
@@ -67,8 +68,8 @@
                 "t1.appaccount AS 'Account Id', t1.workspaces AS 'Projects Count', t4.cardcount AS 'Cards Created', t2.users AS 'Users Invited' " +
                 "FROM (SELECT orgcount AS workspaces, " +
                 "a.id AS appaccount, o.id AS orgId, a.name, a.account_type, sr.created_date, l.activation_date, l.expiry_date, a.current_state, " +
-                        "p.first_name, p.last_name, p.user_id, ad.phone_number, ad.country, max(pli.last_login_time) AS last_login_time, " +
-                        "sr.mgmt_function, sr.intended_use, sr.referrer, p.email_address " +
+                "p.first_name, p.last_name, p.user_id, ad.phone_number, ad.country, max(pli.last_login_time) AS last_login_time, " +
+                "sr.mgmt_function, sr.intended_use, sr.referrer, p.email_address " +
                 "FROM saas_registration sr, app_domain d, app_account a, license l, person p, address ad, " +
                 "repository r left outer join person_login_info PLI on PLI.repository = r.id, organization o " +
                 "LEFT OUTER JOIN " +
