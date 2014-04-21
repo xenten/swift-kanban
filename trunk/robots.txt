@@ -30,6 +30,7 @@ Disallow: /tmp/
 Disallow: /community/
 Disallow: /hosted_domains/
 Disallow: /*?
+Allow: /index.php?option=com_xmap&id=1&view=xml
 
 Sitemap: http://www.swiftkanban.com/index.php?option=com_xmap&id=1&view=xml
 #Begin Attracta SEO Tools Sitemap. Do not remove
