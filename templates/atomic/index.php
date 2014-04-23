@@ -21,17 +21,6 @@ $app = JFactory::getApplication();
     <jdoc:include type="head" />
 
 
-    <!-- The following line loads the template CSS file located in the template folder. -->
-    <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/template.css" type="text/css" />
-
-    <!-- The following four lines load the Blueprint CSS Framework and the template CSS file for right-to-left languages. If you don't want to use these, delete these lines. -->
-    <?php if($this->direction == 'rtl') : ?>
-        <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/blueprint/plugins/rtl/screen.css" type="text/css" />
-        <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/template_rtl.css" type="text/css" />
-    <?php endif; ?>
-
-    <!-- The following line loads the template JavaScript file located in the template folder. It's blank by default. -->
-    <script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/template.js"></script>
 
     <style type="text/css">
         @media only screen and (max-width: 480px) {
