@@ -32,6 +32,22 @@ $app = JFactory::getApplication();
 
     <!-- The following line loads the template JavaScript file located in the template folder. It's blank by default. -->
     <script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/template.js"></script>
+
+    <style type="text/css">
+        @media only screen and (max-width: 480px) {
+            body,table,td,a,li {
+                -webkit-text-size-adjust:none !important;
+            }
+            table {width: 100% !important;}
+
+            .responsive-image img {
+                height: auto !important;
+                max-width: 150px !important;
+                width: 100% !important;
+            }
+        }
+    </style>
+
 </head>
 <body>
 <div class="container">
