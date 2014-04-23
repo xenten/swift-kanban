@@ -51,10 +51,6 @@ $app = JFactory::getApplication();
 </head>
 <body>
 <div class="container">
-    <hr class="space" />
-    <div class="joomla-header span-16 append-1">
-        <h1><?php echo htmlspecialchars($app->getCfg('sitename')); ?></h1>
-    </div>
     <?php if($this->countModules('atomic-search') or $this->countModules('position-0')) : ?>
         <div class="joomla-search span-7 last">
             <jdoc:include type="modules" name="atomic-search" style="none" />
