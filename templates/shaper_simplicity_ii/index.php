@@ -41,33 +41,6 @@ require_once(dirname(__FILE__).DS.'lib'.DS.'helix.php');
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language;?>" >
 
 <head>
-    <script type="text/javascript">
-        var DM_redirect = function (MobileURL, Home){
-            try {
-                // avoid loops within mobile site
-                if(document.getElementById("dmRoot") != null)
-                {
-                    return;
-                }
-                var CurrentUrl = location.href;
-                var noredirect = document.location.search;
-                if (noredirect.indexOf("no_redirect=true") < 0){
-                    if ((navigator.userAgent.match(/(iPhone|iPod|BlackBerry|Android.*Mobile|webOS|Windows CE|IEMobile|Opera Mini|Opera Mobi|HTC|LG-|LGE|SAMSUNG|Samsung|SEC-SGH|Symbian|Nokia|PlayStation|PLAYSTATION|Nintendo DSi)/i)) ) {
-
-                        if(Home){
-                            location.replace(MobileURL);
-                        }
-                        else
-                        {
-                            location.replace(MobileURL + "?url=" + encodeURIComponent(CurrentUrl));
-                        }
-                    }
-                }
-            }
-            catch(err){}
-        }
-        DM_redirect("http://m.swift-kanban.com");
-    </script>
 
 
 
