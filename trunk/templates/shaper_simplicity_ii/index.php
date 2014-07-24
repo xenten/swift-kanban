@@ -81,6 +81,8 @@ require_once(dirname(__FILE__).DS.'lib'.DS.'helix.php');
 
 <body class="bg clearfix new-header" id='sk_body'>
 
+<a href="https://plus.google.com/116495124719251971526" rel="publisher"></a>
+
 <div class="bg1">
 
     <div class="sp-wrap main-bg clearfix">
