@@ -43,7 +43,7 @@ require_once(dirname(__FILE__).DS.'lib'.DS.'helix.php');
 <head>
 
 
-
+    <meta name="google-site-verification" content="PlGXADnejeFl_IriIvP90JZPX-jjoxrxQ5YBwR8QHj8" />
     <?php
     $app = JFactory::getApplication();
     $this->setTitle( $this->getTitle() . ' | ' . $app->getCfg( 'sitename' ) );
