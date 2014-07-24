@@ -333,6 +333,6 @@ redirect 301 /blog-2/82-writing-your-blog-using-kanban-part-2.html http://blog.d
 ###### URL Canonicalization  24July2014 ######
 
 redirect 301 http://swiftkanban.com/ http://www.swiftkanban.com/
-
+redirect 301 http://swiftkanban.com http://www.swiftkanban.com/
 ###### End 24July2014 ######
 
