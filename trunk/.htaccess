@@ -329,3 +329,10 @@ redirect 301 /blog-2/15-masa-blog/77-visualizing-cycles-in-kanban.html http://bl
 redirect 301 /blog-2/82-writing-your-blog-using-kanban-part-2.html http://blog.digite.com/writing-your-blog-using-kanban-part-2/
 
 ####### END edited on Feb 19th - for the blog-2 links google webmaster was showing #########
+
+###### URL Canonicalization  24July2014 ######
+
+redirect 301 http://swiftkanban.com/ http://www.swiftkanban.com/
+
+###### End 24July2014 ######
+
