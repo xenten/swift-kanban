@@ -47,6 +47,11 @@ RewriteCond %{REQUEST_URI} (/|\.php|\.html|\.htm|\.feed|\.pdf|\.raw|/[^.]*)$ [NC
 RewriteRule (.*) index.php
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization},L]
 
+# URL Canonicalization - resolve http://swiftkanban.com to http:// www.swiftkanban.com
+RewriteCond %{HTTP_HOST} !^www.swiftkanban.com$ [NC]
+RewriteRule ^(.*)$ http://www.swiftkanban.com/$1 [L,R=301]
+#
+
 #
 ########## End - Joomla! core SEF Section
 SetOutputFilter DEFLATE
@@ -332,7 +337,8 @@ redirect 301 /blog-2/82-writing-your-blog-using-kanban-part-2.html http://blog.d
 
 ###### URL Canonicalization  24July2014 ######
 
-redirect 301 http://swiftkanban.com/ http://www.swiftkanban.com/
-redirect 301 http://swiftkanban.com http://www.swiftkanban.com/
+#redirect 301 http://swiftkanban.com/ http://www.swiftkanban.com/
+#redirect 301 http://swiftkanban.com http://www.swiftkanban.com/
+#commented out on 22August2014 - added rewrite condition and rule on top
 ###### End 24July2014 ######
 
