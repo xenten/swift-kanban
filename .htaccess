@@ -15,6 +15,11 @@ Options +FollowSymLinks -Indexes
 
 RewriteEngine On
 
+# URL Canonicalization - resolve http://swiftkanban.com to http:// www.swiftkanban.com
+RewriteCond %{HTTP_HOST} ^www.swiftkanban.com$ [NC]
+RewriteRule ^(.*)$ http://www.swiftkanban.com/$1 [L,R=301]
+#
+
 ########## Begin - Rewrite rules to block out some common exploits
 ## If you experience problems on your site block out the operations listed below
 ## This attempts to block the most common type of exploit `attempts` to Joomla!
@@ -46,11 +51,6 @@ RewriteCond %{REQUEST_URI} !^/index.php
 RewriteCond %{REQUEST_URI} (/|\.php|\.html|\.htm|\.feed|\.pdf|\.raw|/[^.]*)$ [NC]
 RewriteRule (.*) index.php
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization},L]
-
-# URL Canonicalization - resolve http://swiftkanban.com to http:// www.swiftkanban.com
-RewriteCond %{HTTP_HOST} !^swiftkanban.com$ [NC]
-RewriteRule ^(.*)$ http://www.swiftkanban.com/$1 [L,R=301]
-#
 
 #
 ########## End - Joomla! core SEF Section
