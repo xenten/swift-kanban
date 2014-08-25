@@ -350,11 +350,16 @@ redirect 301 /swiftkanban-contact-us http://www.swiftkanban.com/swiftkanban-cont
 redirect 301 /swiftkanban-brochure-download http://www.swiftkanban.com/swiftkanban-brochure-download.html
 redirect 301 /signup-for-our-webinars http://www.swiftkanban.com/signup-for-our-webinars.html
 redirect 301 /david-j-anderson http://www.swiftkanban.com/team/david-j-anderson.html
-redirect 301 /194-play-the-kanban-game http://www.swiftkanban.com/news-and-events/194-play-the-kanban-game.html
+redirect 301 /news-and-events/194-play-the-kanban-game http://www.swiftkanban.com/news-and-events/194-play-the-kanban-game.html
 redirect 301 /news-and-events/196-regional-scrum-gathering-india-2014 http://www.swiftkanban.com/news-and-events/196-regional-scrum-gathering-india-2014.html
 redirect 301 /leannow/about-lean-now http://www.swiftkanban.com/leannow/about-lean-now.html
 redirect 301 /leannow http://www.swiftkanban.com/leannow.html
 redirect 301 /kanban-training-consulting http://www.swiftkanban.com/kanban-training-consulting.html
 redirect 301 /47-how-can-i-manage-my-project-or-business-function-with-kanban http://www.swiftkanban.com/kanban/47-how-can-i-manage-my-project-or-business-function-with-kanban.html
 redirect 301 /kanban/65-portfolio-kanban-the-most-visual-tool-for-portfolios http://www.swiftkanban.com/kanban/65-portfolio-kanban-the-most-visual-tool-for-portfolios.html
+redirect 301 /team/masa-k-maeda http://www.swiftkanban.com/team/masa-k-maeda.html
+redirect 301 /team/david-j-anderson http://www.swiftkanban.com/team/david-j-anderson.html
+redirect 301 /kanban/47-how-can-i-manage-my-project-or-business-function-with-kanban http://www.swiftkanban.com/kanban/47-how-can-i-manage-my-project-or-business-function-with-kanban.html
+redirect 301 /davidjanderson http://www.swiftkanban.com/davidjanderson.html
+redirect 301 /swiftsync-integration http://www.swiftkanban.com/swiftsync-integration.html
 ## END removing duplicate urls - xyz to xyz.html 25August2014
