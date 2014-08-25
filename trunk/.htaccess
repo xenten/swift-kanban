@@ -240,8 +240,8 @@ redirect 301 /webinar-signup http://www.swiftkanban.com/news-and-events/david-an
 
 redirect 301 /signup_success http://www.swiftkanban.com/swift-kanban-subscription-confirmation
 
-redirect 301 /kanban-scrum-scrumban-features/swiftsync-integration.html https://www.swift-kanban.com/swiftsync-integration.html
-redirect 301 /kanban-scrum-scrumban-features/swiftsync-integration https://www.swift-kanban.com/swiftsync-integration.html
+redirect 301 /kanban-scrum-scrumban-features/swiftsync-integration.html https://www.swiftkanban.com/swiftsync-integration.html
+redirect 301 /kanban-scrum-scrumban-features/swiftsync-integration https://www.swiftkanban.com/swiftsync-integration.html
 
 redirect 301 /djav-in https://www.youtube.com/watch?v=W0uVcgeRqgk&list=PLQMRWQeOJpJR_xBZbXZ2zSPxBB6Mf0dEm
 
@@ -314,8 +314,8 @@ redirect 301 /blog/30-agility-requires-greater-discipline-are-you-ready-for-it.h
 redirect 301 /blog.html  http://blog.digite.com/
 redirect 301 /blog http://blog.digite.com
 
-redirect 301 /contact-us /swiftkanban-contact-us
-redirect 301 /contact-us.html /swiftkanban-contact-us
+redirect 301 /contact-us /swiftkanban-contact-us.html
+redirect 301 /contact-us.html /swiftkanban-contact-us.html
 
 ####### edited on Feb 19th - for the blog-2 links google webmaster was showing #########
 
@@ -342,3 +342,19 @@ redirect 301 /blog-2/82-writing-your-blog-using-kanban-part-2.html http://blog.d
 #commented out on 22August2014 - added rewrite condition and rule on top
 ###### End 24July2014 ######
 
+##removing duplicate urls - xyz to xyz.html 25August2014
+redirect 301 /valueinnova-offers http://www.swiftkanban.com/valueinnova-offers.html
+redirect 301 /valueinnova http://www.swiftkanban.com/valueinnova.html
+redirect 301 /masa-k-maeda http://www.swiftkanban.com/team/masa-k-maeda.html
+redirect 301 /swiftkanban-contact-us http://www.swiftkanban.com/swiftkanban-contact-us.html
+redirect 301 /swiftkanban-brochure-download http://www.swiftkanban.com/swiftkanban-brochure-download.html
+redirect 301 /signup-for-our-webinars http://www.swiftkanban.com/signup-for-our-webinars.html
+redirect 301 /david-j-anderson http://www.swiftkanban.com/team/david-j-anderson.html
+redirect 301 /194-play-the-kanban-game http://www.swiftkanban.com/news-and-events/194-play-the-kanban-game.html
+redirect 301 /news-and-events/196-regional-scrum-gathering-india-2014 http://www.swiftkanban.com/news-and-events/196-regional-scrum-gathering-india-2014.html
+redirect 301 /leannow/about-lean-now http://www.swiftkanban.com/leannow/about-lean-now.html
+redirect 301 /leannow http://www.swiftkanban.com/leannow.html
+redirect 301 /kanban-training-consulting http://www.swiftkanban.com/kanban-training-consulting.html
+redirect 301 /47-how-can-i-manage-my-project-or-business-function-with-kanban http://www.swiftkanban.com/kanban/47-how-can-i-manage-my-project-or-business-function-with-kanban.html
+redirect 301 /kanban/65-portfolio-kanban-the-most-visual-tool-for-portfolios http://www.swiftkanban.com/kanban/65-portfolio-kanban-the-most-visual-tool-for-portfolios.html
+## END removing duplicate urls - xyz to xyz.html 25August2014
