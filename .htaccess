@@ -16,7 +16,7 @@ Options +FollowSymLinks -Indexes
 RewriteEngine On
 
 # URL Canonicalization - resolve http://swiftkanban.com to http:// www.swiftkanban.com
-RewriteCond %{HTTP_HOST} ^www.swiftkanban.com$ [NC]
+RewriteCond %{HTTP_HOST} ^swiftkanban.com$ [NC]
 RewriteRule ^(.*)$ http://www.swiftkanban.com/$1 [L,R=301]
 #
 
