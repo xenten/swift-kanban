@@ -15,7 +15,7 @@
 var social_titles = function(){
     document.getElementById('0').title='Like us on Facebook!';
     document.getElementById('1').title='Talk to us on Twitter!';
-    document.getElementById('2').title='Check out our Blog - SwiftStream and give us feedback!';
+    document.getElementById('2').title='Follow us on Google+';
     document.getElementById('3').title='Check out our video tutorials and webinar recordings!';
     document.getElementById('4').title='Join the SwiftKanban User Group on LinkedIn!';
 };
