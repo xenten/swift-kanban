@@ -80,7 +80,19 @@ require_once(dirname(__FILE__).DS.'lib'.DS.'helix.php');
         mixpanel.init("d28f41404fb553e418a803139fc2d468");
     </script>
     <!-- end Mixpanel -->
-
+    <!-- start BoostSuite -->
+    <script type="text/javascript">
+        var _bsc = _bsc || {};
+        (function() {
+            var bs = document.createElement('script');
+            bs.type = 'text/javascript';
+            bs.async = true;
+            bs.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://d2so4705rl485y.cloudfront.net/widgets/tracker/tracker.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(bs, s);
+        })();
+    </script>
+    <!-- end BoostSuite -->
 </head>
 
 <?php $helix->addFeature('ie6warn'); ?>
