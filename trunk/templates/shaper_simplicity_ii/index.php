@@ -100,15 +100,15 @@ require_once(dirname(__FILE__).DS.'lib'.DS.'helix.php');
 <body class="bg clearfix new-header" id='sk_body'>
 
 <a href="https://plus.google.com/116495124719251971526" rel="publisher"></a>
-<!-- Checking if page is home page (for mixpanel tracking)-->
-<?php
+<!-- Checking if page is home page (for mixpanel tracking)
+?php
 $app = JFactory::getApplication();
 $menu = $app->getMenu();
 if ($menu->getActive() == $menu->getDefault()) {
-    mixpanel.track("Home");
+    <script>mixpanel.track("Home");</script>
 }
 ?>
-<!-- Ending mixpanl 'home' tracking -->
+Ending mixpanl 'home' tracking -->
 
 <div class="bg1">
 
